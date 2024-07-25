@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One medical group</title>
+
+    <link rel="icon" href="assets/icons/icon.svg" />
+    <link rel="canonical" href="" />
+
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta name="og:title" property="og:title" content="">
+    <meta name="og:type" property="og:type" content="">
+    <meta name="og:image" property="og:image" content="">
+    <meta property=”og:description” content=""/>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Mask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+    <!-- Splide Carousel -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <!-- SVG Inject -->
+    <script src="js/svg-inject.min.js"></script>
+
+    <!-- Main files -->
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/Base_script.js"></script>
+</head>
+
+<body>
+    <header>
+        <ul id="menu">
+            <li>
+                <a class="links" href="#home">
+                    <h1 class="hide">One Medical Group</h1>
+                    <img src="assets/logo.png" alt="Logo one medical group">
+                </a>
+            </li>
+            <li><a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a></li>
+            <li onclick="sideMenu()"><span id="sideMenu_btn"></span></li>
+        </ul>
+        <div id="sideMenu" class="hide">
+            <button type="button" onclick="sideMenu()"></button>
+
+            <a class="itensMenu" href="clinica.html">A One</a>
+            <a class="itensMenu" href="">Especialidades</a>
+            <a class="itensMenu" href="">Equipe one</a>
+            <a class="itensMenu" href="">Tratamentos</a>
+            <a class="itensMenu" href="">Blog</a>
+            <a class="itensMenu" href="">Contato</a>
+
+            <div id="contato_sideMenu">
+                <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
+
+                <a href="" class="redes_sideMenu marginLeft" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
+                <a href="" class="redes_sideMenu" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>
+            </div>
+        </div>
+    </header>
+
+    <main id="Main_index">
+        <a class="whats_link hide" target="_blank" href="https://ww.google.com"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
+
+        <section id="home">
+            <div class="sideBanner" id="Redes_home">
+                <a href="" target="_blank" class="redes_banner"><img src="assets/icons/instagram.svg" onload="SVGInject(this)">Instagram</a>
+                <a href="" target="_blank" class="redes_banner"><img src="assets/icons/facebook.svg" onload="SVGInject(this)">Facebook</a>
+            </div>
+            <div id="banner">
+                <video autoplay loop muted>
+                    <source src="assets/Videos/Bg_video.mp4" type="video/mp4">
+                </video>
+                <h2>
+                    Beleza excepcional, <br> Exclusividade incomparável
+                </h2>
+                <h3>Experimente a excelência em estética com nossos tratamentos únicos.</h3>
+                <a href="clinica.html" class="btns btn_banner">Veja mais da clínica <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+            </div>
+            <div class="sideBanner" id="whats_home">
+                <a href="" target="_blank" class="redes_banner"><img src="assets/icons/whats.svg" onload="SVGInject(this)">Agendar uma consulta</a>
+            </div>
+        </section>
+        <section id="clinica"> </section>
+        <section id="espaco"></section>
+        <section id="especialidades"></section>
+        <section id="equipe"></section>
+        <section id="tratamentos"></section>
+        <section id="allInOne"></section>
+        <section id="concierge"></section>
+        <section id="depos"></section>
+        <section id="blog"></section>
+        <section id="contatos"></section>
+        <section id="form"></section>
+    </main>
+
+    <footer>
+        <div id="bigFooter">
+            <img id="logoRodape" src="assets/logo.png" alt="Logo one medical group">
+            <div id="consulta_rodape">
+                <h5>Marque a sua consulta</h5>
+                <p>Venha conhecer a One Medical Group e agende a sua consulta!</p>
+                <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
+            </div>
+            <div id="endereco_rodape">
+                <h5>Endereço</h5>
+                <p>
+                    Av. Manoel Ribas, 1396 - <br><br> Cidade Jardim, São Paulo, SP
+                </p>
+            </div>
+            <div id="telefone_rodape">
+                <h5>Contato</h5>
+                <p>Telefone:    (99) 9 9999 - 9999<br><br>
+                                (99) 9 9999 - 9999<br><br>
+                                (99) 9 9999 - 9999
+                </p>
+            </div>
+            <div id="redes_rodape">
+                <h5>Entre em contato</h5>
+                <a href="" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/Email.svg" onload="SVGInject(this)"></a>
+            </div>
+        </div>
+        <div id="smallFooter">
+            <p>© <span id="data_footer"></span> One Medical Group</p>
+            <a aria-label="link para a VL7" href="https://www.google.com.br" target="_blank">
+                <img src="assets/vl7_logo.png">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function() {
+            // var elms = document.getElementsByClassName( 'splide' );
+            // for ( var i = 0; i < elms.length; i++ ) {
+            //     if(i == 0){
+            //         new Splide( elms[i], {
+            //             type    : 'loop',
+            //             autoplay: true,
+            //             perPage: 1,
+            //         }).mount();
+            //     }
+            //     if(i == 1){
+            //         new Splide( elms[i], {
+            //             drag   : 'free',
+            //             perPage: 5,
+            //             focus  : 0,
+            //             omitEnd: true,
+            //             arrowPath: 'M28.6236 16.8294C31.0942 18.6647 31.0942 22.3353 28.6236 24.1706L7.88833 39.574C4.83451 41.8426 0.476562 39.6843 0.476562 35.9034L0.476564 5.09658C0.476564 1.31565 4.83451 -0.842576 7.88833 1.42598L28.6236 16.8294Z'
+            //         }).mount();
+            //     }
+            // }
+        });
+
+
+        //MENU LATRERAL
+        // function sideMenu(){
+        //     if($('#sideMenu').hasClass('hide')){
+        //         $('#sideMenu').removeClass('hide');
+        //         $('#sideMenu').animate({ right: "0"});
+        //     }
+        //     else{
+        //         $('#sideMenu').animate({ right: "-30vw"});
+        //         setTimeout(() => { $('#sideMenu').addClass('hide'); }, 500);
+        //     }
+        // }
+
+        // //formulario
+        // $(document).ready(function () {
+        //     $('#telefone').mask('(00) 00000 - 0000');
+
+        //     $('#btn_form').click(function (e) {
+        //         $('#nome').prop('required',false);
+        //         $('#email').prop('required',false);
+        //         $('#telefone').prop('required',false);
+        //         $('#mensagem').prop('required',false);
+        //     });
+
+        //     $('#formulario').submit(function (e) {
+        //         e.preventDefault();
+        //         $('#msg_form').text('');
+        //         $('#msg_form').removeClass('text-danger');
+        //         $('#msg_form').removeClass('text-success');
+        //         $.ajax({
+        //             url: "email.php",
+        //             method: "post",
+        //             data: $('form').serialize(),
+        //             dataType: "text",
+        //             success: function (msg) {
+        //                 if (msg.trim() === 'Mensagem enviada com sucesso! Entrarei em contato em breve!') {
+        //                     $('#msg_form').addClass('text-success');
+        //                     $('#msg_form').text(msg);
+        //                     setTimeout(() => { window.location.reload(); }, 5000)
+        //                 }
+        //                 else if (msg.trim() == "Preencha o campo de 'Nome completo'" || msg.trim() == 'Preencha o campo de E-mail' || msg.trim() == 'O campo de mensagem está vazio!') {
+        //                     $('#msg_form').addClass('text-danger');
+        //                     $('#msg_form').text(msg);
+        //                 }
+        //                 else{
+        //                     $('#msg_form').removeClass('text-success');
+        //                     $('#msg_form').addClass('text-danger');
+        //                     $('#msg_form').text('Erro ao enviar o formulario, provaveis problemas com o servidor, você pode tentar me mandar mensagem via Instagram ou Whatsapp');
+        //                 }
+        //             }
+        //         })
+        //     });
+        // });
+    </script>
+</body>
+</html>

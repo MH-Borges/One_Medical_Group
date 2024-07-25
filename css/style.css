@@ -1,0 +1,574 @@
+@font-face {
+  font-family: "TrajanPro";
+  src: url("../fonts/TrajanPro-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "khmer-mn";
+  src: url("../fonts/khmer-mn.ttf") format("truetype");
+  font-weight: 400;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.75vw;
+  background: #D2AE6D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4B2F24;
+}
+
+p, span, ul, li, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hide {
+  opacity: 0 !important;
+  display: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background: #E0E0E0;
+  overflow-x: hidden;
+  position: relative;
+}
+body .btns {
+  all: unset;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 1.1vw;
+  color: #E0E0E0;
+  border-radius: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75vh 0;
+  transition: all ease-in-out 0.15s;
+}
+body .btns:hover {
+  transform: scale(1.1);
+}
+body header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 0.15s;
+  background-color: #4B2F24;
+  z-index: 99;
+}
+body header #menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw;
+}
+body header #menu li {
+  height: 60%;
+  display: flex;
+  align-items: center;
+}
+body header #menu li .btn_agendamento {
+  font-family: "TrajanPro", system-ui;
+  border: 2px solid #E0E0E0;
+  width: 12.5vw;
+  padding: 0.75vh 0;
+}
+body header #menu li:first-child {
+  margin-right: auto;
+}
+body header #menu li:first-child a {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header #menu li:first-child a svg, body header #menu li:first-child a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body header #menu li:first-child a svg path, body header #menu li:first-child a img path {
+  fill: #D0B498;
+}
+body header #menu li:last-child {
+  margin-left: 2.5vw;
+  width: 3vw;
+  transition: all ease-in-out 0.15s;
+}
+body header #menu li:last-child #sideMenu_btn {
+  all: unset;
+  width: 100%;
+  height: 0.6vh;
+  background-color: #E0E0E0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header #menu li:last-child #sideMenu_btn::before, body header #menu li:last-child #sideMenu_btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background-color: #E0E0E0;
+  left: 0;
+  top: -1.15vh;
+}
+body header #menu li:last-child #sideMenu_btn::after {
+  top: 1.2vh;
+}
+body header #menu li:last-child:hover {
+  transform: scale(1.2);
+}
+body header #sideMenu {
+  height: 100vh;
+  width: 25vw;
+  background: #4B2F24;
+  position: absolute;
+  z-index: 999999 !important;
+  top: 0;
+  right: -25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 0.25;
+}
+body header #sideMenu button {
+  all: unset;
+  position: absolute;
+  top: -18vh;
+  right: 9.5vw;
+  width: 3vw;
+  height: 0.6vh;
+  background-color: #E0E0E0;
+  border-radius: 0.25vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+}
+body header #sideMenu button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #E0E0E0;
+  left: 0;
+  top: 0;
+  border-radius: 0.25vw;
+  transform: rotate(90deg);
+}
+body header #sideMenu button:hover {
+  transform: rotate(45deg) scale(1.2);
+}
+body header #sideMenu .itensMenu {
+  width: 100%;
+  padding: 0.5vh 0;
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.4vw;
+  color: #E0E0E0;
+  margin: 2.25vh 0;
+  text-align: center;
+  transition: all ease-in-out 0.25;
+}
+body header #sideMenu .itensMenu:hover {
+  transform: scale(1.1);
+}
+body header #sideMenu .active {
+  color: #D2AE6D;
+}
+body header #sideMenu #contato_sideMenu {
+  position: absolute;
+  bottom: 1vh;
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5vw;
+}
+body header #sideMenu #contato_sideMenu .btn_agendamento {
+  font-family: "TrajanPro", system-ui;
+  border: 2px solid #E0E0E0;
+  width: 12.5vw;
+  padding: 0.75vh 0;
+}
+body header #sideMenu #contato_sideMenu .redes_sideMenu {
+  height: 4.5vh;
+  width: 4.5vh;
+  border: 2px solid #E0E0E0;
+  border-radius: 50%;
+  margin: 0 0.25vw;
+}
+body header #sideMenu #contato_sideMenu .redes_sideMenu img, body header #sideMenu #contato_sideMenu .redes_sideMenu svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0.55vw;
+}
+body header #sideMenu #contato_sideMenu .redes_sideMenu:hover {
+  transform: scale(1.1);
+}
+body header #sideMenu #contato_sideMenu .marginLeft {
+  margin-left: auto;
+}
+body header #background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #373435;
+  opacity: 0.4;
+  z-index: 1;
+}
+body main {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+}
+body main section {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 5vw;
+  border: none;
+  outline: none;
+}
+body main .whats_link {
+  position: fixed;
+  bottom: 1.5vh;
+  right: 1vw;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+  z-index: 999;
+}
+body main .whats_link img, body main .whats_link svg {
+  width: 100%;
+  height: 100%;
+}
+body main .whats_link img path, body main .whats_link svg path {
+  fill: none;
+  stroke: #E0E0E0;
+  stroke-width: 6px;
+}
+body main .whats_link img .tel, body main .whats_link svg .tel {
+  fill: #E0E0E0;
+  stroke-width: 0;
+}
+body footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw;
+  background-color: #4B2F24;
+}
+body footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8vh;
+  background-color: #373435;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+body footer #bigFooter {
+  width: 100%;
+  height: 32vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+body footer #bigFooter #logoRodape {
+  width: 100%;
+  height: 10vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-top: 4vh;
+}
+body footer #bigFooter #consulta_rodape, body footer #bigFooter #endereco_rodape, body footer #bigFooter #telefone_rodape, body footer #bigFooter #redes_rodape {
+  width: 20%;
+  height: 22vh;
+  padding: 3vh 1.25vw 0;
+}
+body footer #bigFooter #consulta_rodape h5, body footer #bigFooter #endereco_rodape h5, body footer #bigFooter #telefone_rodape h5, body footer #bigFooter #redes_rodape h5 {
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.1vw;
+  color: #E0E0E0;
+}
+body footer #bigFooter #consulta_rodape p, body footer #bigFooter #endereco_rodape p, body footer #bigFooter #telefone_rodape p, body footer #bigFooter #redes_rodape p {
+  width: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 0.9vw;
+  color: #E0E0E0;
+  line-height: 2.5vh;
+  margin-top: 0.5vh;
+}
+body footer #bigFooter #consulta_rodape {
+  margin-left: 10%;
+}
+body footer #bigFooter #consulta_rodape .btn_agendamento {
+  font-family: "TrajanPro", system-ui;
+  margin-top: 3.5vh;
+  border: 2px solid #E0E0E0;
+  width: 12.5vw;
+  padding: 0.75vh 0;
+}
+body footer #bigFooter #endereco_rodape p, body footer #bigFooter #telefone_rodape p {
+  line-height: 1.25vh;
+  margin-top: 1.25vh;
+}
+body footer #bigFooter #telefone_rodape {
+  padding-right: 5.25vw;
+}
+body footer #bigFooter #telefone_rodape p {
+  text-align: right;
+}
+body footer #bigFooter #redes_rodape {
+  display: flex;
+  flex-wrap: wrap;
+}
+body footer #bigFooter #redes_rodape h5 {
+  width: 100%;
+}
+body footer #bigFooter #redes_rodape a {
+  width: 2.5vw;
+  height: 2.5vw;
+  border: 2px solid #E0E0E0;
+  border-radius: 50%;
+  margin: 0 0.5vw;
+  margin-top: -7vh;
+  transition: all ease-in-out 0.2s;
+}
+body footer #bigFooter #redes_rodape a img, body footer #bigFooter #redes_rodape a svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 0.55vw;
+}
+body footer #bigFooter #redes_rodape a img path, body footer #bigFooter #redes_rodape a svg path {
+  fill: #E0E0E0;
+  stroke: #E0E0E0;
+}
+body footer #bigFooter #redes_rodape a:nth-child(2) {
+  margin-left: 0;
+}
+body footer #bigFooter #redes_rodape a:nth-child(4) img path, body footer #bigFooter #redes_rodape a:nth-child(4) svg path {
+  fill: none;
+}
+body footer #bigFooter #redes_rodape a:hover {
+  transform: scale(1.15);
+}
+body footer #smallFooter {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+body footer #smallFooter p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 1vw;
+  color: #E0E0E0;
+}
+body footer #smallFooter p span {
+  font-weight: 600;
+}
+body footer #smallFooter a {
+  width: 7.5vw;
+  height: 60%;
+  margin-left: auto;
+  transition: all ease-in-out 0.15s;
+}
+body footer #smallFooter a img, body footer #smallFooter a svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body footer #smallFooter a:hover {
+  transform: scale(1.1);
+}
+body #Main_index #espaco, body #Main_index #especialidades, body #Main_index #depos, body #Main_index #blog, body #Main_index #contatos, body #Main_index #form {
+  height: 75vh;
+}
+body #Main_index #home {
+  padding: 0;
+  padding-top: 125px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body #Main_index #home .sideBanner {
+  width: 6.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #D2AE6D;
+}
+body #Main_index #home .sideBanner a {
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  font-family: "khmer-mn", sans-serif;
+  font-weight: 600;
+  color: #373435;
+  font-size: 2.25vw;
+  height: 7vh;
+  margin: 4vh 0;
+}
+body #Main_index #home .sideBanner a img, body #Main_index #home .sideBanner a svg {
+  width: auto;
+  height: 7vh;
+  padding: 0.5vw;
+  margin-right: 0.75vw;
+}
+body #Main_index #home .sideBanner a img path, body #Main_index #home .sideBanner a svg path {
+  fill: #373435;
+}
+body #Main_index #home #whats_home {
+  background-color: #4B2F24;
+}
+body #Main_index #home #whats_home a {
+  margin-left: -0.5vw;
+  color: #E0E0E0;
+  width: 25vw;
+}
+body #Main_index #home #whats_home a img, body #Main_index #home #whats_home a svg {
+  margin-right: 1vw;
+}
+body #Main_index #home #whats_home a img path, body #Main_index #home #whats_home a svg path {
+  fill: none;
+  stroke: #E0E0E0;
+  stroke-width: 4px;
+}
+body #Main_index #home #whats_home a img .tel, body #Main_index #home #whats_home a svg .tel {
+  fill: #E0E0E0;
+  stroke-width: 0;
+}
+body #Main_index #home #banner {
+  width: 87%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding-right: 5vw;
+}
+body #Main_index #home #banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 101%;
+  height: 100%;
+  background-color: #4B2F24;
+  opacity: 0.4;
+  z-index: 2;
+}
+body #Main_index #home #banner video {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 101%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_index #home #banner h2 {
+  font-family: "TrajanPro", system-ui;
+  font-size: 3vw;
+  color: #E0E0E0;
+  text-align: right;
+  z-index: 5;
+}
+body #Main_index #home #banner h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1vw;
+  color: #E0E0E0;
+  text-align: right;
+  margin-top: 1vh;
+  z-index: 5;
+}
+body #Main_index #home #banner .btn_banner {
+  position: relative;
+  padding-right: 3vw;
+  margin-top: 12.5vh;
+  font-size: 1.25vw;
+  z-index: 5;
+}
+body #Main_index #home #banner .btn_banner img, body #Main_index #home #banner .btn_banner svg {
+  position: absolute;
+  height: 2.5vh;
+  width: auto;
+  right: 0;
+}
+body #Main_index #home #banner .btn_banner img path, body #Main_index #home #banner .btn_banner svg path {
+  fill: #E0E0E0;
+}
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+/* MOBILE *//*# sourceMappingURL=style.css.map */

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A clinica | One medical group</title>
+
+    <link rel="icon" href="assets/icons/icon.svg" />
+    <link rel="canonical" href="" />
+
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta name="og:title" property="og:title" content="">
+    <meta name="og:type" property="og:type" content="">
+    <meta name="og:image" property="og:image" content="">
+    <meta property=”og:description” content=""/>
+
+    <!-- Splide Carousel -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <!-- SVG Inject -->
+    <script src="js/svg-inject.min.js"></script>
+
+    <!-- Main files -->
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/Base_script.js"></script>
+</head>
+
+<body>
+    <header>
+        <ul id="menu">
+            <li>
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="Logo one medical group">
+                </a>
+            </li>
+            <li><a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a></li>
+            <li onclick="sideMenu()"><span id="sideMenu_btn"></span></li>
+        </ul>
+        <div id="sideMenu" class="hide">
+            <button type="button" onclick="sideMenu()"></button>
+
+            <a class="itensMenu active" href="clinica.html">A One</a>
+            <a class="itensMenu" href="">Especialidades</a>
+            <a class="itensMenu" href="">Equipe one</a>
+            <a class="itensMenu" href="">Tratamentos</a>
+            <a class="itensMenu" href="">Blog</a>
+            <a class="itensMenu" href="">Contato</a>
+
+            <div id="contato_sideMenu">
+                <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
+
+                <a href="" class="redes_sideMenu marginLeft" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
+                <a href="" class="redes_sideMenu" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>
+            </div>
+        </div>
+    </header>
+
+    <main id="Main_clinica">
+        CLINICA
+    </main>
+
+    <footer>
+        <div id="bigFooter">
+            <img id="logoRodape" src="assets/logo.png" alt="Logo one medical group">
+            <div id="consulta_rodape">
+                <h5>Marque a sua consulta</h5>
+                <p>Venha conhecer a One Medical Group e agende a sua consulta!</p>
+                <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
+            </div>
+            <div id="endereco_rodape">
+                <h5>Endereço</h5>
+                <p>
+                    Av. Manoel Ribas, 1396 - <br><br> Cidade Jardim, São Paulo, SP
+                </p>
+            </div>
+            <div id="telefone_rodape">
+                <h5>Contato</h5>
+                <p>Telefone:    (99) 9 9999 - 9999<br><br>
+                                (99) 9 9999 - 9999<br><br>
+                                (99) 9 9999 - 9999
+                </p>
+            </div>
+            <div id="redes_rodape">
+                <h5>Entre em contato</h5>
+                <a href="" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/Email.svg" onload="SVGInject(this)"></a>
+            </div>
+        </div>
+        <div id="smallFooter">
+            <p>© <span id="data_footer"></span> One Medical Group</p>
+            <a aria-label="link para a VL7" href="https://www.google.com.br" target="_blank">
+                <img src="assets/vl7_logo.png">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+    </script>
+</body>
+</html>

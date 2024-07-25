@@ -1,0 +1,532 @@
+@import 'colors_fonts';
+@import 'base';
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    background: $Branco;
+    overflow-x: hidden;
+    position: relative;
+    .btns{
+        all: unset;
+        font-family: $Second-font;
+        font-size: 1.1vw;
+        color: $Branco;
+        border-radius: 0.5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75vh 0;
+        transition: all ease-in-out .15s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all ease-in-out 0.15s;
+        background-color: $Marrom;
+        z-index: 99;
+        #menu{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5vw;
+            li{
+                height: 60%;
+                display: flex;
+                align-items: center;
+                .btn_agendamento{
+                    font-family: $Main-font;
+                    border: 2px solid $Branco;
+                    width: 12.5vw;
+                    padding: 0.75vh 0;
+                }
+                &:first-child{
+                    margin-right: auto;
+                    a{
+                        all: unset;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        svg, img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            path{
+                                fill: $Creme;
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    margin-left: 2.5vw;
+                    width: 3vw;
+                    transition: all ease-in-out .15s;
+                    #sideMenu_btn{
+                        all: unset;
+                        width: 100%;
+                        height: 0.6vh;
+                        background-color: $Branco;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &::before, &::after{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 90%;
+                            background-color: $Branco;
+                            left: 0;
+                            top: -1.15vh;
+                        }
+                        &::after{
+                            top: 1.2vh;
+                        }
+                    }
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+        #sideMenu{
+            height: 100vh;
+            width: 25vw;
+            background: $Marrom;
+            position: absolute;
+            z-index: 999999 !important;
+            top: 0;
+            right: -25vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all ease-in-out 0.25;
+            button{
+                all: unset;
+                position: absolute;
+                top: -18vh;
+                right: 9.5vw;
+                width: 3vw;
+                height: 0.6vh;
+                background-color: $Branco;
+                border-radius: 0.25vw;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: rotate(45deg);
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $Branco;
+                    left: 0;
+                    top: 0;
+                    border-radius: 0.25vw;
+                    transform: rotate(90deg);
+                }
+                &:hover{
+                    transform:rotate(45deg) scale(1.2);
+                }
+            }
+            .itensMenu{
+                width: 100%;
+                padding: 0.5vh 0;
+                font-family: $Main-font;
+                font-size: 1.4vw;
+                color: $Branco;
+                margin: 2.25vh 0;
+                text-align: center;
+                transition: all ease-in-out 0.25;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+            .active{
+                color: $Amarelo;
+            }
+            #contato_sideMenu{
+                position: absolute;
+                bottom: 1vh;
+                width: 100%;
+                height: 6vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 1.5vw;
+                .btn_agendamento{
+                    font-family: $Main-font;
+                    border: 2px solid $Branco;
+                    width: 12.5vw;
+                    padding: 0.75vh 0;
+                }
+                .redes_sideMenu{
+                    height: 4.5vh;
+                    width: 4.5vh;
+                    border: 2px solid $Branco;
+                    border-radius: 50%;
+                    margin: 0 0.25vw;
+                    img, svg{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        padding: 0.55vw;
+                    }
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                .marginLeft{
+                    margin-left: auto;
+                }
+            }
+        }
+        #background{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: $Preto;
+            opacity: .4;
+            z-index: 1;
+        }
+    }
+    main{
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+        position: relative;
+        section{
+            width: 100vw;
+            height: 100vh;
+            padding: 0 5vw;
+            border: none;
+            outline: none;
+        }
+        .whats_link{
+            position: fixed;
+            bottom: 1.5vh;
+            right: 1vw;
+            width: 4vw;
+            height: 4vw;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1vw;
+            z-index: 999;
+            img, svg{
+                width: 100%;
+                height: 100%;
+                path{
+                    fill: none;
+                    stroke: $Branco;
+                    stroke-width: 6px;
+                }
+                .tel{
+                    fill: $Branco;
+                    stroke-width: 0;
+                }  
+            }
+        }
+    }
+    footer{
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5vw;
+        background-color: $Marrom;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 8vh;
+            background-color: $Preto;
+            bottom: 0;
+            left: 0;
+            z-index: 3;
+        }
+        #bigFooter{
+            width: 100%;
+            height: 32vh;
+            display: flex;
+            flex-wrap: wrap;
+            #logoRodape{
+                width: 100%;
+                height: 10vh;
+                object-fit: contain;
+                padding-top: 4vh;
+            }
+            #consulta_rodape, #endereco_rodape,#telefone_rodape,#redes_rodape{
+                width: 20%;
+                height: 22vh;
+                padding: 3vh 1.25vw 0;
+                h5{
+                    font-family: $Main-font;
+                    font-size: 1.1vw;
+                    color: $Branco;
+                }
+                p{
+                    width: 100%;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 0.9vw;
+                    color: $Branco;
+                    line-height: 2.5vh;
+                    margin-top: 0.5vh;
+                }
+            }
+            #consulta_rodape{
+                margin-left: 10%;
+                .btn_agendamento{
+                    font-family: $Main-font;
+                    margin-top: 3.5vh;
+                    border: 2px solid $Branco;
+                    width: 12.5vw;
+                    padding: 0.75vh 0;
+                }
+            }
+            #endereco_rodape, #telefone_rodape{
+                p{
+                    line-height: 1.25vh;
+                    margin-top: 1.25vh;
+                }
+            }
+            #telefone_rodape{
+                padding-right: 5.25vw;
+                p{
+                    text-align: right;
+                }
+            }
+            #redes_rodape{
+                display: flex;
+                flex-wrap: wrap;
+                h5{
+                    width: 100%;
+                }
+                a{
+                    width: 2.5vw;
+                    height: 2.5vw;
+                    border: 2px solid $Branco;
+                    border-radius: 50%;
+                    margin: 0 0.5vw;
+                    margin-top: -7vh;
+                    transition: all ease-in-out .2s;
+                    img, svg{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        padding: 0.55vw;
+                        path{
+                            fill: $Branco;
+                            stroke: $Branco;
+                        }
+                    }
+                    &:nth-child(2){
+                        margin-left: 0;
+                    }
+                    &:nth-child(4){
+                        img,svg{
+                            path{
+                                fill: none;
+                            }
+                        }
+                    }
+                    &:hover{
+                        transform: scale(1.15);
+                    }
+                }
+            }
+        }
+        #smallFooter{
+            width: 100%;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            z-index: 5;
+            p{
+                font-family: $Text-font;
+                font-weight: 600;
+                font-size: 1vw;
+                color: $Branco;
+                span{
+                    font-weight: 600;
+                }
+            }
+            a{
+                width: 7.5vw;
+                height: 60%;
+                margin-left: auto;
+                transition: all ease-in-out .15s;
+                img, svg{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    #Main_index{
+        #espaco, #especialidades, #depos, #blog, #contatos, #form{
+            height: 75vh;
+        }
+        #home{
+            padding: 0;
+            padding-top: 125px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            .sideBanner{
+                width: 6.5%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                background-color: $Amarelo;
+                a{
+                    transform: rotate(-90deg);
+                    display: flex;
+                    align-items: center;
+                    font-family: $Second-font;
+                    font-weight: 600;
+                    color: $Preto;
+                    font-size: 2.25vw;
+                    height: 7vh;
+                    margin: 4vh 0;
+                    img, svg{
+                        width: auto;
+                        height: 7vh;
+                        padding: 0.5vw;
+                        margin-right: 0.75vw;
+                        path{
+                            fill: $Preto;
+                        }
+                    }
+                }
+            }
+            #whats_home{
+                background-color: $Marrom;
+                a{
+                    margin-left: -0.5vw;
+                    color: $Branco;
+                    width: 25vw;
+                    img, svg{
+                        margin-right: 1vw;
+                        path{
+                            fill: none;
+                            stroke: $Branco;
+                            stroke-width: 4px;
+                        }
+                        .tel{
+                            fill: $Branco;
+                            stroke-width: 0;
+                        }   
+                    }
+                }
+            }
+            #banner{
+                width: 87%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: end;
+                padding-right: 5vw;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0; 
+                    width: 101%;
+                    height: 100%;
+                    background-color: $Marrom;
+                    opacity: .4;
+                    z-index: 2;
+                }
+                video{
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    width: 101%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                h2{
+                    font-family: $Main-font;
+                    font-size: 3vw;
+                    color: $Branco;
+                    text-align: right;
+                    z-index: 5;
+                }
+                h3{
+                    font-family: $Text-font;
+                    font-size: 1vw;
+                    color: $Branco;
+                    text-align: right;
+                    margin-top: 1vh;
+                    z-index: 5;
+                }
+                .btn_banner{
+                    position: relative;
+                    padding-right: 3vw;
+                    margin-top: 12.5vh;
+                    font-size: 1.25vw;
+                    z-index: 5;
+                    img, svg{
+                        position: absolute;
+                        height: 2.5vh;
+                        width: auto;
+                        right: 0;
+                        path{
+                            fill: $Branco;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+/* MOBILE */
+@media only screen and (max-width: 479px){}

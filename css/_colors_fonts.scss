@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'TrajanPro';
+    src: url("../fonts/TrajanPro-Bold.otf") format("opentype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'khmer-mn';
+    src: url('../fonts/khmer-mn.ttf') format('truetype');
+    font-weight: 400;
+}
+
+
+$Main-font: 'TrajanPro', system-ui;
+$Second-font: 'khmer-mn', sans-serif;
+$Text-font: Georgia, 'Times New Roman', Times, serif;
+
+////// TrajanPro pesos
+// Regular = 700
+
+/////// khmer-mn pesos
+// Regular = 400
+
+$Branco: #E0E0E0;
+$Preto: #373435;
+$Marrom: #4B2F24;
+$Amarelo: #D2AE6D;
+$Creme: #D0B498;
+$Cinza: #776F62;
