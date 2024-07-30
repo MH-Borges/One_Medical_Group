@@ -477,6 +477,7 @@ body #Main_index #home .sideBanner a {
   font-size: 2.25vw;
   height: 7vh;
   margin: 4vh 0;
+  transition: all ease-in-out 0.15s;
 }
 body #Main_index #home .sideBanner a img, body #Main_index #home .sideBanner a svg {
   width: auto;
@@ -487,11 +488,13 @@ body #Main_index #home .sideBanner a img, body #Main_index #home .sideBanner a s
 body #Main_index #home .sideBanner a img path, body #Main_index #home .sideBanner a svg path {
   fill: #373435;
 }
+body #Main_index #home .sideBanner a:hover {
+  transform: rotate(-90deg) scale(1.05);
+}
 body #Main_index #home #whats_home {
   background-color: #4B2F24;
 }
 body #Main_index #home #whats_home a {
-  margin-left: -0.5vw;
   color: #E0E0E0;
   width: 25vw;
 }
