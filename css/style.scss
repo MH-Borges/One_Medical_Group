@@ -1840,7 +1840,6 @@ body {
             #sideMenu{
                 width: 100vw;
                 right: -100vw;
-                
                 button{
                     top: -16vh;
                     right: 40vw;
@@ -2079,173 +2078,105 @@ body {
                 }
             }
             #clinica{
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                flex-direction: column;
                 padding: 0;
                 .patter{
-                    position: absolute;
-                    width: 100%;
-                    height: auto;
-                    top: 0;
-                    left: 0;
-                    z-index: -1;
+                    width: auto;
+                    height: 50vh;
+                    object-fit: contain;
                     opacity: 0.1;
                 }
                 #Block_textClinica{
-                    width: 50%;
-                    height: 100%;
-                    padding: 4.75vw;
-                    display: flex;
+                    width: 100%;
+                    height: 50vh;
+                    padding: 5vw;
                     flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
+                    order: 1;
                     h2{
-                        width: 100%;
-                        height: auto;
-                        font-family: $Main-font;
-                        font-size: 2.5vw;
-                        padding-left: 2.5vw;
-                        margin-bottom: 7.5vh;
-                        position: relative;
-                        color: $Marrom;
+                        font-size: 7vw;
+                        padding-left: 4vw;
+                        margin-bottom: 5vh;
                         &::before{
-                            content: '';
-                            position: absolute;
-                            bottom: -1.5vh;
-                            left: 0;
-                            width: 30%;
-                            height: 0.35vh;
-                            background-color: $Marrom;
+                            bottom: -0.5vh;
+                            width: 35%;
+                            height: 0.3vh;
                         }
                     }
                     p{
-                        width: 100%;
-                        padding-right: 3.5vw;
-                        font-family: $Text-font;
-                        font-weight: 400;
-                        font-size: 1vw;
-                        color: $Marrom;
-                        line-height: 4vh;
+                        padding-right: 2vw;
+                        font-size: 2.65vw;
+                        line-height: 2.5vh;
                     }
                     .btn_clinica{
+                        width: 45vw;
                         height: 4vh;
-                        color: $Amarelo;
-                        font-size: 1.5vw;
+                        font-size: 4.5vw;
                         margin-right: auto;
-                        margin-top: 12.5vh;
+                        margin-top: 5vh;
                         img, svg{
+                            margin-left: auto;
+                            width: 15%;
                             height: 100%;
+                            margin-top: -1%;
                         }
                     }
                 }
                 #clinica_Img{
-                    width: 50%;
-                    height: 100%;
+                    width: 100%;
+                    height: 50vh;
                     object-fit: cover;
+                    order: 2;
                 }
             }
             #espaco{
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                flex-direction: column;
                 padding: 0;
-                background-color: $Marrom;
                 .patter{
-                    position: absolute;
-                    width: 100%;
-                    height: auto;
-                    top: 0;
-                    left: 0;
-                    z-index: 1;
+                    width: auto;
+                    height: 50vh;
+                    object-fit: contain;
                     opacity: 0.03;
                     path{
                         fill: $Creme;
                     }
                 }
                 #Block_VideoEspaco{
-                    width: 50%;
-                    height: 100%;
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    z-index: 2;
+                    order: 2;
+                    width: 100%;
+                    height: 50vh;
                     img, svg{
-                        position: absolute;
-                        width: 7.5vw;
-                        height: 7.5vw;
-                        z-index: 5;
-                        transition: all ease-in-out .15s;
-                        &:hover{
-                            transform: scale(1.1);
-                        }
-                    }
-                    #VideoEspaco{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        position: relative;
-                        z-index: 1;
+                        width: 20vw;
+                        height: 20vw;
                     }
                     &::before{
-                        content: '';
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        left: 0;
-                        background-color: $Marrom;
-                        z-index: 2;
-                        opacity: 0.5;
-                    }
-                }
-                .no-back{
-                    &::before{
-                        display: none;
+                        height: 101.5%;
+                        top: -1%;
                     }
                 }
                 #Block_textEspaco{
-                    width: 50%;
-                    height: 100%;
-                    padding: 4.75vw;
-                    display: flex;
+                    width: 100%;
+                    height: 50vh;
+                    padding: 5vw;
                     flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    z-index: 2;
+                    order: 1;
                     h2{
-                        width: 100%;
-                        height: auto;
-                        font-family: $Main-font;
-                        font-size: 2.5vw;
-                        padding-left: 2.5vw;
-                        margin-bottom: 7.5vh;
-                        position: relative;
-                        color: $Amarelo;
+                        font-size: 7vw;
+                        padding-left: 4vw;
+                        margin-bottom: 5vh;
                         &::before{
-                            content: '';
-                            position: absolute;
-                            bottom: -1.5vh;
-                            left: 0;
-                            width: 35%;
-                            height: 0.35vh;
-                            background-color: $Amarelo;
+                            bottom: -1vh;
+                            width: 40%;
+                            height: 0.3vh;
                         }
                     }
                     p{
-                        width: 100%;
-                        padding-right: 3.5vw;
-                        font-family: $Text-font;
-                        font-weight: 400;
-                        font-size: 1vw;
-                        color: $Branco;
-                        line-height: 4vh;
+                        padding-right: 2vw;
+                        font-size: 2.7vw;
+                        line-height: 2.5vh;
                     }
                 }
             }
+
             #especialidades{
                 display: flex;
                 flex-wrap: wrap;
@@ -2343,6 +2274,7 @@ body {
                     }
                 }
             }
+            
             #equipe{
                 position: relative;
                 display: flex;
