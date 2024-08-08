@@ -1060,8 +1060,24 @@ body {
                                 position: relative;
                                 padding: 0.75vw;
                                 transition: all ease-in-out .15s;
+                                // overflow: hidden;
                                 &:hover{
-                                    transform: scale(1.02);
+                                    .Block_img{
+                                        img{
+                                            transform: scale(1.05);
+                                        }
+                                    }
+                                    &::before{
+                                        backdrop-filter: blur(2px);
+                                    }
+                                    .infosCards{
+                                        .nome{
+                                            transform: scale(1.07);
+                                        }
+                                        .btn_CardTratamento{
+                                            transform: scale(1.07);
+                                        }
+                                    }
                                 }
                                 &::before{
                                     content: '';
@@ -1070,17 +1086,22 @@ body {
                                     left: 0;
                                     width: 100%;
                                     height: 100%;
-                                    background-color: $Marrom;
+                                    background-color: rgba(75, 47, 36, 0.4);
                                     z-index: 2;
-                                    opacity: 0.4;
+                                    transition: all ease-in-out 0.5s;
                                 }
-                                img{
+                                .Block_img{
                                     width: 100%;
-                                    height: 100%;
-                                    object-fit: cover;
+                                    height: 100%;  
+                                    overflow: hidden;
                                     border-radius: 1vw;
-                                    position: relative;
                                     z-index: 1;
+                                    img{
+                                        transition: all ease-in-out 0.5s;
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
                                 }
                                 .infosCards{
                                     position: absolute;
@@ -1094,6 +1115,7 @@ body {
                                     align-items: center;
                                     justify-content: center;
                                     .nome{
+                                        transition: all ease-in-out 0.5s;
                                         width: 100%;
                                         font-family: $Main-font;
                                         font-size: 1.5vw;
@@ -1103,6 +1125,7 @@ body {
                                         text-align: center;
                                     }
                                     .btn_CardTratamento{
+                                        transition: all ease-in-out 0.5s;
                                         font-family: $Text-font;
                                         height: 3.5vh;
                                         width: 6.25vw;
@@ -2054,19 +2077,20 @@ body {
                 }
                 #banner{
                     width: 100%;
-                    align-items: center;
+                    align-items: right;
                     padding: 0 10vw;
                     h2{
                         font-size: 8vw;
-                        text-align: center;
+                        text-align: right;
                     }
                     h3{
                         font-size: 4vw;
-                        text-align: center;
+                        text-align: right;
                         margin-top: 5vh;
                     }
                     .btn_banner{
                         padding-right: 0;
+                        margin-right: vw;
                         margin-top: 15vh;
                         font-size: 4vw;
                         img, svg{
@@ -2176,104 +2200,65 @@ body {
                     }
                 }
             }
-
             #especialidades{
-                display: flex;
-                flex-wrap: wrap;
-                padding: 2vh 0;
-                background-color: $Marrom;
+                padding: 3vw;
+                justify-content: center;
                 .especialidadeBlock{
-                    width: 25%;
-                    height: 50%;
-                    overflow: hidden;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    img{
-                        z-index: 2;
-                        position: relative;
-                        width: 100%;
-                        height: auto;
-                        object-fit: cover;
-                    }
+                    width: 90%;
+                    height: 22vh;
+                    margin: 2vh 0;
+                    border-radius: 2vw;
                     &::before{
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: $Marrom;
-                        opacity: 0.25;
-                        z-index: 3;
+                        opacity: 0.5;
                     }
                     p{
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-family: $Main-font;
-                        font-size: 1.35vw;
-                        color: $Branco;
+                        font-size: 5vw;
+                        z-index: 9;
                     }
                     .amarelo{
-                        background-color: $Amarelo;
+                        background: none;
                     }
                     .preto{
-                        background-color: $Preto;
+                        background: none;
                     }
                     .cinza{
-                        background-color: $Cinza;
-                    }
-                    &:hover{
-                        img{
-                            display: none;
-                        }
-                        &::before{
-                            display: none;
-                        } 
+                        background: none;
                     }
                 }
                 #textEspecialidade{
-                    flex-direction: column;
                     padding: 2vw;
                     &::before{
                         display: none;
                         content: '';
                     }
                     h2{
-                        width: 100%;
-                        height: auto;
-                        font-family: $Main-font;
-                        font-size: 1.75vw;
-                        position: relative;
-                        color: $Amarelo;
+                        font-size: 6vw;
                     }
                     p{
                         all: unset;
-                        width: 100%;
-                        font-family: $Text-font;
-                        font-weight: 400;
-                        font-size: 0.9vw;
                         color: $Branco;
-                        line-height: 3vh;
                         padding-right: 2vw;
+                        font-size: 2.75vw;
+                        line-height: 2.5vh;
                         margin: 2.5vh 0;
+
                     }
                     .btn_especialidades{
-                        height: 3.5vh;
-                        color: $Amarelo;
-                        font-size: 1.25vw;
+                        width: 52vw;
+                        height: 4vh;
+                        font-size: 4.5vw;
                         margin-right: auto;
                         img, svg{
+                            margin-left: auto;
+                            width: 15%;
                             height: 100%;
+                            margin-top: -1%;
                         }
                     }
                 }
             }
+
+
             
             #equipe{
                 position: relative;
@@ -2542,8 +2527,24 @@ body {
                                     position: relative;
                                     padding: 0.75vw;
                                     transition: all ease-in-out .15s;
+                                    // overflow: hidden;
                                     &:hover{
-                                        transform: scale(1.02);
+                                        .Block_img{
+                                            img{
+                                                transform: scale(1.05);
+                                            }
+                                        }
+                                        &::before{
+                                            backdrop-filter: blur(2px);
+                                        }
+                                        .infosCards{
+                                            .nome{
+                                                transform: scale(1.07);
+                                            }
+                                            .btn_CardTratamento{
+                                                transform: scale(1.07);
+                                            }
+                                        }
                                     }
                                     &::before{
                                         content: '';
@@ -2552,17 +2553,22 @@ body {
                                         left: 0;
                                         width: 100%;
                                         height: 100%;
-                                        background-color: $Marrom;
+                                        background-color: rgba(75, 47, 36, 0.4);
                                         z-index: 2;
-                                        opacity: 0.4;
+                                        transition: all ease-in-out 0.5s;
                                     }
-                                    img{
+                                    .Block_img{
                                         width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
+                                        height: 100%;  
+                                        overflow: hidden;
                                         border-radius: 1vw;
-                                        position: relative;
                                         z-index: 1;
+                                        img{
+                                            transition: all ease-in-out 0.5s;
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
                                     }
                                     .infosCards{
                                         position: absolute;
@@ -2576,6 +2582,7 @@ body {
                                         align-items: center;
                                         justify-content: center;
                                         .nome{
+                                            transition: all ease-in-out 0.5s;
                                             width: 100%;
                                             font-family: $Main-font;
                                             font-size: 1.5vw;
@@ -2585,6 +2592,7 @@ body {
                                             text-align: center;
                                         }
                                         .btn_CardTratamento{
+                                            transition: all ease-in-out 0.5s;
                                             font-family: $Text-font;
                                             height: 3.5vh;
                                             width: 6.25vw;
