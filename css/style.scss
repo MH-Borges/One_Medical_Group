@@ -37,7 +37,7 @@ body {
         justify-content: center;
         transition: all ease-in-out 0.15s;
         background-color: $Marrom;
-        z-index: 99;
+        z-index: 999;
         #menu{
             width: 100%;
             height: 100%;
@@ -226,6 +226,7 @@ body {
             padding: 0 5vw;
             border: none;
             outline: none;
+            overflow: hidden;
         }
         .whats_link{
             position: fixed;
@@ -239,7 +240,7 @@ body {
             align-items: center;
             justify-content: center;
             padding: 1vw;
-            z-index: 999;
+            z-index: 99;
             img, svg{
                 width: 100%;
                 height: 100%;
@@ -527,9 +528,2831 @@ body {
                 }
             }
         }
+        #clinica{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            .patter{
+                position: absolute;
+                width: 100%;
+                height: auto;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                opacity: 0.1;
+            }
+            #Block_textClinica{
+                width: 50%;
+                height: 100%;
+                padding: 4.75vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                h2{
+                    width: 100%;
+                    height: auto;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    padding-left: 2.5vw;
+                    margin-bottom: 7.5vh;
+                    position: relative;
+                    color: $Marrom;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -1.5vh;
+                        left: 0;
+                        width: 30%;
+                        height: 0.35vh;
+                        background-color: $Marrom;
+                    }
+                }
+                p{
+                    width: 100%;
+                    padding-right: 3.5vw;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    color: $Marrom;
+                    line-height: 4vh;
+                }
+                .btn_clinica{
+                    height: 4vh;
+                    color: $Amarelo;
+                    font-size: 1.5vw;
+                    margin-right: auto;
+                    margin-top: 12.5vh;
+                    img, svg{
+                        height: 100%;
+                    }
+                }
+            }
+            #clinica_Img{
+                width: 50%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        #espaco{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            background-color: $Marrom;
+            .patter{
+                position: absolute;
+                width: 100%;
+                height: auto;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                opacity: 0.03;
+                path{
+                    fill: $Creme;
+                }
+            }
+            #Block_VideoEspaco{
+                width: 50%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+                img, svg{
+                    position: absolute;
+                    width: 7.5vw;
+                    height: 7.5vw;
+                    z-index: 5;
+                    transition: all ease-in-out .15s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                #VideoEspaco{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    z-index: 1;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: $Marrom;
+                    z-index: 2;
+                    opacity: 0.5;
+                }
+            }
+            .no-back{
+                &::before{
+                    display: none;
+                }
+            }
+            #Block_textEspaco{
+                width: 50%;
+                height: 100%;
+                padding: 4.75vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+                h2{
+                    width: 100%;
+                    height: auto;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    padding-left: 2.5vw;
+                    margin-bottom: 7.5vh;
+                    position: relative;
+                    color: $Amarelo;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -1.5vh;
+                        left: 0;
+                        width: 35%;
+                        height: 0.35vh;
+                        background-color: $Amarelo;
+                    }
+                }
+                p{
+                    width: 100%;
+                    padding-right: 3.5vw;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    color: $Branco;
+                    line-height: 4vh;
+                }
+            }
+        }
+        #especialidades{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2vh 0;
+            background-color: $Marrom;
+            .especialidadeBlock{
+                width: 25%;
+                height: 50%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                img{
+                    z-index: 2;
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $Marrom;
+                    opacity: 0.25;
+                    z-index: 3;
+                }
+                p{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $Main-font;
+                    font-size: 1.35vw;
+                    color: $Branco;
+                }
+                .amarelo{
+                    background-color: $Amarelo;
+                }
+                .preto{
+                    background-color: $Preto;
+                }
+                .cinza{
+                    background-color: $Cinza;
+                }
+                &:hover{
+                    img{
+                        display: none;
+                    }
+                    &::before{
+                        display: none;
+                    } 
+                }
+            }
+            #textEspecialidade{
+                flex-direction: column;
+                padding: 2vw;
+                &::before{
+                    display: none;
+                    content: '';
+                }
+                h2{
+                    width: 100%;
+                    height: auto;
+                    font-family: $Main-font;
+                    font-size: 1.75vw;
+                    position: relative;
+                    color: $Amarelo;
+                }
+                p{
+                    all: unset;
+                    width: 100%;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 0.9vw;
+                    color: $Branco;
+                    line-height: 3vh;
+                    padding-right: 2vw;
+                    margin: 2.5vh 0;
+                }
+                .btn_especialidades{
+                    height: 3.5vh;
+                    color: $Amarelo;
+                    font-size: 1.25vw;
+                    margin-right: auto;
+                    img, svg{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        #equipe{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7.5vh 5%;
+            .patter{
+                position: absolute;
+                width: 100%;
+                height: auto;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                opacity: 0.1;
+            }
+            h2{
+                width: 100%;
+                height: auto;
+                font-family: $Main-font;
+                font-size: 2.5vw;
+                padding-left: 2.5vw;
+                margin-bottom: 6.5vh;
+                position: relative;
+                color: $Marrom;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -1.5vh;
+                    left: 0;
+                    width: 15%;
+                    height: 0.35vh;
+                    background-color: $Marrom;
+                }
+            }
+            p{
+                width: 100%;
+                padding-right: 3.5vw;
+                font-family: $Text-font;
+                font-weight: 400;
+                font-size: 1vw;
+                color: $Marrom;
+                line-height: 3vh;
+            }
+            .splide{
+                margin-top: 5vh;
+                width: 100%;
+                height: 50vh;
+                .splide__arrows{
+                    .splide__arrow {
+                        width: 3.25vw;
+                        height: 3.25vw;
+                        padding: 0.55vw;
+                        opacity: 1;
+                        background: none;
+                        svg{
+                            fill: $Preto;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        &:disabled{
+                            opacity: 0.3;
+                        }
+                    }
+                    .splide__arrow--prev{
+                        left: -0.5vw;
+                    }
+                    .splide__arrow--next{
+                        right: -0.5vw;
+                    }
+                }
+                .splide__pagination {
+                    display: none;
+                }
+                .splide__track {
+                    width: 95%;
+                    height: 100%;
+                    margin-left: 2.5%;
+                    .splide__list{
+                        width: 100%;
+                        height: 100%;
+                        .splide__slide{
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            padding: 1.5vw;
+                            transition: all ease-in-out .15s;
+                            &:hover{
+                                transform: scale(1.02);
+                            }
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                            .infosCards{
+                                position: absolute;
+                                width: 83%;
+                                height: 20%;
+                                bottom: 3.5%;
+                                left: 8.5%;
+                                z-index: 2;
+                                background-color: $Branco;
+                                border-bottom-left-radius: 0.5vw;
+                                border-bottom-right-radius: 0.5vw;
+                                border: 3px solid $Amarelo;
+                                border-top: none;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                .nome{
+                                    font-family: $Main-font;
+                                    font-size: 1.05vw;
+                                    color: $Marrom;
+                                    margin-bottom: 1.25vh;
+                                }
+                                .espec_medico{
+                                    all: unset;
+                                    font-family: $Text-font;
+                                    font-size: 0.85vw;
+                                    color: $Marrom;
+                                    font-style: italic;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn_equipe{
+                font-family: $Text-font;
+                height: 3.5vh;
+                color: $Preto;
+                font-size: 1.25vw;
+                margin-top: 7.5vh;
+                img, svg{
+                    height: 100%;
+                    path{
+                        fill: $Preto;
+                    }
+                }
+            }
+        }
+        #tratamentos{
+            height: 175vh;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: $Marrom;
+            #tratamentosInfos{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                #Block_textEspaco{
+                    width: 40%;
+                    height: 100%;
+                    padding: 0 3.5vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    h2{
+                        width: 100%;
+                        height: auto;
+                        font-family: $Main-font;
+                        font-size: 2.5vw;
+                        padding-left: 2.5vw;
+                        margin-bottom: 7.5vh;
+                        position: relative;
+                        color: $Amarelo;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom: -1.5vh;
+                            left: 0;
+                            width: 35%;
+                            height: 0.35vh;
+                            background-color: $Amarelo;
+                        }
+                    }
+                    p{
+                        width: 100%;
+                        padding-right: 3.5vw;
+                        font-family: $Text-font;
+                        font-weight: 400;
+                        font-size: 1vw;
+                        color: $Branco;
+                        line-height: 3.75vh;
+                    }
+                    .btn_tratamentos{
+                        font-family: $Text-font;
+                        height: 3.5vh;
+                        color: $Amarelo;
+                        font-size: 1.25vw;
+                        margin-top: 5vh;
+                        margin-right: auto;
+                        img, svg{
+                            height: 100%;
+                        }
+                    }
+                }
+                img{
+                    width: 60%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 2;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 60%;
+                    height: 100%;
+                    background-color: $Marrom;
+                    opacity: 0.35;
+                    z-index: 3;
+                }
+            }
+            #tratamentosimgs{
+                width: 100%;
+                height: 75vh;
+                padding: 5vh 5%;
+                .splide{
+                    width: 100%;
+                    height: 100%;
+                    .splide__arrows{
+                        .splide__arrow {
+                            width: 4.5vw;
+                            height: 4.5vw;
+                            padding: 0.55vw;
+                            opacity: 1;
+                            background: none;
+                            svg{
+                                fill: $Amarelo;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            &:disabled{
+                                opacity: 0.3;
+                            }
+                        }
+                        .splide__arrow--prev{
+                            left: -2vw;
+                        }
+                        .splide__arrow--next{
+                            right: -2vw;
+                        }
+                    }
+                    .splide__pagination {
+                        display: none;
+                    }
+                    .splide__track {
+                        width: 95%;
+                        height: 100%;
+                        margin-left: 2.5%;
+                        .splide__list{
+                            width: 100%;
+                            height: 100%;
+                            .splide__slide{
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                padding: 0.75vw;
+                                transition: all ease-in-out .15s;
+                                &:hover{
+                                    transform: scale(1.02);
+                                }
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: $Marrom;
+                                    z-index: 2;
+                                    opacity: 0.4;
+                                }
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    border-radius: 1vw;
+                                    position: relative;
+                                    z-index: 1;
+                                }
+                                .infosCards{
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 30%;
+                                    bottom: 7.5%;
+                                    left: 0;
+                                    z-index: 9;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .nome{
+                                        width: 100%;
+                                        font-family: $Main-font;
+                                        font-size: 1.5vw;
+                                        color: $Branco;
+                                        margin-bottom: 5vh;
+                                        padding: 0 2vw;
+                                        text-align: center;
+                                    }
+                                    .btn_CardTratamento{
+                                        font-family: $Text-font;
+                                        height: 3.5vh;
+                                        width: 6.25vw;
+                                        color: $Branco;
+                                        font-size: 1vw;
+                                        outline: 2px solid $Branco;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 5vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #allInOne{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            #Block_VideoAllinOne{
+                width: 50%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+                img, svg{
+                    position: absolute;
+                    width: 7.5vw;
+                    height: 7.5vw;
+                    z-index: 5;
+                    transition: all ease-in-out .15s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                #VideoAllinOne{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    z-index: 1;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: $Marrom;
+                    z-index: 2;
+                    opacity: 0.5;
+                }
+            }
+            .no-back{
+                &::before{
+                    display: none;
+                }
+            }
+            #Block_textAllinOne{
+                width: 50%;
+                height: 100%;
+                padding: 5vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+                h2{
+                    width: 100%;
+                    height: auto;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    padding-right: 2.5vw;
+                    margin-bottom: 7.5vh;
+                    position: relative;
+                    color: $Marrom;
+                    text-align: right;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -1.5vh;
+                        right: 0;
+                        width: 35%;
+                        height: 0.35vh;
+                        background-color: $Marrom;
+                    }
+                }
+                p{
+                    width: 100%;
+                    padding-left: 3.5vw;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    text-align: right;
+                    color: $Marrom;
+                    line-height: 4vh;
+                }
+                span{
+                    width: 100%;
+                    padding-left: 10vw;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1.1vw;
+                    text-align: right;
+                    color: $Preto;
+                    line-height: 3.5vh;
+                    margin-top: 12.5vh;
+                }
+                .btn_AllInOne{
+                    font-family: $Text-font;
+                    height: 4.5vh;
+                    width: 13.5vw;
+                    background-color: $Amarelo;
+                    color: $Preto;
+                    font-size: 1.25vw;
+                    margin-top: 3vh;
+                    margin-left: auto;
+                }
+            }
+        }
+        #concierge{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            background-color: $Marrom;
+            #Block_textConcierge{
+                width: 50%;
+                height: 100%;
+                padding: 0 7.5vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+                h2{
+                    width: 100%;
+                    height: auto;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    padding-right: 2.5vw;
+                    margin-bottom: 7.5vh;
+                    position: relative;
+                    color: $Amarelo;
+                    text-align: right;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -1.5vh;
+                        right: 0;
+                        width: 35%;
+                        height: 0.35vh;
+                        background-color: $Amarelo;
+                    }
+                }
+                p{
+                    width: 100%;
+                    padding-left: 5vw;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    text-align: right;
+                    color: $Branco;
+                    line-height: 4vh;
+                }
+                span{
+                    width: 100%;
+                    padding-left: 10vw;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1.1vw;
+                    text-align: right;
+                    color: $Creme;
+                    line-height: 3.5vh;
+                    margin-top: 12.5vh;
+                }
+                .btn_Concierge{
+                    font-family: $Text-font;
+                    height: 4.5vh;
+                    width: 13.5vw;
+                    background-color: $Amarelo;
+                    color: $Preto;
+                    font-size: 1.25vw;
+                    margin-top: 5vh;
+                    margin-left: auto;
+                }
+            }
+            img, svg{
+                width: 50%;
+                height: 100%;
+                z-index: 2;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 50%;
+                height: 100%;
+                background-color: $Marrom;
+                opacity: 0.35;
+                z-index: 3;
+            }
+        }
+        #depos{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{
+                width: 100%;
+                height: auto;
+                font-family: $Main-font;
+                font-size: 2.5vw;
+                padding-left: 2.5vw;
+                margin-bottom: 3.5vh;
+                position: relative;
+                color: $Marrom;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -1.5vh;
+                    left: 0;
+                    width: 15%;
+                    height: 0.35vh;
+                    background-color: $Marrom;
+                }
+            }
+            p{
+                width: 100%;
+                font-family: $Text-font;
+                font-weight: 400;
+                font-size: 1vw;
+                color: $Marrom;
+                line-height: 3vh;
+            }
+            .splide{
+                width: 100%;
+                height: 50vh;
+                margin-top: 5vh;
+                .splide__arrows{
+                    .splide__arrow {
+                        width: 3.25vw;
+                        height: 3.25vw;
+                        padding: 0.55vw;
+                        opacity: 1;
+                        background: none;
+                        svg{
+                            fill: $Marrom;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        &:disabled{
+                            opacity: 0.3;
+                        }
+                    }
+                    .splide__arrow--prev{
+                        left: -0.5vw;
+                    }
+                    .splide__arrow--next{
+                        right: -0.5vw;
+                    }
+                }
+                .splide__pagination {
+                    display: none;
+                }
+                .splide__track {
+                    width: 95%;
+                    height: 100%;
+                    margin-left: 2.5%;
+                    .splide__list{
+                        width: 100%;
+                        height: 100%;
+                        .splide__slide{
+                            width: 100%;
+                            height: 100%;
+                            padding: 1.5vw;
+                            transition: all ease-in-out .15s;
+                            z-index: 2;
+                            &:hover{
+                                transform: scale(1.02);
+                            }
+                            .Block_VideoDepo{
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                img, svg{
+                                    position: absolute;
+                                    width: 7.5vw;
+                                    height: 7.5vw;
+                                    left: 42%;
+                                    top: 30%;
+                                    z-index: 5;
+                                    transition: all ease-in-out .15s;
+                                    &:hover{
+                                        transform: scale(1.1);
+                                    }
+                                }
+                                video{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    position: relative;
+                                    z-index: 1;
+                                    border-radius: 1vw;
+                                }
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    left: 0;
+                                    background-color: $Marrom;
+                                    z-index: 2;
+                                    opacity: 0.5;
+                                    border-radius: 1vw;
+                                }
+                            }
+                            .no-back{
+                                &::before{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #blog{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $Marrom;
+            h2{
+                width: 100%;
+                height: auto;
+                font-family: $Main-font;
+                font-size: 2.5vw;
+                padding-left: 2.5vw;
+                margin-bottom: 5vh;
+                position: relative;
+                color: $Amarelo;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -1.5vh;
+                    left: 0;
+                    width: 15%;
+                    height: 0.35vh;
+                    background-color: $Amarelo;
+                }
+            }
+            p{
+                width: 100%;
+                font-family: $Text-font;
+                font-weight: 400;
+                font-size: 1vw;
+                color: $Creme;
+                line-height: 3vh;
+            }
+            #Blog_cards{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 35vh;
+                width: 100%;
+                margin-top: 5vh;
+                .cards{
+                    width: 32%;
+                    height: 100%;
+                    position: relative;
+                    overflow: hidden;
+                    padding: 1vw;
+                    display: flex;
+                    flex-direction: row;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: linear-gradient(180deg, rgba(75,47,36,0) 0%, rgba(75,47,36, 0.9) 100%);
+                        z-index: 2;
+                        border-radius: 1vw;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: 1;
+                        border-radius: 1.25vw;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    .data, .doutor, .titulo, .btn_BlogCard{
+                        z-index: 5;
+                        position: relative;
+                    }
+                    .data, .doutor{
+                        background-color: $Preto;
+                        font-family: $Second-font;
+                        font-size: 1vw;
+                        color: $Branco;
+                        width: 9vw;
+                        height: 2.75vh;
+                        position: absolute;
+                        top: 1vw;
+                        left: 1vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        line-height: 0;
+                        border-radius: 0.5vw;
+                    }
+                    .doutor{
+                        left: auto;
+                        right: 1vw;
+                    }
+                    .titulo{
+                        width: 73%;
+                        margin-top: auto;
+                        font-family: $Main-font;
+                        font-size: 1vw;
+                        color: $Branco;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .btn_BlogCard{
+                        font-family: $Text-font;
+                        height: 3.5vh;
+                        width: 27%;
+                        color: $Branco;
+                        font-size: 1vw;
+                        margin-top: 5vh;
+                        margin-top: auto;
+                        img, svg{
+                            height: 95%;
+                            width: 25%;
+                            margin-left: auto;
+                            path{
+                                fill: $Branco;
+                            }
+                        }
+                    }
+                }
+            }
+            .btn_blog{
+                font-family: $Text-font;
+                height: 3.5vh;
+                color: $Amarelo;
+                font-size: 1.25vw;
+                margin-top: 5vh;
+                img, svg{
+                    height: 100%;
+                }
+            }
+        }
+        #contatos{
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 60%;
+                height: 85%;
+                left: 0;
+                top: 7.5%;
+                border: 3px solid $Amarelo;
+                border-left: none;
+                border-top-right-radius: 1.5vw;
+                border-bottom-right-radius: 1.5vw;
+                z-index: 2;
+            }
+            iframe{
+                width: 60%;
+                height: 85%;
+                filter: grayscale(100%);
+                border-top-right-radius: 1.5vw;
+                border-bottom-right-radius: 1.5vw;
+                outline: none;
+                border: none;
+                z-index: 1;
+            }
+            #infosContato{
+                width: 40%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0 4vw;
+                #LogoContato{
+                    margin-bottom: 7.5vh;
+                    path{
+                        fill: $Preto;
+                    }
+                }
+                .blockContato{
+                    margin: 2vh 0;
+                    width: 100%;
+                    height: 4vh;
+                    display: flex;
+                    align-items: center;
+                    img, svg{
+                        width: 10%;
+                        height: 100%;
+                    }
+                    p{
+                        margin-left: 1vw;
+                        font-family: $Second-font;
+                        font-size: 1.1vw;
+                        color: $Preto;
+                    }
+                }
+            }
+        }
+        #form{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            h2{
+                width: 100%;
+                height: auto;
+                font-family: $Main-font;
+                font-size: 2.5vw;
+                margin: 2vh 0;
+                position: relative;
+                color: $Marrom;
+                text-align: center;
+            }
+            p{
+                width: 100%;
+                font-family: $Text-font;
+                font-weight: 400;
+                font-size: 1vw;
+                color: $Marrom;
+                line-height: 3vh;
+                text-align: center;
+            }
+            .formBlock{
+                width: 60%;
+                height: 45vh;
+                margin-top: 5vh;
+                position: relative;
+                form{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    position: relative;
+                    .BlockBox{
+                        width: 100%;
+                        height: 13%;
+                        position: relative;
+                        margin: 2vh 0;
+                        display: flex;
+                        align-items: center;
+                        input, textarea{
+                            all: unset;
+                            width: 100% !important;
+                            height: 100%;
+                            padding: 0 1.25vw;
+                            font-family: $Second-font;
+                            font-size: 1vw;
+                            color: $Preto;
+                            border-bottom: 4px solid $Amarelo;
+                            z-index: 9;
+                        }
+                        p, span{
+                            all: unset;
+                            position: absolute;
+                            left: 1vw;
+                            font-family: $Text-font;
+                            font-weight: 900;
+                            font-size: 1vw;
+                            color: $Marrom;
+                            transition: 0.5s;
+                        }
+                        &:nth-child(1){
+                            width: 47.5%;
+                            span{
+                                font-size: 1.2vw;
+                                left: 9.5vw;
+                                color: $Marrom;
+                            }
+                        }
+                        &:nth-child(2){
+                            width: 47.5%;
+                            margin-left: 5%;
+                            span{
+                                font-size: 1.2vw;
+                                left: 4.75vw;
+                                color: $Marrom;
+                            }
+                        }
+                        &:nth-child(4){
+                            height: 30%;
+                            input, textarea{
+                                height: 100%;
+                                padding: 3vh 3vw 3vh 1.25vw;
+                                padding-right: 2vw;
+                                line-height: 2vh;
+                            }
+                            p{
+                                top: 10%;
+                            }
+                        }
+                    }
+                    .BlockBox input:focus ~ p, input:valid ~ p, input:focus ~ span, input:valid ~ span, textarea:focus ~ p, textarea:valid ~ p{
+                        transform:translate(-0.75vw, -3.5vh);
+                        font-size: 0.9vw;
+                    }
+                    .termosPrivacidade{
+                        height: 3vh;
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        left: 0;
+                        bottom: 13%;
+                        input{
+                            height: 100%;
+                            width: 0.85vw;
+                            border: none;
+                            outline: none;
+                        }
+                        h3{
+                            font-family: $Text-font;
+                            font-size: 0.9vw;
+                            color: $Preto;
+                            margin-left: 0.5vw;
+                            a{
+                                color: $Marrom;
+                                text-decoration: underline !important;
+                                font-size: 1vw;
+                                &:hover{
+                                    color: $Amarelo;
+                                }
+                            }
+                        }
+                    }
+                    #btn_form{
+                        font-family: $Text-font;
+                        height: 4.5vh;
+                        width: 25%;
+                        background-color: $Amarelo;
+                        color: $Preto;
+                        font-size: 1.15vw;
+                        margin-left: 37.5%;
+                        margin-top: 8vh;
+                    }
+                }
+                #msg_form{
+                    position: absolute;
+                    top: 0;
+                    left: 102.5%;
+                    width: 37.5%;
+                    min-height: 10vh;
+                    max-height: 35vh;
+                    overflow-y: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $Text-font;
+                    font-weight: 700;
+                    font-size: 1vw;
+                    text-align: center;
+                    z-index: 999;
+                    line-height: 3vh;
+                }
+                .text-success{
+                    color: green;
+                }
+                .text-danger{
+                    color: red;
+                }
+                .text-warning{
+                    color: orange;
+                }
+            }
+        }
     }
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 /* MOBILE */
-@media only screen and (max-width: 479px){}
+@media only screen and (max-width: 479px){
+
+    body {
+        .btns{
+            font-size: 2.25vw;
+            padding: 1vh 0;
+        }
+        header{
+            height: 90px;
+            #menu{
+                padding: 0 5vw;
+                li{
+                    height: 50%;
+                    .btn_agendamento{
+                        display: none;
+                    }
+                    &:last-child{
+                        width: 9vw;
+                        #sideMenu_btn{
+                            height: 0.75vh;
+                            &::before, &::after{
+                                top: -1.25vh;
+                            }
+                            &::after{
+                                top: 1.3vh;
+                            }
+                        }
+                    }
+                }
+            }
+            #sideMenu{
+                width: 100vw;
+                right: -100vw;
+                
+                button{
+                    top: -16vh;
+                    right: 40vw;
+                    width: 10vw;
+                    height: 0.8vh;
+                    background-color: $Branco;
+                    border-radius: 0.75vw;
+                    position: relative;
+                    transform: rotate(45deg);
+                    &::before{
+                        border-radius: 0.75vw;
+                    }
+                    &:hover{
+                        transform:rotate(45deg) scale(1.2);
+                    }
+                }
+                .itensMenu{
+                    font-size: 5.5vw;
+                }
+                #contato_sideMenu{
+                    bottom: 1vh;
+                    height: 6vh;
+                    padding: 0 3vw;
+                    .btn_agendamento{
+                        width: 33vw;
+                        font-size: 2.75vw;
+                        border-radius: 1.5vw;
+                    }
+                    .redes_sideMenu{
+                        height: 5vh;
+                        width: 5vh;
+                        margin: 0 1vw;
+                        border: 2px solid $Branco;
+                        img, svg{
+                            padding: 1.5vw;
+                        }
+                    }
+                    .marginLeft{
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+        main{
+            section{
+                padding: 0 2.5vw;
+            }
+            .whats_link{
+                bottom: 2vh;
+                right: 3vw;
+                width: 12.5vw;
+                height: 12.5vw;
+                padding: 2.25vw;
+            }
+        }
+
+        footer{
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5vw;
+            background-color: $Marrom;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 8vh;
+                background-color: $Preto;
+                bottom: 0;
+                left: 0;
+                z-index: 3;
+            }
+            #bigFooter{
+                width: 100%;
+                height: 32vh;
+                display: flex;
+                flex-wrap: wrap;
+                #logoRodape{
+                    width: 100%;
+                    height: 10vh;
+                    object-fit: contain;
+                    padding-top: 4vh;
+                }
+                #consulta_rodape, #endereco_rodape,#telefone_rodape,#redes_rodape{
+                    width: 20%;
+                    height: 22vh;
+                    padding: 3vh 1.25vw 0;
+                    h5{
+                        font-family: $Main-font;
+                        font-size: 1.1vw;
+                        color: $Branco;
+                    }
+                    p{
+                        width: 100%;
+                        font-family: $Text-font;
+                        font-weight: 400;
+                        font-size: 0.9vw;
+                        color: $Branco;
+                        line-height: 2.5vh;
+                        margin-top: 0.5vh;
+                    }
+                }
+                #consulta_rodape{
+                    margin-left: 10%;
+                    .btn_agendamento{
+                        font-family: $Main-font;
+                        margin-top: 3.5vh;
+                        border: 2px solid $Branco;
+                        width: 12.5vw;
+                        padding: 0.75vh 0;
+                    }
+                }
+                #endereco_rodape, #telefone_rodape{
+                    p{
+                        line-height: 1.25vh;
+                        margin-top: 1.25vh;
+                    }
+                }
+                #telefone_rodape{
+                    padding-right: 5.25vw;
+                    p{
+                        text-align: right;
+                    }
+                }
+                #redes_rodape{
+                    display: flex;
+                    flex-wrap: wrap;
+                    h5{
+                        width: 100%;
+                    }
+                    a{
+                        width: 2.5vw;
+                        height: 2.5vw;
+                        border: 2px solid $Branco;
+                        border-radius: 50%;
+                        margin: 0 0.5vw;
+                        margin-top: -7vh;
+                        transition: all ease-in-out .2s;
+                        img, svg{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            padding: 0.55vw;
+                            path{
+                                fill: $Branco;
+                                stroke: $Branco;
+                            }
+                        }
+                        &:nth-child(2){
+                            margin-left: 0;
+                        }
+                        &:nth-child(4){
+                            img,svg{
+                                path{
+                                    fill: none;
+                                }
+                            }
+                        }
+                        &:hover{
+                            transform: scale(1.15);
+                        }
+                    }
+                }
+            }
+            #smallFooter{
+                width: 100%;
+                height: 8vh;
+                display: flex;
+                align-items: center;
+                z-index: 5;
+                p{
+                    font-family: $Text-font;
+                    font-weight: 600;
+                    font-size: 1vw;
+                    color: $Branco;
+                    span{
+                        font-weight: 600;
+                    }
+                }
+                a{
+                    width: 7.5vw;
+                    height: 60%;
+                    margin-left: auto;
+                    transition: all ease-in-out .15s;
+                    img, svg{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    
+        #Main_index{
+            #espaco, #especialidades, #depos, #blog, #contatos, #form{
+                height: auto;
+            }
+            #home{
+                padding: 0;
+                padding-top: 90px;
+                .sideBanner{
+                    display: none;
+                }
+                #banner{
+                    width: 100%;
+                    align-items: center;
+                    padding: 0 10vw;
+                    h2{
+                        font-size: 8vw;
+                        text-align: center;
+                    }
+                    h3{
+                        font-size: 4vw;
+                        text-align: center;
+                        margin-top: 5vh;
+                    }
+                    .btn_banner{
+                        padding-right: 0;
+                        margin-top: 15vh;
+                        font-size: 4vw;
+                        img, svg{
+                            height: 2vh;
+                            bottom: 2.15vh;
+                            right: -8vw;
+                        }
+                    }
+                }
+            }
+            #clinica{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                .patter{
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    opacity: 0.1;
+                }
+                #Block_textClinica{
+                    width: 50%;
+                    height: 100%;
+                    padding: 4.75vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    h2{
+                        width: 100%;
+                        height: auto;
+                        font-family: $Main-font;
+                        font-size: 2.5vw;
+                        padding-left: 2.5vw;
+                        margin-bottom: 7.5vh;
+                        position: relative;
+                        color: $Marrom;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom: -1.5vh;
+                            left: 0;
+                            width: 30%;
+                            height: 0.35vh;
+                            background-color: $Marrom;
+                        }
+                    }
+                    p{
+                        width: 100%;
+                        padding-right: 3.5vw;
+                        font-family: $Text-font;
+                        font-weight: 400;
+                        font-size: 1vw;
+                        color: $Marrom;
+                        line-height: 4vh;
+                    }
+                    .btn_clinica{
+                        height: 4vh;
+                        color: $Amarelo;
+                        font-size: 1.5vw;
+                        margin-right: auto;
+                        margin-top: 12.5vh;
+                        img, svg{
+                            height: 100%;
+                        }
+                    }
+                }
+                #clinica_Img{
+                    width: 50%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            #espaco{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                background-color: $Marrom;
+                .patter{
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    opacity: 0.03;
+                    path{
+                        fill: $Creme;
+                    }
+                }
+                #Block_VideoEspaco{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                    img, svg{
+                        position: absolute;
+                        width: 7.5vw;
+                        height: 7.5vw;
+                        z-index: 5;
+                        transition: all ease-in-out .15s;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    #VideoEspaco{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: relative;
+                        z-index: 1;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: $Marrom;
+                        z-index: 2;
+                        opacity: 0.5;
+                    }
+                }
+                .no-back{
+                    &::before{
+                        display: none;
+                    }
+                }
+                #Block_textEspaco{
+                    width: 50%;
+                    height: 100%;
+                    padding: 4.75vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                    h2{
+                        width: 100%;
+                        height: auto;
+                        font-family: $Main-font;
+                        font-size: 2.5vw;
+                        padding-left: 2.5vw;
+                        margin-bottom: 7.5vh;
+                        position: relative;
+                        color: $Amarelo;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom: -1.5vh;
+                            left: 0;
+                            width: 35%;
+                            height: 0.35vh;
+                            background-color: $Amarelo;
+                        }
+                    }
+                    p{
+                        width: 100%;
+                        padding-right: 3.5vw;
+                        font-family: $Text-font;
+                        font-weight: 400;
+                        font-size: 1vw;
+                        color: $Branco;
+                        line-height: 4vh;
+                    }
+                }
+            }
+            #especialidades{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 2vh 0;
+                background-color: $Marrom;
+                .especialidadeBlock{
+                    width: 25%;
+                    height: 50%;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    img{
+                        z-index: 2;
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $Marrom;
+                        opacity: 0.25;
+                        z-index: 3;
+                    }
+                    p{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: $Main-font;
+                        font-size: 1.35vw;
+                        color: $Branco;
+                    }
+                    .amarelo{
+                        background-color: $Amarelo;
+                    }
+                    .preto{
+                        background-color: $Preto;
+                    }
+                    .cinza{
+                        background-color: $Cinza;
+                    }
+                    &:hover{
+                        img{
+                            display: none;
+                        }
+                        &::before{
+                            display: none;
+                        } 
+                    }
+                }
+                #textEspecialidade{
+                    flex-direction: column;
+                    padding: 2vw;
+                    &::before{
+                        display: none;
+                        content: '';
+                    }
+                    h2{
+                        width: 100%;
+                        height: auto;
+                        font-family: $Main-font;
+                        font-size: 1.75vw;
+                        position: relative;
+                        color: $Amarelo;
+                    }
+                    p{
+                        all: unset;
+                        width: 100%;
+                        font-family: $Text-font;
+                        font-weight: 400;
+                        font-size: 0.9vw;
+                        color: $Branco;
+                        line-height: 3vh;
+                        padding-right: 2vw;
+                        margin: 2.5vh 0;
+                    }
+                    .btn_especialidades{
+                        height: 3.5vh;
+                        color: $Amarelo;
+                        font-size: 1.25vw;
+                        margin-right: auto;
+                        img, svg{
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            #equipe{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 7.5vh 5%;
+                .patter{
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    opacity: 0.1;
+                }
+                h2{
+                    width: 100%;
+                    height: auto;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    padding-left: 2.5vw;
+                    margin-bottom: 6.5vh;
+                    position: relative;
+                    color: $Marrom;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -1.5vh;
+                        left: 0;
+                        width: 15%;
+                        height: 0.35vh;
+                        background-color: $Marrom;
+                    }
+                }
+                p{
+                    width: 100%;
+                    padding-right: 3.5vw;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    color: $Marrom;
+                    line-height: 3vh;
+                }
+                .splide{
+                    margin-top: 5vh;
+                    width: 100%;
+                    height: 50vh;
+                    .splide__arrows{
+                        .splide__arrow {
+                            width: 3.25vw;
+                            height: 3.25vw;
+                            padding: 0.55vw;
+                            opacity: 1;
+                            background: none;
+                            svg{
+                                fill: $Preto;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            &:disabled{
+                                opacity: 0.3;
+                            }
+                        }
+                        .splide__arrow--prev{
+                            left: -0.5vw;
+                        }
+                        .splide__arrow--next{
+                            right: -0.5vw;
+                        }
+                    }
+                    .splide__pagination {
+                        display: none;
+                    }
+                    .splide__track {
+                        width: 95%;
+                        height: 100%;
+                        margin-left: 2.5%;
+                        .splide__list{
+                            width: 100%;
+                            height: 100%;
+                            .splide__slide{
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                padding: 1.5vw;
+                                transition: all ease-in-out .15s;
+                                &:hover{
+                                    transform: scale(1.02);
+                                }
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                }
+                                .infosCards{
+                                    position: absolute;
+                                    width: 83%;
+                                    height: 20%;
+                                    bottom: 3.5%;
+                                    left: 8.5%;
+                                    z-index: 2;
+                                    background-color: $Branco;
+                                    border-bottom-left-radius: 0.5vw;
+                                    border-bottom-right-radius: 0.5vw;
+                                    border: 3px solid $Amarelo;
+                                    border-top: none;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .nome{
+                                        font-family: $Main-font;
+                                        font-size: 1.05vw;
+                                        color: $Marrom;
+                                        margin-bottom: 1.25vh;
+                                    }
+                                    .espec_medico{
+                                        all: unset;
+                                        font-family: $Text-font;
+                                        font-size: 0.85vw;
+                                        color: $Marrom;
+                                        font-style: italic;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn_equipe{
+                    font-family: $Text-font;
+                    height: 3.5vh;
+                    color: $Preto;
+                    font-size: 1.25vw;
+                    margin-top: 7.5vh;
+                    img, svg{
+                        height: 100%;
+                        path{
+                            fill: $Preto;
+                        }
+                    }
+                }
+            }
+            #tratamentos{
+                height: 175vh;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                background-color: $Marrom;
+                #tratamentosInfos{
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    #Block_textEspaco{
+                        width: 40%;
+                        height: 100%;
+                        padding: 0 3.5vw;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        h2{
+                            width: 100%;
+                            height: auto;
+                            font-family: $Main-font;
+                            font-size: 2.5vw;
+                            padding-left: 2.5vw;
+                            margin-bottom: 7.5vh;
+                            position: relative;
+                            color: $Amarelo;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                bottom: -1.5vh;
+                                left: 0;
+                                width: 35%;
+                                height: 0.35vh;
+                                background-color: $Amarelo;
+                            }
+                        }
+                        p{
+                            width: 100%;
+                            padding-right: 3.5vw;
+                            font-family: $Text-font;
+                            font-weight: 400;
+                            font-size: 1vw;
+                            color: $Branco;
+                            line-height: 3.75vh;
+                        }
+                        .btn_tratamentos{
+                            font-family: $Text-font;
+                            height: 3.5vh;
+                            color: $Amarelo;
+                            font-size: 1.25vw;
+                            margin-top: 5vh;
+                            margin-right: auto;
+                            img, svg{
+                                height: 100%;
+                            }
+                        }
+                    }
+                    img{
+                        width: 60%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: 2;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 60%;
+                        height: 100%;
+                        background-color: $Marrom;
+                        opacity: 0.35;
+                        z-index: 3;
+                    }
+                }
+                #tratamentosimgs{
+                    width: 100%;
+                    height: 75vh;
+                    padding: 5vh 5%;
+                    .splide{
+                        width: 100%;
+                        height: 100%;
+                        .splide__arrows{
+                            .splide__arrow {
+                                width: 4.5vw;
+                                height: 4.5vw;
+                                padding: 0.55vw;
+                                opacity: 1;
+                                background: none;
+                                svg{
+                                    fill: $Amarelo;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                &:disabled{
+                                    opacity: 0.3;
+                                }
+                            }
+                            .splide__arrow--prev{
+                                left: -2vw;
+                            }
+                            .splide__arrow--next{
+                                right: -2vw;
+                            }
+                        }
+                        .splide__pagination {
+                            display: none;
+                        }
+                        .splide__track {
+                            width: 95%;
+                            height: 100%;
+                            margin-left: 2.5%;
+                            .splide__list{
+                                width: 100%;
+                                height: 100%;
+                                .splide__slide{
+                                    width: 100%;
+                                    height: 100%;
+                                    position: relative;
+                                    padding: 0.75vw;
+                                    transition: all ease-in-out .15s;
+                                    &:hover{
+                                        transform: scale(1.02);
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background-color: $Marrom;
+                                        z-index: 2;
+                                        opacity: 0.4;
+                                    }
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        border-radius: 1vw;
+                                        position: relative;
+                                        z-index: 1;
+                                    }
+                                    .infosCards{
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 30%;
+                                        bottom: 7.5%;
+                                        left: 0;
+                                        z-index: 9;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        justify-content: center;
+                                        .nome{
+                                            width: 100%;
+                                            font-family: $Main-font;
+                                            font-size: 1.5vw;
+                                            color: $Branco;
+                                            margin-bottom: 5vh;
+                                            padding: 0 2vw;
+                                            text-align: center;
+                                        }
+                                        .btn_CardTratamento{
+                                            font-family: $Text-font;
+                                            height: 3.5vh;
+                                            width: 6.25vw;
+                                            color: $Branco;
+                                            font-size: 1vw;
+                                            outline: 2px solid $Branco;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border-radius: 5vw;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #allInOne{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                #Block_VideoAllinOne{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                    img, svg{
+                        position: absolute;
+                        width: 7.5vw;
+                        height: 7.5vw;
+                        z-index: 5;
+                        transition: all ease-in-out .15s;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    #VideoAllinOne{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: relative;
+                        z-index: 1;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: $Marrom;
+                        z-index: 2;
+                        opacity: 0.5;
+                    }
+                }
+                .no-back{
+                    &::before{
+                        display: none;
+                    }
+                }
+                #Block_textAllinOne{
+                    width: 50%;
+                    height: 100%;
+                    padding: 5vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                    h2{
+                        width: 100%;
+                        height: auto;
+                        font-family: $Main-font;
+                        font-size: 2.5vw;
+                        padding-right: 2.5vw;
+                        margin-bottom: 7.5vh;
+                        position: relative;
+                        color: $Marrom;
+                        text-align: right;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom: -1.5vh;
+                            right: 0;
+                            width: 35%;
+                            height: 0.35vh;
+                            background-color: $Marrom;
+                        }
+                    }
+                    p{
+                        width: 100%;
+                        padding-left: 3.5vw;
+                        font-family: $Text-font;
+                        font-weight: 400;
+                        font-size: 1vw;
+                        text-align: right;
+                        color: $Marrom;
+                        line-height: 4vh;
+                    }
+                    span{
+                        width: 100%;
+                        padding-left: 10vw;
+                        font-family: $Text-font;
+                        font-weight: 400;
+                        font-size: 1.1vw;
+                        text-align: right;
+                        color: $Preto;
+                        line-height: 3.5vh;
+                        margin-top: 12.5vh;
+                    }
+                    .btn_AllInOne{
+                        font-family: $Text-font;
+                        height: 4.5vh;
+                        width: 13.5vw;
+                        background-color: $Amarelo;
+                        color: $Preto;
+                        font-size: 1.25vw;
+                        margin-top: 3vh;
+                        margin-left: auto;
+                    }
+                }
+            }
+            #concierge{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                background-color: $Marrom;
+                #Block_textConcierge{
+                    width: 50%;
+                    height: 100%;
+                    padding: 0 7.5vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                    h2{
+                        width: 100%;
+                        height: auto;
+                        font-family: $Main-font;
+                        font-size: 2.5vw;
+                        padding-right: 2.5vw;
+                        margin-bottom: 7.5vh;
+                        position: relative;
+                        color: $Amarelo;
+                        text-align: right;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom: -1.5vh;
+                            right: 0;
+                            width: 35%;
+                            height: 0.35vh;
+                            background-color: $Amarelo;
+                        }
+                    }
+                    p{
+                        width: 100%;
+                        padding-left: 5vw;
+                        font-family: $Text-font;
+                        font-weight: 400;
+                        font-size: 1vw;
+                        text-align: right;
+                        color: $Branco;
+                        line-height: 4vh;
+                    }
+                    span{
+                        width: 100%;
+                        padding-left: 10vw;
+                        font-family: $Text-font;
+                        font-weight: 400;
+                        font-size: 1.1vw;
+                        text-align: right;
+                        color: $Creme;
+                        line-height: 3.5vh;
+                        margin-top: 12.5vh;
+                    }
+                    .btn_Concierge{
+                        font-family: $Text-font;
+                        height: 4.5vh;
+                        width: 13.5vw;
+                        background-color: $Amarelo;
+                        color: $Preto;
+                        font-size: 1.25vw;
+                        margin-top: 5vh;
+                        margin-left: auto;
+                    }
+                }
+                img, svg{
+                    width: 50%;
+                    height: 100%;
+                    z-index: 2;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 50%;
+                    height: 100%;
+                    background-color: $Marrom;
+                    opacity: 0.35;
+                    z-index: 3;
+                }
+            }
+            #depos{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h2{
+                    width: 100%;
+                    height: auto;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    padding-left: 2.5vw;
+                    margin-bottom: 3.5vh;
+                    position: relative;
+                    color: $Marrom;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -1.5vh;
+                        left: 0;
+                        width: 15%;
+                        height: 0.35vh;
+                        background-color: $Marrom;
+                    }
+                }
+                p{
+                    width: 100%;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    color: $Marrom;
+                    line-height: 3vh;
+                }
+                .splide{
+                    width: 100%;
+                    height: 50vh;
+                    margin-top: 5vh;
+                    .splide__arrows{
+                        .splide__arrow {
+                            width: 3.25vw;
+                            height: 3.25vw;
+                            padding: 0.55vw;
+                            opacity: 1;
+                            background: none;
+                            svg{
+                                fill: $Marrom;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            &:disabled{
+                                opacity: 0.3;
+                            }
+                        }
+                        .splide__arrow--prev{
+                            left: -0.5vw;
+                        }
+                        .splide__arrow--next{
+                            right: -0.5vw;
+                        }
+                    }
+                    .splide__pagination {
+                        display: none;
+                    }
+                    .splide__track {
+                        width: 95%;
+                        height: 100%;
+                        margin-left: 2.5%;
+                        .splide__list{
+                            width: 100%;
+                            height: 100%;
+                            .splide__slide{
+                                width: 100%;
+                                height: 100%;
+                                padding: 1.5vw;
+                                transition: all ease-in-out .15s;
+                                z-index: 2;
+                                &:hover{
+                                    transform: scale(1.02);
+                                }
+                                .Block_VideoDepo{
+                                    width: 100%;
+                                    height: 100%;
+                                    position: relative;
+                                    img, svg{
+                                        position: absolute;
+                                        width: 7.5vw;
+                                        height: 7.5vw;
+                                        left: 42%;
+                                        top: 30%;
+                                        z-index: 5;
+                                        transition: all ease-in-out .15s;
+                                        &:hover{
+                                            transform: scale(1.1);
+                                        }
+                                    }
+                                    video{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        position: relative;
+                                        z-index: 1;
+                                        border-radius: 1vw;
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        background-color: $Marrom;
+                                        z-index: 2;
+                                        opacity: 0.5;
+                                        border-radius: 1vw;
+                                    }
+                                }
+                                .no-back{
+                                    &::before{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #blog{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: $Marrom;
+                h2{
+                    width: 100%;
+                    height: auto;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    padding-left: 2.5vw;
+                    margin-bottom: 5vh;
+                    position: relative;
+                    color: $Amarelo;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -1.5vh;
+                        left: 0;
+                        width: 15%;
+                        height: 0.35vh;
+                        background-color: $Amarelo;
+                    }
+                }
+                p{
+                    width: 100%;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    color: $Creme;
+                    line-height: 3vh;
+                }
+                #Blog_cards{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 35vh;
+                    width: 100%;
+                    margin-top: 5vh;
+                    .cards{
+                        width: 32%;
+                        height: 100%;
+                        position: relative;
+                        overflow: hidden;
+                        padding: 1vw;
+                        display: flex;
+                        flex-direction: row;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            background: linear-gradient(180deg, rgba(75,47,36,0) 0%, rgba(75,47,36, 0.9) 100%);
+                            z-index: 2;
+                            border-radius: 1vw;
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            z-index: 1;
+                            border-radius: 1.25vw;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                        .data, .doutor, .titulo, .btn_BlogCard{
+                            z-index: 5;
+                            position: relative;
+                        }
+                        .data, .doutor{
+                            background-color: $Preto;
+                            font-family: $Second-font;
+                            font-size: 1vw;
+                            color: $Branco;
+                            width: 9vw;
+                            height: 2.75vh;
+                            position: absolute;
+                            top: 1vw;
+                            left: 1vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            line-height: 0;
+                            border-radius: 0.5vw;
+                        }
+                        .doutor{
+                            left: auto;
+                            right: 1vw;
+                        }
+                        .titulo{
+                            width: 73%;
+                            margin-top: auto;
+                            font-family: $Main-font;
+                            font-size: 1vw;
+                            color: $Branco;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        .btn_BlogCard{
+                            font-family: $Text-font;
+                            height: 3.5vh;
+                            width: 27%;
+                            color: $Branco;
+                            font-size: 1vw;
+                            margin-top: 5vh;
+                            margin-top: auto;
+                            img, svg{
+                                height: 95%;
+                                width: 25%;
+                                margin-left: auto;
+                                path{
+                                    fill: $Branco;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn_blog{
+                    font-family: $Text-font;
+                    height: 3.5vh;
+                    color: $Amarelo;
+                    font-size: 1.25vw;
+                    margin-top: 5vh;
+                    img, svg{
+                        height: 100%;
+                    }
+                }
+            }
+            #contatos{
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 60%;
+                    height: 85%;
+                    left: 0;
+                    top: 7.5%;
+                    border: 3px solid $Amarelo;
+                    border-left: none;
+                    border-top-right-radius: 1.5vw;
+                    border-bottom-right-radius: 1.5vw;
+                    z-index: 2;
+                }
+                iframe{
+                    width: 60%;
+                    height: 85%;
+                    filter: grayscale(100%);
+                    border-top-right-radius: 1.5vw;
+                    border-bottom-right-radius: 1.5vw;
+                    outline: none;
+                    border: none;
+                    z-index: 1;
+                }
+                #infosContato{
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 0 4vw;
+                    #LogoContato{
+                        margin-bottom: 7.5vh;
+                        path{
+                            fill: $Preto;
+                        }
+                    }
+                    .blockContato{
+                        margin: 2vh 0;
+                        width: 100%;
+                        height: 4vh;
+                        display: flex;
+                        align-items: center;
+                        img, svg{
+                            width: 10%;
+                            height: 100%;
+                        }
+                        p{
+                            margin-left: 1vw;
+                            font-family: $Second-font;
+                            font-size: 1.1vw;
+                            color: $Preto;
+                        }
+                    }
+                }
+            }
+            #form{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                h2{
+                    width: 100%;
+                    height: auto;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    margin: 2vh 0;
+                    position: relative;
+                    color: $Marrom;
+                    text-align: center;
+                }
+                p{
+                    width: 100%;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    color: $Marrom;
+                    line-height: 3vh;
+                    text-align: center;
+                }
+                .formBlock{
+                    width: 60%;
+                    height: 45vh;
+                    margin-top: 5vh;
+                    position: relative;
+                    form{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        position: relative;
+                        .BlockBox{
+                            width: 100%;
+                            height: 13%;
+                            position: relative;
+                            margin: 2vh 0;
+                            display: flex;
+                            align-items: center;
+                            input, textarea{
+                                all: unset;
+                                width: 100% !important;
+                                height: 100%;
+                                padding: 0 1.25vw;
+                                font-family: $Second-font;
+                                font-size: 1vw;
+                                color: $Preto;
+                                border-bottom: 4px solid $Amarelo;
+                                z-index: 9;
+                            }
+                            p, span{
+                                all: unset;
+                                position: absolute;
+                                left: 1vw;
+                                font-family: $Text-font;
+                                font-weight: 900;
+                                font-size: 1vw;
+                                color: $Marrom;
+                                transition: 0.5s;
+                            }
+                            &:nth-child(1){
+                                width: 47.5%;
+                                span{
+                                    font-size: 1.2vw;
+                                    left: 9.5vw;
+                                    color: $Marrom;
+                                }
+                            }
+                            &:nth-child(2){
+                                width: 47.5%;
+                                margin-left: 5%;
+                                span{
+                                    font-size: 1.2vw;
+                                    left: 4.75vw;
+                                    color: $Marrom;
+                                }
+                            }
+                            &:nth-child(4){
+                                height: 30%;
+                                input, textarea{
+                                    height: 100%;
+                                    padding: 3vh 3vw 3vh 1.25vw;
+                                    padding-right: 2vw;
+                                    line-height: 2vh;
+                                }
+                                p{
+                                    top: 10%;
+                                }
+                            }
+                        }
+                        .BlockBox input:focus ~ p, input:valid ~ p, input:focus ~ span, input:valid ~ span, textarea:focus ~ p, textarea:valid ~ p{
+                            transform:translate(-0.75vw, -3.5vh);
+                            font-size: 0.9vw;
+                        }
+                        .termosPrivacidade{
+                            height: 3vh;
+                            display: flex;
+                            align-items: center;
+                            position: absolute;
+                            left: 0;
+                            bottom: 13%;
+                            input{
+                                height: 100%;
+                                width: 0.85vw;
+                                border: none;
+                                outline: none;
+                            }
+                            h3{
+                                font-family: $Text-font;
+                                font-size: 0.9vw;
+                                color: $Preto;
+                                margin-left: 0.5vw;
+                                a{
+                                    color: $Marrom;
+                                    text-decoration: underline !important;
+                                    font-size: 1vw;
+                                    &:hover{
+                                        color: $Amarelo;
+                                    }
+                                }
+                            }
+                        }
+                        #btn_form{
+                            font-family: $Text-font;
+                            height: 4.5vh;
+                            width: 25%;
+                            background-color: $Amarelo;
+                            color: $Preto;
+                            font-size: 1.15vw;
+                            margin-left: 37.5%;
+                            margin-top: 8vh;
+                        }
+                    }
+                    #msg_form{
+                        position: absolute;
+                        top: 0;
+                        left: 102.5%;
+                        width: 37.5%;
+                        min-height: 10vh;
+                        max-height: 35vh;
+                        overflow-y: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: $Text-font;
+                        font-weight: 700;
+                        font-size: 1vw;
+                        text-align: center;
+                        z-index: 999;
+                        line-height: 3vh;
+                    }
+                    .text-success{
+                        color: green;
+                    }
+                    .text-danger{
+                        color: red;
+                    }
+                    .text-warning{
+                        color: orange;
+                    }
+                }
+            }
+        }
+    }
+
+}
