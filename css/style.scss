@@ -1865,7 +1865,7 @@ body {
             #sideMenu{
                 width: 100vw;
                 right: -100vw;
-                height: 100vh !important;
+                height: 100svh !important;
                 button{
                     top: -16vh;
                     right: 40vw;
@@ -1921,32 +1921,12 @@ body {
                 padding: 2.25vw;
             }
         }
-
         footer{
-            position: relative;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 40vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0 5vw;
-            background-color: $Marrom;
-            &::before{
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 8vh;
-                background-color: $Preto;
-                bottom: 0;
-                left: 0;
-                z-index: 3;
-            }
+            padding: 0 7.5%;
+            padding-bottom: 8vh;
+            
             #bigFooter{
-                width: 100%;
-                height: 32vh;
+                height: auto;
                 display: flex;
                 flex-wrap: wrap;
                 #logoRodape{
