@@ -2319,15 +2319,27 @@ body #Main_index #form .formBlock .text-warning {
   body #Main_index #equipe .splide .splide__arrows .splide__arrow--next {
     right: -2vw;
   }
+  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide {
+    padding: 0;
+    position: relative;
+  }
+  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide img {
+    padding: 0;
+    width: 65%;
+    height: 90%;
+    margin-left: 17.5%;
+    margin-top: 5%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
   body #Main_index #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
-    position: absolute;
-    width: 73%;
+    width: 66%;
     height: 25%;
     bottom: 0;
     left: 0;
     z-index: 2;
-    margin: 13.5%;
-    margin-bottom: 1.5%;
+    margin: 17%;
+    margin-bottom: 5%;
     border-bottom-left-radius: 4vw;
     border-bottom-right-radius: 4vw;
     border: 2px solid #D2AE6D;
