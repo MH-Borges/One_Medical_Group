@@ -70,7 +70,7 @@
     </header>
 
     <main id="Main_index">
-        <a class="whats_link hide" target="_blank" href="https://ww.google.com"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
+        <a class="whats_link hide" target="_blank" href="https://www.google.com"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
 
         <section id="home">
             <div class="sideBanner" id="Redes_home">
@@ -222,7 +222,7 @@
         </section>
         <section id="tratamentos">
             <div id="tratamentosInfos">
-                <div id="Block_textEspaco">
+                <div id="Block_textTratamentos">
                     <h2>Os Tratamentos da One medical group</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo. Viverra vitae congue eu consequat ac. Montes nascetur ridiculus mus mauris vitae. Massa tincidunt nunc pulvinar sapien. 
@@ -440,8 +440,6 @@
                 </div>
             </div>
         </section>
-
-
         <section id="form">
             <h2>Fale conosco</h2>
             <p>Se você tem alguma duvida sobre um tratamento ou alguma especialidade, estamos aqui para te ajudar.</p>
@@ -507,7 +505,7 @@
         </div>
         <div id="smallFooter">
             <p>© <span id="data_footer"></span> One Medical Group</p>
-            <a aria-label="link para a VL7" href="https://www.google.com.br" target="_blank">
+            <a aria-label="link para a VL7" href="https://www.google.com" target="_blank">
                 <img src="assets/vl7_logo.png">
             </a>
         </div>
@@ -525,34 +523,53 @@
                             omitEnd: true,
                         }).mount();
                     }
-                } else{
+                    if(i == 1){
+                        new Splide( elms[i], {
+                            perPage: 4,
+                            perMove: 1,
+                            omitEnd: true
+                        }).mount();
+                    }
+                    if(i == 2){
+                        new Splide( elms[i], {
+                            omitEnd: true,
+                            perPage: 2,
+                            perMove: 1,
+                            drag   : false
+                        }).mount();
+                    }
+                } 
+                else{
                     if(i == 0){
                         new Splide( elms[i], {
                             drag   : 'free',
                             perPage: 1,
                             perMove: 1,
                             omitEnd: true,
+                            autoplay: true
                         }).mount();
                     }
-                }
-                if(i == 1){
-                    new Splide( elms[i], {
-                        perPage: 4,
-                        perMove: 1,
-                        omitEnd: true
-                    }).mount();
-                }
-                if(i == 2){
-                    new Splide( elms[i], {
-                        omitEnd: true,
-                        perPage: 2,
-                        perMove: 1,
-                        drag   : false
-                    }).mount();
+                    if(i == 1){
+                        new Splide( elms[i], {
+                            perPage: 2,
+                            perMove: 1,
+                            omitEnd: true,
+                            autoplay: true
+                        }).mount();
+                    }
+                    if(i == 2){
+                        new Splide( elms[i], {
+                            omitEnd: true,
+                            perPage: 1,
+                            perMove: 1,
+                            drag   : false
+                        }).mount();
+                    }
                 }
             }
         });
 
+        //video button + video ratio adjust
         function PLayVideo(idVideo) {
             var video = document.getElementById(idVideo);
             var parent = document.getElementById('Block_'+idVideo);
@@ -571,6 +588,15 @@
                 parent.classList.add('no-back');
             }
         }
+
+        document.addEventListener("fullscreenchange", (e) => {
+            if(e.srcElement.style.objectFit == "" || e.srcElement.style.objectFit == 'cover'){
+                e.target.style.objectFit = "contain";
+            }
+            else{
+                e.target.style.objectFit = "cover";
+            }
+        });
 
         //formulario
         $(document).ready(function () {

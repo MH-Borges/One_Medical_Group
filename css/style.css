@@ -993,7 +993,7 @@ body #Main_index #tratamentos #tratamentosInfos {
   justify-content: center;
   position: relative;
 }
-body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco {
+body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos {
   width: 40%;
   height: 100%;
   padding: 0 3.5vw;
@@ -1002,7 +1002,7 @@ body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco {
   align-items: center;
   justify-content: center;
 }
-body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco h2 {
+body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos h2 {
   width: 100%;
   height: auto;
   font-family: "TrajanPro", system-ui;
@@ -1012,7 +1012,7 @@ body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco h2 {
   position: relative;
   color: #D2AE6D;
 }
-body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco h2::before {
+body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos h2::before {
   content: "";
   position: absolute;
   bottom: -1.5vh;
@@ -1021,7 +1021,7 @@ body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco h2::before {
   height: 0.35vh;
   background-color: #D2AE6D;
 }
-body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco p {
+body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos p {
   width: 100%;
   padding-right: 3.5vw;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -1030,7 +1030,7 @@ body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco p {
   color: #E0E0E0;
   line-height: 3.75vh;
 }
-body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco .btn_tratamentos {
+body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos .btn_tratamentos {
   font-family: Georgia, "Times New Roman", Times, serif;
   height: 3.5vh;
   color: #D2AE6D;
@@ -1038,7 +1038,7 @@ body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco .btn_tratament
   margin-top: 5vh;
   margin-right: auto;
 }
-body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco .btn_tratamentos img, body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco .btn_tratamentos svg {
+body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos .btn_tratamentos img, body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos .btn_tratamentos svg {
   height: 100%;
 }
 body #Main_index #tratamentos #tratamentosInfos img {
@@ -1363,6 +1363,8 @@ body #Main_index #concierge img, body #Main_index #concierge svg {
   width: 50%;
   height: 100%;
   z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body #Main_index #concierge::before {
   content: "";
@@ -2114,7 +2116,7 @@ body #Main_index #form .formBlock .text-warning {
   }
   body #Main_index #home #banner .btn_banner {
     padding-right: 0;
-    margin-right: vw;
+    margin-right: 10vw;
     margin-top: 15vh;
     font-size: 4vw;
   }
@@ -2253,6 +2255,7 @@ body #Main_index #form .formBlock .text-warning {
   }
   body #Main_index #especialidades #textEspecialidade {
     padding: 2vw;
+    height: 32vh;
   }
   body #Main_index #especialidades #textEspecialidade::before {
     display: none;
@@ -2265,9 +2268,9 @@ body #Main_index #form .formBlock .text-warning {
     all: unset;
     color: #E0E0E0;
     padding-right: 2vw;
-    font-size: 2.75vw;
+    font-size: 3vw;
     line-height: 2.5vh;
-    margin: 2.5vh 0;
+    margin: 4vh 0;
   }
   body #Main_index #especialidades #textEspecialidade .btn_especialidades {
     width: 52vw;
@@ -2282,664 +2285,321 @@ body #Main_index #form .formBlock .text-warning {
     margin-top: -1%;
   }
   body #Main_index #equipe {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 7.5vh 5%;
-  }
-  body #Main_index #equipe .patter {
-    position: absolute;
-    width: 100%;
+    justify-content: center;
+    padding: 5vh 5% 7.5vh;
     height: auto;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0.1;
   }
   body #Main_index #equipe h2 {
-    width: 100%;
-    height: auto;
-    font-family: "TrajanPro", system-ui;
-    font-size: 2.5vw;
-    padding-left: 2.5vw;
-    margin-bottom: 6.5vh;
-    position: relative;
-    color: #4B2F24;
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 5vh;
   }
   body #Main_index #equipe h2::before {
-    content: "";
-    position: absolute;
-    bottom: -1.5vh;
-    left: 0;
-    width: 15%;
-    height: 0.35vh;
-    background-color: #4B2F24;
+    bottom: -1vh;
+    width: 35%;
+    height: 0.3vh;
   }
   body #Main_index #equipe p {
-    width: 100%;
-    padding-right: 3.5vw;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 1vw;
-    color: #4B2F24;
-    line-height: 3vh;
+    padding-right: 3vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
   }
   body #Main_index #equipe .splide {
-    margin-top: 5vh;
-    width: 100%;
-    height: 50vh;
+    margin-top: 1vh;
   }
   body #Main_index #equipe .splide .splide__arrows .splide__arrow {
-    width: 3.25vw;
-    height: 3.25vw;
-    padding: 0.55vw;
-    opacity: 1;
-    background: none;
-  }
-  body #Main_index #equipe .splide .splide__arrows .splide__arrow svg {
-    fill: #373435;
-    width: 100%;
-    height: 100%;
-  }
-  body #Main_index #equipe .splide .splide__arrows .splide__arrow:disabled {
-    opacity: 0.3;
+    width: 12vw;
+    height: 12vw;
+    padding: 1.5vw;
   }
   body #Main_index #equipe .splide .splide__arrows .splide__arrow--prev {
-    left: -0.5vw;
+    left: -2vw;
   }
   body #Main_index #equipe .splide .splide__arrows .splide__arrow--next {
-    right: -0.5vw;
-  }
-  body #Main_index #equipe .splide .splide__pagination {
-    display: none;
-  }
-  body #Main_index #equipe .splide .splide__track {
-    width: 95%;
-    height: 100%;
-    margin-left: 2.5%;
-  }
-  body #Main_index #equipe .splide .splide__track .splide__list {
-    width: 100%;
-    height: 100%;
-  }
-  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding: 1.5vw;
-    transition: all ease-in-out 0.15s;
-  }
-  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide:hover {
-    transform: scale(1.02);
-  }
-  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    right: -2vw;
   }
   body #Main_index #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
     position: absolute;
-    width: 83%;
-    height: 20%;
-    bottom: 3.5%;
-    left: 8.5%;
-    z-index: 2;
-    background-color: #E0E0E0;
-    border-bottom-left-radius: 0.5vw;
-    border-bottom-right-radius: 0.5vw;
-    border: 3px solid #D2AE6D;
+    width: 73%;
+    height: 25%;
+    bottom: 1%;
+    left: 13.5%;
+    border-bottom-left-radius: 4vw;
+    border-bottom-right-radius: 4vw;
+    border: 2px solid #D2AE6D;
     border-top: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
   body #Main_index #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
-    font-family: "TrajanPro", system-ui;
-    font-size: 1.05vw;
-    color: #4B2F24;
-    margin-bottom: 1.25vh;
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 2vh;
   }
   body #Main_index #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
-    all: unset;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 0.85vw;
-    color: #4B2F24;
-    font-style: italic;
+    font-size: 3.5vw;
   }
   body #Main_index #equipe .btn_equipe {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    height: 3.5vh;
-    color: #373435;
-    font-size: 1.25vw;
-    margin-top: 7.5vh;
+    width: 55vw;
+    height: 4vh;
+    font-size: 4.5vw;
+    margin-top: 5vh;
   }
   body #Main_index #equipe .btn_equipe img, body #Main_index #equipe .btn_equipe svg {
+    margin-left: auto;
+    width: 15%;
     height: 100%;
-  }
-  body #Main_index #equipe .btn_equipe img path, body #Main_index #equipe .btn_equipe svg path {
-    fill: #373435;
+    margin-top: -1%;
   }
   body #Main_index #tratamentos {
-    height: 175vh;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: #4B2F24;
+    height: 165vh;
   }
   body #Main_index #tratamentos #tratamentosInfos {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco {
-    width: 40%;
-    height: 100%;
-    padding: 0 3.5vw;
-    display: flex;
+    height: 125vh;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 0;
   }
-  body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco h2 {
+  body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos {
     width: 100%;
-    height: auto;
-    font-family: "TrajanPro", system-ui;
-    font-size: 2.5vw;
-    padding-left: 2.5vw;
-    margin-bottom: 7.5vh;
-    position: relative;
-    color: #D2AE6D;
+    height: 75vh;
+    padding: 2vh 7.5vw;
+    flex-direction: column;
+    order: 1;
   }
-  body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco h2::before {
-    content: "";
-    position: absolute;
-    bottom: -1.5vh;
-    left: 0;
+  body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 5vh;
+  }
+  body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos h2::before {
+    bottom: -1vh;
     width: 35%;
-    height: 0.35vh;
-    background-color: #D2AE6D;
+    height: 0.3vh;
   }
-  body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco p {
-    width: 100%;
-    padding-right: 3.5vw;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 1vw;
-    color: #E0E0E0;
-    line-height: 3.75vh;
+  body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos p {
+    padding-right: 2.5vw;
+    font-size: 2.75vw;
+    line-height: 3vh;
   }
-  body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco .btn_tratamentos {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    height: 3.5vh;
-    color: #D2AE6D;
-    font-size: 1.25vw;
-    margin-top: 5vh;
+  body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos .btn_tratamentos {
+    width: 65vw;
+    height: 4vh;
+    font-size: 4.5vw;
     margin-right: auto;
+    margin-top: 5vh;
   }
-  body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco .btn_tratamentos img, body #Main_index #tratamentos #tratamentosInfos #Block_textEspaco .btn_tratamentos svg {
+  body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos .btn_tratamentos img, body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos .btn_tratamentos svg {
+    margin-left: auto;
+    width: 15%;
     height: 100%;
+    margin-top: -1%;
   }
   body #Main_index #tratamentos #tratamentosInfos img {
-    width: 60%;
-    height: 100%;
+    width: 100%;
+    height: 50vh;
     -o-object-fit: cover;
        object-fit: cover;
-    z-index: 2;
+    order: 2;
   }
   body #Main_index #tratamentos #tratamentosInfos::before {
-    content: "";
-    position: absolute;
-    top: 0;
+    top: 75vh;
     right: 0;
-    width: 60%;
-    height: 100%;
-    background-color: #4B2F24;
-    opacity: 0.35;
-    z-index: 3;
+    width: 100%;
+    height: 50vh;
   }
   body #Main_index #tratamentos #tratamentosimgs {
     width: 100%;
-    height: 75vh;
-    padding: 5vh 5%;
-  }
-  body #Main_index #tratamentos #tratamentosimgs .splide {
-    width: 100%;
-    height: 100%;
+    height: 40vh;
+    padding: 5vh 7.5%;
   }
   body #Main_index #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow {
-    width: 4.5vw;
-    height: 4.5vw;
-    padding: 0.55vw;
-    opacity: 1;
-    background: none;
-  }
-  body #Main_index #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow svg {
-    fill: #D2AE6D;
-    width: 100%;
-    height: 100%;
-  }
-  body #Main_index #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow:disabled {
-    opacity: 0.3;
+    width: 12vw;
+    height: 12vw;
+    padding: 1.75vw;
   }
   body #Main_index #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow--prev {
-    left: -2vw;
+    left: -6.5vw;
   }
   body #Main_index #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow--next {
-    right: -2vw;
-  }
-  body #Main_index #tratamentos #tratamentosimgs .splide .splide__pagination {
-    display: none;
+    right: -6.5vw;
   }
   body #Main_index #tratamentos #tratamentosimgs .splide .splide__track {
     width: 95%;
     height: 100%;
     margin-left: 2.5%;
   }
-  body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list {
-    width: 100%;
-    height: 100%;
-  }
   body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding: 0.75vw;
-    transition: all ease-in-out 0.15s;
-  }
-  body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .Block_img img {
-    transform: scale(1.05);
-  }
-  body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover::before {
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
-  }
-  body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .infosCards .nome {
-    transform: scale(1.07);
-  }
-  body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .infosCards .btn_CardTratamento {
-    transform: scale(1.07);
-  }
-  body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(75, 47, 36, 0.4);
-    z-index: 2;
-    transition: all ease-in-out 0.5s;
+    padding: 1vw;
   }
   body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 1vw;
-    z-index: 1;
-  }
-  body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img img {
-    transition: all ease-in-out 0.5s;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    border-radius: 3vw;
   }
   body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards {
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    bottom: 7.5%;
-    left: 0;
-    z-index: 9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 35%;
+    bottom: 10%;
   }
   body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .nome {
-    transition: all ease-in-out 0.5s;
-    width: 100%;
-    font-family: "TrajanPro", system-ui;
-    font-size: 1.5vw;
-    color: #E0E0E0;
-    margin-bottom: 5vh;
+    font-size: 3.5vw;
+    margin-bottom: 4vh;
     padding: 0 2vw;
-    text-align: center;
   }
   body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .btn_CardTratamento {
-    transition: all ease-in-out 0.5s;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    height: 3.5vh;
-    width: 6.25vw;
-    color: #E0E0E0;
-    font-size: 1vw;
-    outline: 2px solid #E0E0E0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5vw;
+    height: 2vh;
+    width: 16vw;
+    font-size: 2.75vw;
+    outline: 1px solid #E0E0E0;
   }
   body #Main_index #allInOne {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+    height: 125vh;
+    flex-direction: column;
   }
   body #Main_index #allInOne #Block_VideoAllinOne {
-    width: 50%;
-    height: 100%;
+    order: 2;
+    width: 100%;
+    height: 50vh;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
   }
   body #Main_index #allInOne #Block_VideoAllinOne img, body #Main_index #allInOne #Block_VideoAllinOne svg {
-    position: absolute;
-    width: 7.5vw;
-    height: 7.5vw;
-    z-index: 5;
-    transition: all ease-in-out 0.15s;
-  }
-  body #Main_index #allInOne #Block_VideoAllinOne img:hover, body #Main_index #allInOne #Block_VideoAllinOne svg:hover {
-    transform: scale(1.1);
-  }
-  body #Main_index #allInOne #Block_VideoAllinOne #VideoAllinOne {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    position: relative;
-    z-index: 1;
+    width: 20vw;
+    height: 20vw;
   }
   body #Main_index #allInOne #Block_VideoAllinOne::before {
-    content: "";
-    position: absolute;
-    width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #4B2F24;
-    z-index: 2;
-    opacity: 0.5;
-  }
-  body #Main_index #allInOne .no-back::before {
-    display: none;
   }
   body #Main_index #allInOne #Block_textAllinOne {
-    width: 50%;
-    height: 100%;
-    padding: 5vw;
-    display: flex;
+    width: 100%;
+    height: 75vh;
+    padding: 2vh 7.5%;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
+    order: 1;
   }
   body #Main_index #allInOne #Block_textAllinOne h2 {
-    width: 100%;
-    height: auto;
-    font-family: "TrajanPro", system-ui;
-    font-size: 2.5vw;
-    padding-right: 2.5vw;
-    margin-bottom: 7.5vh;
-    position: relative;
-    color: #4B2F24;
-    text-align: right;
+    font-size: 6vw;
+    padding-right: 3vw;
+    margin-bottom: 6vh;
   }
   body #Main_index #allInOne #Block_textAllinOne h2::before {
-    content: "";
-    position: absolute;
-    bottom: -1.5vh;
-    right: 0;
-    width: 35%;
-    height: 0.35vh;
-    background-color: #4B2F24;
+    bottom: -1vh;
+    width: 40%;
+    height: 0.3vh;
   }
   body #Main_index #allInOne #Block_textAllinOne p {
-    width: 100%;
-    padding-left: 3.5vw;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 1vw;
-    text-align: right;
-    color: #4B2F24;
-    line-height: 4vh;
+    padding-left: 5vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
   }
   body #Main_index #allInOne #Block_textAllinOne span {
-    width: 100%;
-    padding-left: 10vw;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 1.1vw;
-    text-align: right;
-    color: #373435;
-    line-height: 3.5vh;
-    margin-top: 12.5vh;
+    padding-left: 15vw;
+    font-size: 2.5vw;
+    line-height: 2vh;
+    margin-top: 10vh;
   }
   body #Main_index #allInOne #Block_textAllinOne .btn_AllInOne {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    height: 4.5vh;
-    width: 13.5vw;
-    background-color: #D2AE6D;
-    color: #373435;
-    font-size: 1.25vw;
+    border-radius: 1.5vw;
+    height: 3.5vh;
+    width: 35vw;
+    font-size: 3.5vw;
     margin-top: 3vh;
     margin-left: auto;
   }
   body #Main_index #concierge {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    background-color: #4B2F24;
+    height: 115vh;
+    flex-direction: column;
   }
   body #Main_index #concierge #Block_textConcierge {
-    width: 50%;
-    height: 100%;
-    padding: 0 7.5vw;
-    display: flex;
+    width: 100%;
+    height: 65vh;
+    padding: 2vh 7.5%;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
+    order: 1;
   }
   body #Main_index #concierge #Block_textConcierge h2 {
-    width: 100%;
-    height: auto;
-    font-family: "TrajanPro", system-ui;
-    font-size: 2.5vw;
-    padding-right: 2.5vw;
-    margin-bottom: 7.5vh;
-    position: relative;
-    color: #D2AE6D;
-    text-align: right;
+    font-size: 6vw;
+    padding-right: 3vw;
+    margin-bottom: 6vh;
   }
   body #Main_index #concierge #Block_textConcierge h2::before {
-    content: "";
-    position: absolute;
-    bottom: -1.5vh;
-    right: 0;
-    width: 35%;
-    height: 0.35vh;
-    background-color: #D2AE6D;
+    bottom: -1vh;
+    width: 40%;
+    height: 0.3vh;
   }
   body #Main_index #concierge #Block_textConcierge p {
-    width: 100%;
     padding-left: 5vw;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 1vw;
-    text-align: right;
-    color: #E0E0E0;
-    line-height: 4vh;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
   }
   body #Main_index #concierge #Block_textConcierge span {
-    width: 100%;
-    padding-left: 10vw;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 1.1vw;
-    text-align: right;
-    color: #D0B498;
-    line-height: 3.5vh;
-    margin-top: 12.5vh;
+    padding-left: 15vw;
+    font-size: 2.5vw;
+    line-height: 2vh;
+    margin-top: 10vh;
   }
   body #Main_index #concierge #Block_textConcierge .btn_Concierge {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    height: 4.5vh;
-    width: 13.5vw;
-    background-color: #D2AE6D;
-    color: #373435;
-    font-size: 1.25vw;
-    margin-top: 5vh;
+    border-radius: 1.5vw;
+    height: 3.5vh;
+    width: 35vw;
+    font-size: 3.5vw;
+    margin-top: 3vh;
     margin-left: auto;
   }
-  body #Main_index #concierge img, body #Main_index #concierge svg {
-    width: 50%;
-    height: 100%;
-    z-index: 2;
+  body #Main_index #concierge img {
+    width: 100%;
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    order: 2;
   }
   body #Main_index #concierge::before {
-    content: "";
-    position: absolute;
+    top: 65vh;
     right: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background-color: #4B2F24;
-    opacity: 0.35;
-    z-index: 3;
+    width: 100%;
+    height: 50vh;
   }
   body #Main_index #depos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: auto;
+    padding: 3vh 7.5% 6vh;
   }
   body #Main_index #depos h2 {
-    width: 100%;
-    height: auto;
-    font-family: "TrajanPro", system-ui;
-    font-size: 2.5vw;
-    padding-left: 2.5vw;
-    margin-bottom: 3.5vh;
-    position: relative;
-    color: #4B2F24;
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 3vh;
   }
   body #Main_index #depos h2::before {
-    content: "";
-    position: absolute;
-    bottom: -1.5vh;
-    left: 0;
-    width: 15%;
-    height: 0.35vh;
-    background-color: #4B2F24;
+    bottom: -0.75vh;
+    width: 35%;
+    height: 0.3vh;
   }
   body #Main_index #depos p {
-    width: 100%;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 1vw;
-    color: #4B2F24;
-    line-height: 3vh;
+    font-size: 2.75vw;
   }
   body #Main_index #depos .splide {
     width: 100%;
-    height: 50vh;
-    margin-top: 5vh;
+    height: 25vh;
+    margin-top: 1vh;
   }
   body #Main_index #depos .splide .splide__arrows .splide__arrow {
-    width: 3.25vw;
-    height: 3.25vw;
-    padding: 0.55vw;
-    opacity: 1;
-    background: none;
-  }
-  body #Main_index #depos .splide .splide__arrows .splide__arrow svg {
-    fill: #4B2F24;
-    width: 100%;
-    height: 100%;
-  }
-  body #Main_index #depos .splide .splide__arrows .splide__arrow:disabled {
-    opacity: 0.3;
+    width: 12vw;
+    height: 12vw;
+    padding: 1.5vw;
   }
   body #Main_index #depos .splide .splide__arrows .splide__arrow--prev {
-    left: -0.5vw;
+    left: -5vw;
   }
   body #Main_index #depos .splide .splide__arrows .splide__arrow--next {
-    right: -0.5vw;
-  }
-  body #Main_index #depos .splide .splide__pagination {
-    display: none;
+    right: -5vw;
   }
   body #Main_index #depos .splide .splide__track {
-    width: 95%;
-    height: 100%;
-    margin-left: 2.5%;
-  }
-  body #Main_index #depos .splide .splide__track .splide__list {
-    width: 100%;
-    height: 100%;
-  }
-  body #Main_index #depos .splide .splide__track .splide__list .splide__slide {
-    width: 100%;
-    height: 100%;
-    padding: 1.5vw;
-    transition: all ease-in-out 0.15s;
-    z-index: 2;
-  }
-  body #Main_index #depos .splide .splide__track .splide__list .splide__slide:hover {
-    transform: scale(1.02);
-  }
-  body #Main_index #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo {
-    width: 100%;
-    height: 100%;
-    position: relative;
+    width: 90%;
+    margin-left: 5%;
   }
   body #Main_index #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img, body #Main_index #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg {
-    position: absolute;
-    width: 7.5vw;
-    height: 7.5vw;
-    left: 42%;
-    top: 30%;
-    z-index: 5;
-    transition: all ease-in-out 0.15s;
-  }
-  body #Main_index #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img:hover, body #Main_index #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg:hover {
-    transform: scale(1.1);
+    width: 15vw;
+    height: 15vw;
+    top: 32%;
   }
   body #Main_index #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo video {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    position: relative;
-    z-index: 1;
-    border-radius: 1vw;
+    border-radius: 3.5vw;
   }
   body #Main_index #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #4B2F24;
-    z-index: 2;
-    opacity: 0.5;
-    border-radius: 1vw;
-  }
-  body #Main_index #depos .splide .splide__track .splide__list .splide__slide .no-back::before {
-    display: none;
+    border-radius: 3.5vw;
   }
   body #Main_index #blog {
     display: flex;
