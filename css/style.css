@@ -1897,6 +1897,7 @@ body #Main_index #form .formBlock .text-warning {
   body header #sideMenu {
     width: 100vw;
     right: -100vw;
+    height: 100vh !important;
   }
   body header #sideMenu button {
     top: -16vh;
