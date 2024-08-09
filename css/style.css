@@ -1897,7 +1897,7 @@ body #Main_index #form .formBlock .text-warning {
   body header #sideMenu {
     width: 100vw;
     right: -100vw;
-    height: 100svh !important;
+    height: 100dvh;
   }
   body header #sideMenu button {
     top: -16vh;
@@ -1951,126 +1951,63 @@ body #Main_index #form .formBlock .text-warning {
     padding: 2.25vw;
   }
   body footer {
-    padding: 0 7.5%;
-    padding-bottom: 8vh;
+    height: auto;
   }
   body footer #bigFooter {
     height: auto;
-    display: flex;
-    flex-wrap: wrap;
   }
   body footer #bigFooter #logoRodape {
-    width: 100%;
-    height: 10vh;
-    -o-object-fit: contain;
-       object-fit: contain;
-    padding-top: 4vh;
+    margin-bottom: 4vh;
   }
   body footer #bigFooter #consulta_rodape, body footer #bigFooter #endereco_rodape, body footer #bigFooter #telefone_rodape, body footer #bigFooter #redes_rodape {
-    width: 20%;
-    height: 22vh;
-    padding: 3vh 1.25vw 0;
+    width: 50%;
+    height: 20vh;
+    padding: 0;
   }
   body footer #bigFooter #consulta_rodape h5, body footer #bigFooter #endereco_rodape h5, body footer #bigFooter #telefone_rodape h5, body footer #bigFooter #redes_rodape h5 {
-    font-family: "TrajanPro", system-ui;
-    font-size: 1.1vw;
-    color: #E0E0E0;
+    font-size: 3.5vw;
   }
   body footer #bigFooter #consulta_rodape p, body footer #bigFooter #endereco_rodape p, body footer #bigFooter #telefone_rodape p, body footer #bigFooter #redes_rodape p {
-    width: 100%;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 0.9vw;
-    color: #E0E0E0;
-    line-height: 2.5vh;
-    margin-top: 0.5vh;
+    padding-right: 10vw;
+    font-size: 2.5vw;
+    line-height: 2vh;
+    margin-top: 1vh;
   }
   body footer #bigFooter #consulta_rodape {
-    margin-left: 10%;
+    margin: 0;
   }
   body footer #bigFooter #consulta_rodape .btn_agendamento {
-    font-family: "TrajanPro", system-ui;
-    margin-top: 3.5vh;
+    margin-top: 3vh;
     border: 2px solid #E0E0E0;
-    width: 12.5vw;
-    padding: 0.75vh 0;
+    width: 30vw;
+    padding: 0.5vh 0;
   }
   body footer #bigFooter #endereco_rodape p, body footer #bigFooter #telefone_rodape p {
-    line-height: 1.25vh;
-    margin-top: 1.25vh;
+    line-height: 1vh;
+    margin-top: 2vh;
   }
   body footer #bigFooter #telefone_rodape {
-    padding-right: 5.25vw;
-  }
-  body footer #bigFooter #telefone_rodape p {
-    text-align: right;
-  }
-  body footer #bigFooter #redes_rodape {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  body footer #bigFooter #redes_rodape h5 {
-    width: 100%;
+    padding-right: 1vw;
   }
   body footer #bigFooter #redes_rodape a {
-    width: 2.5vw;
-    height: 2.5vw;
-    border: 2px solid #E0E0E0;
-    border-radius: 50%;
-    margin: 0 0.5vw;
-    margin-top: -7vh;
-    transition: all ease-in-out 0.2s;
+    width: 9vw;
+    height: 9vw;
+    margin: 0 1vw;
+    margin-top: -6vh;
   }
   body footer #bigFooter #redes_rodape a img, body footer #bigFooter #redes_rodape a svg {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-    padding: 0.55vw;
-  }
-  body footer #bigFooter #redes_rodape a img path, body footer #bigFooter #redes_rodape a svg path {
-    fill: #E0E0E0;
-    stroke: #E0E0E0;
-  }
-  body footer #bigFooter #redes_rodape a:nth-child(2) {
-    margin-left: 0;
-  }
-  body footer #bigFooter #redes_rodape a:nth-child(4) img path, body footer #bigFooter #redes_rodape a:nth-child(4) svg path {
-    fill: none;
-  }
-  body footer #bigFooter #redes_rodape a:hover {
-    transform: scale(1.15);
+    padding: 1.25vw;
   }
   body footer #smallFooter {
-    width: 100%;
-    height: 8vh;
-    display: flex;
-    align-items: center;
-    z-index: 5;
+    justify-content: center;
   }
   body footer #smallFooter p {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: 600;
-    font-size: 1vw;
-    color: #E0E0E0;
-  }
-  body footer #smallFooter p span {
-    font-weight: 600;
+    font-size: 3vw;
   }
   body footer #smallFooter a {
-    width: 7.5vw;
-    height: 60%;
-    margin-left: auto;
-    transition: all ease-in-out 0.15s;
-  }
-  body footer #smallFooter a img, body footer #smallFooter a svg {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-  body footer #smallFooter a:hover {
-    transform: scale(1.1);
+    width: 12vw;
+    margin: 0;
+    margin-left: 5vw;
   }
   body #Main_index #espaco, body #Main_index #especialidades, body #Main_index #depos, body #Main_index #blog, body #Main_index #contatos, body #Main_index #form {
     height: auto;
