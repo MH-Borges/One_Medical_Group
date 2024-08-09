@@ -390,27 +390,27 @@
             <h2>Blog</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo. Viverra vitae congue eu consequat ac. Montes nascetur ridiculus mus mauris vitae. Massa tincidunt nunc pulvinar sapien.</p>
             <div id="Blog_cards">
-                <div class="cards">
+                <a href="" class="cards">
                     <img src="assets/blog/blog_01.webp" alt="">
                     <span class="data">31/12/2024</span>
                     <p class="doutor">Dra. Aline farias</p>
                     <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <a class="btns btn_BlogCard" href="">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
-                </div>
-                <div class="cards">
+                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a href="" class="cards">
                     <img src="assets/blog/blog_02.webp" alt="">
                     <span class="data">31/12/2024</span>
                     <p class="doutor">Dra. Aline farias</p>
                     <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <a class="btns btn_BlogCard" href="">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
-                </div>
-                <div class="cards">
+                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a href="" class="cards">
                     <img src="assets/blog/blog_03.webp" alt="">
                     <span class="data">31/12/2024</span>
                     <p class="doutor">Dra. Aline farias</p>
                     <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit</h3>
-                    <a class="btns btn_BlogCard" href="">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
-                </div>
+                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
+                </a>
             </div>
             <a href="" class="btns btn_blog">Veja todas as postagens <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
         </section>
@@ -551,9 +551,9 @@
                     }
                     if(i == 1){
                         new Splide( elms[i], {
-                            perPage: 2,
+                            perPage: 1,
                             perMove: 1,
-                            omitEnd: true,
+                            type: 'loop',
                             autoplay: true
                         }).mount();
                     }
