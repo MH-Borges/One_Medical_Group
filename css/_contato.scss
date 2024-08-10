@@ -1,0 +1,440 @@
+#Main_contato{
+    #contatos{
+        padding: 125px 5% 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        h1{
+            width: 100%;
+            height: auto;
+            font-family: $Main-font;
+            font-size: 2.75vw;
+            color: $Amarelo;
+            position: relative;
+            text-align: center;
+            margin: 4vh 0 2vh;
+        }
+        p{
+            width: 100%;
+            font-family: $Text-font;
+            font-weight: 400;
+            font-size: 1vw;
+            color: $Marrom;
+            line-height: 3vh;
+            text-align: center;
+            margin-bottom: 3vh;
+        }
+        #infosContato{
+            width: 100%;
+            height: 85vh;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            flex-direction: column;
+            position: relative;
+            margin: 5vh 0 7.5vh;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 80%;
+                height: 85%;
+                left: -6%;
+                top: 7.5%;
+                border: 3px solid $Amarelo;
+                border-left: none;
+                border-top-right-radius: 1.5vw;
+                border-bottom-right-radius: 1.5vw;
+                z-index: 2;
+            }
+            iframe{
+                position: absolute;
+                width: 80%;
+                height: 85%;
+                left: -6%;
+                top: 7.5%;
+                filter: grayscale(100%);
+                border-top-right-radius: 1.5vw;
+                border-bottom-right-radius: 1.5vw;
+                outline: none;
+                border: none;
+                z-index: 1;
+            }
+            .blockContato{
+                background-color: $Marrom;
+                width: 25vw;
+                height: 32%;
+                border-radius: 1.5vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                z-index: 2;
+                margin-right: 2vw;
+                position: relative;
+                img, svg{
+                    margin: 1vh 0;
+                    width: 100%;
+                    height: 25%;
+                    object-fit: cover;
+                    path{
+                        fill: $Creme;
+                    }
+                }
+                h2{
+                    all: unset;
+                    width: 100%;
+                    height: 17%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    font-family: $Main-font;
+                    font-size: 1.25vw;
+                    color: $Creme;
+                }
+                p{
+                    all: unset;
+                    height: 12%;
+                    width: 100%;
+                    font-family: $Second-font;
+                    font-size: 1.05vw;
+                    color: $Branco;
+                    text-align: center;
+                    margin: 0.5vh;
+                }
+                a{
+                    position: absolute;
+                    bottom: 1vh;
+                    font-family: $Text-font;
+                    font-size: 0.9vw;
+                    color: $Branco;
+                    text-decoration: underline !important;
+                }
+            }
+            .horarios{
+                flex-wrap: wrap;
+                flex-direction: row;
+                p{
+                    all: unset;
+                    width: 50%;
+                    height: auto;
+                    font-family: $Second-font;
+                    font-size: 1.05vw;
+                    color: $Branco;
+                    text-align: center;
+                    margin: 0.5vh 0;
+                }
+            }
+        }
+    }
+    #form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 85vh;
+        h2{
+            width: 100%;
+            height: auto;
+            font-family: $Main-font;
+            font-size: 2.5vw;
+            margin: 2vh 0;
+            position: relative;
+            color: $Marrom;
+            text-align: center;
+        }
+        .formBlock{
+            width: 75%;
+            height: 65vh;
+            position: relative;
+            form{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                .BlockBox{
+                    width: 100%;
+                    height: 13%;
+                    position: relative;
+                    margin: 2vh 0;
+                    display: flex;
+                    align-items: center;
+                    input, textarea{
+                        all: unset;
+                        width: 100% !important;
+                        height: 100%;
+                        padding: 0 1.25vw;
+                        font-family: $Second-font;
+                        font-size: 1vw;
+                        color: $Preto;
+                        border-bottom: 4px solid $Amarelo;
+                        z-index: 9;
+                    }
+                    p, span{
+                        all: unset;
+                        position: absolute;
+                        left: 1vw;
+                        font-family: $Text-font;
+                        font-weight: 900;
+                        font-size: 1vw;
+                        color: $Marrom;
+                        transition: 0.5s;
+                    }
+                    &:nth-child(1){
+                        width: 47.5%;
+                        span{
+                            font-size: 1.2vw;
+                            left: 9.5vw;
+                            color: $Marrom;
+                        }
+                    }
+                    &:nth-child(2){
+                        width: 47.5%;
+                        margin-left: 5%;
+                        span{
+                            font-size: 1.2vw;
+                            left: 4.75vw;
+                            color: $Marrom;
+                        }
+                    }
+                    &:nth-child(4){
+                        height: 30%;
+                        input, textarea{
+                            height: 100%;
+                            padding: 3vh 3vw 3vh 1.25vw;
+                            padding-right: 2vw;
+                            line-height: 2vh;
+                        }
+                        p{
+                            top: 10%;
+                        }
+                    }
+                }
+                .BlockBox input:focus ~ p, input:valid ~ p, input:focus ~ span, input:valid ~ span, textarea:focus ~ p, textarea:valid ~ p{
+                    transform:translate(-0.75vw, -3.5vh);
+                    font-size: 0.9vw;
+                }
+                .termosPrivacidade{
+                    height: 3vh;
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    left: 0;
+                    bottom: 19%;
+                    input{
+                        height: 100%;
+                        width: 0.85vw;
+                        border: none;
+                        outline: none;
+                    }
+                    h3{
+                        font-family: $Text-font;
+                        font-size: 0.9vw;
+                        color: $Preto;
+                        margin-left: 0.5vw;
+                        a{
+                            color: $Marrom;
+                            text-decoration: underline !important;
+                            font-size: 1vw;
+                            &:hover{
+                                color: $Amarelo;
+                            }
+                        }
+                    }
+                }
+                #btn_form{
+                    font-family: $Text-font;
+                    height: 4.5vh;
+                    width: 25%;
+                    background-color: $Amarelo;
+                    color: $Preto;
+                    font-size: 1.15vw;
+                    margin-left: 37.5%;
+                    margin-top: 6vh;
+                }
+            }
+            #msg_form{ 
+                position: absolute;
+                top: 0;
+                left: 101.5%;
+                width: 20%;
+                min-height: 10vh;
+                max-height: 35vh;
+                overflow-y: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $Text-font;
+                font-weight: 700;
+                font-size: 1vw;
+                text-align: center;
+                z-index: 999;
+                line-height: 3vh;
+            }
+            .text-success{
+                color: green;
+            }
+            .text-danger{
+                color: red;
+            }
+            .text-warning{
+                color: orange;
+            }
+        }
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 479px){
+    #Main_contato{
+        #contatos{
+            h1{
+                margin: 0;
+                font-size: 6vw;
+                margin-bottom: 3vh;
+            }
+            p{
+                font-size: 2.75vw;
+                line-height: 2.5vh;
+                margin-bottom: 2vh;
+            }
+            #infosContato{
+                width: 85%;
+                height: auto;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                margin: 2vh 0 7.5vh;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 120%;
+                    height: 35vh;
+                    left: -10%;
+                    top: auto;
+                    bottom: 0;
+                    border: 2px solid $Amarelo;
+                    border-radius: 3vw;
+                }
+                iframe{
+                    order: 5;
+                    position: relative;
+                    width: 120%;
+                    height: 35vh;
+                    left: 0;
+                    top: 0;
+                    margin-top: 4vh;
+                    border-radius: 3vw;
+                }
+                .blockContato{
+                    width: 100%;
+                    height: 25vh;
+                    border-radius: 2.5vw;
+                    margin: 2vh 0;
+                    h2{
+                        font-size: 4vw;
+                    }
+                    p{
+                        font-size: 3.35vw;
+                    }
+                    a{
+                        bottom: 2vh;
+                        font-size: 3vw;
+                    }
+                }
+                .horarios{
+                    p{
+                        font-size: 3.35vw;
+                    }
+                }
+            }
+        }
+        #form{
+            height: auto;
+            padding: 0 7.5% 20vh;
+            h2{
+                font-size: 7vw;
+                padding-left: 4vw;
+                margin-bottom: 3vh;
+                &::before{
+                    bottom: -0.75vh;
+                    width: 35%;
+                    height: 0.3vh;
+                }
+            }
+            p{
+                font-size: 2.75vw;
+            }
+            .formBlock{
+                width: 100%;
+                height: 60vh;
+                margin-top: 2vh;
+                form{
+                    .BlockBox{
+                        width: 100%;
+                        height: 15%;
+                        margin: 2vh 0;
+                        input, textarea{
+                            padding: 0 2vw;
+                            font-size: 3vw;
+                            border-bottom: 2px solid $Amarelo;
+                        }
+                        p, span{
+                            left: 1.5vw;
+                            font-size: 3.5vw;
+                        }
+                        &:nth-child(1){
+                            span{
+                                font-size: 5vw;
+                                left: 30vw;
+                            }
+                        }
+                        &:nth-child(2){
+                            margin-left: 5%;
+                            span{
+                                font-size: 5vw;
+                                left: 14vw;
+                            }
+                        }
+                    }
+                    .BlockBox input:focus ~ p, input:valid ~ p, input:focus ~ span, input:valid ~ span, textarea:focus ~ p, textarea:valid ~ p{
+                        transform:translate(-0.75vw, -3.5vh);
+                        font-size: 2.25vw;
+                    }
+                    .termosPrivacidade{
+                        height: 4vh;
+                        bottom: 13%;
+                        input{
+                            width: 4vw;
+                        }
+                        h3{
+                            font-size: 2.75vw;
+                            margin-left: 1vw;
+                            a{
+                                font-size: 3vw;
+                            }
+                        }
+                    }
+                    #btn_form{
+                        height: 5vh;
+                        width: 45%;
+                        font-size: 3.5vw;
+                        margin-left: 27.5%;
+                        margin-top: 10vh;
+                        border-radius: 1.5vw;
+                    }
+                }
+                #msg_form{ 
+                    top: 110%;
+                    left: 0;
+                    width: 100%;
+                    min-height: 5vh;
+                    max-height: 13vh;
+                    font-size: 3vw;
+                }
+            }
+        }
+    }
+}

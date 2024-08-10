@@ -57,6 +57,10 @@ body {
   background: #E0E0E0;
   overflow-x: hidden;
   position: relative;
+  /* MOBILE */
+  /* MOBILE */
+  /* MOBILE */
+  /* MOBILE */
 }
 body .btns {
   all: unset;
@@ -1862,7 +1866,1219 @@ body #Main_index #form .formBlock .text-danger {
 body #Main_index #form .formBlock .text-warning {
   color: orange;
 }
-
+body #Main_404 {
+  padding: 0;
+}
+body #Main_404 section {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body #Main_404 section img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+body #Main_404 section h1 {
+  position: absolute;
+  top: 13%;
+  left: 7%;
+  font-family: "TrajanPro", system-ui;
+  font-size: 20vw;
+  color: #D2AE6D;
+  opacity: 0.2;
+  -webkit-text-stroke-width: 10px;
+  -webkit-text-stroke-color: #D2AE6D;
+}
+body #Main_404 section h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 900;
+  font-size: 9vw;
+  color: #D2AE6D;
+  margin-top: -15vh;
+}
+body #Main_404 section #Voltar_404 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  height: auto;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+body #Main_404 section #Voltar_404 p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.1vw;
+  font-weight: 400;
+  color: #373435;
+  line-height: 2.5vh;
+}
+body #Main_404 section #Voltar_404 .btn_404 {
+  margin-top: 10vh;
+  border: 2px solid #D2AE6D;
+  border-radius: 0.5vw;
+  color: #D2AE6D;
+  width: 40%;
+  height: 5vh;
+  font-size: 1.5vw;
+}
+@media only screen and (max-width: 479px) {
+  body #Main_404 section img {
+    opacity: 0.25;
+  }
+  body #Main_404 section h1 {
+    top: 28%;
+    left: 2%;
+    font-size: 40vw;
+    opacity: 0.3;
+  }
+  body #Main_404 section h2 {
+    font-size: 20vw;
+    margin-top: -15vh;
+    margin-left: 35vw;
+  }
+  body #Main_404 section #Voltar_404 {
+    bottom: 7.5%;
+    left: 5%;
+    height: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  body #Main_404 section #Voltar_404 p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 3vw;
+    line-height: 2.75vh;
+  }
+  body #Main_404 section #Voltar_404 .btn_404 {
+    margin-top: 7.5vh;
+    border-radius: 1.5vw;
+    width: 70%;
+    height: 5vh;
+    font-size: 5vw;
+  }
+}
+body #Main_PoliticaPrivacidade {
+  padding: 20vh 10% 5vh;
+}
+body #Main_PoliticaPrivacidade section {
+  width: 100%;
+  height: auto;
+  padding: 0 0 5vh;
+  display: flex;
+  flex-direction: column;
+}
+body #Main_PoliticaPrivacidade section h1, body #Main_PoliticaPrivacidade section h2 {
+  font-family: "TrajanPro", system-ui;
+  font-weight: 700;
+  font-size: 2.25vw;
+  width: 100%;
+  text-align: center;
+  color: #D2AE6D;
+  padding: 4vh 0;
+}
+body #Main_PoliticaPrivacidade section p, body #Main_PoliticaPrivacidade section a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.1vw;
+  color: #373435;
+  line-height: 3.5vh;
+  margin: 3vh 0;
+}
+body #Main_PoliticaPrivacidade section p b, body #Main_PoliticaPrivacidade section a b {
+  font-size: 1.5vw;
+  font-weight: 800;
+  margin-right: 0.25vw;
+}
+body #Main_PoliticaPrivacidade section p span, body #Main_PoliticaPrivacidade section a span {
+  color: #D2AE6D;
+  font-size: 1.2vw;
+  margin-right: 0.25vw;
+}
+body #Main_PoliticaPrivacidade section a {
+  margin: 0.2vh 0;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_PoliticaPrivacidade section a:hover {
+  transform: scale(1.01);
+}
+body #Main_PoliticaPrivacidade section ul li {
+  list-style: disc;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1vw;
+  color: #373435;
+  margin: 3vh 0;
+  margin-left: 5vw;
+  line-height: 3vh;
+}
+@media only screen and (max-width: 479px) {
+  body #Main_PoliticaPrivacidade {
+    padding: 15vh 10% 5vh;
+  }
+  body #Main_PoliticaPrivacidade section h1, body #Main_PoliticaPrivacidade section h2 {
+    font-size: 5vw;
+    padding: 3vh 0;
+  }
+  body #Main_PoliticaPrivacidade section p, body #Main_PoliticaPrivacidade section a {
+    font-size: 2.75vw;
+    margin: 3vh 0;
+  }
+  body #Main_PoliticaPrivacidade section p b, body #Main_PoliticaPrivacidade section a b {
+    font-size: 3.25vw;
+    margin-right: 0.5vw;
+  }
+  body #Main_PoliticaPrivacidade section p span, body #Main_PoliticaPrivacidade section a span {
+    color: #D2AE6D;
+    font-size: 3.25vw;
+    margin-right: 0.5vw;
+  }
+  body #Main_PoliticaPrivacidade section a {
+    margin: 1vh 0;
+  }
+  body #Main_PoliticaPrivacidade section ul li {
+    font-size: 2.75vw;
+    margin: 2.5vh 0;
+    margin-left: 10vw;
+  }
+}
+body #Main_contato #contatos {
+  padding: 125px 5% 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body #Main_contato #contatos h1 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.75vw;
+  color: #D2AE6D;
+  position: relative;
+  text-align: center;
+  margin: 4vh 0 2vh;
+}
+body #Main_contato #contatos p {
+  width: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #4B2F24;
+  line-height: 3vh;
+  text-align: center;
+  margin-bottom: 3vh;
+}
+body #Main_contato #contatos #infosContato {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  margin: 5vh 0 7.5vh;
+}
+body #Main_contato #contatos #infosContato::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 85%;
+  left: -6%;
+  top: 7.5%;
+  border: 3px solid #D2AE6D;
+  border-left: none;
+  border-top-right-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+  z-index: 2;
+}
+body #Main_contato #contatos #infosContato iframe {
+  position: absolute;
+  width: 80%;
+  height: 85%;
+  left: -6%;
+  top: 7.5%;
+  filter: grayscale(100%);
+  border-top-right-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+  outline: none;
+  border: none;
+  z-index: 1;
+}
+body #Main_contato #contatos #infosContato .blockContato {
+  background-color: #4B2F24;
+  width: 25vw;
+  height: 32%;
+  border-radius: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  margin-right: 2vw;
+  position: relative;
+}
+body #Main_contato #contatos #infosContato .blockContato img, body #Main_contato #contatos #infosContato .blockContato svg {
+  margin: 1vh 0;
+  width: 100%;
+  height: 25%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_contato #contatos #infosContato .blockContato img path, body #Main_contato #contatos #infosContato .blockContato svg path {
+  fill: #D0B498;
+}
+body #Main_contato #contatos #infosContato .blockContato h2 {
+  all: unset;
+  width: 100%;
+  height: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.25vw;
+  color: #D0B498;
+}
+body #Main_contato #contatos #infosContato .blockContato p {
+  all: unset;
+  height: 12%;
+  width: 100%;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 1.05vw;
+  color: #E0E0E0;
+  text-align: center;
+  margin: 0.5vh;
+}
+body #Main_contato #contatos #infosContato .blockContato a {
+  position: absolute;
+  bottom: 1vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.9vw;
+  color: #E0E0E0;
+  text-decoration: underline !important;
+}
+body #Main_contato #contatos #infosContato .horarios {
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+body #Main_contato #contatos #infosContato .horarios p {
+  all: unset;
+  width: 50%;
+  height: auto;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 1.05vw;
+  color: #E0E0E0;
+  text-align: center;
+  margin: 0.5vh 0;
+}
+body #Main_contato #form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 85vh;
+}
+body #Main_contato #form h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  margin: 2vh 0;
+  position: relative;
+  color: #4B2F24;
+  text-align: center;
+}
+body #Main_contato #form .formBlock {
+  width: 75%;
+  height: 65vh;
+  position: relative;
+}
+body #Main_contato #form .formBlock form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+body #Main_contato #form .formBlock form .BlockBox {
+  width: 100%;
+  height: 13%;
+  position: relative;
+  margin: 2vh 0;
+  display: flex;
+  align-items: center;
+}
+body #Main_contato #form .formBlock form .BlockBox input, body #Main_contato #form .formBlock form .BlockBox textarea {
+  all: unset;
+  width: 100% !important;
+  height: 100%;
+  padding: 0 1.25vw;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 1vw;
+  color: #373435;
+  border-bottom: 4px solid #D2AE6D;
+  z-index: 9;
+}
+body #Main_contato #form .formBlock form .BlockBox p, body #Main_contato #form .formBlock form .BlockBox span {
+  all: unset;
+  position: absolute;
+  left: 1vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 900;
+  font-size: 1vw;
+  color: #4B2F24;
+  transition: 0.5s;
+}
+body #Main_contato #form .formBlock form .BlockBox:nth-child(1) {
+  width: 47.5%;
+}
+body #Main_contato #form .formBlock form .BlockBox:nth-child(1) span {
+  font-size: 1.2vw;
+  left: 9.5vw;
+  color: #4B2F24;
+}
+body #Main_contato #form .formBlock form .BlockBox:nth-child(2) {
+  width: 47.5%;
+  margin-left: 5%;
+}
+body #Main_contato #form .formBlock form .BlockBox:nth-child(2) span {
+  font-size: 1.2vw;
+  left: 4.75vw;
+  color: #4B2F24;
+}
+body #Main_contato #form .formBlock form .BlockBox:nth-child(4) {
+  height: 30%;
+}
+body #Main_contato #form .formBlock form .BlockBox:nth-child(4) input, body #Main_contato #form .formBlock form .BlockBox:nth-child(4) textarea {
+  height: 100%;
+  padding: 3vh 3vw 3vh 1.25vw;
+  padding-right: 2vw;
+  line-height: 2vh;
+}
+body #Main_contato #form .formBlock form .BlockBox:nth-child(4) p {
+  top: 10%;
+}
+body #Main_contato #form .formBlock form .BlockBox input:focus ~ p, body #Main_contato #form .formBlock form input:valid ~ p, body #Main_contato #form .formBlock form input:focus ~ span, body #Main_contato #form .formBlock form input:valid ~ span, body #Main_contato #form .formBlock form textarea:focus ~ p, body #Main_contato #form .formBlock form textarea:valid ~ p {
+  transform: translate(-0.75vw, -3.5vh);
+  font-size: 0.9vw;
+}
+body #Main_contato #form .formBlock form .termosPrivacidade {
+  height: 3vh;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 19%;
+}
+body #Main_contato #form .formBlock form .termosPrivacidade input {
+  height: 100%;
+  width: 0.85vw;
+  border: none;
+  outline: none;
+}
+body #Main_contato #form .formBlock form .termosPrivacidade h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.9vw;
+  color: #373435;
+  margin-left: 0.5vw;
+}
+body #Main_contato #form .formBlock form .termosPrivacidade h3 a {
+  color: #4B2F24;
+  text-decoration: underline !important;
+  font-size: 1vw;
+}
+body #Main_contato #form .formBlock form .termosPrivacidade h3 a:hover {
+  color: #D2AE6D;
+}
+body #Main_contato #form .formBlock form #btn_form {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 4.5vh;
+  width: 25%;
+  background-color: #D2AE6D;
+  color: #373435;
+  font-size: 1.15vw;
+  margin-left: 37.5%;
+  margin-top: 6vh;
+}
+body #Main_contato #form .formBlock #msg_form {
+  position: absolute;
+  top: 0;
+  left: 101.5%;
+  width: 20%;
+  min-height: 10vh;
+  max-height: 35vh;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 1vw;
+  text-align: center;
+  z-index: 999;
+  line-height: 3vh;
+}
+body #Main_contato #form .formBlock .text-success {
+  color: green;
+}
+body #Main_contato #form .formBlock .text-danger {
+  color: red;
+}
+body #Main_contato #form .formBlock .text-warning {
+  color: orange;
+}
+@media only screen and (max-width: 479px) {
+  body #Main_contato #contatos h1 {
+    margin: 0;
+    font-size: 6vw;
+    margin-bottom: 3vh;
+  }
+  body #Main_contato #contatos p {
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+    margin-bottom: 2vh;
+  }
+  body #Main_contato #contatos #infosContato {
+    width: 85%;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 2vh 0 7.5vh;
+  }
+  body #Main_contato #contatos #infosContato::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 35vh;
+    left: -10%;
+    top: auto;
+    bottom: 0;
+    border: 2px solid #D2AE6D;
+    border-radius: 3vw;
+  }
+  body #Main_contato #contatos #infosContato iframe {
+    order: 5;
+    position: relative;
+    width: 120%;
+    height: 35vh;
+    left: 0;
+    top: 0;
+    margin-top: 4vh;
+    border-radius: 3vw;
+  }
+  body #Main_contato #contatos #infosContato .blockContato {
+    width: 100%;
+    height: 25vh;
+    border-radius: 2.5vw;
+    margin: 2vh 0;
+  }
+  body #Main_contato #contatos #infosContato .blockContato h2 {
+    font-size: 4vw;
+  }
+  body #Main_contato #contatos #infosContato .blockContato p {
+    font-size: 3.35vw;
+  }
+  body #Main_contato #contatos #infosContato .blockContato a {
+    bottom: 2vh;
+    font-size: 3vw;
+  }
+  body #Main_contato #contatos #infosContato .horarios p {
+    font-size: 3.35vw;
+  }
+  body #Main_contato #form {
+    height: auto;
+    padding: 0 7.5% 20vh;
+  }
+  body #Main_contato #form h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 3vh;
+  }
+  body #Main_contato #form h2::before {
+    bottom: -0.75vh;
+    width: 35%;
+    height: 0.3vh;
+  }
+  body #Main_contato #form p {
+    font-size: 2.75vw;
+  }
+  body #Main_contato #form .formBlock {
+    width: 100%;
+    height: 60vh;
+    margin-top: 2vh;
+  }
+  body #Main_contato #form .formBlock form .BlockBox {
+    width: 100%;
+    height: 15%;
+    margin: 2vh 0;
+  }
+  body #Main_contato #form .formBlock form .BlockBox input, body #Main_contato #form .formBlock form .BlockBox textarea {
+    padding: 0 2vw;
+    font-size: 3vw;
+    border-bottom: 2px solid #D2AE6D;
+  }
+  body #Main_contato #form .formBlock form .BlockBox p, body #Main_contato #form .formBlock form .BlockBox span {
+    left: 1.5vw;
+    font-size: 3.5vw;
+  }
+  body #Main_contato #form .formBlock form .BlockBox:nth-child(1) span {
+    font-size: 5vw;
+    left: 30vw;
+  }
+  body #Main_contato #form .formBlock form .BlockBox:nth-child(2) {
+    margin-left: 5%;
+  }
+  body #Main_contato #form .formBlock form .BlockBox:nth-child(2) span {
+    font-size: 5vw;
+    left: 14vw;
+  }
+  body #Main_contato #form .formBlock form .BlockBox input:focus ~ p, body #Main_contato #form .formBlock form input:valid ~ p, body #Main_contato #form .formBlock form input:focus ~ span, body #Main_contato #form .formBlock form input:valid ~ span, body #Main_contato #form .formBlock form textarea:focus ~ p, body #Main_contato #form .formBlock form textarea:valid ~ p {
+    transform: translate(-0.75vw, -3.5vh);
+    font-size: 2.25vw;
+  }
+  body #Main_contato #form .formBlock form .termosPrivacidade {
+    height: 4vh;
+    bottom: 13%;
+  }
+  body #Main_contato #form .formBlock form .termosPrivacidade input {
+    width: 4vw;
+  }
+  body #Main_contato #form .formBlock form .termosPrivacidade h3 {
+    font-size: 2.75vw;
+    margin-left: 1vw;
+  }
+  body #Main_contato #form .formBlock form .termosPrivacidade h3 a {
+    font-size: 3vw;
+  }
+  body #Main_contato #form .formBlock form #btn_form {
+    height: 5vh;
+    width: 45%;
+    font-size: 3.5vw;
+    margin-left: 27.5%;
+    margin-top: 10vh;
+    border-radius: 1.5vw;
+  }
+  body #Main_contato #form .formBlock #msg_form {
+    top: 110%;
+    left: 0;
+    width: 100%;
+    min-height: 5vh;
+    max-height: 13vh;
+    font-size: 3vw;
+  }
+}
+body #Main_clinica #concierge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #4B2F24;
+}
+body #Main_clinica #concierge #Block_textConcierge {
+  width: 50%;
+  height: 100%;
+  padding: 0 7.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_clinica #concierge #Block_textConcierge h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-right: 2.5vw;
+  margin-bottom: 7.5vh;
+  position: relative;
+  color: #D2AE6D;
+  text-align: right;
+}
+body #Main_clinica #concierge #Block_textConcierge h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  right: 0;
+  width: 35%;
+  height: 0.35vh;
+  background-color: #D2AE6D;
+}
+body #Main_clinica #concierge #Block_textConcierge p {
+  width: 100%;
+  padding-left: 5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  text-align: right;
+  color: #E0E0E0;
+  line-height: 4vh;
+}
+body #Main_clinica #concierge #Block_textConcierge span {
+  width: 100%;
+  padding-left: 10vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.1vw;
+  text-align: right;
+  color: #D0B498;
+  line-height: 3.5vh;
+  margin-top: 12.5vh;
+}
+body #Main_clinica #concierge #Block_textConcierge .btn_Concierge {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 4.5vh;
+  width: 13.5vw;
+  background-color: #D2AE6D;
+  color: #373435;
+  font-size: 1.25vw;
+  margin-top: 5vh;
+  margin-left: auto;
+}
+body #Main_clinica #concierge img, body #Main_clinica #concierge svg {
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_clinica #concierge::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #4B2F24;
+  opacity: 0.35;
+  z-index: 3;
+}
+body #Main_clinica #allInOne {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+body #Main_clinica #allInOne #Block_VideoAllinOne {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_clinica #allInOne #Block_VideoAllinOne img, body #Main_clinica #allInOne #Block_VideoAllinOne svg {
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  z-index: 5;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_clinica #allInOne #Block_VideoAllinOne img:hover, body #Main_clinica #allInOne #Block_VideoAllinOne svg:hover {
+  transform: scale(1.1);
+}
+body #Main_clinica #allInOne #Block_VideoAllinOne #VideoAllinOne {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+body #Main_clinica #allInOne #Block_VideoAllinOne::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4B2F24;
+  z-index: 2;
+  opacity: 0.5;
+}
+body #Main_clinica #allInOne .no-back::before {
+  display: none;
+}
+body #Main_clinica #allInOne #Block_textAllinOne {
+  width: 50%;
+  height: 100%;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_clinica #allInOne #Block_textAllinOne h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-right: 2.5vw;
+  margin-bottom: 7.5vh;
+  position: relative;
+  color: #4B2F24;
+  text-align: right;
+}
+body #Main_clinica #allInOne #Block_textAllinOne h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  right: 0;
+  width: 35%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_clinica #allInOne #Block_textAllinOne p {
+  width: 100%;
+  padding-left: 3.5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  text-align: right;
+  color: #4B2F24;
+  line-height: 4vh;
+}
+body #Main_clinica #allInOne #Block_textAllinOne span {
+  width: 100%;
+  padding-left: 10vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.1vw;
+  text-align: right;
+  color: #373435;
+  line-height: 3.5vh;
+  margin-top: 12.5vh;
+}
+body #Main_clinica #allInOne #Block_textAllinOne .btn_AllInOne {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 4.5vh;
+  width: 13.5vw;
+  background-color: #D2AE6D;
+  color: #373435;
+  font-size: 1.25vw;
+  margin-top: 3vh;
+  margin-left: auto;
+}
+body #Main_clinica #historia {
+  background-color: #4B2F24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body #Main_clinica #historia h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 12vh;
+  position: relative;
+  color: #D2AE6D;
+  text-align: left;
+}
+body #Main_clinica #historia h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 35%;
+  height: 0.35vh;
+  background-color: #D2AE6D;
+}
+body #Main_clinica #historia p {
+  width: 100%;
+  padding-right: 5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  text-align: left;
+  color: #E0E0E0;
+  line-height: 4vh;
+}
+body #Main_clinica #equipe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7.5vh 5%;
+}
+body #Main_clinica #equipe .patter {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.1;
+}
+body #Main_clinica #equipe h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 6.5vh;
+  position: relative;
+  color: #4B2F24;
+}
+body #Main_clinica #equipe h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 15%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_clinica #equipe p {
+  width: 100%;
+  padding-right: 3.5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #4B2F24;
+  line-height: 3vh;
+}
+body #Main_clinica #equipe .splide {
+  margin-top: 5vh;
+  width: 100%;
+  height: 50vh;
+}
+body #Main_clinica #equipe .splide .splide__arrows .splide__arrow {
+  width: 3.25vw;
+  height: 3.25vw;
+  padding: 0.55vw;
+  opacity: 1;
+  background: none;
+}
+body #Main_clinica #equipe .splide .splide__arrows .splide__arrow svg {
+  fill: #373435;
+  width: 100%;
+  height: 100%;
+}
+body #Main_clinica #equipe .splide .splide__arrows .splide__arrow:disabled {
+  opacity: 0.3;
+}
+body #Main_clinica #equipe .splide .splide__arrows .splide__arrow--prev {
+  left: -0.5vw;
+}
+body #Main_clinica #equipe .splide .splide__arrows .splide__arrow--next {
+  right: -0.5vw;
+}
+body #Main_clinica #equipe .splide .splide__pagination {
+  display: none;
+}
+body #Main_clinica #equipe .splide .splide__track {
+  width: 95%;
+  height: 100%;
+  margin-left: 2.5%;
+}
+body #Main_clinica #equipe .splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide:hover {
+  transform: scale(1.02);
+}
+body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 1.5vw;
+}
+body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+  position: absolute;
+  width: 83%;
+  height: 20%;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin: 8.5%;
+  background-color: #E0E0E0;
+  border-bottom-left-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+  border: 3px solid #D2AE6D;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.05vw;
+  color: #4B2F24;
+  margin-bottom: 1.25vh;
+}
+body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+  all: unset;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.85vw;
+  color: #4B2F24;
+  font-style: italic;
+}
+body #Main_clinica #equipe .btn_equipe {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 3.5vh;
+  color: #373435;
+  font-size: 1.25vw;
+  margin-top: 7.5vh;
+}
+body #Main_clinica #equipe .btn_equipe img, body #Main_clinica #equipe .btn_equipe svg {
+  height: 100%;
+}
+body #Main_clinica #equipe .btn_equipe img path, body #Main_clinica #equipe .btn_equipe svg path {
+  fill: #373435;
+}
+body #Main_clinica #tratamentos {
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #4B2F24;
+}
+body #Main_clinica #tratamentos #tratamentosimgs {
+  width: 100%;
+  height: 75vh;
+  padding: 5vh 5%;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide {
+  width: 100%;
+  height: 100%;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow {
+  width: 4.5vw;
+  height: 4.5vw;
+  padding: 0.55vw;
+  opacity: 1;
+  background: none;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow svg {
+  fill: #D2AE6D;
+  width: 100%;
+  height: 100%;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow:disabled {
+  opacity: 0.3;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow--prev {
+  left: -2vw;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow--next {
+  right: -2vw;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__pagination {
+  display: none;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track {
+  width: 95%;
+  height: 100%;
+  margin-left: 2.5%;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0.75vw;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .Block_img img {
+  transform: scale(1.05);
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover::before {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .infosCards .nome {
+  transform: scale(1.07);
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .infosCards .btn_CardTratamento {
+  transform: scale(1.07);
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(75, 47, 36, 0.4);
+  z-index: 2;
+  transition: all ease-in-out 0.5s;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1vw;
+  z-index: 1;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img img {
+  transition: all ease-in-out 0.5s;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 7.5%;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+  transition: all ease-in-out 0.5s;
+  width: 100%;
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.5vw;
+  color: #E0E0E0;
+  margin-bottom: 5vh;
+  padding: 0 2vw;
+  text-align: center;
+}
+body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .btn_CardTratamento {
+  transition: all ease-in-out 0.5s;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 3.5vh;
+  width: 6.25vw;
+  color: #E0E0E0;
+  font-size: 1vw;
+  outline: 2px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5vw;
+}
+body #Main_clinica #especialidades {
+  height: 75vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+  background-color: #4B2F24;
+}
+body #Main_clinica #especialidades .especialidadeBlock {
+  width: 25%;
+  height: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body #Main_clinica #especialidades .especialidadeBlock img {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_clinica #especialidades .especialidadeBlock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4B2F24;
+  opacity: 0.25;
+  z-index: 3;
+}
+body #Main_clinica #especialidades .especialidadeBlock p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.35vw;
+  color: #E0E0E0;
+}
+body #Main_clinica #especialidades .especialidadeBlock .amarelo {
+  background-color: #D2AE6D;
+}
+body #Main_clinica #especialidades .especialidadeBlock .preto {
+  background-color: #373435;
+}
+body #Main_clinica #especialidades .especialidadeBlock .cinza {
+  background-color: #776F62;
+}
+body #Main_clinica #especialidades .especialidadeBlock:hover img {
+  display: none;
+}
+body #Main_clinica #especialidades .especialidadeBlock:hover::before {
+  display: none;
+}
+body #Main_clinica #especialidades #textEspecialidade {
+  flex-direction: column;
+  padding: 2vw;
+}
+body #Main_clinica #especialidades #textEspecialidade::before {
+  display: none;
+  content: "";
+}
+body #Main_clinica #especialidades #textEspecialidade h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.75vw;
+  position: relative;
+  color: #D2AE6D;
+}
+body #Main_clinica #especialidades #textEspecialidade p {
+  all: unset;
+  width: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 0.9vw;
+  color: #E0E0E0;
+  line-height: 3vh;
+  padding-right: 2vw;
+  margin: 2.5vh 0;
+}
+body #Main_clinica #especialidades #textEspecialidade .btn_especialidades {
+  height: 3.5vh;
+  color: #D2AE6D;
+  font-size: 1.25vw;
+  margin-right: auto;
+}
+body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, body #Main_clinica #especialidades #textEspecialidade .btn_especialidades svg {
+  height: 100%;
+}
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 /* MOBILE */
 @media only screen and (max-width: 479px) {

@@ -1,0 +1,91 @@
+#Main_PoliticaPrivacidade{
+    padding: 20vh 10% 5vh;
+    section{
+        width: 100%;
+        height: auto;
+        padding: 0 0 5vh;
+        display: flex;
+        flex-direction: column;
+        h1,h2{
+            font-family: $Main-font;
+            font-weight: 700;
+            font-size: 2.25vw;
+            width: 100%;
+            text-align: center;
+            color: $Amarelo;
+            padding: 4vh 0;
+        }
+        p, a{
+            font-family: $Text-font;
+            font-weight: 400;
+            font-size: 1.1vw;
+            color: $Preto;
+            line-height: 3.5vh;
+            margin: 3vh 0;
+            b{
+                font-size: 1.5vw;
+                font-weight: 800;
+                margin-right: 0.25vw;
+            }
+            span{
+                color: $Amarelo;
+                font-size: 1.2vw;
+                margin-right: 0.25vw;
+            }
+        }
+        a{
+            margin: 0.2vh 0;
+            transition: all ease-in-out .15s;
+            &:hover{
+                transform: scale(1.01);
+            }
+        }
+        ul{
+            li{
+                list-style: disc;
+                font-family: $Text-font;
+                font-size: 1vw;
+                color: $Preto;
+                margin: 3vh 0;
+                margin-left: 5vw;
+                line-height: 3vh;
+            }
+        }
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 479px){
+    #Main_PoliticaPrivacidade{
+        padding: 15vh 10% 5vh;
+        section{
+            h1,h2{
+                font-size: 5vw;
+                padding: 3vh 0;
+            }
+            p, a{
+                font-size: 2.75vw;
+                margin: 3vh 0;
+                b{
+                    font-size: 3.25vw;
+                    margin-right: 0.5vw;
+                }
+                span{
+                    color: $Amarelo;
+                    font-size: 3.25vw;
+                    margin-right: 0.5vw;
+                }
+            }
+            a{
+                margin: 1vh 0;
+            }
+            ul{
+                li{
+                    font-size: 2.75vw;
+                    margin: 2.5vh 0;
+                    margin-left: 10vw;
+                }
+            }
+        }
+    }
+}

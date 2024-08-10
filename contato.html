@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | One medical group</title>
+
+    <link rel="icon" href="assets/icons/icon.svg" />
+    <link rel="canonical" href="" />
+
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta name="og:title" property="og:title" content="">
+    <meta name="og:type" property="og:type" content="">
+    <meta name="og:image" property="og:image" content="">
+    <meta property=”og:description” content=""/>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Mask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+    <!-- SVG Inject -->
+    <script src="js/svg-inject.min.js"></script>
+
+    <!-- Main files -->
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/Base_script.js"></script>
+</head>
+
+<body>
+    <header>
+        <ul id="menu">
+            <li>
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="Logo one medical group">
+                </a>
+            </li>
+            <li><a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a></li>
+            <li onclick="sideMenu()"><span id="sideMenu_btn"></span></li>
+        </ul>
+        <div id="sideMenu" class="hide">
+            <button type="button" onclick="sideMenu()"></button>
+
+            <a class="itensMenu" href="clinica.html">A One</a>
+            <a class="itensMenu" href="">Especialidades</a>
+            <a class="itensMenu" href="">Equipe one</a>
+            <a class="itensMenu" href="">Tratamentos</a>
+            <a class="itensMenu" href="">Blog</a>
+            <a class="itensMenu active" href="contato.html">Contato</a>
+
+            <div id="contato_sideMenu">
+                <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
+
+                <a href="" class="redes_sideMenu marginLeft" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
+                <a href="" class="redes_sideMenu" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>
+            </div>
+        </div>
+        <div id="background" class="hide" onclick="sideMenu()"></div>
+    </header>
+
+    <main id="Main_contato">
+        <a class="whats_link hide" target="_blank" href="https://www.google.com"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
+        
+        <section id="contatos">
+            <h1>Entre em contato conosco</h1>
+            <p>Mande uma mensagem agora mesmo e tiraremos todas suas dúvidas! <br>
+                Informe-se sobre agendamentos, procedimentos e veja nossos horários.</p>
+
+            <div id="infosContato">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12303.41041010213!2d-46.47628642649605!3d-23.538767081983615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66c8ef039471%3A0xe1157635939c9bc!2sR.%20Manuel%20Ribas%2C%201396%20-%20Vila%20Campanela%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008220-430!5e0!3m2!1spt-BR!2sbr!4v1722559281456!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
+                <div class="blockContato horarios">
+                    <img src="assets/icons/relogio.svg" onload="SVGInject(this)">
+                    <h2>Horários de atendimento</h2>
+                    <p>Segunda - Sexta <br> 08:00 - 19:00 </p>
+                    <p>Sábado <br> 08:30 - 14:00</p>
+                </div>
+                <div class="blockContato">
+                    <img src="assets/icons/telefone.svg" onload="SVGInject(this)">
+                    <h2>Fale conosco</h2>
+                    <p>(11) 99999 - 9999</p>
+                    <p>Whatsapp: (11) 99999 - 9999</p>
+                    <p>Contato@onemedicalgroup.com.br</p>
+                </div>
+                <div class="blockContato">
+                    <img src="assets/icons/localizacao.svg" onload="SVGInject(this)">
+                    <h2>Localização</h2>
+                    <p>Av. Manoel Ribas, 1396 - Jardim, São Paulo, SP</p>
+                    <a href="https://www.google.com/maps/dir//Alameda+Norte+-+Jardim+Primavera,+São+José+do+Rio+Preto+-+SP,+15061-400/@-20.7960349,-49.3730175,14.75z/data=!4m18!1m8!3m7!1s0x94bc52b0f857e7a9:0x9d5fd28499b44d35!2sAlameda+Norte+-+Jardim+Primavera,+São+José+do+Rio+Preto+-+SP,+15061-400!3b1!8m2!3d-20.7992522!4d-49.3575241!16s%2Fg%2F1ymx18wy7!4m8!1m0!1m5!1m1!1s0x94bc52b0f857e7a9:0x9d5fd28499b44d35!2m2!1d-49.3575241!2d-20.7992522!3e3?entry=ttu" target="_blank">Como chegar</a>
+                </div>
+            </div>
+        </section>
+        <section id="form">
+            <h2>Fale conosco</h2>
+            <div class="formBlock">
+                <form id="formulario" method="POST">
+                    <div class="BlockBox">
+                        <input type="text" name="nome" id="nome" required>
+                        <p>Nome completo</p><span>*</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="email" id="email" required>
+                        <p>E-mail</p><span>*</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="telefone" id="telefone" required>
+                        <p>Telefone de contato</p>
+                    </div>
+                    <div class="BlockBox">
+                        <textarea type="text" name="mensagem" id="mensagem" required></textarea>
+                        <p>Sua mensagem</p>
+                    </div>
+                    <div class="termosPrivacidade">
+                        <input type="checkbox" name="termosPrivacidade" id="termosPrivacidade" required>
+                        <h3>Li e estou de acordo com os termos da <a href="politica_Privacidades.html">Política de Privacidade</a></h3>
+                    </div>
+                    
+                    <button id="btn_form" class="btns" type="submit">Enviar mensagem</button>
+                </form>
+
+                <div id="msg_form"></div> 
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="bigFooter">
+            <img id="logoRodape" src="assets/logo.png" alt="Logo one medical group">
+            <div id="consulta_rodape">
+                <h5>Marque a sua consulta</h5>
+                <p>Venha conhecer a One Medical Group e agende a sua consulta!</p>
+                <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
+            </div>
+            <div id="endereco_rodape">
+                <h5>Endereço</h5>
+                <p>
+                    Av. Manoel Ribas, 1396 - <br><br> Cidade Jardim, São Paulo, SP
+                </p>
+            </div>
+            <div id="telefone_rodape">
+                <h5>Contato</h5>
+                <p>Telefone:    (99) 9 9999 - 9999<br><br>
+                                (99) 9 9999 - 9999<br><br>
+                                (99) 9 9999 - 9999
+                </p>
+            </div>
+            <div id="redes_rodape">
+                <h5>Entre em contato</h5>
+                <a href="" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/Email.svg" onload="SVGInject(this)"></a>
+            </div>
+        </div>
+        <div id="smallFooter">
+            <p>© <span id="data_footer"></span> One Medical Group</p>
+            <a aria-label="link para a VL7" href="https://www.google.com" target="_blank">
+                <img src="assets/vl7_logo.png">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        //formulario
+        $(document).ready(function () {
+            $('#telefone').mask('(00) 00000 - 0000');
+
+            $('#formulario').submit(function (e) {
+                e.preventDefault();
+                $('#msg_form').text('');
+                $('#msg_form').removeClass('text-danger');
+                $('#msg_form').removeClass('text-success');
+                $('#msg_form').removeClass('text-warning');
+                $.ajax({
+                    url: "email.php",
+                    method: "post",
+                    data: $('form').serialize(),
+                    dataType: "text",
+                    success: function (msg) {
+                        if (msg.trim() === 'Mensagem enviada com sucesso! Entraremos em contato em breve!') {
+                            $('#msg_form').addClass('text-success');
+                            $('#msg_form').text(msg);
+                            setTimeout(() => { window.location.reload(); }, 5000)
+                        }
+                        else if (msg.trim() == "Preencha o campo de 'Nome completo'" || msg.trim() == 'Preencha o campo de E-mail' || msg.trim() == 'O campo de mensagem está vazio!' || msg.trim() == 'Para continuar, é necessario aceitar os termos de privacidade!') {
+                            $('#msg_form').addClass('text-danger');
+                            $('#msg_form').text(msg);
+                        }
+                        else{
+                            $('#msg_form').addClass('text-warning');
+                            $('#msg_form').text('Erro ao enviar o formulario! Ele não pode ser enviado por falhas com a comunicação com o servidor, você pode tentar novamente ou tentar nos contactar via Instagram ou Whatsapp');
+                        }
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+</html>

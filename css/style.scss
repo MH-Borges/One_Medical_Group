@@ -1828,12 +1828,17 @@ body {
             }
         }
     }
+
+    @import '404';
+    @import 'politicaPrivacidade';
+    @import 'contato';
+    @import 'clinica';
+
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 /* MOBILE */
 @media only screen and (max-width: 479px){
-
     body {
         .btns{
             font-size: 2.25vw;
@@ -2729,5 +2734,4 @@ body {
             }
         }
     }
-
 }
