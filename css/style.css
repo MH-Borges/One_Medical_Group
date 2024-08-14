@@ -61,7 +61,7 @@ body {
   /* MOBILE */
   /* MOBILE */
   /* MOBILE */
-  /*--------------------------------- Responsive Media Quaries -----------------------------*/
+  /* MOBILE */
   /* MOBILE */
 }
 body .btns {
@@ -3886,28 +3886,67 @@ body #Main_especialidades {
 }
 body #Main_especialidades #Especialidades {
   height: auto;
+  width: 100%;
+  padding: 0;
+}
+body #Main_especialidades #Especialidades h1 {
+  width: 100%;
+  height: 25vh;
+  background-color: #D0B498;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "TrajanPro", system-ui;
+  font-size: 3vw;
+  color: #4B2F24;
+}
+body #Main_especialidades #Especialidades h1::before {
+  content: "";
+  position: absolute;
+  bottom: 7vh;
+  width: 15%;
+  height: 0.25vh;
+  background-color: #4B2F24;
+}
+body #Main_especialidades #Especialidades h2 {
+  width: 100%;
+  height: auto;
+  padding: 3vh 5%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.25vw;
+  color: #373435;
+  line-height: 5vh;
 }
 body #Main_especialidades #Especialidades #especialidadesCards {
+  width: 100%;
+  height: auto;
+  padding: 0 5%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 5vh 0;
+  margin: 0 0 7.5vh;
 }
 body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card {
   width: 45%;
-  height: 30vh;
+  height: 40vh;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 1vh 1vw;
+  margin: 5vh 1vw;
+  border-radius: 1vw;
+  background-color: #4B2F24;
 }
 body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card img {
-  z-index: 2;
-  position: relative;
+  z-index: 1;
+  position: absolute;
   width: 100%;
   height: auto;
+  top: 0;
+  left: 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -3920,33 +3959,72 @@ body #Main_especialidades #Especialidades #especialidadesCards .especialidade_ca
   height: 100%;
   background-color: #4B2F24;
   opacity: 0.25;
-  z-index: 3;
+  z-index: 2;
 }
-body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card p {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "TrajanPro", system-ui;
-  font-size: 1.35vw;
-  color: #E0E0E0;
-}
-body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card .amarelo {
-  background-color: #D2AE6D;
-}
-body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card .preto {
-  background-color: #373435;
-}
-body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card .cinza {
-  background-color: #776F62;
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card h3, body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card p, body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card span {
+  display: none;
 }
 body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover img {
   display: none;
 }
 body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover::before {
   display: none;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover h3 {
+  display: flex;
+  z-index: 5;
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.75vw;
+  color: #E0E0E0;
+  margin-bottom: 5vh;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover p {
+  display: flex;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.1vw;
+  color: #D0B498;
+  line-height: 4vh;
+  z-index: 5;
+  text-align: center;
+  padding: 0 3vw;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card {
+  position: absolute;
+  display: flex;
+  z-index: 5;
+  width: 15%;
+  height: 3vh;
+  right: 1vw;
+  bottom: 1vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #E0E0E0;
+  font-size: 0.9vw;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card img, body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card svg {
+  margin-left: 0.5vw;
+  width: 15%;
+  height: 100%;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card img path, body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card svg path {
+  fill: #E0E0E0;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .amarelo {
+  background-color: #D2AE6D;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .amarelo:hover p {
+  color: #373435;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .amarelo:hover .btn_card {
+  color: #373435;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .amarelo:hover .btn_card img path, body #Main_especialidades #Especialidades #especialidadesCards .amarelo:hover .btn_card svg path {
+  fill: #373435;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .preto {
+  background-color: #373435;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .cinza {
+  background-color: #776F62;
 }
 body #Main_especialidades #allInOne {
   position: relative;
@@ -4266,6 +4344,671 @@ body #Main_especialidades #depos .splide .splide__track .splide__list .splide__s
 }
 body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .no-back::before {
   display: none;
+}
+@media only screen and (max-width: 479px) {
+  body #Main_especialidades {
+    padding-top: 90px;
+  }
+  body #Main_especialidades #Especialidades h1 {
+    height: 15vh;
+    font-size: 5.5vw;
+    padding: 0 10vw;
+    text-align: center;
+  }
+  body #Main_especialidades #Especialidades h1::before {
+    bottom: 3vh;
+    width: 25%;
+  }
+  body #Main_especialidades #Especialidades h2 {
+    padding: 3vh 7.5% 0;
+    font-size: 2.75vw;
+    line-height: 4.5vh;
+  }
+  body #Main_especialidades #Especialidades #especialidadesCards {
+    padding: 0 7.5%;
+  }
+  body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card {
+    width: 100%;
+    height: 25vh;
+    margin: 3vh 1vw;
+    border-radius: 2vw;
+  }
+  body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover h3 {
+    font-size: 4.5vw;
+    margin-bottom: 2vh;
+  }
+  body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover p {
+    font-size: 2.5vw;
+    line-height: 2.5vh;
+    padding: 0 5vw;
+  }
+  body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card {
+    width: 25%;
+    height: 3.5vh;
+    font-size: 3vw;
+    padding: 0;
+    right: 3vw;
+    bottom: 1vw;
+  }
+  body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card img, body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card svg {
+    margin-left: auto;
+    width: 20%;
+    height: 100%;
+  }
+  body #Main_especialidades #allInOne {
+    height: 125vh;
+    flex-direction: column;
+  }
+  body #Main_especialidades #allInOne #Block_VideoAllinOne {
+    order: 2;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+  }
+  body #Main_especialidades #allInOne #Block_VideoAllinOne img, body #Main_especialidades #allInOne #Block_VideoAllinOne svg {
+    width: 20vw;
+    height: 20vw;
+  }
+  body #Main_especialidades #allInOne #Block_VideoAllinOne::before {
+    height: 100%;
+  }
+  body #Main_especialidades #allInOne #Block_textAllinOne {
+    width: 100%;
+    height: 75vh;
+    padding: 2vh 7.5%;
+    flex-direction: column;
+    order: 1;
+  }
+  body #Main_especialidades #allInOne #Block_textAllinOne h2 {
+    font-size: 6vw;
+    padding-right: 3vw;
+    margin-bottom: 6vh;
+  }
+  body #Main_especialidades #allInOne #Block_textAllinOne h2::before {
+    bottom: -1vh;
+    width: 40%;
+    height: 0.3vh;
+  }
+  body #Main_especialidades #allInOne #Block_textAllinOne p {
+    padding-left: 5vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+  }
+  body #Main_especialidades #allInOne #Block_textAllinOne span {
+    padding-left: 15vw;
+    font-size: 2.5vw;
+    line-height: 2vh;
+    margin-top: 10vh;
+  }
+  body #Main_especialidades #allInOne #Block_textAllinOne .btn_AllInOne {
+    border-radius: 1.5vw;
+    height: 3.5vh;
+    width: 35vw;
+    font-size: 3.5vw;
+    margin-top: 3vh;
+    margin-left: auto;
+  }
+  body #Main_especialidades #concierge {
+    height: 115vh;
+    flex-direction: column;
+  }
+  body #Main_especialidades #concierge #Block_textConcierge {
+    width: 100%;
+    height: 65vh;
+    padding: 2vh 7.5%;
+    flex-direction: column;
+    order: 1;
+  }
+  body #Main_especialidades #concierge #Block_textConcierge h2 {
+    font-size: 6vw;
+    padding-right: 3vw;
+    margin-bottom: 6vh;
+  }
+  body #Main_especialidades #concierge #Block_textConcierge h2::before {
+    bottom: -1vh;
+    width: 40%;
+    height: 0.3vh;
+  }
+  body #Main_especialidades #concierge #Block_textConcierge p {
+    padding-left: 5vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+  }
+  body #Main_especialidades #concierge #Block_textConcierge span {
+    padding-left: 15vw;
+    font-size: 2.5vw;
+    line-height: 2vh;
+    margin-top: 10vh;
+  }
+  body #Main_especialidades #concierge #Block_textConcierge .btn_Concierge {
+    border-radius: 1.5vw;
+    height: 3.5vh;
+    width: 35vw;
+    font-size: 3.5vw;
+    margin-top: 3vh;
+    margin-left: auto;
+  }
+  body #Main_especialidades #concierge img {
+    width: 100%;
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    order: 2;
+  }
+  body #Main_especialidades #concierge::before {
+    top: 65vh;
+    right: 0;
+    width: 100%;
+    height: 50vh;
+  }
+  body #Main_especialidades #depos {
+    height: auto;
+    padding: 3vh 7.5% 6vh;
+  }
+  body #Main_especialidades #depos h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 3vh;
+  }
+  body #Main_especialidades #depos h2::before {
+    bottom: -0.75vh;
+    width: 35%;
+    height: 0.3vh;
+  }
+  body #Main_especialidades #depos p {
+    font-size: 2.75vw;
+  }
+  body #Main_especialidades #depos .splide {
+    width: 100%;
+    height: 25vh;
+    margin-top: 1vh;
+  }
+  body #Main_especialidades #depos .splide .splide__arrows .splide__arrow {
+    width: 12vw;
+    height: 12vw;
+    padding: 1.5vw;
+  }
+  body #Main_especialidades #depos .splide .splide__arrows .splide__arrow--prev {
+    left: -5vw;
+  }
+  body #Main_especialidades #depos .splide .splide__arrows .splide__arrow--next {
+    right: -5vw;
+  }
+  body #Main_especialidades #depos .splide .splide__track {
+    width: 90%;
+    margin-left: 5%;
+  }
+  body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img, body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg {
+    width: 15vw;
+    height: 15vw;
+    top: 32%;
+  }
+  body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo video {
+    border-radius: 3.5vw;
+  }
+  body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo::before {
+    border-radius: 3.5vw;
+  }
+}
+body #Main_tratamentos #depos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #Main_tratamentos #depos h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 3.5vh;
+  position: relative;
+  color: #4B2F24;
+}
+body #Main_tratamentos #depos h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 15%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_tratamentos #depos p {
+  width: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #4B2F24;
+  line-height: 3vh;
+}
+body #Main_tratamentos #depos .splide {
+  width: 100%;
+  height: 50vh;
+  margin-top: 5vh;
+}
+body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow {
+  width: 3.25vw;
+  height: 3.25vw;
+  padding: 0.55vw;
+  opacity: 1;
+  background: none;
+}
+body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow svg {
+  fill: #4B2F24;
+  width: 100%;
+  height: 100%;
+}
+body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow:disabled {
+  opacity: 0.3;
+}
+body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow--prev {
+  left: -0.5vw;
+}
+body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow--next {
+  right: -0.5vw;
+}
+body #Main_tratamentos #depos .splide .splide__pagination {
+  display: none;
+}
+body #Main_tratamentos #depos .splide .splide__track {
+  width: 95%;
+  height: 100%;
+  margin-left: 2.5%;
+}
+body #Main_tratamentos #depos .splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+  padding: 1.5vw;
+  transition: all ease-in-out 0.15s;
+  z-index: 2;
+}
+body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide:hover {
+  transform: scale(1.02);
+}
+body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img, body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg {
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  left: 42%;
+  top: 30%;
+  z-index: 5;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img:hover, body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg:hover {
+  transform: scale(1.1);
+}
+body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border-radius: 1vw;
+}
+body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4B2F24;
+  z-index: 2;
+  opacity: 0.5;
+  border-radius: 1vw;
+}
+body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .no-back::before {
+  display: none;
+}
+body #Main_tratamentos #equipe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7.5vh 5%;
+}
+body #Main_tratamentos #equipe .patter {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.1;
+}
+body #Main_tratamentos #equipe h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 6.5vh;
+  position: relative;
+  color: #4B2F24;
+}
+body #Main_tratamentos #equipe h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 15%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_tratamentos #equipe p {
+  width: 100%;
+  padding-right: 3.5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #4B2F24;
+  line-height: 3vh;
+}
+body #Main_tratamentos #equipe .splide {
+  margin-top: 5vh;
+  width: 100%;
+  height: 50vh;
+}
+body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow {
+  width: 3.25vw;
+  height: 3.25vw;
+  padding: 0.55vw;
+  opacity: 1;
+  background: none;
+}
+body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow svg {
+  fill: #373435;
+  width: 100%;
+  height: 100%;
+}
+body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow:disabled {
+  opacity: 0.3;
+}
+body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow--prev {
+  left: -0.5vw;
+}
+body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow--next {
+  right: -0.5vw;
+}
+body #Main_tratamentos #equipe .splide .splide__pagination {
+  display: none;
+}
+body #Main_tratamentos #equipe .splide .splide__track {
+  width: 95%;
+  height: 100%;
+  margin-left: 2.5%;
+}
+body #Main_tratamentos #equipe .splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide:hover {
+  transform: scale(1.02);
+}
+body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 1.5vw;
+}
+body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+  position: absolute;
+  width: 83%;
+  height: 20%;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin: 8.5%;
+  background-color: #E0E0E0;
+  border-bottom-left-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+  border: 3px solid #D2AE6D;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.05vw;
+  color: #4B2F24;
+  margin-bottom: 1.25vh;
+}
+body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+  all: unset;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.85vw;
+  color: #4B2F24;
+  font-style: italic;
+}
+body #Main_tratamentos #equipe .btn_equipe {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 3.5vh;
+  color: #373435;
+  font-size: 1.25vw;
+  margin-top: 7.5vh;
+}
+body #Main_tratamentos #equipe .btn_equipe img, body #Main_tratamentos #equipe .btn_equipe svg {
+  height: 100%;
+}
+body #Main_tratamentos #equipe .btn_equipe img path, body #Main_tratamentos #equipe .btn_equipe svg path {
+  fill: #373435;
+}
+body #Main_tratamentos #concierge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #4B2F24;
+}
+body #Main_tratamentos #concierge #Block_textConcierge {
+  width: 50%;
+  height: 100%;
+  padding: 0 7.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_tratamentos #concierge #Block_textConcierge h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-right: 2.5vw;
+  margin-bottom: 7.5vh;
+  position: relative;
+  color: #D2AE6D;
+  text-align: right;
+}
+body #Main_tratamentos #concierge #Block_textConcierge h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  right: 0;
+  width: 35%;
+  height: 0.35vh;
+  background-color: #D2AE6D;
+}
+body #Main_tratamentos #concierge #Block_textConcierge p {
+  width: 100%;
+  padding-left: 5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  text-align: right;
+  color: #E0E0E0;
+  line-height: 4vh;
+}
+body #Main_tratamentos #concierge #Block_textConcierge span {
+  width: 100%;
+  padding-left: 10vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.1vw;
+  text-align: right;
+  color: #D0B498;
+  line-height: 3.5vh;
+  margin-top: 12.5vh;
+}
+body #Main_tratamentos #concierge #Block_textConcierge .btn_Concierge {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 4.5vh;
+  width: 13.5vw;
+  background-color: #D2AE6D;
+  color: #373435;
+  font-size: 1.25vw;
+  margin-top: 5vh;
+  margin-left: auto;
+}
+body #Main_tratamentos #concierge img, body #Main_tratamentos #concierge svg {
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_tratamentos #concierge::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #4B2F24;
+  opacity: 0.35;
+  z-index: 3;
+}
+body #Main_tratamentos #allInOne {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+body #Main_tratamentos #allInOne #Block_VideoAllinOne {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_tratamentos #allInOne #Block_VideoAllinOne img, body #Main_tratamentos #allInOne #Block_VideoAllinOne svg {
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  z-index: 5;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_tratamentos #allInOne #Block_VideoAllinOne img:hover, body #Main_tratamentos #allInOne #Block_VideoAllinOne svg:hover {
+  transform: scale(1.1);
+}
+body #Main_tratamentos #allInOne #Block_VideoAllinOne #VideoAllinOne {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+body #Main_tratamentos #allInOne #Block_VideoAllinOne::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4B2F24;
+  z-index: 2;
+  opacity: 0.5;
+}
+body #Main_tratamentos #allInOne .no-back::before {
+  display: none;
+}
+body #Main_tratamentos #allInOne #Block_textAllinOne {
+  width: 50%;
+  height: 100%;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_tratamentos #allInOne #Block_textAllinOne h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-right: 2.5vw;
+  margin-bottom: 7.5vh;
+  position: relative;
+  color: #4B2F24;
+  text-align: right;
+}
+body #Main_tratamentos #allInOne #Block_textAllinOne h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  right: 0;
+  width: 35%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_tratamentos #allInOne #Block_textAllinOne p {
+  width: 100%;
+  padding-left: 3.5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  text-align: right;
+  color: #4B2F24;
+  line-height: 4vh;
+}
+body #Main_tratamentos #allInOne #Block_textAllinOne span {
+  width: 100%;
+  padding-left: 10vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.1vw;
+  text-align: right;
+  color: #373435;
+  line-height: 3.5vh;
+  margin-top: 12.5vh;
+}
+body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 4.5vh;
+  width: 13.5vw;
+  background-color: #D2AE6D;
+  color: #373435;
+  font-size: 1.25vw;
+  margin-top: 3vh;
+  margin-left: auto;
 }
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 /* MOBILE */
