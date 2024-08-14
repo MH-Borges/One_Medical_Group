@@ -61,6 +61,8 @@ body {
   /* MOBILE */
   /* MOBILE */
   /* MOBILE */
+  /*--------------------------------- Responsive Media Quaries -----------------------------*/
+  /* MOBILE */
 }
 body .btns {
   all: unset;
@@ -293,7 +295,7 @@ body main .whats_link {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1vw;
+  padding: 0.9vw;
   z-index: 99;
 }
 body main .whats_link img, body main .whats_link svg {
@@ -1116,7 +1118,7 @@ body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__l
 body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .Block_img img {
   transform: scale(1.05);
 }
-body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover::before {
+body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .Block_img::before {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
 }
@@ -1125,17 +1127,6 @@ body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__l
 }
 body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .infosCards .btn_CardTratamento {
   transform: scale(1.07);
-}
-body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(75, 47, 36, 0.4);
-  z-index: 2;
-  transition: all ease-in-out 0.5s;
 }
 body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img {
   width: 100%;
@@ -1150,6 +1141,17 @@ body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__l
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(75, 47, 36, 0.4);
+  z-index: 2;
+  transition: all ease-in-out 0.5s;
 }
 body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards {
   position: absolute;
@@ -2477,6 +2479,272 @@ body #Main_contato #form .formBlock .text-warning {
     font-size: 3vw;
   }
 }
+body #Main_clinica {
+  padding-top: 124px;
+}
+body #Main_clinica #banner {
+  height: 65vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_clinica #banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+body #Main_clinica #banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4B2F24;
+  opacity: 0.45;
+  z-index: 2;
+}
+body #Main_clinica #banner h1, body #Main_clinica #banner span {
+  font-family: "TrajanPro", system-ui;
+  color: #E0E0E0;
+  z-index: 5;
+}
+body #Main_clinica #banner h1 {
+  position: relative;
+  font-size: 5vw;
+  display: flex;
+  justify-content: center;
+}
+body #Main_clinica #banner h1::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  width: 30%;
+  height: 0.25vh;
+  background-color: #D2AE6D;
+}
+body #Main_clinica #banner span {
+  font-size: 2vw;
+  margin: -7.5vh 0 1vh;
+}
+body #Main_clinica #oneMedical {
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body #Main_clinica #oneMedical img {
+  width: 60%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 2;
+}
+body #Main_clinica #oneMedical::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #4B2F24;
+  opacity: 0.35;
+  z-index: 3;
+}
+body #Main_clinica #oneMedical #Block_textOne {
+  width: 40%;
+  height: 100%;
+  padding: 0 3.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_clinica #oneMedical #Block_textOne h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 7.5vh;
+  position: relative;
+  color: #4B2F24;
+}
+body #Main_clinica #oneMedical #Block_textOne h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 35%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_clinica #oneMedical #Block_textOne p {
+  width: 100%;
+  padding-right: 3.5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #373435;
+  line-height: 3.75vh;
+}
+body #Main_clinica #oneMedical #Block_textOne .btn_tratamentos {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 3.5vh;
+  color: #D2AE6D;
+  font-size: 1.25vw;
+  margin-top: 5vh;
+  margin-right: auto;
+}
+body #Main_clinica #oneMedical #Block_textOne .btn_tratamentos img, body #Main_clinica #oneMedical #Block_textOne .btn_tratamentos svg {
+  height: 100%;
+}
+body #Main_clinica #MVV {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+body #Main_clinica #MVV #cards_MVV {
+  width: 100%;
+  height: 80vh;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body #Main_clinica #MVV #cards_MVV .card {
+  all: unset;
+  width: 30%;
+  height: 75%;
+  border-radius: 1.5vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 3vw;
+}
+body #Main_clinica #MVV #cards_MVV .card img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_clinica #MVV #cards_MVV .card::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4B2F24;
+  opacity: 0.35;
+  transition: all ease-in-out 0.35s;
+}
+body #Main_clinica #MVV #cards_MVV .card h2 {
+  z-index: 5;
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 3vw;
+  margin-bottom: 0;
+  position: relative;
+  color: #E0E0E0;
+  text-align: center;
+  transition: all ease-in-out 0.35s;
+}
+body #Main_clinica #MVV #cards_MVV .card p {
+  display: none;
+  transition: all ease-in-out 0.35s;
+}
+body #Main_clinica #MVV #cards_MVV .card .btn_card {
+  z-index: 5;
+  border: 1px solid #E0E0E0;
+  width: 40%;
+  font-size: 1.1vw;
+  height: 3.5vh;
+  border-radius: 1vw;
+  margin-left: 30%;
+  margin-top: 3vh;
+  transition: all ease-in-out 0.35s;
+}
+body #Main_clinica #MVV #cards_MVV .card:hover::before {
+  opacity: 1;
+}
+body #Main_clinica #MVV #cards_MVV .card:hover h2 {
+  z-index: 5;
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 1.5vw;
+  margin-bottom: 4vh;
+  position: relative;
+  color: #D2AE6D;
+  text-align: left;
+}
+body #Main_clinica #MVV #cards_MVV .card:hover h2::before {
+  content: "";
+  position: absolute;
+  bottom: -0.75vh;
+  left: 0;
+  width: 35%;
+  height: 0.3vh;
+  background-color: #D2AE6D;
+}
+body #Main_clinica #MVV #cards_MVV .card:hover p {
+  display: block;
+  z-index: 5;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1vw;
+  color: #E0E0E0;
+  line-height: 4vh;
+  text-align: left;
+}
+body #Main_clinica #MVV #cards_MVV .card:hover .btn_card {
+  display: none;
+}
+body #Main_clinica #MVV #Footer_Mvv {
+  height: 20vh;
+  background-color: #373435;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10vw;
+}
+body #Main_clinica #MVV #Footer_Mvv h2 {
+  margin-top: -2vh;
+  font-family: "TrajanPro", system-ui;
+  color: #D2AE6D;
+  position: relative;
+  font-size: 2.5vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+body #Main_clinica #MVV #Footer_Mvv h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1vh;
+  width: 30%;
+  height: 0.25vh;
+  background-color: #D2AE6D;
+}
 body #Main_clinica #concierge {
   position: relative;
   display: flex;
@@ -2854,75 +3122,146 @@ body #Main_clinica #equipe .btn_equipe img path, body #Main_clinica #equipe .btn
 }
 body #Main_clinica #tratamentos {
   height: 100vh;
-  padding: 0;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  background-color: #4B2F24;
-}
-body #Main_clinica #tratamentos #tratamentosimgs {
-  width: 100%;
-  height: 75vh;
   padding: 5vh 5%;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide {
+body #Main_clinica #tratamentos h2 {
+  width: 100%;
+  height: 15%;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  position: relative;
+  color: #4B2F24;
+  display: flex;
+  align-items: center;
+}
+body #Main_clinica #tratamentos h2::before {
+  content: "";
+  position: absolute;
+  bottom: 2vh;
+  left: 0;
+  width: 20%;
+  height: 0.3vh;
+  background-color: #4B2F24;
+}
+body #Main_clinica #tratamentos #block_Tratamentos {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos {
+  width: 25%;
+  height: 100%;
+  padding: 4vh 0;
+}
+body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos p {
+  width: 100%;
+  padding-right: 3.5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #373435;
+  line-height: 3.75vh;
+  color: #4B2F24;
+}
+body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos .btn_tratamentos {
+  width: 85%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 3.5vh;
+  color: #373435;
+  font-size: 1.25vw;
+  margin-top: 6vh;
+}
+body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos .btn_tratamentos img, body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos .btn_tratamentos svg {
+  margin-left: 1vw;
+  width: 15%;
+  height: 100%;
+}
+body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos .btn_tratamentos img path, body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos .btn_tratamentos svg path {
+  fill: #373435;
+}
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs {
+  width: 75%;
+  height: 100%;
+  padding: 4vh 5%;
+}
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide {
   width: 100%;
   height: 100%;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow {
   width: 4.5vw;
   height: 4.5vw;
   padding: 0.55vw;
   opacity: 1;
   background: none;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow svg {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow svg {
   fill: #D2AE6D;
   width: 100%;
   height: 100%;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow:disabled {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow:disabled {
   opacity: 0.3;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow--prev {
-  left: -2vw;
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow--prev {
+  left: -5vw;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow--next {
-  right: -2vw;
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow--next {
+  right: -5vw;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__pagination {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__pagination {
   display: none;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track {
-  width: 95%;
-  height: 100%;
-  margin-left: 2.5%;
-}
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track {
   width: 100%;
   height: 100%;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide {
   width: 100%;
   height: 100%;
   position: relative;
-  padding: 0.75vw;
+  padding: 0.5vw;
   transition: all ease-in-out 0.15s;
+  overflow: hidden;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .Block_img img {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .Block_img img {
   transform: scale(1.05);
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover::before {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .Block_img::before {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .infosCards .nome {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .infosCards .nome {
   transform: scale(1.07);
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .infosCards .btn_CardTratamento {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide:hover .infosCards .btn_CardTratamento {
   transform: scale(1.07);
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide::before {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1vw;
+  z-index: 1;
+  position: relative;
+}
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img img {
+  transition: all ease-in-out 0.5s;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2933,21 +3272,7 @@ body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide_
   z-index: 2;
   transition: all ease-in-out 0.5s;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 1vw;
-  z-index: 1;
-}
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img img {
-  transition: all ease-in-out 0.5s;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards {
   position: absolute;
   width: 100%;
   height: 30%;
@@ -2959,7 +3284,7 @@ body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide_
   align-items: center;
   justify-content: center;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .nome {
   transition: all ease-in-out 0.5s;
   width: 100%;
   font-family: "TrajanPro", system-ui;
@@ -2969,7 +3294,7 @@ body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide_
   padding: 0 2vw;
   text-align: center;
 }
-body #Main_clinica #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .btn_CardTratamento {
+body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .btn_CardTratamento {
   transition: all ease-in-out 0.5s;
   font-family: Georgia, "Times New Roman", Times, serif;
   height: 3.5vh;
@@ -3078,6 +3403,869 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades {
 }
 body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, body #Main_clinica #especialidades #textEspecialidade .btn_especialidades svg {
   height: 100%;
+}
+@media only screen and (max-width: 479px) {
+  body #Main_clinica {
+    padding-top: 90px;
+  }
+  body #Main_clinica #banner {
+    height: 30vh;
+  }
+  body #Main_clinica #banner img {
+    width: auto;
+    height: 100%;
+  }
+  body #Main_clinica #banner h1 {
+    font-size: 7.5vw;
+  }
+  body #Main_clinica #banner span {
+    font-size: 4vw;
+    margin: -2vh 0 2vh;
+  }
+  body #Main_clinica #oneMedical {
+    height: 125vh;
+    flex-direction: column;
+    padding: 0;
+  }
+  body #Main_clinica #oneMedical img {
+    width: 100%;
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    order: 2;
+  }
+  body #Main_clinica #oneMedical::before {
+    top: 75vh;
+    right: 0;
+    width: 100%;
+    height: 50vh;
+  }
+  body #Main_clinica #oneMedical #Block_textOne {
+    width: 100%;
+    height: 75vh;
+    padding: 2vh 7.5vw;
+    flex-direction: column;
+    order: 1;
+  }
+  body #Main_clinica #oneMedical #Block_textOne h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 5vh;
+  }
+  body #Main_clinica #oneMedical #Block_textOne h2::before {
+    bottom: -1vh;
+    width: 35%;
+    height: 0.3vh;
+  }
+  body #Main_clinica #oneMedical #Block_textOne p {
+    padding-right: 2.5vw;
+    font-size: 2.75vw;
+    line-height: 3vh;
+  }
+  body #Main_clinica #oneMedical #Block_textOne .btn_tratamentos {
+    width: 70vw;
+    height: 4vh;
+    font-size: 4.5vw;
+    margin-right: auto;
+    margin-top: 5vh;
+  }
+  body #Main_clinica #oneMedical #Block_textOne .btn_tratamentos img, body #Main_clinica #oneMedical #Block_textOne .btn_tratamentos svg {
+    margin-left: auto;
+    width: 15%;
+    height: 100%;
+    margin-top: -1%;
+  }
+  body #Main_clinica #MVV {
+    height: auto;
+    padding: 4vh 0 0;
+    flex-direction: column;
+  }
+  body #Main_clinica #MVV #cards_MVV {
+    width: 100%;
+    height: auto;
+    padding: 0 5%;
+    flex-direction: column;
+  }
+  body #Main_clinica #MVV #cards_MVV .card {
+    width: 100%;
+    height: 25vh;
+    border-radius: 2.5vw;
+    margin: 2vh 0;
+  }
+  body #Main_clinica #MVV #cards_MVV .card h2 {
+    font-size: 7.5vw;
+  }
+  body #Main_clinica #MVV #cards_MVV .card .btn_card {
+    z-index: 5;
+    width: 35%;
+    font-size: 4vw;
+    border-radius: 5vw;
+    margin-left: 32.5%;
+  }
+  body #Main_clinica #MVV #cards_MVV .card:hover::before {
+    opacity: 1;
+  }
+  body #Main_clinica #MVV #cards_MVV .card:hover h2 {
+    font-size: 6.5vw;
+    padding-left: 2vw;
+    margin-bottom: 2vh;
+  }
+  body #Main_clinica #MVV #cards_MVV .card:hover p {
+    display: block;
+    font-size: 2.5vw;
+    line-height: 2.75vh;
+  }
+  body #Main_clinica #MVV #Footer_Mvv {
+    margin-top: 3vh;
+    height: 15vh;
+    padding: 0 5vw;
+  }
+  body #Main_clinica #MVV #Footer_Mvv h2 {
+    margin-top: -2vh;
+    font-size: 5vw;
+  }
+  body #Main_clinica #MVV #Footer_Mvv h2::before {
+    bottom: -1.5vh;
+  }
+  body #Main_clinica #concierge {
+    height: 115vh;
+    flex-direction: column;
+  }
+  body #Main_clinica #concierge #Block_textConcierge {
+    width: 100%;
+    height: 65vh;
+    padding: 2vh 7.5%;
+    flex-direction: column;
+    order: 1;
+  }
+  body #Main_clinica #concierge #Block_textConcierge h2 {
+    font-size: 6vw;
+    padding-right: 3vw;
+    margin-bottom: 6vh;
+  }
+  body #Main_clinica #concierge #Block_textConcierge h2::before {
+    bottom: -1vh;
+    width: 40%;
+    height: 0.3vh;
+  }
+  body #Main_clinica #concierge #Block_textConcierge p {
+    padding-left: 5vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+  }
+  body #Main_clinica #concierge #Block_textConcierge span {
+    padding-left: 15vw;
+    font-size: 2.5vw;
+    line-height: 2vh;
+    margin-top: 10vh;
+  }
+  body #Main_clinica #concierge #Block_textConcierge .btn_Concierge {
+    border-radius: 1.5vw;
+    height: 3.5vh;
+    width: 35vw;
+    font-size: 3.5vw;
+    margin-top: 3vh;
+    margin-left: auto;
+  }
+  body #Main_clinica #concierge img {
+    width: 100%;
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    order: 2;
+  }
+  body #Main_clinica #concierge::before {
+    top: 65vh;
+    right: 0;
+    width: 100%;
+    height: 50vh;
+  }
+  body #Main_clinica #allInOne {
+    height: 125vh;
+    flex-direction: column;
+  }
+  body #Main_clinica #allInOne #Block_VideoAllinOne {
+    order: 2;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+  }
+  body #Main_clinica #allInOne #Block_VideoAllinOne img, body #Main_clinica #allInOne #Block_VideoAllinOne svg {
+    width: 20vw;
+    height: 20vw;
+  }
+  body #Main_clinica #allInOne #Block_VideoAllinOne::before {
+    height: 100%;
+  }
+  body #Main_clinica #allInOne #Block_textAllinOne {
+    width: 100%;
+    height: 75vh;
+    padding: 2vh 7.5%;
+    flex-direction: column;
+    order: 1;
+  }
+  body #Main_clinica #allInOne #Block_textAllinOne h2 {
+    font-size: 6vw;
+    padding-right: 3vw;
+    margin-bottom: 6vh;
+  }
+  body #Main_clinica #allInOne #Block_textAllinOne h2::before {
+    bottom: -1vh;
+    width: 40%;
+    height: 0.3vh;
+  }
+  body #Main_clinica #allInOne #Block_textAllinOne p {
+    padding-left: 5vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+  }
+  body #Main_clinica #allInOne #Block_textAllinOne span {
+    padding-left: 15vw;
+    font-size: 2.5vw;
+    line-height: 2vh;
+    margin-top: 10vh;
+  }
+  body #Main_clinica #allInOne #Block_textAllinOne .btn_AllInOne {
+    border-radius: 1.5vw;
+    height: 3.5vh;
+    width: 35vw;
+    font-size: 3.5vw;
+    margin-top: 3vh;
+    margin-left: auto;
+  }
+  body #Main_clinica #historia {
+    height: auto;
+    background-color: #4B2F24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3vh 5% 7.5vh;
+  }
+  body #Main_clinica #historia h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 5vh;
+  }
+  body #Main_clinica #historia h2::before {
+    bottom: -0.5vh;
+    width: 35%;
+    height: 0.3vh;
+  }
+  body #Main_clinica #historia p {
+    padding-right: 2vw;
+    font-size: 2.65vw;
+    line-height: 2.5vh;
+  }
+  body #Main_clinica #equipe {
+    justify-content: center;
+    padding: 3vh 5% 7.5vh;
+    height: auto;
+  }
+  body #Main_clinica #equipe h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 5vh;
+  }
+  body #Main_clinica #equipe h2::before {
+    bottom: -1vh;
+    width: 35%;
+    height: 0.3vh;
+  }
+  body #Main_clinica #equipe p {
+    padding-right: 3vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+  }
+  body #Main_clinica #equipe .splide {
+    margin-top: 1vh;
+  }
+  body #Main_clinica #equipe .splide .splide__arrows .splide__arrow {
+    width: 12vw;
+    height: 12vw;
+    padding: 1.5vw;
+  }
+  body #Main_clinica #equipe .splide .splide__arrows .splide__arrow--prev {
+    left: -2vw;
+  }
+  body #Main_clinica #equipe .splide .splide__arrows .splide__arrow--next {
+    right: -2vw;
+  }
+  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide {
+    padding: 0;
+    position: relative;
+  }
+  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide img {
+    padding: 0;
+    width: 65%;
+    height: 90%;
+    margin-left: 17.5%;
+    margin-top: 5%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+    width: 66%;
+    height: 25%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    margin: 17%;
+    margin-bottom: 5%;
+    border-bottom-left-radius: 4vw;
+    border-bottom-right-radius: 4vw;
+    border: 2px solid #D2AE6D;
+    border-top: none;
+  }
+  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 2vh;
+  }
+  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+    font-size: 3.5vw;
+  }
+  body #Main_clinica #equipe .btn_equipe {
+    width: 58vw;
+    height: 4vh;
+    font-size: 4.5vw;
+    margin-top: 3vh;
+  }
+  body #Main_clinica #equipe .btn_equipe img, body #Main_clinica #equipe .btn_equipe svg {
+    margin-left: auto;
+    width: 15%;
+    height: 100%;
+  }
+  body #Main_clinica #tratamentos {
+    height: auto;
+    padding: 1vh 5%;
+  }
+  body #Main_clinica #tratamentos h2 {
+    height: 10vh;
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 3vh;
+  }
+  body #Main_clinica #tratamentos h2::before {
+    bottom: -1vh;
+    width: 35%;
+    height: 0.3vh;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos {
+    width: 100%;
+    height: 35vh;
+    padding: 0;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos p {
+    padding-right: 3vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos .btn_tratamentos {
+    width: 70vw;
+    height: 4vh;
+    font-size: 4.5vw;
+    margin-top: 5vh;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos .btn_tratamentos img, body #Main_clinica #tratamentos #block_Tratamentos #Block_textTratamentos .btn_tratamentos svg {
+    margin-left: auto;
+    width: 15%;
+    height: 100%;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs {
+    width: 100%;
+    height: 60vh;
+    padding: 2vh 7.5%;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow {
+    width: 12vw;
+    height: 12vw;
+    padding: 1.75vw;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow--prev {
+    left: -6.5vw;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__arrows .splide__arrow--next {
+    right: -6.5vw;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track {
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide {
+    padding: 1vw;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .Block_img {
+    border-radius: 3vw;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards {
+    height: 35%;
+    bottom: 10%;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+    font-size: 5vw;
+    margin-bottom: 5vh;
+    padding: 0 10vw;
+  }
+  body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .btn_CardTratamento {
+    height: 3vh;
+    width: 22vw;
+    font-size: 3.5vw;
+    outline: 1px solid #E0E0E0;
+  }
+  body #Main_clinica #especialidades {
+    padding: 3vw;
+    height: auto;
+    justify-content: center;
+  }
+  body #Main_clinica #especialidades .especialidadeBlock {
+    width: 90%;
+    height: 22vh;
+    margin: 2vh 0;
+    border-radius: 2vw;
+  }
+  body #Main_clinica #especialidades .especialidadeBlock::before {
+    opacity: 0.5;
+  }
+  body #Main_clinica #especialidades .especialidadeBlock p {
+    font-size: 5vw;
+    z-index: 9;
+  }
+  body #Main_clinica #especialidades .especialidadeBlock .amarelo {
+    background: none;
+  }
+  body #Main_clinica #especialidades .especialidadeBlock .preto {
+    background: none;
+  }
+  body #Main_clinica #especialidades .especialidadeBlock .cinza {
+    background: none;
+  }
+  body #Main_clinica #especialidades #textEspecialidade {
+    padding: 2vw;
+    height: 32vh;
+  }
+  body #Main_clinica #especialidades #textEspecialidade::before {
+    display: none;
+    content: "";
+  }
+  body #Main_clinica #especialidades #textEspecialidade h2 {
+    font-size: 6vw;
+  }
+  body #Main_clinica #especialidades #textEspecialidade p {
+    all: unset;
+    color: #E0E0E0;
+    padding-right: 2vw;
+    font-size: 3vw;
+    line-height: 2.5vh;
+    margin: 4vh 0;
+  }
+  body #Main_clinica #especialidades #textEspecialidade .btn_especialidades {
+    width: 52vw;
+    height: 4vh;
+    font-size: 4.5vw;
+    margin-right: auto;
+  }
+  body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, body #Main_clinica #especialidades #textEspecialidade .btn_especialidades svg {
+    margin-left: auto;
+    width: 15%;
+    height: 100%;
+    margin-top: -1%;
+  }
+}
+body #Main_especialidades {
+  padding-top: 124px;
+}
+body #Main_especialidades #Especialidades {
+  height: auto;
+}
+body #Main_especialidades #Especialidades #especialidadesCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5vh 0;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card {
+  width: 45%;
+  height: 30vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 1vh 1vw;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card img {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4B2F24;
+  opacity: 0.25;
+  z-index: 3;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.35vw;
+  color: #E0E0E0;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card .amarelo {
+  background-color: #D2AE6D;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card .preto {
+  background-color: #373435;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card .cinza {
+  background-color: #776F62;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover img {
+  display: none;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover::before {
+  display: none;
+}
+body #Main_especialidades #allInOne {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+body #Main_especialidades #allInOne #Block_VideoAllinOne {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_especialidades #allInOne #Block_VideoAllinOne img, body #Main_especialidades #allInOne #Block_VideoAllinOne svg {
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  z-index: 5;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_especialidades #allInOne #Block_VideoAllinOne img:hover, body #Main_especialidades #allInOne #Block_VideoAllinOne svg:hover {
+  transform: scale(1.1);
+}
+body #Main_especialidades #allInOne #Block_VideoAllinOne #VideoAllinOne {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+body #Main_especialidades #allInOne #Block_VideoAllinOne::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4B2F24;
+  z-index: 2;
+  opacity: 0.5;
+}
+body #Main_especialidades #allInOne .no-back::before {
+  display: none;
+}
+body #Main_especialidades #allInOne #Block_textAllinOne {
+  width: 50%;
+  height: 100%;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_especialidades #allInOne #Block_textAllinOne h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-right: 2.5vw;
+  margin-bottom: 7.5vh;
+  position: relative;
+  color: #4B2F24;
+  text-align: right;
+}
+body #Main_especialidades #allInOne #Block_textAllinOne h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  right: 0;
+  width: 35%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_especialidades #allInOne #Block_textAllinOne p {
+  width: 100%;
+  padding-left: 3.5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  text-align: right;
+  color: #4B2F24;
+  line-height: 4vh;
+}
+body #Main_especialidades #allInOne #Block_textAllinOne span {
+  width: 100%;
+  padding-left: 10vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.1vw;
+  text-align: right;
+  color: #373435;
+  line-height: 3.5vh;
+  margin-top: 12.5vh;
+}
+body #Main_especialidades #allInOne #Block_textAllinOne .btn_AllInOne {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 4.5vh;
+  width: 13.5vw;
+  background-color: #D2AE6D;
+  color: #373435;
+  font-size: 1.25vw;
+  margin-top: 3vh;
+  margin-left: auto;
+}
+body #Main_especialidades #concierge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #4B2F24;
+}
+body #Main_especialidades #concierge #Block_textConcierge {
+  width: 50%;
+  height: 100%;
+  padding: 0 7.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_especialidades #concierge #Block_textConcierge h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-right: 2.5vw;
+  margin-bottom: 7.5vh;
+  position: relative;
+  color: #D2AE6D;
+  text-align: right;
+}
+body #Main_especialidades #concierge #Block_textConcierge h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  right: 0;
+  width: 35%;
+  height: 0.35vh;
+  background-color: #D2AE6D;
+}
+body #Main_especialidades #concierge #Block_textConcierge p {
+  width: 100%;
+  padding-left: 5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  text-align: right;
+  color: #E0E0E0;
+  line-height: 4vh;
+}
+body #Main_especialidades #concierge #Block_textConcierge span {
+  width: 100%;
+  padding-left: 10vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.1vw;
+  text-align: right;
+  color: #D0B498;
+  line-height: 3.5vh;
+  margin-top: 12.5vh;
+}
+body #Main_especialidades #concierge #Block_textConcierge .btn_Concierge {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 4.5vh;
+  width: 13.5vw;
+  background-color: #D2AE6D;
+  color: #373435;
+  font-size: 1.25vw;
+  margin-top: 5vh;
+  margin-left: auto;
+}
+body #Main_especialidades #concierge img, body #Main_especialidades #concierge svg {
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_especialidades #concierge::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #4B2F24;
+  opacity: 0.35;
+  z-index: 3;
+}
+body #Main_especialidades #depos {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #Main_especialidades #depos h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 3.5vh;
+  position: relative;
+  color: #4B2F24;
+}
+body #Main_especialidades #depos h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 15%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_especialidades #depos p {
+  width: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #4B2F24;
+  line-height: 3vh;
+}
+body #Main_especialidades #depos .splide {
+  width: 100%;
+  height: 50vh;
+  margin-top: 5vh;
+}
+body #Main_especialidades #depos .splide .splide__arrows .splide__arrow {
+  width: 3.25vw;
+  height: 3.25vw;
+  padding: 0.55vw;
+  opacity: 1;
+  background: none;
+}
+body #Main_especialidades #depos .splide .splide__arrows .splide__arrow svg {
+  fill: #4B2F24;
+  width: 100%;
+  height: 100%;
+}
+body #Main_especialidades #depos .splide .splide__arrows .splide__arrow:disabled {
+  opacity: 0.3;
+}
+body #Main_especialidades #depos .splide .splide__arrows .splide__arrow--prev {
+  left: -0.5vw;
+}
+body #Main_especialidades #depos .splide .splide__arrows .splide__arrow--next {
+  right: -0.5vw;
+}
+body #Main_especialidades #depos .splide .splide__pagination {
+  display: none;
+}
+body #Main_especialidades #depos .splide .splide__track {
+  width: 95%;
+  height: 100%;
+  margin-left: 2.5%;
+}
+body #Main_especialidades #depos .splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+  padding: 1.5vw;
+  transition: all ease-in-out 0.15s;
+  z-index: 2;
+}
+body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide:hover {
+  transform: scale(1.02);
+}
+body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img, body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg {
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  left: 42%;
+  top: 30%;
+  z-index: 5;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img:hover, body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg:hover {
+  transform: scale(1.1);
+}
+body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border-radius: 1vw;
+}
+body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4B2F24;
+  z-index: 2;
+  opacity: 0.5;
+  border-radius: 1vw;
+}
+body #Main_especialidades #depos .splide .splide__track .splide__list .splide__slide .no-back::before {
+  display: none;
 }
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 /* MOBILE */
@@ -3212,7 +4400,7 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
     margin-top: -6vh;
   }
   body footer #bigFooter #redes_rodape a img, body footer #bigFooter #redes_rodape a svg {
-    padding: 1.25vw;
+    padding: 1.5vw;
   }
   body footer #smallFooter {
     justify-content: center;
