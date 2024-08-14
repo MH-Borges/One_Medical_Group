@@ -70,3 +70,32 @@ window.addEventListener('scroll', function() {
     if(window.pageYOffset > 200){ document.querySelector(".whats_link").classList.remove('hide'); }
     else{ document.querySelector(".whats_link").classList.add('hide'); }
 });
+
+
+//video button + video ratio adjust
+function PLayVideo(idVideo) {
+    var video = document.getElementById(idVideo);
+    var parent = document.getElementById('Block_'+idVideo);
+
+    if(video.controls == true){
+        parent.children[0].classList.remove('hide');
+        video.pause();
+        video.currentTime = 0;
+        video.controls = false;
+        parent.classList.remove('no-back');
+    }
+    else{
+        parent.children[0].classList.add('hide');
+        video.play();
+        video.controls = true;
+        parent.classList.add('no-back');
+    }
+}
+document.addEventListener("fullscreenchange", (e) => {
+    if(e.srcElement.style.objectFit == "" || e.srcElement.style.objectFit == 'cover'){
+        e.target.style.objectFit = "contain";
+    }
+    else{
+        e.target.style.objectFit = "cover";
+    }
+});

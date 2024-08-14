@@ -1,16 +1,267 @@
 #Main_clinica{
+    padding-top: 124px;
     #banner{
-
+        height: 65vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            z-index: 1;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $Marrom;
+            opacity: 0.45;
+            z-index: 2;
+        }
+        h1, span{
+            font-family: $Main-font;
+            color: $Branco;
+            z-index: 5;
+        }
+        h1{
+            position: relative;
+            font-size: 5vw;
+            display: flex;
+            justify-content: center;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -1.5vh;
+                width: 30%;
+                height: 0.25vh;
+                background-color: $Amarelo;
+            }
+        }
+        span{
+            font-size: 2vw;
+            margin: -7.5vh 0 1vh;
+        }
     }
-
     #oneMedical{
-
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        img{
+            width: 60%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 100%;
+            background-color: $Marrom;
+            opacity: 0.35;
+            z-index: 3;
+        }
+        #Block_textOne{
+            width: 40%;
+            height: 100%;
+            padding: 0 3.5vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h2{
+                width: 100%;
+                height: auto;
+                font-family: $Main-font;
+                font-size: 2.5vw;
+                padding-left: 2.5vw;
+                margin-bottom: 7.5vh;
+                position: relative;
+                color: $Marrom;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -1.5vh;
+                    left: 0;
+                    width: 35%;
+                    height: 0.35vh;
+                    background-color: $Marrom;
+                }
+            }
+            p{
+                width: 100%;
+                padding-right: 3.5vw;
+                font-family: $Text-font;
+                font-weight: 400;
+                font-size: 1vw;
+                color: $Preto;
+                line-height: 3.75vh;
+            }
+            .btn_tratamentos{
+                font-family: $Text-font;
+                height: 3.5vh;
+                color: $Amarelo;
+                font-size: 1.25vw;
+                margin-top: 5vh;
+                margin-right: auto;
+                img, svg{
+                    height: 100%;
+                }
+            }
+        }
     }
-
     #MVV{
-
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        #cards_MVV{
+            width: 100%;
+            height: 80vh;
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .card{
+                all: unset;
+                width: 30%;
+                height: 75%;
+                border-radius: 1.5vw;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                padding: 3vw;
+                img{
+                    position: absolute;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    object-fit: cover;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    z-index: 2;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: $Marrom;
+                    opacity: 0.35;
+                    transition: all ease-in-out .35s;
+                }
+                h2{
+                    z-index: 5;
+                    width: 100%;
+                    height: auto;
+                    font-family: $Main-font;
+                    font-size: 3vw;
+                    margin-bottom: 0;
+                    position: relative;
+                    color: $Branco;
+                    text-align: center;
+                    transition: all ease-in-out .35s;
+                }
+                p{
+                    display: none;
+                    transition: all ease-in-out .35s;
+                }
+                .btn_card{
+                    z-index: 5;
+                    border: 1px solid $Branco;
+                    width: 40%;
+                    font-size: 1.1vw;
+                    height: 3.5vh;
+                    border-radius: 1vw;
+                    margin-left: 30%;
+                    margin-top: 3vh;
+                    transition: all ease-in-out .35s;
+                }
+                &:hover{
+                    &::before{
+                        opacity: 1;
+                    }
+                    h2{
+                        z-index: 5;
+                        width: 100%;
+                        height: auto;
+                        font-family: $Main-font;
+                        font-size: 2.5vw;
+                        padding-left: 1.5vw;
+                        margin-bottom: 4vh;
+                        position: relative;
+                        color: $Amarelo;
+                        text-align: left;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom: -0.75vh;
+                            left: 0;
+                            width: 35%;
+                            height: 0.3vh;
+                            background-color: $Amarelo;
+                        }
+                    }
+                    p{
+                        display: block;
+                        z-index: 5;
+                        font-family: $Text-font;
+                        font-size: 1vw;
+                        color: $Branco;
+                        line-height: 4vh;
+                        text-align: left;
+                    }
+                    .btn_card{
+                        display: none;
+                    }
+                }
+            }
+        }
+        #Footer_Mvv{
+            height: 20vh;
+            background-color: $Preto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10vw;
+            h2{
+                margin-top: -2vh;
+                font-family: $Main-font;
+                color: $Amarelo;
+                position: relative;
+                font-size: 2.5vw;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -1vh;
+                    width: 30%;
+                    height: 0.25vh;
+                    background-color: $Amarelo;
+                }
+            }
+        }
     }
-
     #concierge{
         position: relative;
         display: flex;
@@ -244,7 +495,6 @@
             line-height: 4vh;
         }
     }
-
     #equipe{
         position: relative;
         display: flex;
@@ -388,136 +638,191 @@
             }
         }
     }
-
     #tratamentos{
         height: 100vh;
-        padding: 0;
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        background-color: $Marrom;
-        #tratamentosimgs{
+        padding: 5vh 5%;
+        h2{
             width: 100%;
-            height: 75vh;
-            padding: 5vh 5%;
-            .splide{
-                width: 100%;
+            height: 15%;
+            font-family: $Main-font;
+            font-size: 2.5vw;
+            padding-left: 2.5vw;
+            position: relative;
+            color: $Marrom;
+            display: flex;
+            align-items: center;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 2vh;
+                left: 0;
+                width: 20%;
+                height: 0.3vh;
+                background-color: $Marrom;
+            }
+        }
+        #block_Tratamentos{
+            width: 100%;
+            height: 85%;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            #Block_textTratamentos{
+                width: 25%;
                 height: 100%;
-                .splide__arrows{
-                    .splide__arrow {
-                        width: 4.5vw;
-                        height: 4.5vw;
-                        padding: 0.55vw;
-                        opacity: 1;
-                        background: none;
-                        svg{
-                            fill: $Amarelo;
-                            width: 100%;
-                            height: 100%;
-                        }
-                        &:disabled{
-                            opacity: 0.3;
-                        }
-                    }
-                    .splide__arrow--prev{
-                        left: -2vw;
-                    }
-                    .splide__arrow--next{
-                        right: -2vw;
-                    }
+                padding: 4vh 0;
+                p{
+                    width: 100%;
+                    padding-right: 3.5vw;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    color: $Preto;
+                    line-height: 3.75vh;
+                    color: $Marrom;
                 }
-                .splide__pagination {
-                    display: none;
-                }
-                .splide__track {
-                    width: 95%;
-                    height: 100%;
-                    margin-left: 2.5%;
-                    .splide__list{
-                        width: 100%;
+                .btn_tratamentos{
+                    width: 85%;
+                    font-family: $Text-font;
+                    height: 3.5vh;
+                    color: $Preto;
+                    font-size: 1.25vw;
+                    margin-top: 6vh;
+                    img, svg{
+                        margin-left: 1vw;
+                        width: 15%;
                         height: 100%;
-                        .splide__slide{
-                            width: 100%;
-                            height: 100%;
-                            position: relative;
-                            padding: 0.75vw;
-                            transition: all ease-in-out .15s;
-                            // overflow: hidden;
-                            &:hover{
-                                .Block_img{
-                                    img{
-                                        transform: scale(1.05);
-                                    }
-                                }
-                                &::before{
-                                    backdrop-filter: blur(2px);
-                                }
-                                .infosCards{
-                                    .nome{
-                                        transform: scale(1.07);
-                                    }
-                                    .btn_CardTratamento{
-                                        transform: scale(1.07);
-                                    }
-                                }
-                            }
-                            &::before{
-                                content: '';
-                                position: absolute;
-                                top: 0;
-                                left: 0;
+                        path{
+                            fill: $Preto;
+                        }
+                    }
+                }
+            }
+            #tratamentosimgs{
+                width: 75%;
+                height: 100%;
+                padding: 4vh 5%;
+                .splide{
+                    width: 100%;
+                    height: 100%;
+                    .splide__arrows{
+                        .splide__arrow {
+                            width: 4.5vw;
+                            height: 4.5vw;
+                            padding: 0.55vw;
+                            opacity: 1;
+                            background: none;
+                            svg{
+                                fill: $Amarelo;
                                 width: 100%;
                                 height: 100%;
-                                background-color: rgba(75, 47, 36, 0.4);
-                                z-index: 2;
-                                transition: all ease-in-out 0.5s;
                             }
-                            .Block_img{
+                            &:disabled{
+                                opacity: 0.3;
+                            }
+                        }
+                        .splide__arrow--prev{
+                            left: -5vw;
+                        }
+                        .splide__arrow--next{
+                            right: -5vw;
+                        }
+                    }
+                    .splide__pagination {
+                        display: none;
+                    }
+                    .splide__track {
+                        width: 100%;
+                        height: 100%;
+                        .splide__list{
+                            width: 100%;
+                            height: 100%;
+                            .splide__slide{
                                 width: 100%;
-                                height: 100%;  
+                                height: 100%;
+                                position: relative;
+                                padding: 0.5vw;
+                                transition: all ease-in-out .15s;
                                 overflow: hidden;
-                                border-radius: 1vw;
-                                z-index: 1;
-                                img{
-                                    transition: all ease-in-out 0.5s;
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: cover;
+                                &:hover{
+                                    .Block_img{
+                                        img{
+                                            transform: scale(1.05);
+                                        }
+                                        &::before{
+                                            backdrop-filter: blur(2px);
+                                        }
+                                    }
+                                    .infosCards{
+                                        .nome{
+                                            transform: scale(1.07);
+                                        }
+                                        .btn_CardTratamento{
+                                            transform: scale(1.07);
+                                        }
+                                    }
                                 }
-                            }
-                            .infosCards{
-                                position: absolute;
-                                width: 100%;
-                                height: 30%;
-                                bottom: 7.5%;
-                                left: 0;
-                                z-index: 9;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                .nome{
-                                    transition: all ease-in-out 0.5s;
+                                .Block_img{
                                     width: 100%;
-                                    font-family: $Main-font;
-                                    font-size: 1.5vw;
-                                    color: $Branco;
-                                    margin-bottom: 5vh;
-                                    padding: 0 2vw;
-                                    text-align: center;
+                                    height: 100%;  
+                                    overflow: hidden;
+                                    border-radius: 1vw;
+                                    z-index: 1;
+                                    position: relative;
+                                    img{
+                                        transition: all ease-in-out 0.5s;
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background-color: rgba(75, 47, 36, 0.4);
+                                        z-index: 2;
+                                        transition: all ease-in-out 0.5s;
+                                    }
                                 }
-                                .btn_CardTratamento{
-                                    transition: all ease-in-out 0.5s;
-                                    font-family: $Text-font;
-                                    height: 3.5vh;
-                                    width: 6.25vw;
-                                    color: $Branco;
-                                    font-size: 1vw;
-                                    outline: 2px solid $Branco;
+                                .infosCards{
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 30%;
+                                    bottom: 7.5%;
+                                    left: 0;
+                                    z-index: 9;
                                     display: flex;
+                                    flex-direction: column;
                                     align-items: center;
                                     justify-content: center;
-                                    border-radius: 5vw;
+                                    .nome{
+                                        transition: all ease-in-out 0.5s;
+                                        width: 100%;
+                                        font-family: $Main-font;
+                                        font-size: 1.5vw;
+                                        color: $Branco;
+                                        margin-bottom: 5vh;
+                                        padding: 0 2vw;
+                                        text-align: center;
+                                    }
+                                    .btn_CardTratamento{
+                                        transition: all ease-in-out 0.5s;
+                                        font-family: $Text-font;
+                                        height: 3.5vh;
+                                        width: 6.25vw;
+                                        color: $Branco;
+                                        font-size: 1vw;
+                                        outline: 2px solid $Branco;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 5vw;
+                                    }
                                 }
                             }
                         }
@@ -526,7 +831,6 @@
             }
         }
     }
-
     #especialidades{
         height: 75vh;
         display: flex;
@@ -630,4 +934,500 @@
 /* MOBILE */
 @media only screen and (max-width: 479px){
 
+
+    #Main_clinica{
+        padding-top: 90px;
+        #banner{
+            height: 30vh;
+            img{
+                width: auto;
+                height: 100%;
+            }
+            h1{
+                font-size: 7.5vw;
+            }
+            span{
+                font-size: 4vw;
+                margin: -2vh 0 2vh;
+            }
+        }
+        #oneMedical{
+            height: 125vh;
+            flex-direction: column;
+            padding: 0;
+            img{
+                width: 100%;
+                height: 50vh;
+                object-fit: cover;
+                order: 2;
+            }
+            &::before{
+                top: 75vh;
+                right: 0;
+                width: 100%;
+                height: 50vh;
+            }
+            #Block_textOne{
+                width: 100%;
+                height: 75vh;
+                padding: 2vh 7.5vw;
+                flex-direction: column;
+                order: 1;
+                h2{
+                    font-size: 7vw;
+                    padding-left: 4vw;
+                    margin-bottom: 5vh;
+                    &::before{
+                        bottom: -1vh;
+                        width: 35%;
+                        height: 0.3vh;
+                    }
+                }
+                p{
+                    padding-right: 2.5vw;
+                    font-size: 2.75vw;
+                    line-height: 3vh;
+                }
+                .btn_tratamentos{
+                    width: 70vw;
+                    height: 4vh;
+                    font-size: 4.5vw;
+                    margin-right: auto;
+                    margin-top: 5vh;
+                    img, svg{
+                        margin-left: auto;
+                        width: 15%;
+                        height: 100%;
+                        margin-top: -1%;
+                    }
+                }
+            }
+            
+        }
+
+
+        #MVV{
+            height: auto;
+            padding:4vh 0 0;
+            flex-direction: column;
+            #cards_MVV{
+                width: 100%;
+                height: auto;
+                padding: 0 5%;
+                flex-direction: column;
+                .card{
+                    width: 100%;
+                    height: 25vh;
+                    border-radius: 2.5vw;
+                    margin: 2vh 0;
+                    h2{
+                        font-size: 7.5vw;
+                    }
+                    .btn_card{
+                        z-index: 5;
+                        width: 35%;
+                        font-size: 4vw;
+                        border-radius: 5vw;
+                        margin-left: 32.5%;
+                    }
+                    &:hover{
+                        &::before{
+                            opacity: 1;
+                        }
+                        h2{
+                            font-size: 6.5vw;
+                            padding-left: 2vw;
+                            margin-bottom: 2vh;
+                        }
+                        p{
+                            display: block;
+                            font-size: 2.5vw;
+                            line-height: 2.75vh;
+                        }
+                       
+                    }
+                }
+            }
+            #Footer_Mvv{
+                margin-top: 3vh;
+                height: 15vh;
+                padding: 0 5vw;
+                h2{
+                    margin-top: -2vh;
+                    font-size: 5vw;
+                    &::before{
+                        bottom: -1.5vh;
+                    }
+                }
+            }
+        }
+
+        
+
+        #concierge{
+            height: 115vh;
+            flex-direction: column;
+            #Block_textConcierge{
+                width: 100%;
+                height: 65vh;
+                padding: 2vh 7.5%;
+                flex-direction: column;
+                order: 1;
+                h2{
+                    font-size: 6vw;
+                    padding-right: 3vw;
+                    margin-bottom: 6vh;
+                    &::before{
+                        bottom: -1vh;
+                        width: 40%;
+                        height: 0.3vh;
+                    }
+                }
+                p{
+                    padding-left: 5vw;
+                    font-size: 2.75vw;
+                    line-height: 2.5vh;
+                }
+                span{
+                    padding-left: 15vw;
+                    font-size: 2.5vw;
+                    line-height: 2vh;
+                    margin-top: 10vh;
+                }
+                .btn_Concierge{
+                    border-radius: 1.5vw;
+                    height: 3.5vh;
+                    width: 35vw;
+                    font-size: 3.5vw;
+                    margin-top: 3vh;
+                    margin-left: auto;
+                }
+
+            }
+            img{
+                width: 100%;
+                height: 50vh;
+                object-fit: cover;
+                order: 2;
+            }
+            &::before{
+                top: 65vh;
+                right: 0;
+                width: 100%;
+                height: 50vh;
+            }
+        }
+        #allInOne{
+            height: 125vh;
+            flex-direction: column;
+            #Block_VideoAllinOne{
+                order: 2;
+                width: 100%;
+                height: 50vh;
+                position: relative;
+                img, svg{
+                    width: 20vw;
+                    height: 20vw;
+                }
+                &::before{
+                    height: 100%;
+                }
+            }
+            #Block_textAllinOne{
+                width: 100%;
+                height: 75vh;
+                padding: 2vh 7.5%;
+                flex-direction: column;
+                order: 1;
+                h2{
+                    font-size: 6vw;
+                    padding-right: 3vw;
+                    margin-bottom: 6vh;
+                    &::before{
+                        bottom: -1vh;
+                        width: 40%;
+                        height: 0.3vh;
+                    }
+                }
+                p{
+                    padding-left: 5vw;
+                    font-size: 2.75vw;
+                    line-height: 2.5vh;
+                }
+                span{
+                    padding-left: 15vw;
+                    font-size: 2.5vw;
+                    line-height: 2vh;
+                    margin-top: 10vh;
+                }
+                .btn_AllInOne{
+                    border-radius: 1.5vw;
+                    height: 3.5vh;
+                    width: 35vw;
+                    font-size: 3.5vw;
+                    margin-top: 3vh;
+                    margin-left: auto;
+                }
+            }
+        }
+        #historia{
+            height: auto;
+            background-color: $Marrom;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 3vh 5% 7.5vh;
+            h2{
+                font-size: 7vw;
+                padding-left: 4vw;
+                margin-bottom: 5vh;
+                &::before{
+                    bottom: -0.5vh;
+                    width: 35%;
+                    height: 0.3vh;
+                }
+            }
+            p{
+                padding-right: 2vw;
+                font-size: 2.65vw;
+                line-height: 2.5vh;
+            }
+        }
+        #equipe{
+            justify-content: center;
+            padding: 3vh 5% 7.5vh;
+            height: auto;
+            h2{
+                font-size: 7vw;
+                padding-left: 4vw;
+                margin-bottom: 5vh;
+                &::before{
+                    bottom: -1vh;
+                    width: 35%;
+                    height: 0.3vh;
+                }
+            }
+            p{
+                padding-right: 3vw;
+                font-size: 2.75vw;
+                line-height: 2.5vh;
+            }
+            .splide{
+                margin-top: 1vh;
+                .splide__arrows{
+                    .splide__arrow {
+                        width: 12vw;
+                        height: 12vw;
+                        padding: 1.5vw;
+                    }
+                    .splide__arrow--prev{
+                        left: -2vw;
+                    }
+                    .splide__arrow--next{
+                        right: -2vw;
+                    }
+                }
+                .splide__track {
+                    .splide__list{
+                        .splide__slide{
+                            padding: 0;
+                            position: relative;
+                            img{
+                                padding: 0;
+                                width: 65%;
+                                height: 90%;
+                                margin-left: 17.5%;
+                                margin-top: 5%;
+                                object-fit: fill;
+                            }
+                            .infosCards{
+                                width: 66%;
+                                height: 25%;
+                                bottom: 0;
+                                left: 0;
+                                z-index: 2;
+                                margin: 17%;
+                                margin-bottom: 5%;
+                                border-bottom-left-radius: 4vw;
+                                border-bottom-right-radius: 4vw;
+                                border: 2px solid $Amarelo;
+                                border-top: none;
+                                .nome{
+                                    text-align: center;
+                                    font-size: 4vw;
+                                    margin-bottom: 2vh;
+                                }
+                                .espec_medico{
+                                    font-size: 3.5vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn_equipe{
+                width: 58vw;
+                height: 4vh;
+                font-size: 4.5vw;
+                margin-top: 3vh;
+                img, svg{
+                    margin-left: auto;
+                    width: 15%;
+                    height: 100%;
+                }
+            }
+        }
+        #tratamentos{
+            height: auto;
+            padding: 1vh 5%;
+            h2{
+                height: 10vh;
+                font-size: 7vw;
+                padding-left: 4vw;
+                margin-bottom: 3vh;
+                &::before{
+                    bottom: -1vh;
+                    width: 35%;
+                    height: 0.3vh;
+                }
+            }
+            #block_Tratamentos{
+                width: 100%;
+                height: 95vh;
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+                #Block_textTratamentos{
+                    width: 100%;
+                    height: 35vh;
+                    padding: 0;
+                    p{
+                        padding-right: 3vw;
+                        font-size: 2.75vw;
+                        line-height: 2.5vh;
+                    }
+                    .btn_tratamentos{
+                        width: 70vw;
+                        height: 4vh;
+                        font-size: 4.5vw;
+                        margin-top: 5vh;
+                        img, svg{
+                            margin-left: auto;
+                            width: 15%;
+                            height: 100%;
+                        }
+                    }
+                }
+                #tratamentosimgs{
+                    width: 100%;
+                    height: 60vh;
+                    padding: 2vh 7.5%;
+                    .splide{
+                        .splide__arrows{
+                            .splide__arrow {
+                                width: 12vw;
+                                height: 12vw;
+                                padding: 1.75vw;
+                            }
+                            .splide__arrow--prev{
+                                left: -6.5vw;
+                            }
+                            .splide__arrow--next{
+                                right: -6.5vw;
+                            }
+                        }
+                        .splide__track {
+                            width: 90%;
+                            height: 100%;
+                            margin-left: 5%;
+                            .splide__list{
+                                .splide__slide{
+                                    padding: 1vw;
+                                    .Block_img{
+                                        border-radius: 3vw;
+                                    }
+                                    .infosCards{
+                                        height: 35%;
+                                        bottom: 10%;
+                                        .nome{
+                                            font-size: 5vw;
+                                            margin-bottom: 5vh;
+                                            padding: 0 10vw;
+                                        }
+                                        .btn_CardTratamento{
+                                            height: 3vh;
+                                            width: 22vw;
+                                            font-size: 3.5vw;
+                                            outline: 1px solid $Branco;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #especialidades{
+            padding: 3vw;
+            height: auto;
+            justify-content: center;
+            .especialidadeBlock{
+                width: 90%;
+                height: 22vh;
+                margin: 2vh 0;
+                border-radius: 2vw;
+                &::before{
+                    opacity: 0.5;
+                }
+                p{
+                    font-size: 5vw;
+                    z-index: 9;
+                }
+                .amarelo{
+                    background: none;
+                }
+                .preto{
+                    background: none;
+                }
+                .cinza{
+                    background: none;
+                }
+            }
+            #textEspecialidade{
+                padding: 2vw;
+                height: 32vh;
+                &::before{
+                    display: none;
+                    content: '';
+                }
+                h2{
+                    font-size: 6vw;
+                }
+                p{
+                    all: unset;
+                    color: $Branco;
+                    padding-right: 2vw;
+                    font-size: 3vw;
+                    line-height: 2.5vh;
+                    margin: 4vh 0;
+
+                }
+                .btn_especialidades{
+                    width: 52vw;
+                    height: 4vh;
+                    font-size: 4.5vw;
+                    margin-right: auto;
+                    img, svg{
+                        margin-left: auto;
+                        width: 15%;
+                        height: 100%;
+                        margin-top: -1%;
+                    }
+                }
+            }
+        }
+    }
 }
