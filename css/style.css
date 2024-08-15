@@ -18,15 +18,6 @@
   list-style: none;
 }
 
-::-webkit-scrollbar {
-  width: 0.75vw;
-  background: #D2AE6D;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #4B2F24;
-}
-
 p, span, ul, li, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -47,6 +38,15 @@ button {
           user-select: none !important;
 }
 
+::-webkit-scrollbar {
+  width: 0.75vw;
+  background: #D2AE6D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4B2F24;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -57,12 +57,6 @@ body {
   background: #E0E0E0;
   overflow-x: hidden;
   position: relative;
-  /* MOBILE */
-  /* MOBILE */
-  /* MOBILE */
-  /* MOBILE */
-  /* MOBILE */
-  /* MOBILE */
 }
 body .btns {
   all: unset;
@@ -323,6 +317,7 @@ body footer {
   align-items: center;
   padding: 0 5vw;
   background-color: #4B2F24;
+  border-top: 2px solid #E0E0E0;
 }
 body footer::before {
   content: "";
@@ -4550,7 +4545,222 @@ body #Main_especialidades #depos .splide .splide__track .splide__list .splide__s
     border-radius: 3.5vw;
   }
 }
+body #Main_tratamentos {
+  padding-top: 124px;
+}
+body #Main_tratamentos #banner {
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  align-items: flex-start;
+}
+body #Main_tratamentos #banner img {
+  width: 50%;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_tratamentos #banner #Titulo_banner {
+  width: 50%;
+  height: 60vh;
+  background-color: #D2AE6D;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_tratamentos #banner #Titulo_banner h1, body #Main_tratamentos #banner #Titulo_banner span {
+  font-family: "TrajanPro", system-ui;
+  color: #4B2F24;
+  z-index: 5;
+}
+body #Main_tratamentos #banner #Titulo_banner h1 {
+  position: relative;
+  font-size: 3.5vw;
+  display: flex;
+  justify-content: center;
+}
+body #Main_tratamentos #banner #Titulo_banner h1::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  width: 30%;
+  height: 0.25vh;
+  background-color: #4B2F24;
+}
+body #Main_tratamentos #banner #Titulo_banner span {
+  font-size: 1.75vw;
+  margin: -7.5vh 0 1vh;
+}
+body #Main_tratamentos #banner p {
+  width: 100%;
+  height: 20vh;
+  padding: 0 5%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.25vw;
+  color: #373435;
+  line-height: 5vh;
+  display: flex;
+  align-items: center;
+}
+body #Main_tratamentos #Listagem_tratamentos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block {
+  width: 100%;
+  height: 75vh;
+  margin: 5vh 0;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  position: relative;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a h2 {
+  width: 100%;
+  height: 100%;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  color: #4B2F24;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a h2::before {
+  content: "";
+  position: absolute;
+  bottom: 4vh;
+  left: 0;
+  width: 15%;
+  height: 0.4vh;
+  background-color: #4B2F24;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide {
+  width: 100%;
+  height: 85%;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__arrows .splide__arrow {
+  width: 4.5vw;
+  height: 4.5vw;
+  padding: 0.55vw;
+  opacity: 1;
+  background: none;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__arrows .splide__arrow svg {
+  fill: #D2AE6D;
+  width: 100%;
+  height: 100%;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__arrows .splide__arrow:disabled {
+  opacity: 0.3;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__arrows .splide__arrow--prev {
+  left: -2vw;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__arrows .splide__arrow--next {
+  right: -2vw;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__pagination {
+  display: none;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track {
+  width: 95%;
+  height: 100%;
+  margin-left: 2.5%;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0.75vw;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide:hover .Block_img img {
+  transform: scale(1.05);
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide:hover .Block_img::before {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide:hover .infosCards .nome {
+  transform: scale(1.07);
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide:hover .infosCards .btn_CardTratamento {
+  transform: scale(1.07);
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .Block_img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1vw;
+  z-index: 1;
+  position: relative;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .Block_img img {
+  transition: all ease-in-out 0.5s;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .Block_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(75, 47, 36, 0.4);
+  z-index: 2;
+  transition: all ease-in-out 0.5s;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .infosCards {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 7.5%;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .infosCards .nome {
+  transition: all ease-in-out 0.5s;
+  width: 100%;
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.5vw;
+  color: #E0E0E0;
+  margin-bottom: 5vh;
+  padding: 0 2vw;
+  text-align: center;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .infosCards .btn_CardTratamento {
+  transition: all ease-in-out 0.5s;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 3.5vh;
+  width: 6.25vw;
+  color: #E0E0E0;
+  font-size: 1vw;
+  outline: 2px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5vw;
+}
 body #Main_tratamentos #depos {
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4583,60 +4793,60 @@ body #Main_tratamentos #depos p {
   color: #4B2F24;
   line-height: 3vh;
 }
-body #Main_tratamentos #depos .splide {
+body #Main_tratamentos #depos .depo_splide {
   width: 100%;
   height: 50vh;
   margin-top: 5vh;
 }
-body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow {
+body #Main_tratamentos #depos .depo_splide .splide__arrows .splide__arrow {
   width: 3.25vw;
   height: 3.25vw;
   padding: 0.55vw;
   opacity: 1;
   background: none;
 }
-body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow svg {
+body #Main_tratamentos #depos .depo_splide .splide__arrows .splide__arrow svg {
   fill: #4B2F24;
   width: 100%;
   height: 100%;
 }
-body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow:disabled {
+body #Main_tratamentos #depos .depo_splide .splide__arrows .splide__arrow:disabled {
   opacity: 0.3;
 }
-body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow--prev {
+body #Main_tratamentos #depos .depo_splide .splide__arrows .splide__arrow--prev {
   left: -0.5vw;
 }
-body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow--next {
+body #Main_tratamentos #depos .depo_splide .splide__arrows .splide__arrow--next {
   right: -0.5vw;
 }
-body #Main_tratamentos #depos .splide .splide__pagination {
+body #Main_tratamentos #depos .depo_splide .splide__pagination {
   display: none;
 }
-body #Main_tratamentos #depos .splide .splide__track {
+body #Main_tratamentos #depos .depo_splide .splide__track {
   width: 95%;
   height: 100%;
   margin-left: 2.5%;
 }
-body #Main_tratamentos #depos .splide .splide__track .splide__list {
+body #Main_tratamentos #depos .depo_splide .splide__track .splide__list {
   width: 100%;
   height: 100%;
 }
-body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide {
+body #Main_tratamentos #depos .depo_splide .splide__track .splide__list .splide__slide {
   width: 100%;
   height: 100%;
   padding: 1.5vw;
   transition: all ease-in-out 0.15s;
   z-index: 2;
 }
-body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide:hover {
+body #Main_tratamentos #depos .depo_splide .splide__track .splide__list .splide__slide:hover {
   transform: scale(1.02);
 }
-body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo {
+body #Main_tratamentos #depos .depo_splide .splide__track .splide__list .splide__slide .Block_VideoDepo {
   width: 100%;
   height: 100%;
   position: relative;
 }
-body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img, body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg {
+body #Main_tratamentos #depos .depo_splide .splide__track .splide__list .splide__slide .Block_VideoDepo img, body #Main_tratamentos #depos .depo_splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg {
   position: absolute;
   width: 7.5vw;
   height: 7.5vw;
@@ -4645,10 +4855,10 @@ body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slid
   z-index: 5;
   transition: all ease-in-out 0.15s;
 }
-body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img:hover, body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg:hover {
+body #Main_tratamentos #depos .depo_splide .splide__track .splide__list .splide__slide .Block_VideoDepo img:hover, body #Main_tratamentos #depos .depo_splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg:hover {
   transform: scale(1.1);
 }
-body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo video {
+body #Main_tratamentos #depos .depo_splide .splide__track .splide__list .splide__slide .Block_VideoDepo video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -4657,7 +4867,7 @@ body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slid
   z-index: 1;
   border-radius: 1vw;
 }
-body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo::before {
+body #Main_tratamentos #depos .depo_splide .splide__track .splide__list .splide__slide .Block_VideoDepo::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -4669,7 +4879,7 @@ body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slid
   opacity: 0.5;
   border-radius: 1vw;
 }
-body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .no-back::before {
+body #Main_tratamentos #depos .depo_splide .splide__track .splide__list .splide__slide .no-back::before {
   display: none;
 }
 body #Main_tratamentos #equipe {
@@ -4677,7 +4887,7 @@ body #Main_tratamentos #equipe {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 7.5vh 5%;
+  padding: 5vh 5%;
 }
 body #Main_tratamentos #equipe .patter {
   position: absolute;
@@ -4716,61 +4926,61 @@ body #Main_tratamentos #equipe p {
   color: #4B2F24;
   line-height: 3vh;
 }
-body #Main_tratamentos #equipe .splide {
+body #Main_tratamentos #equipe .equipe_splide {
   margin-top: 5vh;
   width: 100%;
   height: 50vh;
 }
-body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow {
+body #Main_tratamentos #equipe .equipe_splide .splide__arrows .splide__arrow {
   width: 3.25vw;
   height: 3.25vw;
   padding: 0.55vw;
   opacity: 1;
   background: none;
 }
-body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow svg {
+body #Main_tratamentos #equipe .equipe_splide .splide__arrows .splide__arrow svg {
   fill: #373435;
   width: 100%;
   height: 100%;
 }
-body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow:disabled {
+body #Main_tratamentos #equipe .equipe_splide .splide__arrows .splide__arrow:disabled {
   opacity: 0.3;
 }
-body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow--prev {
+body #Main_tratamentos #equipe .equipe_splide .splide__arrows .splide__arrow--prev {
   left: -0.5vw;
 }
-body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow--next {
+body #Main_tratamentos #equipe .equipe_splide .splide__arrows .splide__arrow--next {
   right: -0.5vw;
 }
-body #Main_tratamentos #equipe .splide .splide__pagination {
+body #Main_tratamentos #equipe .equipe_splide .splide__pagination {
   display: none;
 }
-body #Main_tratamentos #equipe .splide .splide__track {
+body #Main_tratamentos #equipe .equipe_splide .splide__track {
   width: 95%;
   height: 100%;
   margin-left: 2.5%;
 }
-body #Main_tratamentos #equipe .splide .splide__track .splide__list {
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list {
   width: 100%;
   height: 100%;
 }
-body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide {
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide {
   width: 100%;
   height: 100%;
   position: relative;
   transition: all ease-in-out 0.15s;
 }
-body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide:hover {
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide:hover {
   transform: scale(1.02);
 }
-body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide img {
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   padding: 1.5vw;
 }
-body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide .infosCards {
   position: absolute;
   width: 83%;
   height: 20%;
@@ -4788,13 +4998,13 @@ body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__sli
   align-items: center;
   justify-content: center;
 }
-body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide .infosCards .nome {
   font-family: "TrajanPro", system-ui;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
 }
-body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
   all: unset;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 0.85vw;
@@ -4806,7 +5016,7 @@ body #Main_tratamentos #equipe .btn_equipe {
   height: 3.5vh;
   color: #373435;
   font-size: 1.25vw;
-  margin-top: 7.5vh;
+  margin-top: 5vh;
 }
 body #Main_tratamentos #equipe .btn_equipe img, body #Main_tratamentos #equipe .btn_equipe svg {
   height: 100%;
@@ -5010,8 +5220,728 @@ body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
   margin-top: 3vh;
   margin-left: auto;
 }
-/*--------------------------------- Responsive Media Quaries -----------------------------*/
-/* MOBILE */
+@media only screen and (max-width: 479px) {
+  body #Main_tratamentos {
+    padding-top: 90px;
+  }
+  body #Main_tratamentos #banner {
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    align-items: flex-start;
+  }
+  body #Main_tratamentos #banner #Titulo_banner {
+    width: 100%;
+    height: 30vh;
+  }
+  body #Main_tratamentos #banner #Titulo_banner h1 {
+    font-size: 7.5vw;
+  }
+  body #Main_tratamentos #banner #Titulo_banner h1::before {
+    bottom: -0.75vh;
+  }
+  body #Main_tratamentos #banner #Titulo_banner span {
+    font-size: 3.5vw;
+    margin: 0 0 0.5vh;
+  }
+  body #Main_tratamentos #banner img {
+    width: 100%;
+    height: 25vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body #Main_tratamentos #banner p {
+    padding: 2vh 7.5% 0;
+    font-size: 2.6vw;
+    line-height: 2.75vh;
+  }
+  body #Main_tratamentos #Listagem_tratamentos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block {
+    width: 100%;
+    height: 70vh;
+    margin: 3vh 0;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    position: relative;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a h2 {
+    display: flex;
+    align-items: center;
+    font-size: 6vw;
+    padding-left: 5vw;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a h2::before {
+    bottom: 2.25vh;
+    left: 2vw;
+    width: 35%;
+    height: 0.3vh;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide {
+    padding: 0 7.5%;
+    height: 85%;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__arrows .splide__arrow {
+    width: 12vw;
+    height: 12vw;
+    padding: 1.75vw;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__arrows .splide__arrow--prev {
+    left: -1vw;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__arrows .splide__arrow--next {
+    right: -1vw;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track {
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide {
+    padding: 1vw;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .Block_img {
+    border-radius: 3vw;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .infosCards {
+    height: 35%;
+    bottom: 10%;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .infosCards .nome {
+    font-size: 5vw;
+    margin-bottom: 5vh;
+    padding: 0 10vw;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .infosCards .btn_CardTratamento {
+    height: 3vh;
+    width: 22vw;
+    font-size: 3.5vw;
+    outline: 1px solid #E0E0E0;
+  }
+  body #Main_tratamentos #depos {
+    height: auto;
+    padding: 3vh 7.5% 6vh;
+  }
+  body #Main_tratamentos #depos h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 3vh;
+  }
+  body #Main_tratamentos #depos h2::before {
+    bottom: -0.75vh;
+    width: 35%;
+    height: 0.3vh;
+  }
+  body #Main_tratamentos #depos p {
+    font-size: 2.75vw;
+  }
+  body #Main_tratamentos #depos .splide {
+    width: 100%;
+    height: 25vh;
+    margin-top: 1vh;
+  }
+  body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow {
+    width: 12vw;
+    height: 12vw;
+    padding: 1.5vw;
+  }
+  body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow--prev {
+    left: -5vw;
+  }
+  body #Main_tratamentos #depos .splide .splide__arrows .splide__arrow--next {
+    right: -5vw;
+  }
+  body #Main_tratamentos #depos .splide .splide__track {
+    width: 90%;
+    margin-left: 5%;
+  }
+  body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img, body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg {
+    width: 15vw;
+    height: 15vw;
+    top: 32%;
+  }
+  body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo video {
+    border-radius: 3.5vw;
+  }
+  body #Main_tratamentos #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo::before {
+    border-radius: 3.5vw;
+  }
+  body #Main_tratamentos #equipe {
+    justify-content: center;
+    padding: 5vh 5% 7.5vh;
+    height: auto;
+  }
+  body #Main_tratamentos #equipe h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 5vh;
+  }
+  body #Main_tratamentos #equipe h2::before {
+    bottom: -1vh;
+    width: 35%;
+    height: 0.3vh;
+  }
+  body #Main_tratamentos #equipe p {
+    padding-right: 3vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+  }
+  body #Main_tratamentos #equipe .splide {
+    margin-top: 1vh;
+  }
+  body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow {
+    width: 12vw;
+    height: 12vw;
+    padding: 1.5vw;
+  }
+  body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow--prev {
+    left: -2vw;
+  }
+  body #Main_tratamentos #equipe .splide .splide__arrows .splide__arrow--next {
+    right: -2vw;
+  }
+  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide {
+    padding: 0;
+    position: relative;
+  }
+  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide img {
+    padding: 0;
+    width: 65%;
+    height: 90%;
+    margin-left: 17.5%;
+    margin-top: 5%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+    width: 66%;
+    height: 25%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    margin: 17%;
+    margin-bottom: 5%;
+    border-bottom-left-radius: 4vw;
+    border-bottom-right-radius: 4vw;
+    border: 2px solid #D2AE6D;
+    border-top: none;
+  }
+  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 2vh;
+  }
+  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+    font-size: 3.5vw;
+  }
+  body #Main_tratamentos #equipe .btn_equipe {
+    width: 58vw;
+    height: 4vh;
+    font-size: 4.5vw;
+    margin-top: 5vh;
+  }
+  body #Main_tratamentos #equipe .btn_equipe img, body #Main_tratamentos #equipe .btn_equipe svg {
+    margin-left: auto;
+    width: 15%;
+    height: 100%;
+  }
+  body #Main_tratamentos #concierge {
+    height: 115vh;
+    flex-direction: column;
+  }
+  body #Main_tratamentos #concierge #Block_textConcierge {
+    width: 100%;
+    height: 65vh;
+    padding: 2vh 7.5%;
+    flex-direction: column;
+    order: 1;
+  }
+  body #Main_tratamentos #concierge #Block_textConcierge h2 {
+    font-size: 6vw;
+    padding-right: 3vw;
+    margin-bottom: 6vh;
+  }
+  body #Main_tratamentos #concierge #Block_textConcierge h2::before {
+    bottom: -1vh;
+    width: 40%;
+    height: 0.3vh;
+  }
+  body #Main_tratamentos #concierge #Block_textConcierge p {
+    padding-left: 5vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+  }
+  body #Main_tratamentos #concierge #Block_textConcierge span {
+    padding-left: 15vw;
+    font-size: 2.5vw;
+    line-height: 2vh;
+    margin-top: 10vh;
+  }
+  body #Main_tratamentos #concierge #Block_textConcierge .btn_Concierge {
+    border-radius: 1.5vw;
+    height: 3.5vh;
+    width: 35vw;
+    font-size: 3.5vw;
+    margin-top: 3vh;
+    margin-left: auto;
+  }
+  body #Main_tratamentos #concierge img {
+    width: 100%;
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    order: 2;
+  }
+  body #Main_tratamentos #concierge::before {
+    top: 65vh;
+    right: 0;
+    width: 100%;
+    height: 50vh;
+  }
+  body #Main_tratamentos #allInOne {
+    height: 125vh;
+    flex-direction: column;
+  }
+  body #Main_tratamentos #allInOne #Block_VideoAllinOne {
+    order: 2;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+  }
+  body #Main_tratamentos #allInOne #Block_VideoAllinOne img, body #Main_tratamentos #allInOne #Block_VideoAllinOne svg {
+    width: 20vw;
+    height: 20vw;
+  }
+  body #Main_tratamentos #allInOne #Block_VideoAllinOne::before {
+    height: 100%;
+  }
+  body #Main_tratamentos #allInOne #Block_textAllinOne {
+    width: 100%;
+    height: 75vh;
+    padding: 2vh 7.5%;
+    flex-direction: column;
+    order: 1;
+  }
+  body #Main_tratamentos #allInOne #Block_textAllinOne h2 {
+    font-size: 6vw;
+    padding-right: 3vw;
+    margin-bottom: 6vh;
+  }
+  body #Main_tratamentos #allInOne #Block_textAllinOne h2::before {
+    bottom: -1vh;
+    width: 40%;
+    height: 0.3vh;
+  }
+  body #Main_tratamentos #allInOne #Block_textAllinOne p {
+    padding-left: 5vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+  }
+  body #Main_tratamentos #allInOne #Block_textAllinOne span {
+    padding-left: 15vw;
+    font-size: 2.5vw;
+    line-height: 2vh;
+    margin-top: 10vh;
+  }
+  body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
+    border-radius: 1.5vw;
+    height: 3.5vh;
+    width: 35vw;
+    font-size: 3.5vw;
+    margin-top: 3vh;
+    margin-left: auto;
+  }
+}
+body #Main_TratDetalhes #equipe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7.5vh 5%;
+}
+body #Main_TratDetalhes #equipe .patter {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.1;
+}
+body #Main_TratDetalhes #equipe h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 6.5vh;
+  position: relative;
+  color: #4B2F24;
+}
+body #Main_TratDetalhes #equipe h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 15%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_TratDetalhes #equipe .splide {
+  margin-top: 5vh;
+  width: 100%;
+  height: 50vh;
+}
+body #Main_TratDetalhes #equipe .splide .splide__arrows .splide__arrow {
+  width: 3.25vw;
+  height: 3.25vw;
+  padding: 0.55vw;
+  opacity: 1;
+  background: none;
+}
+body #Main_TratDetalhes #equipe .splide .splide__arrows .splide__arrow svg {
+  fill: #373435;
+  width: 100%;
+  height: 100%;
+}
+body #Main_TratDetalhes #equipe .splide .splide__arrows .splide__arrow:disabled {
+  opacity: 0.3;
+}
+body #Main_TratDetalhes #equipe .splide .splide__arrows .splide__arrow--prev {
+  left: -0.5vw;
+}
+body #Main_TratDetalhes #equipe .splide .splide__arrows .splide__arrow--next {
+  right: -0.5vw;
+}
+body #Main_TratDetalhes #equipe .splide .splide__pagination {
+  display: none;
+}
+body #Main_TratDetalhes #equipe .splide .splide__track {
+  width: 95%;
+  height: 100%;
+  margin-left: 2.5%;
+}
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide:hover {
+  transform: scale(1.02);
+}
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 1.5vw;
+}
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+  position: absolute;
+  width: 83%;
+  height: 20%;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin: 8.5%;
+  background-color: #E0E0E0;
+  border-bottom-left-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+  border: 3px solid #D2AE6D;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.05vw;
+  color: #4B2F24;
+  margin-bottom: 1.25vh;
+}
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+  all: unset;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.85vw;
+  color: #4B2F24;
+  font-style: italic;
+}
+body #Main_TratDetalhes #depos {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #Main_TratDetalhes #depos h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 3.5vh;
+  position: relative;
+  color: #4B2F24;
+}
+body #Main_TratDetalhes #depos h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 15%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_TratDetalhes #depos p {
+  width: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #4B2F24;
+  line-height: 3vh;
+}
+body #Main_TratDetalhes #depos .splide {
+  width: 100%;
+  height: 50vh;
+  margin-top: 5vh;
+}
+body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow {
+  width: 3.25vw;
+  height: 3.25vw;
+  padding: 0.55vw;
+  opacity: 1;
+  background: none;
+}
+body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow svg {
+  fill: #4B2F24;
+  width: 100%;
+  height: 100%;
+}
+body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow:disabled {
+  opacity: 0.3;
+}
+body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow--prev {
+  left: -0.5vw;
+}
+body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow--next {
+  right: -0.5vw;
+}
+body #Main_TratDetalhes #depos .splide .splide__pagination {
+  display: none;
+}
+body #Main_TratDetalhes #depos .splide .splide__track {
+  width: 95%;
+  height: 100%;
+  margin-left: 2.5%;
+}
+body #Main_TratDetalhes #depos .splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+  padding: 1.5vw;
+  transition: all ease-in-out 0.15s;
+  z-index: 2;
+}
+body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide:hover {
+  transform: scale(1.02);
+}
+body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img, body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg {
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  left: 42%;
+  top: 30%;
+  z-index: 5;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img:hover, body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg:hover {
+  transform: scale(1.1);
+}
+body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border-radius: 1vw;
+}
+body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4B2F24;
+  z-index: 2;
+  opacity: 0.5;
+  border-radius: 1vw;
+}
+body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .no-back::before {
+  display: none;
+}
+body #Main_TratDetalhes #espaco {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #4B2F24;
+}
+body #Main_TratDetalhes #espaco .patter {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.03;
+}
+body #Main_TratDetalhes #espaco .patter path {
+  fill: #D0B498;
+}
+body #Main_TratDetalhes #espaco #Block_textEspaco {
+  width: 50%;
+  height: 100%;
+  padding: 4.75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_TratDetalhes #espaco #Block_textEspaco h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 7.5vh;
+  position: relative;
+  color: #D2AE6D;
+}
+body #Main_TratDetalhes #espaco #Block_textEspaco h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 35%;
+  height: 0.35vh;
+  background-color: #D2AE6D;
+}
+body #Main_TratDetalhes #espaco #Block_textEspaco p {
+  width: 100%;
+  padding-right: 3.5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #E0E0E0;
+  line-height: 4vh;
+}
+body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 3.5vh;
+  width: 45%;
+  color: #D2AE6D;
+  font-size: 1.2vw;
+}
+body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco img, body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco svg {
+  height: 100%;
+  width: 25%;
+  margin-left: auto;
+}
+body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco img path, body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco svg path {
+  fill: #D2AE6D;
+}
+body #Main_TratDetalhes #espaco #Block_VideoEspaco {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_TratDetalhes #espaco #Block_VideoEspaco img, body #Main_TratDetalhes #espaco #Block_VideoEspaco svg {
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  z-index: 5;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_TratDetalhes #espaco #Block_VideoEspaco img:hover, body #Main_TratDetalhes #espaco #Block_VideoEspaco svg:hover {
+  transform: scale(1.1);
+}
+body #Main_TratDetalhes #espaco #Block_VideoEspaco #VideoEspaco {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+body #Main_TratDetalhes #espaco #Block_VideoEspaco::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4B2F24;
+  z-index: 2;
+  opacity: 0.5;
+}
+body #Main_TratDetalhes #espaco .no-back::before {
+  display: none;
+}
+body #Main_TratDetalhes #FAQ {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #D0B498;
+}
+body #Main_TratDetalhes #FAQ .patter {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.03;
+}
+body #Main_TratDetalhes #FAQ .patter path {
+  fill: #4B2F24;
+}
+body #Main_TratDetalhes #FAQ h2 {
+  width: 100%;
+  outline: 1px solid red;
+}
 @media only screen and (max-width: 479px) {
   body .btns {
     font-size: 2.25vw;

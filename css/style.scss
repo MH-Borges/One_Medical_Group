@@ -1,6 +1,14 @@
 @import 'colors_fonts';
 @import 'base';
 
+::-webkit-scrollbar {
+    width: 0.75vw;
+    background: $Amarelo;
+}
+::-webkit-scrollbar-thumb {
+    background: $Marrom;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -268,6 +276,7 @@ body {
         align-items: center;
         padding: 0 5vw;
         background-color: $Marrom;
+        border-top: 2px solid $Branco;
         &::before{
             content: '';
             position: absolute;
@@ -1836,11 +1845,10 @@ body {
     @import 'clinica';
     @import 'especialidades';
     @import 'tratamentos';
+    @import 'tratamentos_detalhes';
 
 }
 
-/*--------------------------------- Responsive Media Quaries -----------------------------*/
-/* MOBILE */
 @media only screen and (max-width: 479px){
     body {
         .btns{
