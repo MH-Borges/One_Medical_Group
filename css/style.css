@@ -923,20 +923,25 @@ body #Main_index #equipe .splide .splide__track .splide__list {
 body #Main_index #equipe .splide .splide__track .splide__list .splide__slide {
   width: 100%;
   height: 100%;
-  position: relative;
   transition: all ease-in-out 0.15s;
 }
 body #Main_index #equipe .splide .splide__track .splide__list .splide__slide:hover {
   transform: scale(1.02);
 }
-body #Main_index #equipe .splide .splide__track .splide__list .splide__slide img {
+body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   padding: 1.5vw;
 }
-body #Main_index #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .infosCards {
   position: absolute;
   width: 83%;
   height: 20%;
@@ -954,13 +959,13 @@ body #Main_index #equipe .splide .splide__track .splide__list .splide__slide .in
   align-items: center;
   justify-content: center;
 }
-body #Main_index #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
   font-family: "TrajanPro", system-ui;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
 }
-body #Main_index #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 0.85vw;
@@ -3058,20 +3063,25 @@ body #Main_clinica #equipe .splide .splide__track .splide__list {
 body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide {
   width: 100%;
   height: 100%;
-  position: relative;
   transition: all ease-in-out 0.15s;
 }
 body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide:hover {
   transform: scale(1.02);
 }
-body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide img {
+body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide a img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   padding: 1.5vw;
 }
-body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide a .infosCards {
   position: absolute;
   width: 83%;
   height: 20%;
@@ -3089,13 +3099,13 @@ body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .
   align-items: center;
   justify-content: center;
 }
-body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
   font-family: "TrajanPro", system-ui;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
 }
-body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 0.85vw;
@@ -3690,7 +3700,7 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
     padding: 0;
     position: relative;
   }
-  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide img {
+  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide a img {
     padding: 0;
     width: 65%;
     height: 90%;
@@ -3699,7 +3709,7 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
     -o-object-fit: fill;
        object-fit: fill;
   }
-  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide a .infosCards {
     width: 66%;
     height: 25%;
     bottom: 0;
@@ -3712,12 +3722,12 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
     border: 2px solid #D2AE6D;
     border-top: none;
   }
-  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
     text-align: center;
     font-size: 4vw;
     margin-bottom: 2vh;
   }
-  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+  body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
     font-size: 3.5vw;
   }
   body #Main_clinica #equipe .btn_equipe {
@@ -4967,26 +4977,28 @@ body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list {
 body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide {
   width: 100%;
   height: 100%;
-  position: relative;
   transition: all ease-in-out 0.15s;
 }
-body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide:hover {
-  transform: scale(1.02);
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
 }
-body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide img {
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide a img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   padding: 1.5vw;
 }
-body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide .infosCards {
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide a .infosCards {
   position: absolute;
   width: 83%;
   height: 20%;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   margin: 8.5%;
   background-color: #E0E0E0;
   border-bottom-left-radius: 0.5vw;
@@ -4998,18 +5010,21 @@ body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .spli
   align-items: center;
   justify-content: center;
 }
-body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide .infosCards .nome {
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide a .infosCards .nome {
   font-family: "TrajanPro", system-ui;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
 }
-body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 0.85vw;
   color: #4B2F24;
   font-style: italic;
+}
+body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide:hover {
+  transform: scale(1.02);
 }
 body #Main_tratamentos #equipe .btn_equipe {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -5414,7 +5429,7 @@ body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
     padding: 0;
     position: relative;
   }
-  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide img {
+  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide a img {
     padding: 0;
     width: 65%;
     height: 90%;
@@ -5423,7 +5438,7 @@ body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
     -o-object-fit: fill;
        object-fit: fill;
   }
-  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide a .infosCards {
     width: 66%;
     height: 25%;
     bottom: 0;
@@ -5436,12 +5451,12 @@ body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
     border: 2px solid #D2AE6D;
     border-top: none;
   }
-  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
     text-align: center;
     font-size: 4vw;
     margin-bottom: 2vh;
   }
-  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+  body #Main_tratamentos #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
     font-size: 3.5vw;
   }
   body #Main_tratamentos #equipe .btn_equipe {
@@ -5562,12 +5577,212 @@ body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
     margin-left: auto;
   }
 }
-body #Main_TratDetalhes #equipe {
+body #Main_TratDetalhes #banner {
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 7.5vh 5%;
+  justify-content: center;
+}
+body #Main_TratDetalhes #banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_TratDetalhes #banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4B2F24;
+  opacity: 0.45;
+  z-index: 2;
+}
+body #Main_TratDetalhes #banner h1, body #Main_TratDetalhes #banner p {
+  font-family: "TrajanPro", system-ui;
+  color: #E0E0E0;
+  z-index: 5;
+}
+body #Main_TratDetalhes #banner h1 {
+  position: relative;
+  font-size: 6vw;
+  display: flex;
+  justify-content: center;
+}
+body #Main_TratDetalhes #banner h1::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  width: 30%;
+  height: 0.25vh;
+  background-color: #D2AE6D;
+}
+body #Main_TratDetalhes #banner p {
+  font-size: 2.5vw;
+  margin: 1vh 0 1vh;
+}
+body #Main_TratDetalhes #banner span {
+  z-index: 5;
+  position: absolute;
+  bottom: 3vh;
+  right: 3vw;
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.15vw;
+  color: #E0E0E0;
+}
+body #Main_TratDetalhes #banner span a {
+  margin-left: 0.25vw;
+  color: #D2AE6D;
+}
+body #Main_TratDetalhes #como_Funicona {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 5% 7.5vh;
+}
+body #Main_TratDetalhes #como_Funicona h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 6.5vh;
+  position: relative;
+  color: #4B2F24;
+}
+body #Main_TratDetalhes #como_Funicona h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 15%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_TratDetalhes #como_Funicona p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.1vw;
+  color: #373435;
+  line-height: 3.5vh;
+}
+body #Main_TratDetalhes #etapas {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5% 7.5vh;
+}
+body #Main_TratDetalhes #etapas h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 5vh;
+  position: relative;
+  color: #4B2F24;
+}
+body #Main_TratDetalhes #etapas h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 15%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_TratDetalhes #etapas ul {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body #Main_TratDetalhes #etapas ul li {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  margin: 0.75vh 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.1vw;
+  color: #373435;
+  margin-left: 1vw;
+  padding-left: 1vw;
+  position: relative;
+}
+body #Main_TratDetalhes #etapas ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0.4vw;
+  height: 0.4vw;
+  border-radius: 50%;
+  background-color: #373435;
+}
+body #Main_TratDetalhes #resultados {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5% 7.5vh;
+}
+body #Main_TratDetalhes #resultados h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 6.5vh;
+  position: relative;
+  color: #4B2F24;
+}
+body #Main_TratDetalhes #resultados h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 15%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_TratDetalhes #resultados .img_block {
+  margin: 0 0 3vh;
+  width: 50%;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+}
+body #Main_TratDetalhes #resultados .img_block img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 1vw;
+}
+body #Main_TratDetalhes #equipe {
+  padding: 5vh 5% 7.5vh;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 body #Main_TratDetalhes #equipe .patter {
   position: absolute;
@@ -5576,7 +5791,7 @@ body #Main_TratDetalhes #equipe .patter {
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: 0.1;
+  opacity: 0.09;
 }
 body #Main_TratDetalhes #equipe h2 {
   width: 100%;
@@ -5584,7 +5799,7 @@ body #Main_TratDetalhes #equipe h2 {
   font-family: "TrajanPro", system-ui;
   font-size: 2.5vw;
   padding-left: 2.5vw;
-  margin-bottom: 6.5vh;
+  margin-bottom: 3vh;
   position: relative;
   color: #4B2F24;
 }
@@ -5598,7 +5813,6 @@ body #Main_TratDetalhes #equipe h2::before {
   background-color: #4B2F24;
 }
 body #Main_TratDetalhes #equipe .splide {
-  margin-top: 5vh;
   width: 100%;
   height: 50vh;
 }
@@ -5638,27 +5852,30 @@ body #Main_TratDetalhes #equipe .splide .splide__track .splide__list {
 body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide {
   width: 100%;
   height: 100%;
-  position: relative;
   transition: all ease-in-out 0.15s;
 }
-body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide:hover {
-  transform: scale(1.02);
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
 }
-body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide img {
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   padding: 1.5vw;
 }
-body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a .infosCards {
   position: absolute;
-  width: 83%;
+  width: 68%;
   height: 20%;
   bottom: 0;
   left: 0;
   z-index: 2;
-  margin: 8.5%;
+  margin: 16%;
+  margin-bottom: 6%;
   background-color: #E0E0E0;
   border-bottom-left-radius: 0.5vw;
   border-bottom-right-radius: 0.5vw;
@@ -5669,18 +5886,21 @@ body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__sl
   align-items: center;
   justify-content: center;
 }
-body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
   font-family: "TrajanPro", system-ui;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
 }
-body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 0.85vw;
   color: #4B2F24;
   font-style: italic;
+}
+body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide:hover {
+  transform: scale(1.02);
 }
 body #Main_TratDetalhes #depos {
   height: 75vh;
@@ -5841,6 +6061,7 @@ body #Main_TratDetalhes #espaco #Block_textEspaco h2 {
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 7.5vh;
+  margin-top: -5vh;
   position: relative;
   color: #D2AE6D;
 }
@@ -5868,6 +6089,7 @@ body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco {
   width: 45%;
   color: #D2AE6D;
   font-size: 1.2vw;
+  margin-top: 15vh;
 }
 body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco img, body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco svg {
   height: 100%;
@@ -5940,7 +6162,1134 @@ body #Main_TratDetalhes #FAQ .patter path {
 }
 body #Main_TratDetalhes #FAQ h2 {
   width: 100%;
-  outline: 1px solid red;
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  color: #4B2F24;
+}
+body #Main_TratDetalhes #FAQ .block_perguntas {
+  margin: 4vh 0 2vh;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta {
+  width: 50%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  border-right: 2px solid #373435;
+  position: relative;
+}
+body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 2vw;
+  width: 80%;
+  height: 2px;
+  background-color: #373435;
+}
+body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 1.3vw;
+  color: #4B2F24;
+  margin-bottom: 1.5vh;
+}
+body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 3vh;
+  color: #373435;
+  margin-bottom: 1.5vh;
+}
+body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(2), body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(4), body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(6) {
+  border: none;
+}
+body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::before, body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(6)::before {
+  display: none;
+}
+@media only screen and (max-width: 479px) {
+  body #Main_TratDetalhes #banner img {
+    height: 100%;
+  }
+  body #Main_TratDetalhes #banner h1 {
+    font-size: 8vw;
+    padding: 0 2vw;
+  }
+  body #Main_TratDetalhes #banner h1::before {
+    bottom: -2vh;
+    width: 35%;
+    height: 0.35vh;
+  }
+  body #Main_TratDetalhes #banner p {
+    font-size: 4vw;
+    margin: 1vh 0;
+  }
+  body #Main_TratDetalhes #banner span {
+    bottom: 2vh;
+    right: 4vw;
+    font-size: 3vw;
+  }
+  body #Main_TratDetalhes #banner span a {
+    margin-left: 1vw;
+  }
+  body #Main_TratDetalhes #como_Funicona {
+    padding: 3vh 6% 7.5vh;
+  }
+  body #Main_TratDetalhes #como_Funicona h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 5vh;
+  }
+  body #Main_TratDetalhes #como_Funicona h2::before {
+    bottom: -1.5vh;
+    width: 45%;
+    height: 0.35vh;
+  }
+  body #Main_TratDetalhes #como_Funicona p {
+    font-size: 3.5vw;
+    line-height: 4.5vh;
+  }
+  body #Main_TratDetalhes #etapas {
+    padding: 0 5% 7.5vh;
+  }
+  body #Main_TratDetalhes #etapas h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 5vh;
+  }
+  body #Main_TratDetalhes #etapas h2::before {
+    bottom: -1.5vh;
+    width: 45%;
+    height: 0.35vh;
+  }
+  body #Main_TratDetalhes #etapas ul li {
+    height: 6vh;
+    margin: 1vh 0;
+    font-size: 3.5vw;
+    padding-left: 2.5vw;
+  }
+  body #Main_TratDetalhes #etapas ul li::before {
+    width: 1vw;
+    height: 1vw;
+  }
+  body #Main_TratDetalhes #resultados {
+    padding: 0 6% 7.5vh;
+  }
+  body #Main_TratDetalhes #resultados h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 5vh;
+  }
+  body #Main_TratDetalhes #resultados h2::before {
+    bottom: -1.5vh;
+    width: 45%;
+    height: 0.35vh;
+  }
+  body #Main_TratDetalhes #resultados .img_block {
+    margin: 0 0 3vh;
+    width: 100%;
+    height: 35vh;
+    padding: 0;
+  }
+  body #Main_TratDetalhes #equipe {
+    justify-content: center;
+    padding: 5vh 5%;
+    height: auto;
+  }
+  body #Main_TratDetalhes #equipe .patter {
+    width: auto;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    opacity: 0.15;
+  }
+  body #Main_TratDetalhes #equipe h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 3vh;
+  }
+  body #Main_TratDetalhes #equipe h2::before {
+    bottom: -1vh;
+    width: 35%;
+    height: 0.3vh;
+  }
+  body #Main_TratDetalhes #equipe .splide {
+    margin-top: 0;
+  }
+  body #Main_TratDetalhes #equipe .splide .splide__arrows .splide__arrow {
+    width: 12vw;
+    height: 12vw;
+    padding: 1.5vw;
+  }
+  body #Main_TratDetalhes #equipe .splide .splide__arrows .splide__arrow--prev {
+    left: -2vw;
+  }
+  body #Main_TratDetalhes #equipe .splide .splide__arrows .splide__arrow--next {
+    right: -2vw;
+  }
+  body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide {
+    padding: 0;
+    position: relative;
+  }
+  body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a img {
+    padding: 0;
+    width: 65%;
+    height: 90%;
+    margin-left: 17.5%;
+    margin-top: 5%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a .infosCards {
+    width: 66%;
+    height: 25%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    margin: 17%;
+    margin-bottom: 5%;
+    border-bottom-left-radius: 4vw;
+    border-bottom-right-radius: 4vw;
+    border: 2px solid #D2AE6D;
+    border-top: none;
+  }
+  body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 2vh;
+  }
+  body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
+    font-size: 3.5vw;
+  }
+  body #Main_TratDetalhes #depos {
+    height: auto;
+    padding: 3vh 7.5% 6vh;
+  }
+  body #Main_TratDetalhes #depos h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 3vh;
+  }
+  body #Main_TratDetalhes #depos h2::before {
+    bottom: -0.75vh;
+    width: 35%;
+    height: 0.3vh;
+  }
+  body #Main_TratDetalhes #depos p {
+    font-size: 2.75vw;
+  }
+  body #Main_TratDetalhes #depos .splide {
+    width: 100%;
+    height: 25vh;
+    margin-top: 1vh;
+  }
+  body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow {
+    width: 12vw;
+    height: 12vw;
+    padding: 1.5vw;
+  }
+  body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow--prev {
+    left: -5vw;
+  }
+  body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow--next {
+    right: -5vw;
+  }
+  body #Main_TratDetalhes #depos .splide .splide__track {
+    width: 90%;
+    margin-left: 5%;
+  }
+  body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img, body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg {
+    width: 15vw;
+    height: 15vw;
+    top: 32%;
+  }
+  body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo video {
+    border-radius: 3.5vw;
+  }
+  body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo::before {
+    border-radius: 3.5vw;
+  }
+  body #Main_TratDetalhes #espaco {
+    flex-direction: column;
+    padding: 0;
+    height: auto;
+  }
+  body #Main_TratDetalhes #espaco .patter {
+    width: auto;
+    height: 60vh;
+    -o-object-fit: contain;
+       object-fit: contain;
+    opacity: 0.04;
+  }
+  body #Main_TratDetalhes #espaco .patter path {
+    fill: #D0B498;
+  }
+  body #Main_TratDetalhes #espaco #Block_VideoEspaco {
+    order: 2;
+    width: 100%;
+    height: 50vh;
+  }
+  body #Main_TratDetalhes #espaco #Block_VideoEspaco img, body #Main_TratDetalhes #espaco #Block_VideoEspaco svg {
+    width: 20vw;
+    height: 20vw;
+  }
+  body #Main_TratDetalhes #espaco #Block_VideoEspaco::before {
+    height: 101.5%;
+    top: -1%;
+  }
+  body #Main_TratDetalhes #espaco #Block_textEspaco {
+    width: 100%;
+    height: 60vh;
+    padding: 5vw;
+    flex-direction: column;
+    order: 1;
+  }
+  body #Main_TratDetalhes #espaco #Block_textEspaco h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 5vh;
+    margin-top: 0;
+  }
+  body #Main_TratDetalhes #espaco #Block_textEspaco h2::before {
+    bottom: -1vh;
+    width: 40%;
+    height: 0.3vh;
+  }
+  body #Main_TratDetalhes #espaco #Block_textEspaco p {
+    padding-right: 2vw;
+    font-size: 2.7vw;
+    line-height: 2.5vh;
+  }
+  body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco {
+    width: 60vw;
+    height: 4vh;
+    font-size: 4.5vw;
+    margin-top: 5vh;
+  }
+  body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco img, body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco svg {
+    margin-left: auto;
+    width: 15%;
+    height: 100%;
+  }
+  body #Main_TratDetalhes #FAQ {
+    height: auto;
+    padding: 2vh 7.5%;
+  }
+  body #Main_TratDetalhes #FAQ .patter {
+    width: auto;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    opacity: 0.04;
+  }
+  body #Main_TratDetalhes #FAQ h2 {
+    font-size: 6.5vw;
+  }
+  body #Main_TratDetalhes #FAQ .block_perguntas {
+    margin: 2vh 0;
+  }
+  body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta {
+    width: 100%;
+    height: 25vh;
+    padding: 1vh 2vw;
+    border: none;
+    margin: 1vh 0;
+  }
+  body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta::before {
+    left: 10%;
+  }
+  body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta h3 {
+    font-size: 3.75vw;
+    margin-bottom: 2vh;
+  }
+  body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta p {
+    font-size: 3vw;
+    line-height: 2.75vh;
+    margin-bottom: 0;
+  }
+  body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::before {
+    display: block;
+  }
+}
+body #Main_Equipe {
+  padding-top: 124px;
+  background-color: #4B2F24;
+}
+body #Main_Equipe #background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  opacity: 0.03;
+}
+body #Main_Equipe #banner {
+  height: 65vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20vh;
+  overflow: visible;
+}
+body #Main_Equipe #banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Equipe #banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4B2F24;
+  opacity: 0.45;
+  z-index: 3;
+}
+body #Main_Equipe #banner h1, body #Main_Equipe #banner span {
+  font-family: "TrajanPro", system-ui;
+  color: #E0E0E0;
+  z-index: 5;
+}
+body #Main_Equipe #banner span {
+  font-size: 2vw;
+  margin: -7.5vh 0 0;
+}
+body #Main_Equipe #banner h1 {
+  position: relative;
+  font-size: 5vw;
+  display: flex;
+  justify-content: center;
+}
+body #Main_Equipe #banner h1::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  width: 30%;
+  height: 0.25vh;
+  background-color: #D2AE6D;
+}
+body #Main_Equipe #banner p {
+  position: absolute;
+  bottom: -17.5vh;
+  width: 100%;
+  height: 15vh;
+  z-index: 5;
+  padding: 0 10%;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  color: #E0E0E0;
+  font-size: 1.2vw;
+  line-height: 4.5vh;
+}
+body #Main_Equipe #Block_medicos {
+  position: relative;
+  z-index: 5;
+  padding: 5vh 5% 7.5vh;
+  width: 100%;
+  height: auto;
+}
+body #Main_Equipe #Block_medicos .dropdown {
+  position: absolute;
+  right: 5%;
+  top: 0;
+  width: 17vw;
+  height: 3.75vh;
+}
+body #Main_Equipe #Block_medicos .dropdown .dropdown-toggle {
+  width: 100%;
+  height: 100%;
+  padding: 0 0.75vw;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-family: "khmer-mn", sans-serif;
+  color: #D2AE6D;
+  font-weight: 500;
+  font-size: 1.1vw;
+  padding-top: 0.35vh;
+  border-radius: 0.5vw;
+  border: 1px solid #D2AE6D;
+}
+body #Main_Equipe #Block_medicos .dropdown .dropdown-toggle::after {
+  content: "";
+  margin-left: auto;
+  color: #D2AE6D;
+  border-left: 0.4em solid transparent;
+  border-right: 0.4em solid transparent;
+  border-top: 0.4em solid;
+  margin-top: -0.4vh;
+}
+body #Main_Equipe #Block_medicos .dropdown .dropdown-menu {
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  padding: 0.5vh 1vw;
+  margin: 0;
+  background-color: #D2AE6D;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+body #Main_Equipe #Block_medicos .dropdown .dropdown-menu li {
+  margin: 1vh 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 1vw;
+  color: #4B2F24;
+  padding: 0.75vh 0;
+  border-bottom: 1px solid #4B2F24;
+  position: relative;
+  padding-left: 0.5vw;
+}
+body #Main_Equipe #Block_medicos .dropdown .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+body #Main_Equipe #Block_medicos .dropdown .dropdown-menu li:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #E0E0E0;
+  opacity: 0.2;
+  z-index: -1;
+}
+body #Main_Equipe #Block_medicos .filter {
+  padding: 2vh 0 6vh;
+  min-height: 25vh;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body #Main_Equipe #Block_medicos .filter .mix {
+  width: 18%;
+  height: 45vh;
+  margin: 1.5vh 0;
+}
+body #Main_Equipe #Block_medicos .filter .mix a {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_Equipe #Block_medicos .filter .mix a img {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body #Main_Equipe #Block_medicos .filter .mix a .infosCards {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 10vh;
+  background-color: #E0E0E0;
+  border-bottom-left-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+  border: 2px solid #D2AE6D;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Equipe #Block_medicos .filter .mix a .infosCards .nome {
+  font-family: "TrajanPro", system-ui;
+  font-size: 1.05vw;
+  color: #4B2F24;
+  margin-bottom: 1.25vh;
+}
+body #Main_Equipe #Block_medicos .filter .mix a .infosCards .espec_medico {
+  all: unset;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.85vw;
+  color: #4B2F24;
+  font-style: italic;
+}
+body #Main_Equipe #Block_medicos .filter .mix a:hover {
+  transform: scale(1.02);
+}
+body #Main_Equipe #espaco {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #4B2F24;
+}
+body #Main_Equipe #espaco .patter {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.03;
+}
+body #Main_Equipe #espaco .patter path {
+  fill: #D0B498;
+}
+body #Main_Equipe #espaco #Block_textEspaco {
+  width: 50%;
+  height: 100%;
+  padding: 4.75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_Equipe #espaco #Block_textEspaco h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 7.5vh;
+  margin-top: -5vh;
+  position: relative;
+  color: #D2AE6D;
+}
+body #Main_Equipe #espaco #Block_textEspaco h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 35%;
+  height: 0.35vh;
+  background-color: #D2AE6D;
+}
+body #Main_Equipe #espaco #Block_textEspaco p {
+  width: 100%;
+  padding-right: 3.5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #E0E0E0;
+  line-height: 4vh;
+}
+body #Main_Equipe #espaco #Block_textEspaco .btn_espaco {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 3.5vh;
+  width: 45%;
+  color: #D2AE6D;
+  font-size: 1.2vw;
+  margin-top: 15vh;
+}
+body #Main_Equipe #espaco #Block_textEspaco .btn_espaco img, body #Main_Equipe #espaco #Block_textEspaco .btn_espaco svg {
+  height: 100%;
+  width: 25%;
+  margin-left: auto;
+}
+body #Main_Equipe #espaco #Block_textEspaco .btn_espaco img path, body #Main_Equipe #espaco #Block_textEspaco .btn_espaco svg path {
+  fill: #D2AE6D;
+}
+body #Main_Equipe #espaco #Block_VideoEspaco {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_Equipe #espaco #Block_VideoEspaco img, body #Main_Equipe #espaco #Block_VideoEspaco svg {
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  z-index: 5;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_Equipe #espaco #Block_VideoEspaco img:hover, body #Main_Equipe #espaco #Block_VideoEspaco svg:hover {
+  transform: scale(1.1);
+}
+body #Main_Equipe #espaco #Block_VideoEspaco #VideoEspaco {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+body #Main_Equipe #espaco #Block_VideoEspaco::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4B2F24;
+  z-index: 2;
+  opacity: 0.5;
+}
+body #Main_Equipe #espaco .no-back::before {
+  display: none;
+}
+body #Main_Equipe #FAQ {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #D0B498;
+  z-index: 5;
+}
+body #Main_Equipe #FAQ .patter {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.03;
+}
+body #Main_Equipe #FAQ .patter path {
+  fill: #4B2F24;
+}
+body #Main_Equipe #FAQ h2 {
+  width: 100%;
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TrajanPro", system-ui;
+  font-size: 2.5vw;
+  color: #4B2F24;
+}
+body #Main_Equipe #FAQ .block_perguntas {
+  margin: 4vh 0 2vh;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+body #Main_Equipe #FAQ .block_perguntas .Block_pergunta {
+  width: 50%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  border-right: 2px solid #373435;
+  position: relative;
+}
+body #Main_Equipe #FAQ .block_perguntas .Block_pergunta::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 2vw;
+  width: 80%;
+  height: 2px;
+  background-color: #373435;
+}
+body #Main_Equipe #FAQ .block_perguntas .Block_pergunta h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 1.3vw;
+  color: #4B2F24;
+  margin-bottom: 1.5vh;
+}
+body #Main_Equipe #FAQ .block_perguntas .Block_pergunta p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 3vh;
+  color: #373435;
+  margin-bottom: 1.5vh;
+}
+body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(2), body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(4), body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(6) {
+  border: none;
+}
+body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(5)::before, body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(6)::before {
+  display: none;
+}
+@media only screen and (max-width: 479px) {
+  body #Main_Equipe {
+    padding-top: 90px;
+  }
+  body #Main_Equipe #background {
+    width: auto;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    opacity: 0.04;
+  }
+  body #Main_Equipe #banner {
+    height: 55vh;
+    margin-bottom: 30vh;
+  }
+  body #Main_Equipe #banner span {
+    font-size: 3vw;
+    margin: -7.5vh 0 1vh;
+  }
+  body #Main_Equipe #banner h1 {
+    font-size: 9vw;
+  }
+  body #Main_Equipe #banner h1::before {
+    bottom: -2vh;
+    width: 35%;
+    height: 0.4vh;
+  }
+  body #Main_Equipe #banner p {
+    bottom: -26vh;
+    height: 25vh;
+    padding: 0 7.5%;
+    font-size: 3vw;
+    line-height: 4vh;
+  }
+  body #Main_Equipe #Block_medicos {
+    padding: 5vh 5% 0;
+  }
+  body #Main_Equipe #Block_medicos .dropdown {
+    width: 60vw;
+    height: 4vh;
+  }
+  body #Main_Equipe #Block_medicos .dropdown .dropdown-toggle {
+    padding: 0 1.5vw;
+    font-size: 4vw;
+    padding-top: 0.35vh;
+    border-radius: 1.5vw;
+  }
+  body #Main_Equipe #Block_medicos .dropdown .dropdown-menu {
+    padding: 0.5vh 2vw;
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+  }
+  body #Main_Equipe #Block_medicos .dropdown .dropdown-menu li {
+    font-size: 3.5vw;
+    padding-left: 1vw;
+  }
+  body #Main_Equipe #Block_medicos .filter {
+    min-height: 30vh;
+  }
+  body #Main_Equipe #Block_medicos .filter .mix {
+    width: 90%;
+    height: 55vh;
+  }
+  body #Main_Equipe #Block_medicos .filter .mix a .infosCards {
+    width: 82%;
+    height: 15vh;
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+  }
+  body #Main_Equipe #Block_medicos .filter .mix a .infosCards .nome {
+    font-size: 4.25vw;
+    margin-bottom: 2vh;
+  }
+  body #Main_Equipe #Block_medicos .filter .mix a .infosCards .espec_medico {
+    font-size: 4vw;
+  }
+  body #Main_Equipe #espaco {
+    flex-direction: column;
+    padding: 0;
+    height: auto;
+  }
+  body #Main_Equipe #espaco .patter {
+    width: auto;
+    height: 60vh;
+    -o-object-fit: contain;
+       object-fit: contain;
+    opacity: 0.04;
+  }
+  body #Main_Equipe #espaco .patter path {
+    fill: #D0B498;
+  }
+  body #Main_Equipe #espaco #Block_VideoEspaco {
+    order: 2;
+    width: 100%;
+    height: 50vh;
+  }
+  body #Main_Equipe #espaco #Block_VideoEspaco img, body #Main_Equipe #espaco #Block_VideoEspaco svg {
+    width: 20vw;
+    height: 20vw;
+  }
+  body #Main_Equipe #espaco #Block_VideoEspaco::before {
+    height: 101.5%;
+    top: -1%;
+  }
+  body #Main_Equipe #espaco #Block_textEspaco {
+    width: 100%;
+    height: 60vh;
+    padding: 5vw;
+    flex-direction: column;
+    order: 1;
+  }
+  body #Main_Equipe #espaco #Block_textEspaco h2 {
+    font-size: 7vw;
+    padding-left: 4vw;
+    margin-bottom: 5vh;
+    margin-top: 0;
+  }
+  body #Main_Equipe #espaco #Block_textEspaco h2::before {
+    bottom: -1vh;
+    width: 40%;
+    height: 0.3vh;
+  }
+  body #Main_Equipe #espaco #Block_textEspaco p {
+    padding-right: 2vw;
+    font-size: 2.7vw;
+    line-height: 2.5vh;
+  }
+  body #Main_Equipe #espaco #Block_textEspaco .btn_espaco {
+    width: 60vw;
+    height: 4vh;
+    font-size: 4.5vw;
+    margin-top: 5vh;
+  }
+  body #Main_Equipe #espaco #Block_textEspaco .btn_espaco img, body #Main_Equipe #espaco #Block_textEspaco .btn_espaco svg {
+    margin-left: auto;
+    width: 15%;
+    height: 100%;
+  }
+  body #Main_Equipe #FAQ {
+    height: auto;
+    padding: 2vh 7.5%;
+  }
+  body #Main_Equipe #FAQ .patter {
+    width: auto;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    opacity: 0.04;
+  }
+  body #Main_Equipe #FAQ h2 {
+    font-size: 6.5vw;
+  }
+  body #Main_Equipe #FAQ .block_perguntas {
+    margin: 2vh 0;
+  }
+  body #Main_Equipe #FAQ .block_perguntas .Block_pergunta {
+    width: 100%;
+    height: 25vh;
+    padding: 1vh 2vw;
+    border: none;
+    margin: 1vh 0;
+  }
+  body #Main_Equipe #FAQ .block_perguntas .Block_pergunta::before {
+    left: 10%;
+  }
+  body #Main_Equipe #FAQ .block_perguntas .Block_pergunta h3 {
+    font-size: 3.75vw;
+    margin-bottom: 2vh;
+  }
+  body #Main_Equipe #FAQ .block_perguntas .Block_pergunta p {
+    font-size: 3vw;
+    line-height: 2.75vh;
+    margin-bottom: 0;
+  }
+  body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(5)::before {
+    display: block;
+  }
+}
+body #Main_EquipeDetalhes {
+  padding-top: 124px;
+  background-color: #4B2F24;
+}
+body #Main_EquipeDetalhes #background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  opacity: 0.03;
+}
+body #Main_EquipeDetalhes #Block_user {
+  z-index: 5;
+  position: relative;
+  height: auto;
+  display: flex;
+}
+body #Main_EquipeDetalhes #Block_user #imgVideo_User {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+body #Main_EquipeDetalhes #Block_user #imgVideo_User #Block_VideoMedico {
+  width: 90%;
+  height: 45vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  margin-top: 5vh;
+}
+body #Main_EquipeDetalhes #Block_user #imgVideo_User #Block_VideoMedico img, body #Main_EquipeDetalhes #Block_user #imgVideo_User #Block_VideoMedico svg {
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  z-index: 5;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_EquipeDetalhes #Block_user #imgVideo_User #Block_VideoMedico img:hover, body #Main_EquipeDetalhes #Block_user #imgVideo_User #Block_VideoMedico svg:hover {
+  transform: scale(1.1);
+}
+body #Main_EquipeDetalhes #Block_user #imgVideo_User #Block_VideoMedico #VideoMedico {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border-radius: 1.5vw;
+}
+body #Main_EquipeDetalhes #Block_user #imgVideo_User #Block_VideoMedico::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4B2F24;
+  z-index: 2;
+  opacity: 0.15;
+}
+body #Main_EquipeDetalhes #Block_user #imgVideo_User .no-back::before {
+  display: none;
+}
+body #Main_EquipeDetalhes #Block_user #imgVideo_User #imgUser {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  z-index: 10;
+  top: 58%;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User {
+  width: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #especialidade {
+  all: unset;
+  width: 100%;
+  height: 3vh;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 1vw;
+  font-weight: 700;
+  color: #D2AE6D;
+  display: flex;
+  align-items: center;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #nome_user {
+  all: unset;
+  width: 100%;
+  height: 9vh;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 3.5vw;
+  letter-spacing: 0.15vw;
+  font-weight: 900;
+  color: #D2AE6D;
+  display: flex;
+  align-items: center;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #doc {
+  all: unset;
+  width: 100%;
+  height: 5vh;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 2vw;
+  font-weight: 900;
+  letter-spacing: 0.15vw;
+  color: #E0E0E0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #doc::before {
+  content: "";
+  position: absolute;
+  bottom: -2vh;
+  left: 0;
+  width: 12vw;
+  height: 0.8vh;
+  border-radius: 10vw;
+  background-color: #D2AE6D;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #bio, body #Main_EquipeDetalhes #Block_user #infos_User #formacoes {
+  all: unset;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.75vh 0;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #bio h3, body #Main_EquipeDetalhes #Block_user #infos_User #formacoes h3 {
+  font-family: "khmer-mn", sans-serif;
+  font-weight: 400;
+  font-size: 1.35vw;
+  color: #E0E0E0;
+  padding: 0.5vh 0;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #bio p, body #Main_EquipeDetalhes #Block_user #infos_User #formacoes p {
+  font-family: "khmer-mn", sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+  color: #E0E0E0;
+  line-height: 3.5vh;
+  padding: 0;
+  padding-right: 5vw;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #botoes {
+  width: 100%;
+  height: 6vh;
+  margin-top: 6vh;
+  display: flex;
+  align-items: center;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #botoes .redes {
+  height: 100%;
+  width: auto;
+  margin: 0 1vw;
+  transition: all ease-in-out 0.2s;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #botoes .redes img, body #Main_EquipeDetalhes #Block_user #infos_User #botoes .redes svg {
+  width: 100%;
+  height: 100%;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #botoes .redes:nth-child(1) {
+  margin-left: 0;
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #botoes .redes:hover {
+  transform: scale(1.15);
+}
+body #Main_EquipeDetalhes #Block_user #infos_User #botoes .btn_agendamento {
+  background-color: #D2AE6D;
+  margin-left: auto;
+  margin-right: 2vw;
+  height: 4vh;
 }
 @media only screen and (max-width: 479px) {
   body .btns {
@@ -6318,7 +7667,7 @@ body #Main_TratDetalhes #FAQ h2 {
     padding: 0;
     position: relative;
   }
-  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide img {
+  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a img {
     padding: 0;
     width: 65%;
     height: 90%;
@@ -6327,7 +7676,7 @@ body #Main_TratDetalhes #FAQ h2 {
     -o-object-fit: fill;
        object-fit: fill;
   }
-  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide .infosCards {
+  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .infosCards {
     width: 66%;
     height: 25%;
     bottom: 0;
@@ -6340,12 +7689,12 @@ body #Main_TratDetalhes #FAQ h2 {
     border: 2px solid #D2AE6D;
     border-top: none;
   }
-  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide .infosCards .nome {
+  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
     text-align: center;
     font-size: 4vw;
     margin-bottom: 2vh;
   }
-  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide .infosCards .espec_medico {
+  body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
     font-size: 3.5vw;
   }
   body #Main_index #equipe .btn_equipe {

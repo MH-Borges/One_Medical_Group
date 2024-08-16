@@ -1,0 +1,187 @@
+#Main_EquipeDetalhes{
+    padding-top: 124px;
+    background-color: $Marrom;
+    #background{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        opacity: 0.03;
+    }
+    #Block_user{
+        z-index: 5;
+        position: relative;
+        height: auto;
+        display: flex;
+        #imgVideo_User{
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            #Block_VideoMedico{
+                width: 90%;
+                height: 45vh;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+                margin-top: 5vh;
+                img, svg{
+                    position: absolute;
+                    width: 5vw;
+                    height: 5vw;
+                    z-index: 5;
+                    transition: all ease-in-out .15s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                #VideoMedico{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    z-index: 1;
+                    border-radius: 1.5vw;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: $Marrom;
+                    z-index: 2;
+                    opacity: 0.15;
+                }
+            }
+            .no-back{
+                &::before{
+                    display: none;
+                }
+            }
+
+            #imgUser{
+                position: absolute;
+                width: 60%;
+                height: auto;
+                z-index: 10;
+                top: 58%;
+            }
+        }
+        #infos_User{
+            width: 60vw;
+            display: flex;
+            flex-wrap: wrap;
+            #especialidade{
+                all: unset;
+                width: 100%;
+                height: 3vh;
+                font-family: $Second-font;
+                font-size: 1vw;
+                font-weight: 700;
+                color: $Amarelo;
+                display: flex;
+                align-items: center;
+            }
+            #nome_user{
+                all: unset;
+                width: 100%;
+                height: 9vh;
+                font-family: $Second-font;
+                font-size: 3.5vw;
+                letter-spacing: 0.15vw;
+                font-weight: 900;
+                color: $Amarelo;
+                display: flex;
+                align-items: center;
+            }
+            #doc{
+                all: unset;
+                width: 100%;
+                height: 5vh;
+                font-family: $Second-font;
+                font-size: 2vw;
+                font-weight: 900;
+                letter-spacing: 0.15vw;
+                color: $Branco;
+                position: relative;
+                display: flex;
+                align-items: center;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -2vh;
+                    left: 0;
+                    width: 12vw;
+                    height: 0.8vh;
+                    border-radius: 10vw;
+                    background-color: $Amarelo;
+                }
+            }
+            #bio, #formacoes{
+                all: unset;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0.75vh 0;
+                h3{
+                    font-family: $Second-font;
+                    font-weight: 400;
+                    font-size: 1.35vw;
+                    color: $Branco;
+                    padding: 0.5vh 0;
+                }
+                p{
+                    font-family: $Second-font;
+                    font-weight: 600;
+                    font-size: 1vw;
+                    color: $Branco;
+                    line-height: 3.5vh;
+                    padding: 0;
+                    padding-right: 5vw;
+                }
+            }
+            #botoes{
+                width: 100%;
+                height: 6vh;
+                margin-top: 6vh;
+                display: flex;
+                align-items: center;
+                .redes{
+                    height: 100%;
+                    width: auto;
+                    margin: 0 1vw;
+                    transition: all ease-in-out .2s;
+                    img, svg{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:nth-child(1){
+                        margin-left: 0;
+                    }
+                    &:hover{
+                        transform: scale(1.15);
+                    }
+                }
+                .btn_agendamento{
+                    background-color: $Amarelo;
+                    margin-left: auto;
+                    margin-right: 2vw;
+                    height: 4vh;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 479px){
+    
+}
