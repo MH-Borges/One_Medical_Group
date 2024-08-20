@@ -8,6 +8,7 @@ function mobileCheck() {
     return check;
 };
 
+
 //MENU LATRERAL
 function sideMenu(){
     if($('#sideMenu').hasClass('hide')){
@@ -25,6 +26,7 @@ function sideMenu(){
         setTimeout(() => { $('#sideMenu').addClass('hide'); }, 500);
     }
 }
+
 
 //Scroll Menu
 document.querySelectorAll('.links').forEach(item => { item.addEventListener('click', scrollToIdOnClick); });
@@ -64,6 +66,7 @@ function smoothScrollTo(endX, endY, duration = 200) {
     scroll();
 }
 
+
 //Whats Icon
 window.addEventListener('scroll', function() {
     //whats icon
@@ -99,3 +102,15 @@ document.addEventListener("fullscreenchange", (e) => {
         e.target.style.objectFit = "cover";
     }
 });
+
+
+//FILTRO Equipe e blog posts
+$('.controls li').on('click', function () {
+    $('.controls li').removeClass('active');
+    $(this).addClass('active');
+});
+
+if ($('.filter').length > 0) {
+    var containerEl = document.querySelector('.filter');
+    var mixer = mixitup(containerEl);
+}

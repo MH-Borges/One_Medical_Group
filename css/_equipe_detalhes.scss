@@ -16,7 +16,8 @@
         height: auto;
         display: flex;
         #imgVideo_User{
-            width: 40vw;
+            width: 45vw;
+            height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -47,7 +48,7 @@
                     object-fit: cover;
                     position: relative;
                     z-index: 1;
-                    border-radius: 1.5vw;
+                    border-radius: 1vw;
                 }
                 &::before{
                     content: '';
@@ -66,87 +67,117 @@
                     display: none;
                 }
             }
-
             #imgUser{
                 position: absolute;
                 width: 60%;
-                height: auto;
+                height: 28.5vh;
+                object-fit: contain;
                 z-index: 10;
-                top: 58%;
+                top: 55%;
             }
         }
         #infos_User{
-            width: 60vw;
+            width: 55vw;
+            height: auto;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 5vh 1vw 10vh;
             #especialidade{
                 all: unset;
                 width: 100%;
-                height: 3vh;
-                font-family: $Second-font;
-                font-size: 1vw;
-                font-weight: 700;
-                color: $Amarelo;
+                height: 5vh;
+                font-family: $Text-font;
+                font-size: 1.5vw;
+                font-weight: 500;
+                font-style: italic;
+                color: $Branco;
                 display: flex;
                 align-items: center;
             }
             #nome_user{
                 all: unset;
                 width: 100%;
-                height: 9vh;
-                font-family: $Second-font;
-                font-size: 3.5vw;
-                letter-spacing: 0.15vw;
+                min-height: 10vh;
+                height: auto;
+                font-family: $Main-font;
+                font-size: 3vw;
+                letter-spacing: 0.2vw;
                 font-weight: 900;
-                color: $Amarelo;
+                color: $Branco;
                 display: flex;
                 align-items: center;
             }
             #doc{
                 all: unset;
                 width: 100%;
-                height: 5vh;
+                height: 4vh;
                 font-family: $Second-font;
-                font-size: 2vw;
-                font-weight: 900;
+                font-size: 1.25vw;
                 letter-spacing: 0.15vw;
-                color: $Branco;
+                color: $Amarelo;
                 position: relative;
                 display: flex;
                 align-items: center;
                 &::before{
                     content: '';
                     position: absolute;
-                    bottom: -2vh;
+                    bottom: -1.5vh;
                     left: 0;
-                    width: 12vw;
-                    height: 0.8vh;
-                    border-radius: 10vw;
+                    width: 27%;
+                    height: 0.25vh;
                     background-color: $Amarelo;
                 }
             }
             #bio, #formacoes{
                 all: unset;
                 width: 100%;
+                min-height: 5vh;
+                height: auto;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                margin: 0.75vh 0;
+                margin-top: 5vh;
                 h3{
-                    font-family: $Second-font;
-                    font-weight: 400;
-                    font-size: 1.35vw;
+                    font-family: $Text-font;
+                    font-weight: 600;
+                    font-size: 1.75vw;
                     color: $Branco;
-                    padding: 0.5vh 0;
+                    padding: 1vh 0;
                 }
                 p{
-                    font-family: $Second-font;
-                    font-weight: 600;
-                    font-size: 1vw;
-                    color: $Branco;
+                    font-family: $Text-font;
+                    font-weight: 400;
+                    font-size: 1.1vw;
+                    color: $Creme;
                     line-height: 3.5vh;
-                    padding: 0;
-                    padding-right: 5vw;
+                    padding-right: 1vw;
+                }
+            }
+            #formacoes{
+                margin-top: 2vh;
+                ul{
+                    margin-top: 2vh;
+                    li{
+                        font-family: $Text-font;
+                        font-weight: 400;
+                        font-size: 1vw;
+                        color: $Creme;
+                        line-height: 3.5vh;
+                        padding-left: 1.25vw;
+                        margin: 1vh 0;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            left: 0.5vw;
+                            width: 0.3vw;
+                            height: 0.3vw;
+                            background-color: $Creme;
+                            border-radius: 2vw;
+                        }
+                    }
                 }
             }
             #botoes{
@@ -156,10 +187,13 @@
                 display: flex;
                 align-items: center;
                 .redes{
-                    height: 100%;
-                    width: auto;
-                    margin: 0 1vw;
+                    height: 3vw;
+                    width: 3vw;
+                    margin: 0 0.75vw;
                     transition: all ease-in-out .2s;
+                    padding: 0.6vw;
+                    border-radius: 50%;
+                    outline: 2px solid $Branco;
                     img, svg{
                         width: 100%;
                         height: 100%;
@@ -172,10 +206,13 @@
                     }
                 }
                 .btn_agendamento{
-                    background-color: $Amarelo;
                     margin-left: auto;
-                    margin-right: 2vw;
-                    height: 4vh;
+                    background-color: $Amarelo;
+                    width: 13.5vw;
+                    height: 75%;
+                    font-size: 1.5vw;
+                    padding: 0;
+                    color: $Preto;
                 }
             }
         }
@@ -183,5 +220,115 @@
 }
 
 @media only screen and (max-width: 479px){
-    
+    #Main_EquipeDetalhes{
+        padding-top: 90px;
+        #background{
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.04;
+        }
+        #Block_user{
+            display: flex;
+            flex-direction: column;
+            padding: 0 7.5%;
+            #imgVideo_User{
+                width: 100%;
+                height: 60vh;
+                #Block_VideoMedico{
+                    width: 100%;
+                    height: 35vh;
+                    margin-top: 0;
+                    img, svg{
+                        width: 15vw;
+                        height: 15vw;
+                        top: 35%;
+                    }
+                    #VideoMedico{
+                        border-radius: 3.5vw;
+                    }
+                    &::before{
+                        border-radius: 3.5vw;
+                        z-index: 5;
+                        opacity: 0.4;
+                    }
+                }
+               
+                #imgUser{
+                    width: 75%;
+                    height: 23vh;
+                    top: 55%;
+                }
+            }
+            #infos_User{
+                width: 100%;
+                padding: 0 0 7.5vh;
+                #especialidade{
+                    height: 5vh;
+                    font-size: 4vw;
+                }
+                #nome_user{
+                    width: 100%;
+                    min-height: 7.5vh;
+                    font-size: 6vw;
+                }
+                #doc{
+                    width: 100%;
+                    height: 4vh;
+                    font-size: 3.5vw;
+                    letter-spacing: 0.35vw;
+                    &::before{
+                        bottom: -2vh;
+                        width: 35%;
+                    }
+                }
+                #bio, #formacoes{
+                    margin-top: 5vh;
+                    h3{
+                        font-size: 4.5vw;
+                        padding: 1vh 0;
+                    }
+                    p{
+                        font-size: 3vw;
+                        line-height: 4vh;
+                        padding: 1vh 0;
+                        padding-right: 1vw;
+                    }
+                }
+                #formacoes{
+                    margin-top: 2vh;
+                    ul{
+                        margin-top: 0;
+                        li{
+                            font-size: 2.75vw;
+                            padding-left: 4vw;
+                            &::before{
+                                left: 1.5vw;
+                                width: 0.75vw;
+                                height: 0.75vw;
+                            }
+                        }
+                    }
+                }
+                #botoes{
+                    height: 8vh;
+                    margin-top: 5vh;
+                    .redes{
+                        height: 7.5vw;
+                        width: 7.5vw;
+                        margin: 0 2vw;
+                        padding: 1.5vw;
+                    }
+                    .btn_agendamento{
+                        width: 40vw;
+                        height: 50%;
+                        font-size: 4.5vw;
+                        padding: 0;
+                        color: $Preto;
+                        border-radius: 1.5vw;
+                    }
+                }
+            }
+        }
+    }
 }

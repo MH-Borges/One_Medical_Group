@@ -411,7 +411,7 @@
                 font-family: $Main-font;
                 font-size: 2.5vw;
                 padding-right: 2.5vw;
-                margin-bottom: 7.5vh;
+                margin-bottom: 5vh;
                 position: relative;
                 color: $Marrom;
                 text-align: right;
@@ -427,24 +427,13 @@
             }
             p{
                 width: 100%;
-                padding-left: 3.5vw;
+                padding-left: 2vw;
                 font-family: $Text-font;
                 font-weight: 400;
                 font-size: 1vw;
                 text-align: right;
                 color: $Marrom;
-                line-height: 4vh;
-            }
-            span{
-                width: 100%;
-                padding-left: 10vw;
-                font-family: $Text-font;
-                font-weight: 400;
-                font-size: 1.1vw;
-                text-align: right;
-                color: $Preto;
-                line-height: 3.5vh;
-                margin-top: 12.5vh;
+                line-height: 3vh;
             }
             .btn_AllInOne{
                 font-family: $Text-font;
@@ -453,7 +442,7 @@
                 background-color: $Amarelo;
                 color: $Preto;
                 font-size: 1.25vw;
-                margin-top: 3vh;
+                margin-top: 5vh;
                 margin-left: auto;
             }
         }
@@ -1115,7 +1104,7 @@
             }
         }
         #allInOne{
-            height: 125vh;
+            height: auto;
             flex-direction: column;
             #Block_VideoAllinOne{
                 order: 2;
@@ -1132,7 +1121,7 @@
             }
             #Block_textAllinOne{
                 width: 100%;
-                height: 75vh;
+                height: 100vh;
                 padding: 2vh 7.5%;
                 flex-direction: column;
                 order: 1;

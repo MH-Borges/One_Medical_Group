@@ -1,0 +1,936 @@
+#Main_blog{
+    padding-top: 124px;
+    #banner{
+        height: 25vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $Creme;
+        h1, span{
+            font-family: $Main-font;
+            color: $Marrom;
+            z-index: 5;
+        }
+        h1{
+            position: relative;
+            font-size: 3vw;
+            display: flex;
+            justify-content: center;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -1.75vh;
+                width: 25%;
+                height: 0.25vh;
+                background-color: $Marrom;
+            }
+        }
+        span{
+            font-size: 1.75vw;
+            margin: -3vh 0 1vh;
+        }
+    }
+    #Block_blog{
+        min-height: 50vh;
+        height: auto;
+        #menu_blog{
+            margin-top: 7.5vh;
+            width: 100%;
+            height: 5vh;
+            display: flex;
+            position: relative;
+            .splide{
+                width: 80%;
+                height: 100%;
+                .splide__track{
+                    height:100%;
+                    width: 90%;
+                    margin-left: 5%;
+                    .splide__list{
+                        height:100%;
+                        width: 100%;
+                        .splide__slide{
+                            height:100%;
+                            width: 100%;
+                            position: relative;
+                            border-left: 2px solid $Amarelo;
+                            border-right: 2px solid $Amarelo;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-family: $Text-font;
+                            font-weight: 500;
+                            font-size: 1.1vw;
+                            color: $Marrom;
+                            &:first-child{
+                                border-left: none;
+                            }
+                            &:last-child{
+                                border-right: none;
+                            }
+                        }
+                        .active{
+                            font-weight: 900;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: $Cinza;
+                                opacity: .2;
+                                z-index: -1;
+                            }
+                        }
+                    }
+                }
+                .splide__arrows{
+                    .splide__arrow {
+                        width: 1.5vw;
+                        height: 1.5vw;
+                        background: none;
+                        opacity: 1;
+                        svg{
+                            width: 100%;
+                            height: 100%;
+                            path{
+                                fill: $Amarelo;
+                            }
+                        }
+                        &:disabled{
+                            opacity: 0;
+                        }
+                    }
+                    .splide__arrow--prev{
+                        left: 1vw;
+                    }
+                    .splide__arrow--next{
+                        right: 1vw;
+                    }
+                }
+                .splide__pagination {
+                    display: none;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+            .searchBar {
+                width: 20%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                input {
+                    all: unset;
+                    width: 90%;
+                    height: 80%;
+                    font-family: $Text-font;
+                    font-size: 1vw;
+                    font-weight: 500;
+                    font-style: italic;
+                    color: $Amarelo;
+                    padding-left: 1vw;
+                    outline: 2px solid $Amarelo;
+                    border-radius: 0.25vw;
+                    &::placeholder{
+                        color: $Amarelo;
+                        font-size: 1.1vw;
+                        font-weight: 600;
+                    }
+                }
+                img,svg{
+                    position: absolute;
+                    right: 1.75vw;
+                    height: 60%;
+                    path{
+                        fill: $Amarelo;
+                    }
+                }
+            }
+            .Search_resultBox{
+                position: absolute;
+                top: 5.5vh;
+                right: 0.75vw;
+                width: 25%;
+                min-height: 10vh;
+                height: auto;
+                max-height: 50vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                background: $Marrom;
+                z-index: 99 !important;
+                border-radius: 0.5vw;
+                .searchResult{
+                    position: relative;
+                    width: 100%;
+                    height: 16vh;
+                    border-top: 1px solid $Creme;
+                    border-bottom: 1px solid $Creme;
+                    margin: 1vh 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(75, 47, 36, 0.4);
+                        backdrop-filter: blur(2px);
+                        z-index: 2;
+                    }
+                    img{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: 1;
+                    }
+                    span{
+                        position: absolute;
+                        z-index: 5;
+                        top: 1vh;
+                        left: 0.5vw;
+                        font-family: $Second-font;
+                        font-weight: 400;
+                        font-size: 0.75vw;
+                        color: $Branco;
+                        background-color: $Preto;
+                        padding: 0 1vw;
+                        padding-top: 0.15vh;
+                        border-radius: 0.25vw;
+                    }
+                    .tag{
+                        left: auto;
+                        right: 0.5vw;
+                    }
+                    .titulo{
+                        z-index: 5;
+                        font-family: $Main-font;
+                        font-weight: 800;
+                        font-size: 1.25vw;
+                        color: $Branco;
+                        text-align: center;
+                        padding: 0 1vw;
+                        margin-top: 2vh;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+                .nullResult{
+                    width: 100%;
+                    height: 10vh;
+                    border: none;
+                    margin: 0;
+                    position: relative;
+                    &::before{
+                        display: none;
+                    }
+                    span{
+                        all: unset;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        font-family: $Text-font;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1vw;
+                        font-weight: 800;
+                        color: $Creme;
+                    }
+                }
+            }
+        }
+        .Blog_cards{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            min-height: 35vh;
+            height: auto;
+            width: 100%;
+            margin-top: 5vh;
+            padding-bottom: 5vh;
+            .card_blog{
+                width: 31%;
+                height: 32vh;
+                position: relative;
+                overflow: hidden;
+                padding: 1vw;
+                display: flex;
+                flex-direction: row;
+                margin: 2vh 0;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(180deg, rgba(75,47,36,0) 0%, rgba(75,47,36, 0.9) 100%);
+                    z-index: 2;
+                    border-radius: 1vw;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 1;
+                    border-radius: 1.25vw;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                .data, .doutor, .titulo, .btn_BlogCard{
+                    z-index: 5;
+                    position: relative;
+                }
+                .data, .doutor{
+                    background-color: $Preto;
+                    font-family: $Second-font;
+                    font-size: 1vw;
+                    color: $Branco;
+                    width: 9vw;
+                    height: 2.75vh;
+                    position: absolute;
+                    top: 1vw;
+                    left: 1vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 0;
+                    border-radius: 0.5vw;
+                    padding-top: 0.15vw;
+                }
+                .doutor{
+                    left: auto;
+                    right: 1vw;
+                }
+                .titulo{
+                    width: 73%;
+                    margin-top: auto;
+                    font-family: $Main-font;
+                    font-size: 1vw;
+                    color: $Branco;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .btn_BlogCard{
+                    font-family: $Text-font;
+                    height: 3.5vh;
+                    width: 27%;
+                    color: $Branco;
+                    font-size: 1vw;
+                    margin-top: 5vh;
+                    margin-top: auto;
+                    img, svg{
+                        height: 95%;
+                        width: 25%;
+                        margin-left: auto;
+                        path{
+                            fill: $Branco;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #tratamentos{
+        width: 100%;
+        height: 75vh;
+        margin: 5vh 0;
+        h2{
+            width: 100%;
+            height: 15%;
+            font-family: $Main-font;
+            font-size: 2.5vw;
+            padding-left: 2.5vw;
+            position: relative;
+            color: $Marrom;
+            display: flex;
+            align-items: center;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 1.5vh;
+                left: 0;
+                width: 15%;
+                height: 0.35vh;
+                background-color: $Marrom;
+            }
+        }
+        .splide{
+            width: 100%;
+            height: 85%;
+            .splide__arrows{
+                .splide__arrow {
+                    width: 4.5vw;
+                    height: 4.5vw;
+                    padding: 0.55vw;
+                    opacity: 1;
+                    background: none;
+                    svg{
+                        fill: $Amarelo;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:disabled{
+                        opacity: 0.3;
+                    }
+                }
+                .splide__arrow--prev{
+                    left: -2vw;
+                }
+                .splide__arrow--next{
+                    right: -2vw;
+                }
+            }
+            .splide__pagination {
+                display: none;
+            }
+            .splide__track {
+                width: 95%;
+                height: 100%;
+                margin-left: 2.5%;
+                .splide__list{
+                    width: 100%;
+                    height: 100%;
+                    .splide__slide{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        padding: 0.75vw;
+                        transition: all ease-in-out .15s;
+                        &:hover{
+                            .Block_img{
+                                img{
+                                    transform: scale(1.05);
+                                }
+                                &::before{
+                                    backdrop-filter: blur(2px);
+                                }
+                            }
+                            .infosCards{
+                                .nome{
+                                    transform: scale(1.07);
+                                }
+                                .btn_CardTratamento{
+                                    transform: scale(1.07);
+                                }
+                            }
+                        }
+                        .Block_img{
+                            width: 100%;
+                            height: 100%;  
+                            overflow: hidden;
+                            border-radius: 1vw;
+                            z-index: 1;
+                            position: relative;
+                            img{
+                                transition: all ease-in-out 0.5s;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(75, 47, 36, 0.4);
+                                z-index: 2;
+                                transition: all ease-in-out 0.5s;
+                            }
+                        }
+                        .infosCards{
+                            position: absolute;
+                            width: 100%;
+                            height: 30%;
+                            bottom: 7.5%;
+                            left: 0;
+                            z-index: 9;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            .nome{
+                                transition: all ease-in-out 0.5s;
+                                width: 100%;
+                                font-family: $Main-font;
+                                font-size: 1.5vw;
+                                color: $Branco;
+                                margin-bottom: 5vh;
+                                padding: 0 2vw;
+                                text-align: center;
+                            }
+                            .btn_CardTratamento{
+                                transition: all ease-in-out 0.5s;
+                                font-family: $Text-font;
+                                height: 3.5vh;
+                                width: 6.25vw;
+                                color: $Branco;
+                                font-size: 1vw;
+                                outline: 2px solid $Branco;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 5vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #equipe{
+        padding: 5vh 5% 7.5vh;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            width: 100%;
+            height: auto;
+            font-family: $Main-font;
+            font-size: 2.5vw;
+            padding-left: 2.5vw;
+            position: relative;
+            color: $Marrom;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -1.5vh;
+                left: 0;
+                width: 15%;
+                height: 0.35vh;
+                background-color: $Marrom;
+            }
+        }
+        .splide{
+            margin-top: 5vh;
+            width: 100%;
+            height: 50vh;
+            .splide__arrows{
+                .splide__arrow {
+                    width: 3.25vw;
+                    height: 3.25vw;
+                    padding: 0.55vw;
+                    opacity: 1;
+                    background: none;
+                    svg{
+                        fill: $Preto;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:disabled{
+                        opacity: 0.3;
+                    }
+                }
+                .splide__arrow--prev{
+                    left: -0.5vw;
+                }
+                .splide__arrow--next{
+                    right: -0.5vw;
+                }
+            }
+            .splide__pagination {
+                display: none;
+            }
+            .splide__track {
+                width: 95%;
+                height: 100%;
+                margin-left: 2.5%;
+                .splide__list{
+                    width: 100%;
+                    height: 100%;
+                    .splide__slide{
+                        width: 100%;
+                        height: 100%;
+                        transition: all ease-in-out .15s;
+                        &:hover{
+                            transform: scale(1.02);
+                        }
+                        a{
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            position: relative;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                                padding: 1.5vw;
+                            }
+                            .infosCards{
+                                position: absolute;
+                                width: 83%;
+                                height: 20%;
+                                bottom: 0;
+                                left: 0;
+                                z-index: 2;
+                                margin: 8.5%;
+                                background-color: $Branco;
+                                border-bottom-left-radius: 0.5vw;
+                                border-bottom-right-radius: 0.5vw;
+                                border: 3px solid $Amarelo;
+                                border-top: none;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                .nome{
+                                    font-family: $Main-font;
+                                    font-size: 1.05vw;
+                                    color: $Marrom;
+                                    margin-bottom: 1.25vh;
+                                }
+                                .espec_medico{
+                                    all: unset;
+                                    font-family: $Text-font;
+                                    font-size: 0.85vw;
+                                    color: $Marrom;
+                                    font-style: italic;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn_equipe{
+            font-family: $Text-font;
+            height: 3.5vh;
+            color: $Preto;
+            font-size: 1.25vw;
+            margin-top: 5vh;
+            img, svg{
+                height: 100%;
+                path{
+                    fill: $Preto;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 479px){
+    #Main_blog{
+        padding-top: 90px;
+        #banner{
+            height: 30vh;
+            h1{
+                font-size: 7.5vw;
+                text-align: center;
+            }
+            span{
+                font-size: 4vw;
+                margin: -2vh 0 1vh;
+            }
+        }
+        #Block_blog{
+            min-height: 50vh;
+            height: auto;
+            #menu_blog{
+                margin-top: 5vh;
+                width: 100%;
+                height: 12vh;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                .splide{
+                    width: 100%;
+                    height: 6vh;
+                    .splide__track{
+                        height:100%;
+                        width: 85%;
+                        margin-left: 7.5%;
+                        .splide__list{
+                            .splide__slide{
+                                border-left: 1px solid $Amarelo;
+                                border-right: 1px solid $Amarelo;
+                                font-size: 3vw;
+                                color: $Marrom;
+                            }
+                        }
+                    }
+                    .splide__arrows{
+                        .splide__arrow {
+                            width: 5vw;
+                            height: 5vw;
+                        }
+                        .splide__arrow--prev{
+                            left: -1vw;
+                        }
+                        .splide__arrow--next{
+                            right: -1vw;
+                        }
+                    }
+                }
+                .searchBar {
+                    width: 50%;
+                    height: 4vh;
+                    margin-top: 2vh;
+                    margin-left: 25%;
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        font-size: 3vw;
+                        padding-left: 2vw;
+                        outline: 1px solid $Amarelo;
+                        border-radius: 1vw;
+                        &::placeholder{
+                            font-size: 3.25vw;
+                        }
+                    }
+                    img,svg{
+                        right: 1vw;
+                        height: 70%;
+                    }
+                }
+                .Search_resultBox{
+                    top: 110%;
+                    right: 15%;
+                    width: 75%;
+                    min-height: 15lvh;
+                    height: auto;
+                    max-height: 60lvh;
+                    border-radius: 2vw;
+                    .searchResult{
+                        height: 20vh;
+                        margin: 2vh 0;
+                        span{
+                            top: 1vh;
+                            left: 2vw;
+                            font-size: 2.75vw;
+                            padding: 0 2.5vw;
+                            border-radius: 1vw;
+                        }
+                        .tag{
+                            right: 2vw;
+                        }
+                        .titulo{
+                            font-size: 4vw;
+                            padding: 0 4vw;
+                        }
+                    }
+                    .nullResult{
+                        height: 15vh;
+                        span{
+                            all: unset;
+                            font-family: $Text-font;
+                            font-size: 3vw;
+                            font-weight: 800;
+                            letter-spacing: 0.15vw;
+                            color: $Creme;
+                        }
+                    }
+                }
+            }
+            .Blog_cards{
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 35vh;
+                height: auto;
+                width: 100%;
+                margin-top: 4vh;
+                .card_blog{
+                    width: 100%;
+                    height: 30vh;
+                    padding: 2vw;
+                    border-radius: 1.5vw;
+                    .data, .doutor{
+                        font-size: 2.75vw;
+                        width: 20vw;
+                        height: 2.25vh;
+                        border-radius: 1vw;
+                        top: 2vw;
+                        left: 2vw;
+                    }
+                    .doutor{
+                        left: auto;
+                        right: 2vw;
+                        width: 25vw;
+                        justify-content: center;
+                        padding: 0 2vw;
+                        display: flex;
+                        align-items: center;
+                        white-space: nowrap;                  
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .titulo{
+                        font-size: 3.5vw;
+                    }
+                    .btn_BlogCard{
+                        font-size: 2.75vw;
+                        padding-left: 2vw;
+                    }
+                }
+            }
+        }
+        #tratamentos{
+            width: 100%;
+            height: 75vh;
+            margin: 5vh 0;
+            h2{
+                font-size: 6.5vw;
+                padding-left: 4vw;
+                margin-bottom: 3vh;
+                &::before{
+                    bottom: -1vh;
+                    width: 35%;
+                    height: 0.3vh;
+                }
+            }
+            .splide{
+                padding: 0 7.5%;
+                height: 85%;
+                .splide__arrows{
+                    .splide__arrow {
+                        width: 12vw;
+                        height: 12vw;
+                        padding: 1.75vw;
+                    }
+                    .splide__arrow--prev{
+                        left: -1vw;
+                    }
+                    .splide__arrow--next{
+                        right: -1vw;
+                    }
+                }
+                .splide__track {
+                    width: 90%;
+                    height: 100%;
+                    margin-left: 5%;
+                    .splide__list{
+                        .splide__slide{
+                            padding: 1vw;
+                            .Block_img{
+                                border-radius: 3vw;
+                            }
+                            .infosCards{
+                                height: 35%;
+                                bottom: 10%;
+                                .nome{
+                                    font-size: 5vw;
+                                    margin-bottom: 5vh;
+                                    padding: 0 10vw;
+                                }
+                                .btn_CardTratamento{
+                                    height: 3vh;
+                                    width: 22vw;
+                                    font-size: 3.5vw;
+                                    outline: 1px solid $Branco;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #equipe{
+            justify-content: center;
+            padding: 5vh 5%;
+            height: auto;
+            h2{
+                font-size: 6.5vw;
+                padding-left: 4vw;
+                margin-bottom: 3vh;
+                &::before{
+                    bottom: -1vh;
+                    width: 35%;
+                    height: 0.3vh;
+                }
+            }
+            .splide{
+                margin-top: 0;
+                .splide__arrows{
+                    .splide__arrow {
+                        width: 12vw;
+                        height: 12vw;
+                        padding: 1.5vw;
+                    }
+                    .splide__arrow--prev{
+                        left: -2vw;
+                    }
+                    .splide__arrow--next{
+                        right: -2vw;
+                    }
+                }
+                .splide__track {
+                    .splide__list{
+                        .splide__slide{
+                            padding: 0;
+                            position: relative;
+                            a{
+                                img{
+                                    padding: 0;
+                                    width: 65%;
+                                    height: 90%;
+                                    margin-left: 17.5%;
+                                    margin-top: 5%;
+                                    object-fit: fill;
+                                }
+                                .infosCards{
+                                    width: 66%;
+                                    height: 25%;
+                                    bottom: 0;
+                                    left: 0;
+                                    z-index: 2;
+                                    margin: 17%;
+                                    margin-bottom: 5%;
+                                    border-bottom-left-radius: 4vw;
+                                    border-bottom-right-radius: 4vw;
+                                    border: 2px solid $Amarelo;
+                                    border-top: none;
+                                    .nome{
+                                        text-align: center;
+                                        font-size: 4vw;
+                                        margin-bottom: 2vh;
+                                    }
+                                    .espec_medico{
+                                        font-size: 3.5vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn_equipe{
+                width: 58vw;
+                height: 4vh;
+                font-size: 4.5vw;
+                margin-top: 5vh;
+                img, svg{
+                    margin-left: auto;
+                    width: 15%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

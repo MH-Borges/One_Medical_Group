@@ -55,7 +55,7 @@
             <a class="itensMenu" href="especialidades.html">Especialidades</a>
             <a class="itensMenu active" href="equipe.html">Equipe one</a>
             <a class="itensMenu" href="tratamentos.html">Tratamentos</a>
-            <a class="itensMenu" href="">Blog</a>
+            <a class="itensMenu" href="blog.html">Blog</a>
             <a class="itensMenu" href="contato.html">Contato</a>
 
             <div id="contato_sideMenu">
@@ -232,7 +232,7 @@
             </div>
             <div id="Block_VideoEspaco">
                 <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoEspaco')">
-                <video id="VideoEspaco" onclick="PLayVideo('VideoEspaco')">
+                <video controlsList="nodownload" id="VideoEspaco" onclick="PLayVideo('VideoEspaco')">
                     <source src="assets/Videos/clinica.mp4" type="video/mp4">
                 </video>
             </div>
@@ -307,16 +307,6 @@
     </footer>
 
     <script>
-        $('.controls li').on('click', function () {
-            $('.controls li').removeClass('active');
-            $(this).addClass('active');
-        });
-
-        if ($('.filter').length > 0) {
-            var containerEl = document.querySelector('.filter');
-            var mixer = mixitup(containerEl);
-        }
-
         function changeButton(e) {
             if(e.dataset.filter == '*'){
                 document.getElementById('dropdownBtn').innerText = 'Selecione por especialidade';

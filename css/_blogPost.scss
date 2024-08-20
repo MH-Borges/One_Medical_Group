@@ -1,0 +1,817 @@
+#Main_blogPost{
+    padding-top: 124px;
+    #banner{
+        height: 75vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $Marrom;
+            opacity: 0.45;
+            z-index: 2;
+        }
+        h1{
+            font-family: $Main-font;
+            color: $Branco;
+            z-index: 5;
+        }
+        h1{
+            position: relative;
+            font-size: 3.5vw;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 0 25vw;
+            margin-top: -5vh;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -2vh;
+                width: 15%;
+                height: 0.25vh;
+                background-color: $Branco;
+            }
+        }
+        span{
+            z-index: 5;
+            font-size: 1vw;
+            padding: 0.75vh 1.5vw;
+            border: 1px solid $Branco;
+            font-family: $Text-font;
+            font-weight: 400;
+            color: $Branco;
+            border-radius: 0.3vw;
+            margin-top: 7.5vh;
+        }
+    }
+    #conteudo{
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        min-height: 100vh;
+        height: auto;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            z-index: 99;
+            width: 30%;
+            height: 100%;
+            right: 0;
+            background-color: $Creme;
+            z-index: 1;
+        }
+        .Postagem{
+            width: 70%;
+            height: auto;
+            padding: 7.5vh 3vw 15vh 4vw;
+            position: relative;
+            span{
+                position: absolute;
+                top: 3vh;
+                left: 3vw;
+                outline: 2px solid $Amarelo;
+                font-family: $Text-font;
+                font-size: 1vw;
+                font-weight: 800;
+                color: $Amarelo;
+                padding: 0.5vh 2vw;
+                border-radius: 0.25vw;
+            }
+            .tag{
+                left: auto;
+                right: 3vw;
+            }
+            h2, h3, h4, h5, h6{
+                font-family: $Main-font;
+            }
+            p, h2, h3, h4, h5, h6{
+                width: 100%;
+                font-size: 1vw;
+                font-weight: 400;
+                line-height: 4vh;
+                color: $Marrom;
+                margin: 1vh 0;
+            }
+            p{
+                font-family: $Text-font;
+                margin: 3vh 0;
+            }
+            h2{
+                font-size: 2.5vw;
+                font-weight: 800;
+                line-height: 7vh;
+            }
+            h3{
+                font-size: 2vw;
+                font-weight: 700;
+                line-height: 5vh;
+            }
+            h4{
+                font-size: 1.75vw;
+                font-weight: 600;
+                line-height: 4.5vh;
+            }
+            h5{
+                font-size: 1.5vw;
+                font-weight: 600;
+                line-height: 4vh;
+
+            }
+            h6{
+                font-size: 1.2vw;
+                font-weight: 500;
+            }
+        }
+        aside{
+            z-index: 9;
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding-top: 4vh;
+            .searchBar {
+                width: 75%;
+                height: 5vh;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                input {
+                    all: unset;
+                    width: 90%;
+                    height: 80%;
+                    font-family: $Text-font;
+                    font-size: 1vw;
+                    font-weight: 500;
+                    font-style: italic;
+                    color: $Marrom;
+                    padding-left: 1vw;
+                    outline: 2px solid $Marrom;
+                    border-radius: 0.25vw;
+                    &::placeholder{
+                        color: $Marrom;
+                        font-size: 1.1vw;
+                        font-weight: 600;
+                    }
+                }
+                img,svg{
+                    position: absolute;
+                    right: 1.75vw;
+                    height: 60%;
+                    path{
+                        fill: $Marrom;
+                    }
+                }
+            }
+            .Search_resultBox{
+                position: absolute;
+                top: 4%;
+                width: 75%;
+                min-height: 10vh;
+                height: auto;
+                max-height: 60vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                background: $Marrom;
+                z-index: 99 !important;
+                border-radius: 0.5vw;
+                border: 1px solid $Branco;
+                .searchResult{
+                    position: relative;
+                    width: 100%;
+                    height: 18vh;
+                    border-top: 1px solid $Creme;
+                    border-bottom: 1px solid $Creme;
+                    margin: 2vh 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(75, 47, 36, 0.4);
+                        backdrop-filter: blur(2px);
+                        z-index: 2;
+                    }
+                    img{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: 1;
+                    }
+                    span{
+                        position: absolute;
+                        z-index: 5;
+                        top: 1vh;
+                        left: 0.5vw;
+                        font-family: $Second-font;
+                        font-weight: 400;
+                        font-size: 0.75vw;
+                        color: $Branco;
+                        background-color: $Preto;
+                        padding: 0 1vw;
+                        padding-top: 0.15vh;
+                        border-radius: 0.25vw;
+                    }
+                    .tag{
+                        left: auto;
+                        right: 0.5vw;
+                    }
+                    .titulo{
+                        z-index: 5;
+                        font-family: $Main-font;
+                        font-weight: 800;
+                        font-size: 1.25vw;
+                        color: $Branco;
+                        text-align: center;
+                        padding: 0 1vw;
+                        margin-top: 3vh;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+                .nullResult{
+                    width: 100%;
+                    height: 10vh;
+                    border: none;
+                    margin: 0;
+                    position: relative;
+                    &::before{
+                        display: none;
+                    }
+                    span{
+                        all: unset;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        font-family: $Text-font;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1vw;
+                        font-weight: 800;
+                        color: $Creme;
+                    }
+                }
+            }
+            h2{
+                width: 100%;
+                font-family: $Main-font;
+                font-weight: 800;
+                font-size: 2vw;
+                color: $Marrom;
+                text-align: center;
+                margin-top: 5vh;
+                margin-bottom: 2vh;
+                padding: 0 3vw;
+            }
+            #postsH2{
+                margin-top: 7.5vh;
+            }
+            .tags{
+                width: 60%;
+                height: 4.5vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $Marrom;
+                font-family: $Text-font;
+                font-weight: 600;
+                font-size: 1vw;
+                color: $Branco;
+                border-radius: 0.5vw;
+                margin: 1vh 0;
+                transition: all ease-in-out .2s;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+            .active{
+                color: $Amarelo;
+            }
+            .block_cardsAside{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 5vh;
+                .card_blog{
+                    width: 80%;
+                    height: 28vh;
+                    position: relative;
+                    overflow: hidden;
+                    padding: 1vw;
+                    display: flex;
+                    flex-direction: row;
+                    margin: 2vh 0;
+                    transition: all ease-in-out .2s;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: linear-gradient(180deg, rgba(75,47,36,0) 0%, rgba(75,47,36, 0.9) 100%);
+                        z-index: 2;
+                        border-radius: 1vw;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: 1;
+                        border-radius: 1.25vw;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    .data, .doutor, .titulo, .btn_BlogCard{
+                        z-index: 5;
+                        position: relative;
+                    }
+                    .data, .doutor{
+                        background-color: $Preto;
+                        font-family: $Second-font;
+                        font-size: 1vw;
+                        color: $Branco;
+                        width: 9vw;
+                        height: 2.75vh;
+                        position: absolute;
+                        top: 1vw;
+                        left: 1vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        line-height: 0;
+                        border-radius: 0.5vw;
+                        padding-top: 0.15vw;
+                    }
+                    .doutor{
+                        left: auto;
+                        right: 1vw;
+                    }
+                    .titulo{
+                        width: 70%;
+                        margin-top: auto;
+                        font-family: $Main-font;
+                        font-size: 1vw;
+                        color: $Branco;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .btn_BlogCard{
+                        font-family: $Text-font;
+                        height: 3.5vh;
+                        width: 30%;
+                        color: $Branco;
+                        font-size: 1vw;
+                        margin-top: 5vh;
+                        margin-top: auto;
+                        img, svg{
+                            height: 95%;
+                            width: 20%;
+                            margin-left: auto;
+                            path{
+                                fill: $Branco;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #equipe{
+        padding: 5vh 5% 7.5vh;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            width: 100%;
+            height: auto;
+            font-family: $Main-font;
+            font-size: 2.5vw;
+            padding-left: 2.5vw;
+            position: relative;
+            color: $Marrom;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -1.5vh;
+                left: 0;
+                width: 15%;
+                height: 0.35vh;
+                background-color: $Marrom;
+            }
+        }
+        .splide{
+            margin-top: 5vh;
+            width: 100%;
+            height: 50vh;
+            .splide__arrows{
+                .splide__arrow {
+                    width: 3.25vw;
+                    height: 3.25vw;
+                    padding: 0.55vw;
+                    opacity: 1;
+                    background: none;
+                    svg{
+                        fill: $Preto;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:disabled{
+                        opacity: 0.3;
+                    }
+                }
+                .splide__arrow--prev{
+                    left: -0.5vw;
+                }
+                .splide__arrow--next{
+                    right: -0.5vw;
+                }
+            }
+            .splide__pagination {
+                display: none;
+            }
+            .splide__track {
+                width: 95%;
+                height: 100%;
+                margin-left: 2.5%;
+                .splide__list{
+                    width: 100%;
+                    height: 100%;
+                    .splide__slide{
+                        width: 100%;
+                        height: 100%;
+                        transition: all ease-in-out .15s;
+                        &:hover{
+                            transform: scale(1.02);
+                        }
+                        a{
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            position: relative;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                                padding: 1.5vw;
+                            }
+                            .infosCards{
+                                position: absolute;
+                                width: 83%;
+                                height: 20%;
+                                bottom: 0;
+                                left: 0;
+                                z-index: 2;
+                                margin: 8.5%;
+                                background-color: $Branco;
+                                border-bottom-left-radius: 0.5vw;
+                                border-bottom-right-radius: 0.5vw;
+                                border: 3px solid $Amarelo;
+                                border-top: none;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                .nome{
+                                    font-family: $Main-font;
+                                    font-size: 1.05vw;
+                                    color: $Marrom;
+                                    margin-bottom: 1.25vh;
+                                }
+                                .espec_medico{
+                                    all: unset;
+                                    font-family: $Text-font;
+                                    font-size: 0.85vw;
+                                    color: $Marrom;
+                                    font-style: italic;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn_equipe{
+            font-family: $Text-font;
+            height: 3.5vh;
+            color: $Preto;
+            font-size: 1.25vw;
+            margin-top: 5vh;
+            img, svg{
+                height: 100%;
+                path{
+                    fill: $Preto;
+                }
+            }
+        }
+    }
+}
+    
+@media only screen and (max-width: 479px){
+    #Main_blogPost{
+        padding-top: 90px;
+        #banner{
+            height: 50vh;
+            h1{
+                font-size: 8.5vw;
+                padding: 0 7.5vw;
+                margin-top: -5vh;
+                &::before{
+                    bottom: -1vh;
+                    width: 25%;
+                    height: 0.2vh;
+                }
+            }
+            span{
+                font-size: 2.5vw;
+                padding: 0.75vh 3vw;
+                border: 2px solid $Branco;
+                border-radius: 1vw;
+            }
+        }
+        #conteudo{
+            padding: 0;
+            flex-direction: column;
+            position: relative;
+            &::before{
+                display: none;
+            }
+            .Postagem{
+                width: 100%;
+                padding: 5vh 5vw 10vh ;
+                span{
+                    top: 2vh;
+                    outline: 2px solid $Amarelo;
+                    font-size: 2.75vw;
+                    padding: 0.5vh 5vw;
+                    border-radius: 1vw;
+                }
+                p, h2, h3, h4, h5, h6{
+                    width: 100%;
+                    font-size: 3vw;
+                    line-height: 4.5vh;
+                }
+                h2{
+                    font-size: 6.5vw;
+                    line-height: 5vh;
+                }
+                h3{
+                    font-size: 5.5vw;
+                    line-height: 4vh;
+                }
+                h4{
+                    font-size: 4.5vw;
+                    line-height: 3vh;
+                }
+                h5{
+                    font-size: 4vw;
+                    line-height: 3vh;
+                }
+                h6{
+                    font-size: 3.5vw;
+                    line-height: 3vh;
+                }
+            }
+            aside{
+                background-color: $Creme;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                position: relative;
+                padding-top: 4vh;
+                .searchBar {
+                    input {
+                        font-size: 3vw;
+                        padding-left: 2vw;
+                        &::placeholder{
+                            color: $Marrom;
+                            font-size: 3.2vw;
+                        }
+                    }
+                    img,svg{
+                        right: 5vw;
+                    }
+                }
+                .Search_resultBox{
+                    background: $Marrom;
+                    border-radius: 2vw;
+                    border: none;
+                    .searchResult{
+                        height: 20vh;
+                        margin: 2vh 0;
+                        span{
+                            top: 1vh;
+                            left: 2vw;
+                            font-size: 2.75vw;
+                            padding: 0 2.5vw;
+                            border-radius: 1vw;
+                        }
+                        .tag{
+                            right: 2vw;
+                        }
+                        .titulo{
+                            font-size: 4vw;
+                            padding: 0 4vw;
+                        }
+                    }
+                    .nullResult{
+                        height: 15vh;
+                        span{
+                            all: unset;
+                            font-family: $Text-font;
+                            font-size: 3vw;
+                            font-weight: 800;
+                            letter-spacing: 0.15vw;
+                            color: $Creme;
+                        }
+                    }
+                }
+                h2{
+                    font-size: 8vw;
+                }
+                #postsH2{
+                    margin-top: 10vh;
+                }
+                .tags{
+                    font-size: 3vw;
+                    border-radius: 1.5vw;
+                    margin: 1vh 0;
+                }
+                .block_cardsAside{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-bottom: 10vh;
+                    .card_blog{
+                        width: 80%;
+                        height: 25vh;
+                        padding: 2vw;
+                        border-radius: 3vw;
+                        .data, .doutor{
+                            font-size: 2.75vw;
+                            width: 20vw;
+                            height: 2.25vh;
+                            border-radius: 1vw;
+                            top: 2vw;
+                            left: 2vw;
+                            padding-top: 0.4vh;
+                        }
+                        .doutor{
+                            left: auto;
+                            right: 2vw;
+                            width: 25vw;
+                            justify-content: center;
+                            padding: 0 2vw;
+                            padding-top: 0.4vh;
+                            display: flex;
+                            align-items: center;
+                            white-space: nowrap;                  
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        .titulo{
+                            font-size: 3.5vw;
+                        }
+                        .btn_BlogCard{
+                            font-size: 2.75vw;
+                            padding-left: 2vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        #equipe{
+            justify-content: center;
+            padding: 5vh 5%;
+            height: auto;
+            h2{
+                font-size: 6.5vw;
+                padding-left: 4vw;
+                margin-bottom: 3vh;
+                &::before{
+                    bottom: -1vh;
+                    width: 35%;
+                    height: 0.3vh;
+                }
+            }
+            .splide{
+                margin-top: 0;
+                .splide__arrows{
+                    .splide__arrow {
+                        width: 12vw;
+                        height: 12vw;
+                        padding: 1.5vw;
+                    }
+                    .splide__arrow--prev{
+                        left: -2vw;
+                    }
+                    .splide__arrow--next{
+                        right: -2vw;
+                    }
+                }
+                .splide__track {
+                    .splide__list{
+                        .splide__slide{
+                            padding: 0;
+                            position: relative;
+                            a{
+                                img{
+                                    padding: 0;
+                                    width: 65%;
+                                    height: 90%;
+                                    margin-left: 17.5%;
+                                    margin-top: 5%;
+                                    object-fit: fill;
+                                }
+                                .infosCards{
+                                    width: 66%;
+                                    height: 25%;
+                                    bottom: 0;
+                                    left: 0;
+                                    z-index: 2;
+                                    margin: 17%;
+                                    margin-bottom: 5%;
+                                    border-bottom-left-radius: 4vw;
+                                    border-bottom-right-radius: 4vw;
+                                    border: 2px solid $Amarelo;
+                                    border-top: none;
+                                    .nome{
+                                        text-align: center;
+                                        font-size: 4vw;
+                                        margin-bottom: 2vh;
+                                    }
+                                    .espec_medico{
+                                        font-size: 3.5vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn_equipe{
+                width: 58vw;
+                height: 4vh;
+                font-size: 4.5vw;
+                margin-top: 5vh;
+                img, svg{
+                    margin-left: auto;
+                    width: 15%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
