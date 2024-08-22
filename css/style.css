@@ -469,6 +469,7 @@ body #Main_index #home .sideBanner {
   align-items: center;
   justify-content: space-evenly;
   background-color: #D2AE6D;
+  z-index: 10 !important;
 }
 body #Main_index #home .sideBanner a {
   transform: rotate(-90deg);
@@ -531,15 +532,15 @@ body #Main_index #home #banner::before {
   width: 101%;
   height: 100%;
   background-color: #4B2F24;
-  opacity: 0.4;
+  opacity: 0.5;
   z-index: 2;
 }
 body #Main_index #home #banner video {
   position: absolute;
   z-index: 1;
   top: 0;
-  left: 0;
-  width: 101%;
+  left: -0.5vw;
+  width: 102%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
