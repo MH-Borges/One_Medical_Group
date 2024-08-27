@@ -100,7 +100,7 @@ body header #menu li {
   align-items: center;
 }
 body header #menu li .btn_agendamento {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   border: 2px solid #E0E0E0;
   width: 12.5vw;
   padding: 0.75vh 0;
@@ -201,7 +201,7 @@ body header #sideMenu button:hover {
 body header #sideMenu .itensMenu {
   width: 100%;
   padding: 0.5vh 0;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.4vw;
   color: #E0E0E0;
   margin: 2.25vh 0;
@@ -225,7 +225,7 @@ body header #sideMenu #contato_sideMenu {
   padding: 0 1.5vw;
 }
 body header #sideMenu #contato_sideMenu .btn_agendamento {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   border: 2px solid #E0E0E0;
   width: 12.5vw;
   padding: 0.75vh 0;
@@ -349,7 +349,7 @@ body footer #bigFooter #consulta_rodape, body footer #bigFooter #endereco_rodape
   padding: 3vh 1.25vw 0;
 }
 body footer #bigFooter #consulta_rodape h5, body footer #bigFooter #endereco_rodape h5, body footer #bigFooter #telefone_rodape h5, body footer #bigFooter #redes_rodape h5 {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.1vw;
   color: #E0E0E0;
 }
@@ -366,7 +366,7 @@ body footer #bigFooter #consulta_rodape {
   margin-left: 10%;
 }
 body footer #bigFooter #consulta_rodape .btn_agendamento {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   margin-top: 3.5vh;
   border: 2px solid #E0E0E0;
   width: 12.5vw;
@@ -546,7 +546,7 @@ body #Main_index #home #banner video {
      object-fit: cover;
 }
 body #Main_index #home #banner h2 {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 3vw;
   color: #E0E0E0;
   text-align: right;
@@ -604,7 +604,7 @@ body #Main_index #clinica #Block_textClinica {
 body #Main_index #clinica #Block_textClinica h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 7.5vh;
@@ -719,7 +719,7 @@ body #Main_index #espaco #Block_textEspaco {
 body #Main_index #espaco #Block_textEspaco h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 5vh;
@@ -785,7 +785,7 @@ body #Main_index #especialidades .especialidadeBlock p {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.35vw;
   color: #E0E0E0;
 }
@@ -815,7 +815,7 @@ body #Main_index #especialidades #textEspecialidade::before {
 body #Main_index #especialidades #textEspecialidade h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.75vw;
   position: relative;
   color: #D2AE6D;
@@ -859,7 +859,7 @@ body #Main_index #equipe .patter {
 body #Main_index #equipe h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 6.5vh;
@@ -962,7 +962,7 @@ body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .
   justify-content: center;
 }
 body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
@@ -1014,7 +1014,7 @@ body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos {
 body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 7.5vh;
@@ -1170,7 +1170,7 @@ body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__l
 body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .nome {
   transition: all ease-in-out 0.5s;
   width: 100%;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.5vw;
   color: #E0E0E0;
   margin-bottom: 5vh;
@@ -1251,7 +1251,7 @@ body #Main_index #allInOne #Block_textAllinOne {
 body #Main_index #allInOne #Block_textAllinOne h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-right: 2.5vw;
   margin-bottom: 5vh;
@@ -1309,7 +1309,7 @@ body #Main_index #concierge #Block_textConcierge {
 body #Main_index #concierge #Block_textConcierge h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-right: 2.5vw;
   margin-bottom: 7.5vh;
@@ -1384,7 +1384,7 @@ body #Main_index #depos {
 body #Main_index #depos h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 3.5vh;
@@ -1507,7 +1507,7 @@ body #Main_index #blog {
 body #Main_index #blog h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 5vh;
@@ -1598,7 +1598,7 @@ body #Main_index #blog #Blog_cards .cards .doutor {
 body #Main_index #blog #Blog_cards .cards .titulo {
   width: 73%;
   margin-top: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1vw;
   color: #E0E0E0;
   display: -webkit-box;
@@ -1704,7 +1704,7 @@ body #Main_index #form {
 body #Main_index #form h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   margin: 2vh 0;
   position: relative;
@@ -1886,7 +1886,7 @@ body #Main_404 section h1 {
   position: absolute;
   top: 13%;
   left: 7%;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 20vw;
   color: #D2AE6D;
   opacity: 0.2;
@@ -1972,7 +1972,7 @@ body #Main_PoliticaPrivacidade section {
   flex-direction: column;
 }
 body #Main_PoliticaPrivacidade section h1, body #Main_PoliticaPrivacidade section h2 {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-weight: 700;
   font-size: 2.25vw;
   width: 100%;
@@ -2056,7 +2056,7 @@ body #Main_contato #contatos {
 body #Main_contato #contatos h1 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.75vw;
   color: #D2AE6D;
   position: relative;
@@ -2139,7 +2139,7 @@ body #Main_contato #contatos #infosContato .blockContato h2 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.25vw;
   color: #D0B498;
 }
@@ -2184,7 +2184,7 @@ body #Main_contato #form {
 body #Main_contato #form h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   margin: 2vh 0;
   position: relative;
@@ -2504,7 +2504,7 @@ body #Main_clinica #banner::before {
   z-index: 2;
 }
 body #Main_clinica #banner h1, body #Main_clinica #banner span {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   color: #E0E0E0;
   z-index: 5;
 }
@@ -2565,7 +2565,7 @@ body #Main_clinica #oneMedical #Block_textOne {
 body #Main_clinica #oneMedical #Block_textOne h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 7.5vh;
@@ -2652,7 +2652,7 @@ body #Main_clinica #MVV #cards_MVV .card h2 {
   z-index: 5;
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 3vw;
   margin-bottom: 0;
   position: relative;
@@ -2682,7 +2682,7 @@ body #Main_clinica #MVV #cards_MVV .card:hover h2 {
   z-index: 5;
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 1.5vw;
   margin-bottom: 4vh;
@@ -2721,7 +2721,7 @@ body #Main_clinica #MVV #Footer_Mvv {
 }
 body #Main_clinica #MVV #Footer_Mvv h2 {
   margin-top: -2vh;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   color: #D2AE6D;
   position: relative;
   font-size: 2.5vw;
@@ -2758,7 +2758,7 @@ body #Main_clinica #concierge #Block_textConcierge {
 body #Main_clinica #concierge #Block_textConcierge h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-right: 2.5vw;
   margin-bottom: 7.5vh;
@@ -2885,7 +2885,7 @@ body #Main_clinica #allInOne #Block_textAllinOne {
 body #Main_clinica #allInOne #Block_textAllinOne h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-right: 2.5vw;
   margin-bottom: 5vh;
@@ -2932,7 +2932,7 @@ body #Main_clinica #historia {
 body #Main_clinica #historia h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 12vh;
@@ -2978,7 +2978,7 @@ body #Main_clinica #equipe .patter {
 body #Main_clinica #equipe h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 6.5vh;
@@ -3081,7 +3081,7 @@ body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide a
   justify-content: center;
 }
 body #Main_clinica #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
@@ -3115,7 +3115,7 @@ body #Main_clinica #tratamentos {
 body #Main_clinica #tratamentos h2 {
   width: 100%;
   height: 15%;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   position: relative;
@@ -3273,7 +3273,7 @@ body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .spl
 body #Main_clinica #tratamentos #block_Tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .nome {
   transition: all ease-in-out 0.5s;
   width: 100%;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.5vw;
   color: #E0E0E0;
   margin-bottom: 5vh;
@@ -3335,7 +3335,7 @@ body #Main_clinica #especialidades .especialidadeBlock p {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.35vw;
   color: #E0E0E0;
 }
@@ -3365,7 +3365,7 @@ body #Main_clinica #especialidades #textEspecialidade::before {
 body #Main_clinica #especialidades #textEspecialidade h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.75vw;
   position: relative;
   color: #D2AE6D;
@@ -3883,7 +3883,7 @@ body #Main_especialidades #Especialidades h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 3vw;
   color: #4B2F24;
 }
@@ -3959,7 +3959,7 @@ body #Main_especialidades #Especialidades #especialidadesCards .especialidade_ca
 body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover h3 {
   display: flex;
   z-index: 5;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.75vw;
   color: #E0E0E0;
   margin-bottom: 5vh;
@@ -4078,7 +4078,7 @@ body #Main_especialidades #allInOne #Block_textAllinOne {
 body #Main_especialidades #allInOne #Block_textAllinOne h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-right: 2.5vw;
   margin-bottom: 5vh;
@@ -4136,7 +4136,7 @@ body #Main_especialidades #concierge #Block_textConcierge {
 body #Main_especialidades #concierge #Block_textConcierge h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-right: 2.5vw;
   margin-bottom: 7.5vh;
@@ -4212,7 +4212,7 @@ body #Main_especialidades #depos {
 body #Main_especialidades #depos h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 3.5vh;
@@ -4557,7 +4557,7 @@ body #Main_tratamentos #banner #Titulo_banner {
   justify-content: center;
 }
 body #Main_tratamentos #banner #Titulo_banner h1, body #Main_tratamentos #banner #Titulo_banner span {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   color: #4B2F24;
   z-index: 5;
 }
@@ -4612,7 +4612,7 @@ body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a {
 body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a h2 {
   width: 100%;
   height: 100%;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   color: #4B2F24;
@@ -4724,7 +4724,7 @@ body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_spli
 body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .infosCards .nome {
   transition: all ease-in-out 0.5s;
   width: 100%;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.5vw;
   color: #E0E0E0;
   margin-bottom: 5vh;
@@ -4754,7 +4754,7 @@ body #Main_tratamentos #depos {
 body #Main_tratamentos #depos h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 3.5vh;
@@ -4886,7 +4886,7 @@ body #Main_tratamentos #equipe .patter {
 body #Main_tratamentos #equipe h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 6.5vh;
@@ -4986,7 +4986,7 @@ body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .spli
   justify-content: center;
 }
 body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide a .infosCards .nome {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
@@ -5035,7 +5035,7 @@ body #Main_tratamentos #concierge #Block_textConcierge {
 body #Main_tratamentos #concierge #Block_textConcierge h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-right: 2.5vw;
   margin-bottom: 7.5vh;
@@ -5162,7 +5162,7 @@ body #Main_tratamentos #allInOne #Block_textAllinOne {
 body #Main_tratamentos #allInOne #Block_textAllinOne h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-right: 2.5vw;
   margin-bottom: 5vh;
@@ -5574,7 +5574,7 @@ body #Main_TratDetalhes #banner::before {
   z-index: 2;
 }
 body #Main_TratDetalhes #banner h1, body #Main_TratDetalhes #banner p {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   color: #E0E0E0;
   z-index: 5;
 }
@@ -5601,7 +5601,7 @@ body #Main_TratDetalhes #banner span {
   position: absolute;
   bottom: 3vh;
   right: 3vw;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.15vw;
   color: #E0E0E0;
 }
@@ -5620,7 +5620,7 @@ body #Main_TratDetalhes #como_Funicona {
 body #Main_TratDetalhes #como_Funicona h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 6.5vh;
@@ -5653,7 +5653,7 @@ body #Main_TratDetalhes #etapas {
 body #Main_TratDetalhes #etapas h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 5vh;
@@ -5708,7 +5708,7 @@ body #Main_TratDetalhes #resultados {
 body #Main_TratDetalhes #resultados h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 6.5vh;
@@ -5760,7 +5760,7 @@ body #Main_TratDetalhes #equipe .patter {
 body #Main_TratDetalhes #equipe h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 3vh;
@@ -5851,7 +5851,7 @@ body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__sl
   justify-content: center;
 }
 body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
@@ -5876,7 +5876,7 @@ body #Main_TratDetalhes #depos {
 body #Main_TratDetalhes #depos h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 3.5vh;
@@ -6021,7 +6021,7 @@ body #Main_TratDetalhes #espaco #Block_textEspaco {
 body #Main_TratDetalhes #espaco #Block_textEspaco h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 5vh;
@@ -6129,7 +6129,7 @@ body #Main_TratDetalhes #FAQ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   color: #4B2F24;
 }
@@ -6531,7 +6531,7 @@ body #Main_Equipe #banner::before {
   z-index: 3;
 }
 body #Main_Equipe #banner h1, body #Main_Equipe #banner span {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   color: #E0E0E0;
   z-index: 5;
 }
@@ -6688,7 +6688,7 @@ body #Main_Equipe #Block_medicos .filter .mix a .infosCards {
   justify-content: center;
 }
 body #Main_Equipe #Block_medicos .filter .mix a .infosCards .nome {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
@@ -6735,7 +6735,7 @@ body #Main_Equipe #espaco #Block_textEspaco {
 body #Main_Equipe #espaco #Block_textEspaco h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   margin-bottom: 7.5vh;
@@ -6845,7 +6845,7 @@ body #Main_Equipe #FAQ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   color: #4B2F24;
 }
@@ -7177,7 +7177,7 @@ body #Main_EquipeDetalhes #Block_user #infos_User #nome_user {
   width: 100%;
   min-height: 10vh;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 3vw;
   letter-spacing: 0.2vw;
   font-weight: 900;
@@ -7419,7 +7419,7 @@ body #Main_blog #banner {
   background-color: #D0B498;
 }
 body #Main_blog #banner h1, body #Main_blog #banner span {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   color: #4B2F24;
   z-index: 5;
 }
@@ -7630,7 +7630,7 @@ body #Main_blog #Block_blog #menu_blog .Search_resultBox .searchResult .tag {
 }
 body #Main_blog #Block_blog #menu_blog .Search_resultBox .searchResult .titulo {
   z-index: 5;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-weight: 800;
   font-size: 1.25vw;
   color: #E0E0E0;
@@ -7743,7 +7743,7 @@ body #Main_blog #Block_blog .Blog_cards .card_blog .doutor {
 body #Main_blog #Block_blog .Blog_cards .card_blog .titulo {
   width: 73%;
   margin-top: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1vw;
   color: #E0E0E0;
   display: -webkit-box;
@@ -7777,7 +7777,7 @@ body #Main_blog #tratamentos {
 body #Main_blog #tratamentos h2 {
   width: 100%;
   height: 15%;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   position: relative;
@@ -7892,7 +7892,7 @@ body #Main_blog #tratamentos .splide .splide__track .splide__list .splide__slide
 body #Main_blog #tratamentos .splide .splide__track .splide__list .splide__slide .infosCards .nome {
   transition: all ease-in-out 0.5s;
   width: 100%;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.5vw;
   color: #E0E0E0;
   margin-bottom: 5vh;
@@ -7923,7 +7923,7 @@ body #Main_blog #equipe {
 body #Main_blog #equipe h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   position: relative;
@@ -8016,7 +8016,7 @@ body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a .i
   justify-content: center;
 }
 body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
@@ -8360,7 +8360,7 @@ body #Main_blogPost #banner::before {
   z-index: 2;
 }
 body #Main_blogPost #banner h1 {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   color: #E0E0E0;
   z-index: 5;
 }
@@ -8433,7 +8433,7 @@ body #Main_blogPost #conteudo .Postagem .tag {
   right: 3vw;
 }
 body #Main_blogPost #conteudo .Postagem h2, body #Main_blogPost #conteudo .Postagem h3, body #Main_blogPost #conteudo .Postagem h4, body #Main_blogPost #conteudo .Postagem h5, body #Main_blogPost #conteudo .Postagem h6 {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
 }
 body #Main_blogPost #conteudo .Postagem p, body #Main_blogPost #conteudo .Postagem h2, body #Main_blogPost #conteudo .Postagem h3, body #Main_blogPost #conteudo .Postagem h4, body #Main_blogPost #conteudo .Postagem h5, body #Main_blogPost #conteudo .Postagem h6 {
   width: 100%;
@@ -8586,7 +8586,7 @@ body #Main_blogPost #conteudo aside .Search_resultBox .searchResult .tag {
 }
 body #Main_blogPost #conteudo aside .Search_resultBox .searchResult .titulo {
   z-index: 5;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-weight: 800;
   font-size: 1.25vw;
   color: #E0E0E0;
@@ -8630,7 +8630,7 @@ body #Main_blogPost #conteudo aside .Search_resultBox .nullResult span {
 }
 body #Main_blogPost #conteudo aside h2 {
   width: 100%;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-weight: 800;
   font-size: 2vw;
   color: #4B2F24;
@@ -8734,7 +8734,7 @@ body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .doutor {
 body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .titulo {
   width: 70%;
   margin-top: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1vw;
   color: #E0E0E0;
   display: -webkit-box;
@@ -8771,7 +8771,7 @@ body #Main_blogPost #equipe {
 body #Main_blogPost #equipe h2 {
   width: 100%;
   height: auto;
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   position: relative;
@@ -8864,7 +8864,7 @@ body #Main_blogPost #equipe .splide .splide__track .splide__list .splide__slide 
   justify-content: center;
 }
 body #Main_blogPost #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
-  font-family: "TrajanPro", system-ui;
+  font-family: "TrajanPro", sans-serif;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
