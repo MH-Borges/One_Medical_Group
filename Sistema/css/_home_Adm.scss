@@ -853,57 +853,83 @@
             justify-content: space-evenly;
             overflow-y: auto;
             .card{
-                outline: 1px solid blue;
-                width: 21%;
-                height: 50vh;
+                width: 18%;
+                height: 55vh;
                 overflow: hidden;
-                margin: 2vh 2%;
+                margin: 2vh 3%;
                 border-radius: 0;
                 background: none;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 position: relative;
-                padding-left: 12vw;
                 border: none;
-                
-                .nome, .email{
+                .cardMedico{
                     width: 100%;
-                    font-family: $Second-font;
-                    color: $Preto;
+                    height: 90%;
+                    object-fit: contain;
+                    margin-bottom: auto;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 10%;
+                    width: 100%;
+                    height: 30%;
+                    background-color: $Branco;
+                    border-bottom-left-radius: 1vw;
+                    border-bottom-right-radius: 1vw;
                 }
                 .nome{
-                    font-weight: 700;
-                    font-size: 1.35vw;
-                    margin: -1.5vh 0 2vh;
+                    position: absolute;
+                    top: 62.5%;
+                    width: 100%;
+                    font-family: $Main-font;
+                    font-size: 1.4vw;
+                    font-weight: 900;
+                    color: $Preto;
+                    text-align: center;
+                    padding: 0;
+                    z-index: 999;
+                    
                 }
                 .email{
-                    font-weight: 500;
+                    position: absolute;
+                    top: 82.5%;
+                    width: 100%;
+                    font-family: $Second-font;
                     font-size: 1.1vw;
+                    color: $Preto;
+                    text-align: center;
+                    padding: 0;
+                    z-index: 999;
+                    white-space: nowrap;                  
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 .acoes{
                     position: absolute;
-                    top: 3vh;
-                    right: 1.5vw;
-                    height: 18%;
-                    width: 25%;
+                    bottom: 0;
+                    height: 10%;
+                    width: 100%;
                     display: flex;
-                    justify-content: end;
+                    align-items: center;
+                    justify-content: center;
                     a{
                         padding: 0;
-                        width: 20%;
-                        height: 100%;
-                        margin-left: 0.5vw;
-                        background-color: $Marrom;
+                        width: 12.5%;
+                        height: 70%;
+                        margin: 0 0.5vw;
+                        background-color: $Amarelo;
                         border-radius: 0.25vw;
+                        border: 1px solid $Marrom;
                         img, svg{
                             width: 100%;
                             height: 100%;
                             padding: 0.35vw;
                         }
                         &:last-child{
-                            background-color: $Amarelo;
-                            z-index: 999;
+                            background-color: red;
                         }
                     }
                     .ativo{

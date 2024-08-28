@@ -1866,6 +1866,13 @@ body {
                     .btn_agendamento{
                         display: none;
                     }
+                    &:first-child{
+                        a{
+                            svg, img{
+                                object-fit: contain;
+                            }
+                        }
+                    }
                     &:last-child{
                         width: 9vw;
                         #sideMenu_btn{
@@ -2042,9 +2049,10 @@ body {
             #clinica{
                 flex-direction: column;
                 padding: 0;
+                height: auto;
                 #Block_textClinica{
                     width: 100%;
-                    height: 50vh;
+                    height: 75vh;
                     padding: 5vw;
                     flex-direction: column;
                     order: 1;
@@ -2269,14 +2277,14 @@ body {
                 }
             }
             #tratamentos{
-                height: 185vh;
+                height: 210vh;
                 #tratamentosInfos{
-                    height: 125vh;
+                    height: 140vh;
                     flex-direction: column;
                     padding: 0;
                     #Block_textTratamentos{
                         width: 100%;
-                        height: 75vh;
+                        height: 90vh;
                         padding: 2vh 7.5vw;
                         flex-direction: column;
                         order: 1;
@@ -2316,7 +2324,7 @@ body {
                         order: 2;
                     }
                     &::before{
-                        top: 75vh;
+                        top: 90vh;
                         right: 0;
                         width: 100%;
                         height: 50vh;

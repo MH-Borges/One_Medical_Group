@@ -25,9 +25,10 @@
                     else{
                         $ação = "<a class=".$status." href='index.php?pag=medicos&funcao=statusMedico&id=".$id_medico."'><img src='../../assets/sistema/lampada.svg'></a>";
                     }
+
                     $nome_medico = "Usuario sem <br> informações cadastradas";
                 }
-                if($nome_medico != ""){
+                else if($nome_medico != ""){
                     $ação = "
                         <a class=".$status." href='index.php?pag=medicos&funcao=statusMedico&id=".$id_medico."'><img src='../../assets/sistema/lampada.svg'></a>
                         <a href='index.php?pag=medicos&funcao=editMedico&id=".$id_medico."'><img src='../../assets/sistema/edit.svg'></a>
@@ -39,8 +40,6 @@
                 }else{
                     $card = "<img class='cardMedico' src='../../assets/medicos/$card'>";
                 }
-
-                
 
                 echo "
                     <div class='card'>
@@ -106,39 +105,39 @@
     
 
     <!-- Modal Status categoria-->
-    <!-- <div class="modal fade" id="ModalStatusPerfil" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="ModalStatusPerfil" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <?php 
-                // $mensagem = '';
-                // $id_perfil = $_GET['id'];
+                $mensagem = '';
+                $id_perfil = $_GET['id'];
 
-                // $query = $pdo->query("SELECT * FROM medicos WHERE id = '$id_perfil' LIMIT 1");
-                // $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                $query = $pdo->query("SELECT * FROM medicos WHERE id = '$id_perfil' LIMIT 1");
+                $dados = $query->fetchAll(PDO::FETCH_ASSOC);
 
-                // if(@count($dados) > 0){
-                //     $status_perfil = $dados[0]['status_perfil'];
-                //     $nome = $dados[0]['nome'];
-                // }
+                if(@count($dados) > 0){
+                    $status_perfil = $dados[0]['status_perfil'];
+                    $nome = $dados[0]['nome'];
+                }
 
-                // if($nome == ""){
-                //     if($status_perfil == "ativo"){
-                //         $mensagem = '<h4>Gostaria mesmo de desativar este perfil?</h4>';
-                //     }
-                //     else{
-                //         $mensagem = '<h4>Este perfil se encontra sem informações, gostaria mesmo de ativá-lo? <span>(Isso pode ocasionar alguns erros de visualização do perfil.)</span></h4>';
-                //     }
-                // }
-                // if($nome != ""){
-                //     if($status_perfil == "ativo"){
-                //         $mensagem = '<h4>Gostaria mesmo de desativar este perfil?</h4>';
-                //     }
-                //     else{
-                //         $mensagem = '<h4>Gostaria de reativar este perfil?</h4>';
-                //     }
-                // }
+                if($nome == ""){
+                    if($status_perfil == "ativo"){
+                        $mensagem = '<h4>Gostaria mesmo de desativar este perfil?</h4>';
+                    }
+                    else{
+                        $mensagem = '<h4>Este perfil se encontra sem informações, gostaria mesmo de ativá-lo? <span>(Isso pode ocasionar alguns erros de visualização do perfil.)</span></h4>';
+                    }
+                }
+                if($nome != ""){
+                    if($status_perfil == "ativo"){
+                        $mensagem = '<h4>Gostaria mesmo de desativar este perfil?</h4>';
+                    }
+                    else{
+                        $mensagem = '<h4>Gostaria de reativar este perfil?</h4>';
+                    }
+                }
 
-                // if($status_perfil == "ativo"){ $btn = 'Desativar'; } 
-                // else { $btn = 'Ativar'; }
+                if($status_perfil == "ativo"){ $btn = 'Desativar'; } 
+                else { $btn = 'Ativar'; }
             ?>
 
             <form id="Form_ModalStatusMedico" method="post" class="modal-content">
@@ -164,7 +163,7 @@
             </form>
             <div id="msg_ModalStatusMedico"></div>
         </div>
-    </div> -->
+    </div>
 
     <!-- Modal Edit medico-->
     <!-- <div class="modal fade" id="ModalEditMedico" tabindex="-1" aria-hidden="true">

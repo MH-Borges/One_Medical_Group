@@ -1607,50 +1607,78 @@ body #Main_Adm #Medicos #List_Medicos {
   overflow-y: auto;
 }
 body #Main_Adm #Medicos #List_Medicos .card {
-  outline: 1px solid blue;
-  width: 21%;
-  height: 50vh;
+  width: 18%;
+  height: 55vh;
   overflow: hidden;
-  margin: 2vh 2%;
+  margin: 2vh 3%;
   border-radius: 0;
   background: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  padding-left: 12vw;
   border: none;
 }
-body #Main_Adm #Medicos #List_Medicos .card .nome, body #Main_Adm #Medicos #List_Medicos .card .email {
+body #Main_Adm #Medicos #List_Medicos .card .cardMedico {
   width: 100%;
-  font-family: "khmer-mn", sans-serif;
-  color: #373435;
+  height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: auto;
+}
+body #Main_Adm #Medicos #List_Medicos .card::before {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  height: 30%;
+  background-color: #E0E0E0;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
 }
 body #Main_Adm #Medicos #List_Medicos .card .nome {
-  font-weight: 700;
-  font-size: 1.35vw;
-  margin: -1.5vh 0 2vh;
+  position: absolute;
+  top: 62.5%;
+  width: 100%;
+  font-family: "TrajanPro", sans-serif;
+  font-size: 1.4vw;
+  font-weight: 900;
+  color: #373435;
+  text-align: center;
+  padding: 0;
+  z-index: 999;
 }
 body #Main_Adm #Medicos #List_Medicos .card .email {
-  font-weight: 500;
+  position: absolute;
+  top: 82.5%;
+  width: 100%;
+  font-family: "khmer-mn", sans-serif;
   font-size: 1.1vw;
+  color: #373435;
+  text-align: center;
+  padding: 0;
+  z-index: 999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body #Main_Adm #Medicos #List_Medicos .card .acoes {
   position: absolute;
-  top: 3vh;
-  right: 1.5vw;
-  height: 18%;
-  width: 25%;
+  bottom: 0;
+  height: 10%;
+  width: 100%;
   display: flex;
-  justify-content: end;
+  align-items: center;
+  justify-content: center;
 }
 body #Main_Adm #Medicos #List_Medicos .card .acoes a {
   padding: 0;
-  width: 20%;
-  height: 100%;
-  margin-left: 0.5vw;
-  background-color: #4B2F24;
+  width: 12.5%;
+  height: 70%;
+  margin: 0 0.5vw;
+  background-color: #D2AE6D;
   border-radius: 0.25vw;
+  border: 1px solid #4B2F24;
 }
 body #Main_Adm #Medicos #List_Medicos .card .acoes a img, body #Main_Adm #Medicos #List_Medicos .card .acoes a svg {
   width: 100%;
@@ -1658,8 +1686,7 @@ body #Main_Adm #Medicos #List_Medicos .card .acoes a img, body #Main_Adm #Medico
   padding: 0.35vw;
 }
 body #Main_Adm #Medicos #List_Medicos .card .acoes a:last-child {
-  background-color: #D2AE6D;
-  z-index: 999;
+  background-color: red;
 }
 body #Main_Adm #Medicos #List_Medicos .card .acoes .ativo {
   background-color: red;
