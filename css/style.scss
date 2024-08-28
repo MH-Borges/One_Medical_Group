@@ -330,7 +330,6 @@ body {
             }
             #endereco_rodape, #telefone_rodape{
                 p{
-                    line-height: 1.25vh;
                     margin-top: 1.25vh;
                 }
             }
@@ -413,7 +412,7 @@ body {
     }
 
     #Main_index{
-        #espaco, #especialidades, #depos, #blog, #contatos, #form{
+        #espaco, #especialidades, #depos, #contatos, #form{
             height: 75vh;
         }
         #home{
@@ -437,7 +436,7 @@ body {
                     transform: rotate(-90deg);
                     display: flex;
                     align-items: center;
-                    font-family: $Second-font;
+                    font-family: $Text-font;
                     font-weight: 600;
                     color: $Preto;
                     font-size: 2.25vw;
@@ -462,7 +461,7 @@ body {
                 background-color: $Marrom;
                 a{
                     color: $Branco;
-                    width: 25vw;
+                    width: 28vw;
                     img, svg{
                         margin-right: 1vw;
                         path{
@@ -477,8 +476,36 @@ body {
                     }
                 }
             }
+            #Redes_home{
+                position: absolute;
+                bottom: 0;
+                left: -6.5%;
+                height: 88%;
+                transition: all ease-in-out .2s;
+                button{
+                    position: absolute;
+                    bottom: 2vh;
+                    left: 100%;
+                    width: 3vw;
+                    height: 3vw;
+                    background-color: $Amarelo;
+                    border-top-right-radius: 1.5vw;
+                    border-bottom-right-radius: 1.5vw;
+                    img, svg{
+                        width: 100%;
+                        height: 100%;
+                        padding: 0.6vw;
+                        path{
+                            fill: $Preto;
+                        }
+                    }
+                }
+                &:hover{
+                    left: 0;
+                }
+            }
             #banner{
-                width: 87%;
+                width: 93.5%;
                 height: 100%;
                 position: relative;
                 display: flex;
@@ -494,7 +521,7 @@ body {
                     width: 101%;
                     height: 100%;
                     background-color: $Marrom;
-                    opacity: .5;
+                    opacity: .65;
                     z-index: 2;
                 }
                 video{
@@ -545,15 +572,7 @@ body {
             align-items: center;
             justify-content: center;
             padding: 0;
-            .patter{
-                position: absolute;
-                width: 100%;
-                height: auto;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                opacity: 0.1;
-            }
+            
             #Block_textClinica{
                 width: 50%;
                 height: 100%;
@@ -588,14 +607,14 @@ body {
                     font-weight: 400;
                     font-size: 1vw;
                     color: $Marrom;
-                    line-height: 4vh;
+                    line-height: 3.5vh;
                 }
                 .btn_clinica{
                     height: 4vh;
                     color: $Amarelo;
                     font-size: 1.5vw;
                     margin-right: auto;
-                    margin-top: 12.5vh;
+                    margin-top: 5vh;
                     img, svg{
                         height: 100%;
                     }
@@ -614,18 +633,6 @@ body {
             justify-content: center;
             padding: 0;
             background-color: $Marrom;
-            .patter{
-                position: absolute;
-                width: 100%;
-                height: auto;
-                top: 0;
-                left: 0;
-                z-index: 1;
-                opacity: 0.03;
-                path{
-                    fill: $Creme;
-                }
-            }
             #Block_VideoEspaco{
                 width: 50%;
                 height: 100%;
@@ -700,7 +707,7 @@ body {
                     width: 100%;
                     padding-right: 1vw;
                     font-family: $Text-font;
-                    font-weight: 400;
+                    font-weight: 300;
                     font-size: 1vw;
                     color: $Branco;
                     line-height: 2.5vh;
@@ -748,6 +755,8 @@ body {
                     font-family: $Main-font;
                     font-size: 1.35vw;
                     color: $Branco;
+                    padding: 0 10vw;
+                    text-align: center;
                 }
                 .amarelo{
                     background-color: $Amarelo;
@@ -787,7 +796,7 @@ body {
                     width: 100%;
                     font-family: $Text-font;
                     font-weight: 400;
-                    font-size: 0.9vw;
+                    font-size: 1.05vw;
                     color: $Branco;
                     line-height: 3vh;
                     padding-right: 2vw;
@@ -810,22 +819,13 @@ body {
             flex-direction: column;
             align-items: center;
             padding: 7.5vh 5%;
-            .patter{
-                position: absolute;
-                width: 100%;
-                height: auto;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                opacity: 0.1;
-            }
             h2{
                 width: 100%;
                 height: auto;
                 font-family: $Main-font;
                 font-size: 2.5vw;
                 padding-left: 2.5vw;
-                margin-bottom: 6.5vh;
+                margin-bottom: 3.5vh;
                 position: relative;
                 color: $Marrom;
                 &::before{
@@ -930,7 +930,6 @@ body {
                                         font-family: $Text-font;
                                         font-size: 0.85vw;
                                         color: $Marrom;
-                                        font-style: italic;
                                     }
                                 }
                             }
@@ -994,7 +993,6 @@ body {
                     }
                     p{
                         width: 100%;
-                        padding-right: 3.5vw;
                         font-family: $Text-font;
                         font-weight: 400;
                         font-size: 1vw;
@@ -1241,7 +1239,7 @@ body {
                 }
                 p{
                     width: 100%;
-                    padding-left: 2vw;
+                    padding-left: 1vw;
                     font-family: $Text-font;
                     font-weight: 400;
                     font-size: 1vw;
@@ -1251,6 +1249,7 @@ body {
                 }
                 .btn_AllInOne{
                     font-family: $Text-font;
+                    font-weight: 600;
                     height: 4.5vh;
                     width: 13.5vw;
                     background-color: $Amarelo;
@@ -1320,8 +1319,9 @@ body {
                 }
                 .btn_Concierge{
                     font-family: $Text-font;
+                    font-weight: 600;
                     height: 4.5vh;
-                    width: 13.5vw;
+                    width: 17.5vw;
                     background-color: $Amarelo;
                     color: $Preto;
                     font-size: 1.25vw;
@@ -1375,7 +1375,7 @@ body {
                 width: 100%;
                 font-family: $Text-font;
                 font-weight: 400;
-                font-size: 1vw;
+                font-size: 1.1vw;
                 color: $Marrom;
                 line-height: 3vh;
             }
@@ -1478,6 +1478,7 @@ body {
             justify-content: center;
             align-items: center;
             background-color: $Marrom;
+            height: 90vh;
             h2{
                 width: 100%;
                 height: auto;
@@ -1501,7 +1502,7 @@ body {
                 width: 100%;
                 font-family: $Text-font;
                 font-weight: 400;
-                font-size: 1vw;
+                font-size: 1.1vw;
                 color: $Creme;
                 line-height: 3vh;
             }
@@ -1511,7 +1512,7 @@ body {
                 justify-content: space-between;
                 height: 35vh;
                 width: 100%;
-                margin-top: 5vh;
+                margin-top: 7.5vh;
                 .cards{
                     width: 32%;
                     height: 100%;
@@ -1602,7 +1603,7 @@ body {
                 height: 3.5vh;
                 color: $Amarelo;
                 font-size: 1.25vw;
-                margin-top: 5vh;
+                margin-top: 7.5vh;
                 img, svg{
                     height: 100%;
                 }
@@ -2041,12 +2042,6 @@ body {
             #clinica{
                 flex-direction: column;
                 padding: 0;
-                .patter{
-                    width: auto;
-                    height: 50vh;
-                    object-fit: contain;
-                    opacity: 0.1;
-                }
                 #Block_textClinica{
                     width: 100%;
                     height: 50vh;
@@ -2093,15 +2088,6 @@ body {
                 flex-direction: column;
                 padding: 0;
                 height: auto;
-                .patter{
-                    width: auto;
-                    height: 100%;
-                    object-fit: contain;
-                    opacity: 0.03;
-                    path{
-                        fill: $Creme;
-                    }
-                }
                 #Block_VideoEspaco{
                     order: 2;
                     width: 100%;

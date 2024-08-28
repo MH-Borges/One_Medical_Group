@@ -172,7 +172,7 @@ else {
                     </div>
                     <div class="modal-footer">
                         <button class="btns btn_cancel" type="button" data-bs-dismiss="modal">Cancelar</button>
-                        <a class="btns btn_salvar" href="../../configs/logout.php" type="button">Sair</a>
+                        <a class="btns btn_salvar" href="../configs/logout.php" type="button">Sair</a>
                     </div>
                 </div>
             </div>

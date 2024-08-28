@@ -122,7 +122,7 @@ else {
 
     <main id="Main_Medicos">
         <!-- Modal Cria senha-->
-        <div class="modal fade" id="ModalCriaSenha" data-bs-backdrop="static" tabindex="-1">
+        <!-- <div class="modal fade" id="ModalCriaSenha" data-bs-backdrop="static" tabindex="-1">
             <div class="modal-dialog">
                 <form id="Form_ModalCriaSenha" method="post" class="modal-content">
                     <div class="modal-body">
@@ -154,13 +154,13 @@ else {
                 </form>
             </div>
             <div id="msg_ModalCriaMedico"></div>
-        </div>
+        </div> -->
         <?php
             if($senha == "" && $senha_temp != "" && $status == "inativo") {
-                echo "
-                    <button id='openModalCriaSenha' class='hide' type='button' data-bs-toggle='modal' data-bs-target='#ModalCriaSenha'></button>
-                    <script language='javascript'>$('#openModalCriaSenha').click();</script>
-                ";
+                // echo "
+                //     <button id='openModalCriaSenha' class='hide' type='button' data-bs-toggle='modal' data-bs-target='#ModalCriaSenha'></button>
+                //     <script language='javascript'>$('#openModalCriaSenha').click();</script>
+                // ";
             }
         ?>
 
