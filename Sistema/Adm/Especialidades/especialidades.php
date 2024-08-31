@@ -37,7 +37,7 @@
     <!-- Modal Cria / Editar especialidade -->
     <div class="modal fade" id="ModalEspecialidade" tabindex="-1">
         <div class="modal-dialog">
-            <form id="Form_ModalEspecialidade" method="post" class="modal-content">
+            <form id="Form_ModalEspecialidade" method="POST" class="modal-content" enctype="multipart/form-data">
                 <?php 
                     if (@$_GET['funcao'] == 'editEspecialidade') {
                         $titulo_espec = "Edição de Especialidade!";
@@ -63,16 +63,22 @@
                     <h4><?php echo $titulo_espec ?></h4>
 
                     <div class="Img_Espec">
+                        <input type="hidden" id="foto_espec_Input_default" name="foto_espec_Input_default" value="" required>
                         <input type="file" value="<?php echo @$foto_espec_edit ?>" id="foto_espec_Input" name="foto_espec_Input" onChange="carregarImgWeb();">
                         <?php
                             if(@$foto_espec_edit == "placeholder.webp" || @$foto_espec_edit == ""){
-                                echo "<img class='img_espec_modal' id='target_imgEspec' src='../../assets/especialidades/placeholder.webp'>";
+                                echo "
+                                    <img class='img_espec_modal' id='target_imgEspec' src='../../assets/especialidades/placeholder.webp'>
+                                    <button type='button' class='btns btn_VoltaPadrao_foto_espec_Input hide' onclick='imgPadrao()'>Restaurar imagem</button>
+                                ";
                             }else{
-                                echo "<img class='img_espec_modal imgSelected' id='target_imgEspec' src='../../assets/especialidades/$foto_espec_edit'>";
+                                echo "
+                                    <img class='img_espec_modal imgSelected' id='target_imgEspec' src='../../assets/especialidades/$foto_espec_edit'>
+                                    <button type='button' class='btns btn_VoltaPadrao_foto_espec_Input' onclick='imgPadrao()'>Restaurar imagem</button>
+                                ";
                             }
                         ?>
                         <img class="editPen" onclick="document.getElementById('foto_espec_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
-                        
                         <span>*Tamanho de imagem recomendado: 720 x 780</span>
                     </div>
 
@@ -90,6 +96,7 @@
                 </div>
 
                 <div class="modal-footer">
+                    <input type="hidden" id="img_espec_edit" name="img_espec_edit" value="<?php echo @$foto_espec_edit ?>" required>
                     <input type="hidden" id="id_espec_edit" name="id_espec_edit" value="<?php echo @$id_espec_edit ?>" required>
                     <input type="hidden" id="nome_espec_edit" name="nome_espec_edit" value="<?php echo @$nome_espec_edit ?>" required>
                     
@@ -140,16 +147,25 @@
         //CHAMADA DE FUNÇÃO PARA UPLOAD DE IMG BANCO DE DADOS
         function carregarImgWeb(){ carregarImagem('foto_espec_Input', 'target_imgEspec', "../../assets/especialidades/placeholder.webp", 'img_espec_modal'); }
 
+        function imgPadrao() {
+            document.getElementById('target_imgEspec').src = '../../assets/especialidades/placeholder.webp';
+            document.getElementById('foto_espec_Input_default').value = 'true';
+            document.querySelector('.btn_VoltaPadrao_foto_espec_Input').classList.add('hide');
+            document.querySelector('.img_espec_modal').classList.remove('imgSelected');
+        }
+
         //UPLOAD DAS INFOS NO BANCO DE DADOS
         $("#Form_ModalEspecialidade").submit(function (e) {
             e.preventDefault();
             $('#msg_ModalEspecialidade').text('');
             $('#msg_ModalEspecialidade').removeClass('text-danger');
             $('#msg_ModalEspecialidade').removeClass('text-success');
+            var formData = new FormData(this);
             $.ajax({
+                enctype: 'multipart/form-data',
                 url: "Especialidades/insert_Edit.php",
                 type: 'POST',
-                data: new FormData(this),
+                data: formData,
                 success: function (msg) {
                     if (msg.trim() === "Especialidade adicionada com Sucesso!!" || msg.trim() === "Especialidade Atualizada com Sucesso!!" ) {
                         $('#msg_ModalEspecialidade').addClass('text-success');

@@ -1,5 +1,5 @@
 <?php
-require_once("../../configs/conexao.php"); 
+require_once("../configs/conexao.php"); 
 
 $emailAntigo = $_POST['antigoEmail'];
 $novoEmail = filter_var($_POST['novoEmail'], FILTER_SANITIZE_EMAIL);

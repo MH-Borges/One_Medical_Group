@@ -12,7 +12,7 @@
                 $id_medico = $dados[$i]['id'];
                 $nome_medico = $dados[$i]['nome'];
                 $email_medico = $dados[$i]['email'];
-                $card = $dados[$i]['card'];
+                $card = $dados[$i]['card_'];
                 $status = $dados[$i]['status_perfil'];
 
                 if($nome_medico == ""){
@@ -102,8 +102,6 @@
         </div>
     </div>
 
-    
-
     <!-- Modal Status categoria-->
     <div class="modal fade" id="ModalStatusPerfil" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
@@ -145,7 +143,7 @@
                 
                 <div class="modal-body">
                     <?php 
-                        // echo $mensagem; 
+                        echo $mensagem; 
                     ?>
                 </div>
 
@@ -154,11 +152,7 @@
                     <input type="hidden" id="status_perfil" name="status_perfil" value="<?php echo $status_perfil ?>" required>
 
                     <button class="btns btn_cancel" type="button" data-bs-dismiss="modal" onclick='window.location=`./index.php?pag=medicos`;'>Cancelar</button>
-                    <button class="btns <?php 
-                    // echo $status_perfil 
-                    ?>" type="submit"><?php 
-                    // echo $btn; 
-                    ?></button>
+                    <button class="btns <?php echo $status_perfil ?>" type="submit"><?php echo $btn; ?></button>
                 </div>
             </form>
             <div id="msg_ModalStatusMedico"></div>
@@ -166,35 +160,42 @@
     </div>
 
     <!-- Modal Edit medico-->
-    <!-- <div class="modal fade" id="ModalEditMedico" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="ModalEditMedico" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
 
             <?php
-                // $id_perfil = $_GET['id'];
+                $id_perfil = $_GET['id'];
 
-                // $query = $pdo->query("SELECT * FROM medicos WHERE id = '$id_perfil' LIMIT 1");
-                // $dados = $query->fetchAll(PDO::FETCH_ASSOC);
-                // if(@count($dados) > 0){
-                //     $email = $dados[0]['email'];
-                //     $senha = $dados[0]['senha'];
-                //     $imagem = $dados[0]['foto'];
-                //     $especialidade = $dados[0]['especialidade'];
-                //     $nome_user = $dados[0]['nome'];
-                //     $documento = $dados[0]['documento'];
-                //     $estado = $dados[0]['estado'];
-                //     $tipoAtendimento = $dados[0]['tipo_atendimento'];
-                //     $abordagem = $dados[0]['abordagem'];
-                //     $publico = $dados[0]['publico'];
-                //     $descricao = $dados[0]['bio'];
-
-                //     $linkedin = $dados[0]['linkedin'];
-                //     $instagram = $dados[0]['instagram'];
-                //     $facebook = $dados[0]['facebook'];
-                //     $whatsapp = $dados[0]['whatsapp'];
-
-                //     $publico = str_replace('<br />', " ", $publico);
-                //     $descricao = str_replace('<br />', " ", $descricao);
-                // } 
+                $query = $pdo->query("SELECT * FROM medicos WHERE id = '$id_perfil' LIMIT 1");
+                $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                if(@count($dados) > 0){
+                    $status = $dados[0]['status_perfil'];
+                    $email = $dados[0]['email'];
+                    $senha = $dados[0]['senha'];
+                    $card = $dados[0]['card_'];
+                    $foto = $dados[0]['foto'];
+                    $video = $dados[0]['video'];
+                    $especialidade = $dados[0]['especialidade'];
+                    $nome = $dados[0]['nome'];
+                    $documento = $dados[0]['documento'];
+                    $descricao = $dados[0]['bio'];
+                    $formacoes = $dados[0]['formacoes'];
+                    $linkedin = $dados[0]['linkedin'];
+                    $instagram = $dados[0]['instagram'];
+                    $facebook = $dados[0]['facebook'];
+                    $whatsapp = $dados[0]['whatsapp'];
+                
+                    //tratamentos
+                    $descricao = str_replace('<br />', " ", $descricao);
+                    $formacoes = str_replace('<br />', " ", $formacoes);
+                
+                    $nome_novo = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                    $nome_tratado = preg_replace('/[ -]+/', '_', $nome_novo);
+                
+                    $card_edit = $card;
+                    $foto_edit = $foto;
+                    $video_edit = $video;
+                } 
 
             ?>
 
@@ -204,174 +205,184 @@
                     <h2>Edição de perfil</h2>
 
                     <div id="Block_Infos">
-                        <div id="imgUser_block">
-                            <input type="file" value="<?php 
-                            // echo @$imagem 
-                            ?>" id="img_User_Input" name="img_User_Input" onChange="carregarImgWeb();">
-                            <?php
-                                // if(@$imagem == "user_placeholder.webp" || @$imagem == ""){
-                                //     $imagem = "<img class='img_user' id='target_img' src='../../../Clinica/assets/users/user_placeholder.webp'>";
-                                // }else{
-                                //     $imagem = "<img class='img_user imgSelected' id='target_img' src='../../../Clinica/assets/users/$imagem'>";
-                                // }
-                                
-                                // echo $imagem;
-                            ?>
-                            <img class="editPen" onclick="document.getElementById('img_User_Input').click();" src="../../../assets/sistema/edit.svg" onload="SVGInject(this)">
+                        <div id="Card_foto_video">
+                            <div id="Card_block">
+                                <h3>Selecione uma imagem para o seu card</h3>
+                                <span>*Tamanho de imagem recomendado: 225 x 375</span>
+                                <input type="hidden" id="Card_Input_default" name="Card_Input_default" value="" required>
+                                <input type="file" value="<?php echo $card ?>" id="Card_Input" name="Card_Input" onChange="carregaCard();">
+                                <?php
+                                    if($card == "user_placeholder.webp" || $card == ""){
+                                        $card = "
+                                            <img class='card' id='target_card' src='../../assets/medicos/user_placeholder.webp'>
+                                            <button type='button' class='btns btn_VoltaPadrao_Card_Input hide' onclick='imgPadrao(`Card_Input`, `target_card`, `user_placeholder.webp`, `card`)'>Restaurar imagem</button>
+                                        ";
+                                    }else{
+                                        $card = "
+                                            <img class='card imgSelected' id='target_card' src='../../assets/medicos/$nome_tratado/$card'>
+                                            <button type='button' class='btns btn_VoltaPadrao_Card_Input' onclick='imgPadrao(`Card_Input`, `target_card`, `user_placeholder.webp`, `card`)'>Restaurar imagem</button>
+                                        ";
+                                    }
+                                    
+                                    echo $card;
+                                ?>
+                                <img class="editPen" onclick="document.getElementById('Card_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
+                            </div>
+
+                            <div id="Foto_block">
+                                <h3>Selecione uma imagem para o seu perfil</h3>
+                                <span>*Tamanho de imagem recomendado: 515 x 325</span>
+                                <input type="hidden" id="Foto_Input_default" name="Foto_Input_default" value="" required>
+                                <input type="file" value="<?php echo $foto ?>" id="Foto_Input" name="Foto_Input" onChange="carregaFoto();">
+                                <?php
+                                    if($foto == "foto_placeholder.webp" || $foto == ""){
+                                        $foto = "
+                                            <img class='foto' id='target_foto' src='../../assets/medicos/foto_placeholder.webp'>
+                                            <button type='button' class='btns btn_VoltaPadrao_Foto_Input hide' onclick='imgPadrao(`Foto_Input`, `target_foto`, `foto_placeholder.webp`, `foto`)'>Restaurar imagem</button>
+                                        ";
+                                    }else{
+                                        $foto = "
+                                            <img class='foto imgSelected' id='target_foto' src='../../assets/medicos/$nome_tratado/$foto'>
+                                            <button type='button' class='btns btn_VoltaPadrao_Foto_Input' onclick='imgPadrao(`Foto_Input`, `target_foto`, `foto_placeholder.webp`, `foto`)'>Restaurar imagem</button>
+                                        ";
+                                    }
+                                    
+                                    echo $foto;
+                                ?>
+                                <img class="editPen" onclick="document.getElementById('Foto_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
+                            </div>
+
+                            <div id="Video_block">
+                                <h3>Selecione um video para o seu perfil</h3>
+                                <span>*Tamanho de Video recomendado: 1920 x 1080</span>
+                                <input type="hidden" id="Video_Input_default" name="Video_Input_default" value="" required>
+                                <input type="file" value="<?php echo $video ?>" id="Video_Input" name="Video_Input" onChange="carregaVideo();">
+                                <?php
+                                    if($video == "video_vazio.mp4" || $video == ""){
+                                        $video = "
+                                            <video class='video' id='target_video'>
+                                                <source src='../../assets/medicos/video_vazio.mp4'>
+                                            </video>
+                                            <button type='button' class='btns btn_VoltaPadrao_Video_Input hide' onclick='imgPadrao(`Video_Input`, `target_video`, `video_vazio.mp4`, `video`)'>Restaurar imagem</button>
+                                        ";
+                                    }else{
+                                        $video = "
+                                            <video class='video imgSelected' id='target_video'>
+                                                <source  src='../../assets/medicos/$nome_tratado/$video'>
+                                            </video>
+                                            <button type='button' class='btns btn_VoltaPadrao_Video_Input' onclick='imgPadrao(`Video_Input`, `target_video`, `video_vazio.mp4`, `video`)'>Restaurar Video</button>
+                                        ";
+                                    }
+                                    
+                                    echo $video;
+                                ?>
+                                <img class="editPen" onclick="document.getElementById('Video_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
+                            </div>
                         </div>
 
                         <div id="infos">
                             <div class="BlockBox">
-                                <input type="text" name="nome" id="nome" value="<?php 
-                                // echo @$nome_user 
-                                ?>" maxlength="100" required>
+                                <input type="text" name="nome" id="nome" value="<?php echo @$nome?>" maxlength="100" required>
                                 <span>Seu nome e sobrenome:</span>
                                 <p class="lengthInput NomeInput"></p>
                             </div>
                             <div class="BlockBox">
-                                <input type="text" name="doc" id="doc" value="<?php 
-                                // echo @$documento 
-                                ?>" maxlength="100" required>
+                                <input type="text" name="doc" id="doc" value="<?php echo @$documento?>" maxlength="100" required>
                                 <span>Numero de documento (CRM/CRP/Outros):</span>
                             </div>
                             <div class="Seletor">
+                                <span>Selecione sua especialidade:</span>
                                 <div id="especialidades-select">
                                     <input type="checkbox" id="select_input_espec" onchange="OptionSelection('selected_val_espec', 'select_input_espec', 'options_espec');">
 
                                     <div id="select-button">
-                                        <div id='selected_val_espec'><?php
-                                        // if($especialidade == ""){ echo "Selecione sua especialidade"; } else{ echo $especialidade; } 
-                                        ?></div>
-                                        <img src="../../../assets/sistema/seta_fina.svg" onload="SVGInject(this)">
+                                        <div id='selected_val_espec'><?php if($especialidade == ""){ echo "Selecione sua especialidade"; } else{ echo $especialidade; } ?></div>
+                                        <img src="../../assets/sistema/seta_fina.svg" onload="SVGInject(this)">
                                     </div>
                                 </div>
                                 
                                 <ul id="options">
                                     <?php 
-                                        // $query = $pdo->query("SELECT * FROM especialidade ORDER BY id DESC");
-                                        // $dados = $query->fetchAll(PDO::FETCH_ASSOC);
-                                        // for ($i=0; $i < count($dados); $i++) {
-                                        //     $nome_espec = $dados[$i]['nome'];
-                                        //     if($nome_espec === $especialidade){
-                                        //         echo "
-                                        //             <li class='options_espec'>
-                                        //                 <input type='radio' name='especialidade' value='$nome_espec' data-label='$nome_espec' checked>
-                                        //                 <span class='label'>$nome_espec</span>
-                                        //             </li>
-                                        //         ";
-                                        //     }
-                                        //     else{
-                                        //         echo "
-                                        //             <li class='options_espec'>
-                                        //                 <input type='radio' name='especialidade' value='$nome_espec' data-label='$nome_espec'>
-                                        //                 <span class='label'>$nome_espec</span>
-                                        //             </li>
-                                        //         ";
-                                        //     }
-                                        // }
-                                    ?>
-                                </ul>
-                            </div>
-                            <div class="Seletor">
-                                <div id="atendimento-select">
-                                    <input type="checkbox" id="select_input_atendimento" onchange="OptionSelection('selected_val_atendimento', 'select_input_atendimento', 'options_atendimento');">
 
-                                    <div id="select-button">
-                                        <div id='selected_val_atendimento'><?php
-                                         if($tipoAtendimento == ""){ echo "Selecione a sua modalidade de atendimento"; } else{ echo $tipoAtendimento; } 
-                                         ?></div>
-                                        <img src="../../../assets/sistema/seta_fina.svg" onload="SVGInject(this)">
-                                    </div>
-                                </div>
-                                <ul id="options">
-                                    <?php 
-                                        // if($tipoAtendimento != ""){
-                                        //     if($tipoAtendimento == "Online&Presencial"){ $tipoAtendimento = "Online e Presencial"; }
-                                        //     echo "
-                                        //         <li class='options_atendimento'>
-                                        //             <input type='radio' name='atendimento' value='$tipoAtendimento' data-label='$tipoAtendimento' checked>
-                                        //             <span class='label'>$tipoAtendimento</span>
-                                        //         </li>
-                                        //     ";
-                                        // }
-                                    ?>
-                                    <li class='options_atendimento'>
-                                        <input type='radio' name='atendimento' value='Online' data-label='Online'>
-                                        <span class='label'>Online</span>
-                                    </li>
-                                    <li class='options_atendimento'>
-                                        <input type='radio' name='atendimento' value='Presencial' data-label='Presencial'>
-                                        <span class='label'>Presencial</span>
-                                    </li>
-                                    <li class='options_atendimento'>
-                                        <input type='radio' name='atendimento' value='Online&Presencial' data-label='Online e Presencial'>
-                                        <span class='label'>Online e Presencial</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="Seletor">
-                                <div id="abordagem-select">
-                                    <input type="checkbox" id="select_input_abordagem" onchange="OptionSelection('selected_val_abordagem', 'select_input_abordagem', 'options_abordagem');">
+                                        echo "
+                                            <li class='options_espec'>
+                                                <input type='radio' name='especialidade' value='null' data-label='null'>
+                                                <span class='label'> Selecione sua especialidade </span>
+                                            </li>
+                                        ";
 
-                                    <div id="select-button">
-                                        <div id='selected_val_abordagem'><?php 
-                                        // if($abordagem == ""){ echo "Selecione seu estilo de abordagem"; } else{ echo $abordagem; } 
-                                        ?></div>
-                                        <img src="../../../assets/sistema/seta_fina.svg" onload="SVGInject(this)">
-                                    </div>
-                                </div>
-                                
-                                <ul id="options">
-                                    <?php 
-                                        // $query = $pdo->query("SELECT * FROM abordagem ORDER BY id DESC");
-                                        // $dados = $query->fetchAll(PDO::FETCH_ASSOC);
-                                        // for ($i=0; $i < count($dados); $i++) {
-                                        //     $nome_abordagem = $dados[$i]['nome'];
-                                        //     if($nome_abordagem === $abordagem){
-                                        //         echo "
-                                        //             <li class='options_abordagem'>
-                                        //                 <input type='radio' name='abordagem' value='$nome_abordagem' data-label='$nome_abordagem' checked>
-                                        //                 <span class='label'>$nome_abordagem</span>
-                                        //             </li>
-                                        //         ";
-                                        //     }
-                                        //     else{
-                                        //         echo "
-                                        //             <li class='options_abordagem'>
-                                        //                 <input type='radio' name='abordagem' value='$nome_abordagem' data-label='$nome_abordagem'>
-                                        //                 <span class='label'>$nome_abordagem</span>
-                                        //             </li>
-                                        //         ";
-                                        //     }
-                                        // }
+                                        $query = $pdo->query("SELECT * FROM especialidade ORDER BY id DESC");
+                                        $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                                        for ($i=0; $i < count($dados); $i++) {
+                                            $nome_espec = $dados[$i]['nome'];
+                                            if($nome_espec === $especialidade){
+                                                echo "
+                                                    <li class='options_espec'>
+                                                        <input type='radio' name='especialidade' value='$nome_espec' data-label='$nome_espec' checked>
+                                                        <span class='label'>$nome_espec</span>
+                                                    </li>
+                                                ";
+                                            }
+                                            else{
+                                                echo "
+                                                    <li class='options_espec'>
+                                                        <input type='radio' name='especialidade' value='$nome_espec' data-label='$nome_espec'>
+                                                        <span class='label'>$nome_espec</span>
+                                                    </li>
+                                                ";
+                                            }
+                                        }
                                     ?>
                                 </ul>
-                            </div>
-                            <div class="BlockBox TextAreaBox">
-                                <textarea type="text" name="publico_alvo" id="publico_alvo" maxlength="1500" required><?php echo $publico ?></textarea>
-                                <span>Seu publico alvo:</span>
                             </div>
                             <div class="BlockBox TextAreaBox">
                                 <textarea type="text" name="bio" id="bio" maxlength="5000" required><?php echo $descricao ?></textarea>
                                 <span>Sua Biografia:</span>
                             </div>
+                            <div class="BlockBox TextAreaBox">
+                                <textarea type="text" name="formacoes" id="formacoes" maxlength="1500" required><?php echo $formacoes ?></textarea>
+                                <span>Suas Formações:</span>
+                            </div>
                             <div class="BlockBox">
                                 <input type="text" name="linkedin" id="linkedin" value="<?php echo @$linkedin?>" required>
-                                <span><img src="../../Clinica/assets/icons/linkedin_full.svg" onload="SVGInject(this)"> Linkedin:</span>
+                                <span><img src="../../assets/sistema/linkedin_full.svg" onload="SVGInject(this)"> Linkedin:</span>
                             </div>
                             <div class="BlockBox">
                                 <input type="text" name="instagram" id="instagram" value="<?php echo @$instagram?>" required>
-                                <span><img src="../../Clinica/assets/icons/instagram_full.svg" onload="SVGInject(this)"> Instagram:</span>
+                                <span><img src="../../assets/sistema/instagram_full.svg" onload="SVGInject(this)"> Instagram:</span>
                             </div>
                             <div class="BlockBox">
                                 <input type="text" name="facebook" id="facebook" value="<?php echo @$facebook?>" required>
-                                <span><img src="../../Clinica/assets/icons/facebook_full.svg" onload="SVGInject(this)"> Facebook:</span>
+                                <span><img src="../../assets/sistema/facebook_full.svg" onload="SVGInject(this)"> Facebook:</span>
                             </div>
                             <div class="BlockBox">
                                 <input type="text" name="whatsapp" id="whatsapp" value="<?php echo @$whatsapp?>" required>
-                                <span><img src="../../Clinica/assets/icons/whatsapp_full.svg" onload="SVGInject(this)"> Whatsapp:</span>
+                                <span><img src="../../assets/sistema/whatsapp_full.svg" onload="SVGInject(this)"> Whatsapp:</span>
                             </div>
                         </div>
+
+                        <?php
+                            $hiddenFields = '
+                                <input type="hidden" id="card_edit" name="card_edit" value="'.$card_edit.'">
+                                <input type="hidden" id="foto_edit" name="foto_edit" value="'.$foto_edit.'">
+                                <input type="hidden" id="video_edit" name="video_edit" value="'.$video_edit.'">
+                                <input type="hidden" id="nome_antigo" name="nome_antigo" value="'.$nome.'">
+                                <input type="hidden" id="idUser" name="idUser" value="'.$idUserSession.'">
+                                <input type="hidden" id="status" name="status" value="'.$status.'">
+                            ';
+
+                            if($status == 'inativo') {
+                                if($nome != "") {
+                                    echo '<button class="btns btn_salvar btn_desativado" id="btn_salva">Perfil desativado</button>'; 
+                                } else {
+                                    echo $hiddenFields;
+                                    echo '<button class="btns btn_salvar" type="submit" id="btn_salva">Ativar perfil</button>';
+                                }
+                            } else {
+                                echo $hiddenFields;
+                                echo '<button class="btns btn_salvar" type="submit" id="btn_salva">Salvar informações</button>';
+                            }
+                        ?>
                     </div>
 
                     <div id="Block_SenhaEmail">
@@ -430,7 +441,7 @@
 
             <div id="msg_ModalEditMedico"></div>
         </div>
-    </div> -->
+    </div>
     
 
     <!-- FUNÇÕES PHP NA CHAMADA DE MODAL -->
@@ -462,8 +473,118 @@
     ?>
 
     <script>
-        //CHAMADA DE FUNÇÃO PARA UPLOAD DE IMG BANCO DE DADOS
-        function carregarImgWeb(){ carregarImagem('img_User_Input', 'target_img', "../../Clinica/assets/users/user_placeholder.webp", 'img_user'); }
+
+    /////*****!!!!ADICIONAR MEDICO PELO PAINEL ADM VERIFICAR TODAS ESSAS FUNÇÕES !!!!*****
+        var fileSize = '';
+        function ShowPass(boxNum) {
+            var elements = {
+                '1': {
+                    eye: 'eye',
+                    eyeSlash: 'eye_slash',
+                    passwordInput: 'novaSenhaUser'
+                },
+                '2': {
+                    eye: 'eye_Repet',
+                    eyeSlash: 'eye_slash_Repet',
+                    passwordInput: 'repetNovaSenhaUser'
+                },
+                '3': {
+                    eye: 'eye',
+                    eyeSlash: 'eye_slash',
+                    passwordInput: 'antigaSenha'
+                },
+                '4': {
+                    eye: 'eyeRecup',
+                    eyeSlash: 'eye_slashRecup',
+                    passwordInput: 'novaSenha'
+                },
+                '5': {
+                    eye: 'eye_RecupRepet',
+                    eyeSlash: 'eye_slash_RecupRepet',
+                    passwordInput: 'confirmaNovaSenha'
+                }
+            };
+            var element = elements[boxNum];
+            if (element) {
+                var eye = document.getElementById(element.eye);
+                var eyeSlash = document.getElementById(element.eyeSlash);
+                var passwordInput = document.getElementById(element.passwordInput);
+
+                if (eyeSlash.classList.contains('hide')) {
+                    eyeSlash.classList.remove('hide');
+                    eye.classList.add('hide');
+                    passwordInput.type = 'text';
+                } else {
+                    eyeSlash.classList.add('hide');
+                    eye.classList.remove('hide');
+                    passwordInput.type = 'password';
+                }
+            }
+        }
+
+        //FUNÇÃO DE SELETORES CUSTOMIZADOS
+        function OptionSelection(selectedValueId, optionsButtonId, optionInputsClass) {
+            let selectedValue = document.getElementById(selectedValueId),
+                optionsViewButton = document.getElementById(optionsButtonId),
+                inputsOptions = document.querySelectorAll('.' + optionInputsClass + ' input');
+
+            inputsOptions.forEach(input => { 
+                input.addEventListener('click', event => {
+
+                    var valor = '';
+                    if(input.dataset.label == 'null'){
+                        valor = 'Selecione sua especialidade';
+                    }
+                    else{
+                        valor = input.dataset.label;
+                    }
+                    selectedValue.textContent = valor;
+                    optionsViewButton.click();
+                });
+            });
+        }
+
+        //INSERT IMGS MEDICO
+        function carregaCard(){ carregarImagem('Card_Input', 'target_card', '../../assets/medicos/user_placeholder.webp', 'card'); }
+        function carregaFoto(){ carregarImagem('Foto_Input', 'target_foto', '../../assets/medicos/foto_placeholder.webp', 'foto'); }
+        function carregaVideo(){ carregarImagem('Video_Input', 'target_video', '../../assets/medicos/video_vazio.mp4', 'video'); }
+
+        //RESET DE IMG
+        function imgPadrao(inputId, targetId, placeholder, imgContainerClass) {
+            document.getElementById(targetId).src = '../../assets/medicos/' + placeholder;
+            document.getElementById(inputId + '_default').value = 'true';
+            document.querySelector('.btn_VoltaPadrao_' + inputId).classList.add('hide');
+            document.querySelector('.' + imgContainerClass).classList.remove('imgSelected');
+        }
+
+        $('.btn_salvar').click(function (e) {
+            $('#formacoes').prop('required',false);
+            $('#bio').prop('required',false);
+            $('#linkedin').prop('required',false);
+            $('#instagram').prop('required',false);
+            $('#facebook').prop('required',false);
+            $('#whatsapp').prop('required',false);
+        });
+
+        $("#Video_Input").change(function(e){ 
+            const fileSize = e.target.files[0].size / 1024 / 1024; // para mb
+            if (fileSize > 20) {
+                $('#btn_salva').addClass('btn_desativado');
+                $('#btn_salva').removeAttr('type');
+                $('#msg_DadosMedico').addClass('text-danger');
+                $('#msg_DadosMedico').text('Tamanho do vídeo excedeu o limite do servidor! Apenas vídeos menores que 20 MB são aceitos.');
+            }
+            if (fileSize < 20) {
+                $('#btn_salva').removeClass('btn_desativado');
+                $('#btn_salva').attr('type', 'submit');
+                $('#msg_DadosMedico').removeClass('text-danger');
+                $('#msg_DadosMedico').text('');
+            }
+        });
+
+    /////*****!!!!ADICIONAR MEDICO PELO PAINEL ADM VERIFICAR TODAS ESSAS FUNÇÕES !!!!*****
+
+
 
         //UPLOAD DAS INFOS NO BANCO DE DADOS
         $("#Form_ModalCriaMedico").submit(function (e) {

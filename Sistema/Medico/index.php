@@ -10,56 +10,33 @@ if(@count($dados) > 0){
     $email = $dados[0]['email'];
     $senha = $dados[0]['senha'];
     $senha_temp = $dados[0]['senha_temp'];
-    $imagem = $dados[0]['foto'];
+    $card = $dados[0]['card_'];
+    $foto = $dados[0]['foto'];
+    $video = $dados[0]['video'];
     $especialidade = $dados[0]['especialidade'];
-    $nome_user = $dados[0]['nome'];
+    $nome = $dados[0]['nome'];
     $documento = $dados[0]['documento'];
-    $estado = $dados[0]['estado'];
-    $tipoAtendimento = $dados[0]['tipo_atendimento'];
-    $abordagem = $dados[0]['abordagem'];
-    $publico = $dados[0]['publico'];
     $descricao = $dados[0]['bio'];
-
+    $formacoes = $dados[0]['formacoes'];
     $linkedin = $dados[0]['linkedin'];
     $instagram = $dados[0]['instagram'];
     $facebook = $dados[0]['facebook'];
     $whatsapp = $dados[0]['whatsapp'];
 
-    $publico = str_replace('<br />', " ", $publico);
+    //tratamentos
     $descricao = str_replace('<br />', " ", $descricao);
+    $formacoes = str_replace('<br />', " ", $formacoes);
 
-    //Tratamento estado
-    if($estado == "AC"){ $estado_longo = "Acre - AC"; }
-    if($estado == "AL"){ $estado_longo = "Alagoas - AL"; }
-    if($estado == "AP"){ $estado_longo = "Amapá - AP"; }
-    if($estado == "AM"){ $estado_longo = "Amazonas - AM"; }
-    if($estado == "BA"){ $estado_longo = "Bahia- BA"; }
-    if($estado == "CE"){ $estado_longo = "Ceará - CE"; }
-    if($estado == "DF"){ $estado_longo = "Distrito Federal - DF"; }
-    if($estado == "ES"){ $estado_longo = "Espírito Santo - ES"; }
-    if($estado == "GO"){ $estado_longo = "Goiás - GO"; }
-    if($estado == "MT"){ $estado_longo = "Mato Grosso - MT"; }
-    if($estado == "MS"){ $estado_longo = "Mato Grosso do Sul - MS"; }
-    if($estado == "MG"){ $estado_longo = "Minas Gerais - MG"; }
-    if($estado == "PA"){ $estado_longo = "Pará - PA"; }
-    if($estado == "PB"){ $estado_longo = "Paraíba - PB"; }
-    if($estado == "PR"){ $estado_longo = "Paraná - PR"; }
-    if($estado == "PE"){ $estado_longo = "Pernambuco - PE"; }
-    if($estado == "PI"){ $estado_longo = "Piauí - PI"; }
-    if($estado == "RJ"){ $estado_longo = "Rio de Janeiro - RJ"; }
-    if($estado == "RN"){ $estado_longo = "Rio Grande do Norte - RN"; }
-    if($estado == "RS"){ $estado_longo = "Rio Grande do Sul - RS"; }
-    if($estado == "RO"){ $estado_longo = "Rondônia - RO"; }
-    if($estado == "RR"){ $estado_longo = "Roraima - RR"; }
-    if($estado == "SC"){ $estado_longo = "Santa Catarina - SC"; }
-    if($estado == "SP"){ $estado_longo = "São Paulo - SP"; }
-    if($estado == "SE"){ $estado_longo = "Sergipe - SE"; }
-    if($estado == "TO"){ $estado_longo = "Tocantins - TO"; }
-    	 
+    $nome_novo = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+    $nome_tratado = preg_replace('/[ -]+/', '_', $nome_novo);
+
+    $card_edit = $card;
+    $foto_edit = $foto;
+    $video_edit = $video;
 } 
 else {
     echo "<script language='javascript'> window.alert('Acesso Negado: Usuario não encontrado!') </script>";
-    echo "<script language='javascript'> window.location='../../sistema' </script>";
+    echo "<script language='javascript'> window.location='../configs/logout.php' </script>";
 }
 
 ?> 
@@ -72,7 +49,7 @@ else {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil medico <?php echo @$nome; ?> | Clinica Sicuro</title>
-    <link rel="icon" href="../../assets/icon.svg" />
+    <link rel="icon" href="../../assets/icons/icon.svg" />
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -100,8 +77,8 @@ else {
     <header id="menuMedico">
         <ul class="menu">
             <li id="logo">
-                <a href="../../../Sicuropsi/">
-                    <img src="../../assets/sicuro_clinica.svg" onload="SVGInject(this)">
+                <a href="../../">
+                    <img src="../../assets/sistema/logo.webp" alt="logo one medical">
                 </a>
             </li>
 
@@ -122,7 +99,7 @@ else {
 
     <main id="Main_Medicos">
         <!-- Modal Cria senha-->
-        <!-- <div class="modal fade" id="ModalCriaSenha" data-bs-backdrop="static" tabindex="-1">
+        <div class="modal fade" id="ModalCriaSenha" data-bs-backdrop="static" tabindex="-1">
             <div class="modal-dialog">
                 <form id="Form_ModalCriaSenha" method="post" class="modal-content">
                     <div class="modal-body">
@@ -130,18 +107,18 @@ else {
                         <div class="BlockBox senhaInput">
                             <input type="password" name="novaSenhaUser" id="novaSenhaUser" maxlength="25" required>
                             <span>Digite sua nova senha:</span>
-                            <div id="eye_box" onclick="ShowPass(`1`)">
-                                <img id="eye" src="../../assets/Login/eye.svg" onload="SVGInject(this)">
-                                <img id="eye_slash" class="hide" src="../../assets/Login/eye_slash.svg" onload="SVGInject(this)">
+                            <div id="eye_box" onclick="ShowPass('1')">
+                                <img id="eye" src="../../assets/sistema/eye.svg" onload="SVGInject(this)">
+                                <img id="eye_slash" class="hide" src="../../assets/sistema/eye_slash.svg" onload="SVGInject(this)">
                             </div>
                             <p class="lengthInput novaSenhaInput"></p>
                         </div>
                         <div class="BlockBox senhaInput">
                             <input type="password" name="repetNovaSenhaUser" id="repetNovaSenhaUser" maxlength="25" required>
                             <span>Digite novamente sua nova senha:</span>
-                            <div id="eye_box_Repet" onclick="ShowPass(`2`)">
-                                <img id="eye_Repet" src="../../assets/Login/eye.svg" onload="SVGInject(this)">
-                                <img id="eye_slash_Repet" class="hide" src="../../assets/Login/eye_slash.svg" onload="SVGInject(this)">
+                            <div id="eye_box_Repet" onclick="ShowPass('2')">
+                                <img id="eye_Repet" src="../../assets/sistema/eye.svg" onload="SVGInject(this)">
+                                <img id="eye_slash_Repet" class="hide" src="../../assets/sistema/eye_slash.svg" onload="SVGInject(this)">
                             </div>
                             <p class="lengthInput repetSenhaInput"></p>
                         </div>
@@ -154,44 +131,105 @@ else {
                 </form>
             </div>
             <div id="msg_ModalCriaMedico"></div>
-        </div> -->
+        </div>
         <?php
             if($senha == "" && $senha_temp != "" && $status == "inativo") {
-                // echo "
-                //     <button id='openModalCriaSenha' class='hide' type='button' data-bs-toggle='modal' data-bs-target='#ModalCriaSenha'></button>
-                //     <script language='javascript'>$('#openModalCriaSenha').click();</script>
-                // ";
+                echo "
+                    <button id='openModalCriaSenha' class='hide' type='button' data-bs-toggle='modal' data-bs-target='#ModalCriaSenha'></button>
+                    <script language='javascript'>$('#openModalCriaSenha').click();</script>
+                ";
             }
         ?>
 
         <section id="home">
             <?php 
-                if($status == 'inativo' && $nome_user == ""){ 
+                if($status == 'inativo' && $nome == ""){ 
                     echo "<h2 id='status_msg'>Este perfil se encontra desativado, preencha com suas informações para ativa-lo.</h2>"; 
                 }
-                if($status == 'inativo' && $nome_user != ""){ 
+                if($status == 'inativo' && $nome != ""){ 
                     echo "<h2 id='status_msg'>Este perfil se encontra desativado, Entre em contato com o administrador para mais informações!</h2>"; 
                 }
             ?>
             
-            <form id="Form_DadosMedico" method="post">
-                <div id="imgUser_block">
-                    <input type="file" value="<?php echo @$imagem ?>" id="img_User_Input" name="img_User_Input" onChange="carregarImgWeb();">
-                    <?php
-                        if(@$imagem == "user_placeholder.webp" || @$imagem == ""){
-                            $imagem = "<img class='img_user' id='target_img' src='../../Clinica/assets/users/user_placeholder.webp'>";
-                        }else{
-                            $imagem = "<img class='img_user imgSelected' id='target_img' src='../../Clinica/assets/users/$imagem'>";
-                        }
-                        
-                        echo $imagem;
-                    ?>
-                    <img class="editPen" onclick="document.getElementById('img_User_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
+            <form id="Form_DadosMedico" method="post" enctype="multipart/form-data">
+                <div id="Card_foto_video">
+                    <div id="Card_block">
+                        <h3>Selecione uma imagem para o seu card</h3>
+                        <span>*Tamanho de imagem recomendado: 225 x 375</span>
+                        <input type="hidden" id="Card_Input_default" name="Card_Input_default" value="" required>
+                        <input type="file" value="<?php echo $card ?>" id="Card_Input" name="Card_Input" onChange="carregaCard();">
+                        <?php
+                            if($card == "user_placeholder.webp" || $card == ""){
+                                $card = "
+                                    <img class='card' id='target_card' src='../../assets/medicos/user_placeholder.webp'>
+                                    <button type='button' class='btns btn_VoltaPadrao_Card_Input hide' onclick='imgPadrao(`Card_Input`, `target_card`, `user_placeholder.webp`, `card`)'>Restaurar imagem</button>
+                                ";
+                            }else{
+                                $card = "
+                                    <img class='card imgSelected' id='target_card' src='../../assets/medicos/$nome_tratado/$card'>
+                                    <button type='button' class='btns btn_VoltaPadrao_Card_Input' onclick='imgPadrao(`Card_Input`, `target_card`, `user_placeholder.webp`, `card`)'>Restaurar imagem</button>
+                                ";
+                            }
+                            
+                            echo $card;
+                        ?>
+                        <img class="editPen" onclick="document.getElementById('Card_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
+                    </div>
+
+                    <div id="Foto_block">
+                        <h3>Selecione uma imagem para o seu perfil</h3>
+                        <span>*Tamanho de imagem recomendado: 515 x 325</span>
+                        <input type="hidden" id="Foto_Input_default" name="Foto_Input_default" value="" required>
+                        <input type="file" value="<?php echo $foto ?>" id="Foto_Input" name="Foto_Input" onChange="carregaFoto();">
+                        <?php
+                            if($foto == "foto_placeholder.webp" || $foto == ""){
+                                $foto = "
+                                    <img class='foto' id='target_foto' src='../../assets/medicos/foto_placeholder.webp'>
+                                    <button type='button' class='btns btn_VoltaPadrao_Foto_Input hide' onclick='imgPadrao(`Foto_Input`, `target_foto`, `foto_placeholder.webp`, `foto`)'>Restaurar imagem</button>
+                                ";
+                            }else{
+                                $foto = "
+                                    <img class='foto imgSelected' id='target_foto' src='../../assets/medicos/$nome_tratado/$foto'>
+                                    <button type='button' class='btns btn_VoltaPadrao_Foto_Input' onclick='imgPadrao(`Foto_Input`, `target_foto`, `foto_placeholder.webp`, `foto`)'>Restaurar imagem</button>
+                                ";
+                            }
+                            
+                            echo $foto;
+                        ?>
+                        <img class="editPen" onclick="document.getElementById('Foto_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
+                    </div>
+
+                    <div id="Video_block">
+                        <h3>Selecione um video para o seu perfil</h3>
+                        <span>*Tamanho de Video recomendado: 1920 x 1080</span>
+                        <input type="hidden" id="Video_Input_default" name="Video_Input_default" value="" required>
+                        <input type="file" value="<?php echo $video ?>" id="Video_Input" name="Video_Input" onChange="carregaVideo();">
+                        <?php
+                            if($video == "video_vazio.mp4" || $video == ""){
+                                $video = "
+                                    <video class='video' id='target_video'>
+                                        <source src='../../assets/medicos/video_vazio.mp4'>
+                                    </video>
+                                    <button type='button' class='btns btn_VoltaPadrao_Video_Input hide' onclick='imgPadrao(`Video_Input`, `target_video`, `video_vazio.mp4`, `video`)'>Restaurar imagem</button>
+                                ";
+                            }else{
+                                $video = "
+                                    <video class='video imgSelected' id='target_video'>
+                                        <source  src='../../assets/medicos/$nome_tratado/$video'>
+                                    </video>
+                                    <button type='button' class='btns btn_VoltaPadrao_Video_Input' onclick='imgPadrao(`Video_Input`, `target_video`, `video_vazio.mp4`, `video`)'>Restaurar Video</button>
+                                ";
+                            }
+                            
+                            echo $video;
+                        ?>
+                        <img class="editPen" onclick="document.getElementById('Video_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
+                    </div>
                 </div>
 
                 <div id="infos">
                     <div class="BlockBox">
-                        <input type="text" name="nome" id="nome" value="<?php echo @$nome_user?>" maxlength="100" required>
+                        <input type="text" name="nome" id="nome" value="<?php echo @$nome?>" maxlength="100" required>
                         <span>Seu nome e sobrenome:</span>
                         <p class="lengthInput NomeInput"></p>
                     </div>
@@ -200,6 +238,7 @@ else {
                         <span>Numero de documento (CRM/CRP/Outros):</span>
                     </div>
                     <div class="Seletor">
+                        <span>Selecione sua especialidade:</span>
                         <div id="especialidades-select">
                             <input type="checkbox" id="select_input_espec" onchange="OptionSelection('selected_val_espec', 'select_input_espec', 'options_espec');">
 
@@ -211,6 +250,14 @@ else {
                         
                         <ul id="options">
                             <?php 
+
+                                echo "
+                                    <li class='options_espec'>
+                                        <input type='radio' name='especialidade' value='null' data-label='null'>
+                                        <span class='label'> Selecione sua especialidade </span>
+                                    </li>
+                                ";
+
                                 $query = $pdo->query("SELECT * FROM especialidade ORDER BY id DESC");
                                 $dados = $query->fetchAll(PDO::FETCH_ASSOC);
                                 for ($i=0; $i < count($dados); $i++) {
@@ -235,242 +282,52 @@ else {
                             ?>
                         </ul>
                     </div>
-                    <div class="Seletor">
-                        <div id="estado-select">
-                            <input type="checkbox" id="select_input_estado" onchange="OptionSelection('selected_val_estado', 'select_input_estado', 'options_estado');">
-
-                            <div id="select-button">
-                                <div id='selected_val_estado'><?php if($estado == ""){ echo "Selecione seu estado"; } else{ echo $estado_longo; } ?></div>
-                                <img src="../../assets/sistema/seta_fina.svg" onload="SVGInject(this)">
-                            </div>
-                        </div>
-                        <ul id="options">
-                            <?php 
-                                if($estado != ""){
-                                    echo "
-                                        <li class='options_estado'>
-                                            <input type='radio' name='estado' value='$estado' data-label='$estado_longo' checked>
-                                            <span class='label'>$estado_longo</span>
-                                        </li>
-                                    ";
-                                }
-                            ?>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='AC' data-label='Acre - AC'>
-                                <span class='label'>Acre - AC</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='AL' data-label='Alagoas - AL'>
-                                <span class='label'>Alagoas - AL</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='AP' data-label='Amapá - AP'>
-                                <span class='label'>Amapá - AP</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='AM' data-label='Amazonas - AM'>
-                                <span class='label'>Amazonas - AM</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='BA' data-label='Bahia - BA'>
-                                <span class='label'>Bahia - BA</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='CE' data-label='Ceará - CE'>
-                                <span class='label'>Ceará - CE</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='DF' data-label='Distrito Federal - DF'>
-                                <span class='label'>Distrito Federal - DF</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='ES' data-label='Espírito Santo - ES'>
-                                <span class='label'>Espírito Santo - ES</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='GO' data-label='Goiás - GO'>
-                                <span class='label'>Goiás - GO</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='MT' data-label='Mato Grosso - MT'>
-                                <span class='label'>Mato Grosso - MT</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='MS' data-label='Mato Grosso do Sul - MS'>
-                                <span class='label'>Mato Grosso do Sul - MS</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='MG' data-label='Minas Gerais - MG'>
-                                <span class='label'>Minas Gerais - MG</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='PA' data-label='Pará - PA'>
-                                <span class='label'>Pará - PA</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='PB' data-label='Paraíba - PB'>
-                                <span class='label'>Paraíba - PB</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='PR' data-label='Paraná - PR'>
-                                <span class='label'>Paraná - PR</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='PE' data-label='Pernambuco - PE'>
-                                <span class='label'>Pernambuco - PE</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='PI' data-label='Piauí - PI'>
-                                <span class='label'>Piauí - PI</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='RJ' data-label='Rio de Janeiro - RJ'>
-                                <span class='label'>Rio de Janeiro - RJ</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='RN' data-label='Rio Grande do Norte - RN'>
-                                <span class='label'>Rio Grande do Norte - RN</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='RS' data-label='Rio Grande do Sul - RS'>
-                                <span class='label'>Rio Grande do Sul - RS</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='RO' data-label='Rondônia - RO'>
-                                <span class='label'>Rondônia - RO</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='RR' data-label='Roraima - RR'>
-                                <span class='label'>Roraima - RR</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='SC' data-label='Santa Catarina - SC'>
-                                <span class='label'>Santa Catarina - SC</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='SP' data-label='São Paulo - SP'>
-                                <span class='label'>São Paulo - SP</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='SE' data-label='Sergipe - SE'>
-                                <span class='label'>Sergipe - SE</span>
-                            </li>
-                            <li class='options_estado'>
-                                <input type='radio' name='estado' value='TO' data-label='Tocantins - TO'>
-                                <span class='label'>Tocantins - TO</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="Seletor">
-                        <div id="atendimento-select">
-                            <input type="checkbox" id="select_input_atendimento" onchange="OptionSelection('selected_val_atendimento', 'select_input_atendimento', 'options_atendimento');">
-
-                            <div id="select-button">
-                                <div id='selected_val_atendimento'><?php if($tipoAtendimento == ""){ echo "Selecione a sua modalidade de atendimento"; } else{ echo $tipoAtendimento; } ?></div>
-                                <img src="../../assets/sistema/seta_fina.svg" onload="SVGInject(this)">
-                            </div>
-                        </div>
-                        <ul id="options">
-                            <?php 
-                                if($tipoAtendimento != ""){
-                                    if($tipoAtendimento == "Online&Presencial"){ $tipoAtendimento = "Online e Presencial"; }
-                                    echo "
-                                        <li class='options_atendimento'>
-                                            <input type='radio' name='atendimento' value='$tipoAtendimento' data-label='$tipoAtendimento' checked>
-                                            <span class='label'>$tipoAtendimento</span>
-                                        </li>
-                                    ";
-                                }
-                            ?>
-                            <li class='options_atendimento'>
-                                <input type='radio' name='atendimento' value='Online' data-label='Online'>
-                                <span class='label'>Online</span>
-                            </li>
-                            <li class='options_atendimento'>
-                                <input type='radio' name='atendimento' value='Presencial' data-label='Presencial'>
-                                <span class='label'>Presencial</span>
-                            </li>
-                            <li class='options_atendimento'>
-                                <input type='radio' name='atendimento' value='Online&Presencial' data-label='Online e Presencial'>
-                                <span class='label'>Online e Presencial</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="Seletor">
-                        <div id="abordagem-select">
-                            <input type="checkbox" id="select_input_abordagem" onchange="OptionSelection('selected_val_abordagem', 'select_input_abordagem', 'options_abordagem');">
-
-                            <div id="select-button">
-                                <div id='selected_val_abordagem'><?php if($abordagem == ""){ echo "Selecione seu estilo de abordagem"; } else{ echo $abordagem; } ?></div>
-                                <img src="../../assets/sistema/seta_fina.svg" onload="SVGInject(this)">
-                            </div>
-                        </div>
-                        
-                        <ul id="options">
-                            <?php 
-                                $query = $pdo->query("SELECT * FROM abordagem ORDER BY id DESC");
-                                $dados = $query->fetchAll(PDO::FETCH_ASSOC);
-                                for ($i=0; $i < count($dados); $i++) {
-                                    $nome_abordagem = $dados[$i]['nome'];
-                                    if($nome_abordagem === $abordagem){
-                                        echo "
-                                            <li class='options_abordagem'>
-                                                <input type='radio' name='abordagem' value='$nome_abordagem' data-label='$nome_abordagem' checked>
-                                                <span class='label'>$nome_abordagem</span>
-                                            </li>
-                                        ";
-                                    }
-                                    else{
-                                        echo "
-                                            <li class='options_abordagem'>
-                                                <input type='radio' name='abordagem' value='$nome_abordagem' data-label='$nome_abordagem'>
-                                                <span class='label'>$nome_abordagem</span>
-                                            </li>
-                                        ";
-                                    }
-                                }
-                            ?>
-                        </ul>
-                    </div>
-                    <div class="BlockBox TextAreaBox">
-                        <textarea type="text" name="publico_alvo" id="publico_alvo" maxlength="1500" required><?php echo $publico ?></textarea>
-                        <span>Seu publico alvo:</span>
-                    </div>
                     <div class="BlockBox TextAreaBox">
                         <textarea type="text" name="bio" id="bio" maxlength="5000" required><?php echo $descricao ?></textarea>
                         <span>Sua Biografia:</span>
                     </div>
+                    <div class="BlockBox TextAreaBox">
+                        <textarea type="text" name="formacoes" id="formacoes" maxlength="1500" required><?php echo $formacoes ?></textarea>
+                        <span>Suas Formações:</span>
+                    </div>
                     <div class="BlockBox">
                         <input type="text" name="linkedin" id="linkedin" value="<?php echo @$linkedin?>" required>
-                        <span><img src="../../Clinica/assets/icons/linkedin_full.svg" onload="SVGInject(this)"> Linkedin:</span>
+                        <span><img src="../../assets/sistema/linkedin_full.svg" onload="SVGInject(this)"> Linkedin:</span>
                     </div>
                     <div class="BlockBox">
                         <input type="text" name="instagram" id="instagram" value="<?php echo @$instagram?>" required>
-                        <span><img src="../../Clinica/assets/icons/instagram_full.svg" onload="SVGInject(this)"> Instagram:</span>
+                        <span><img src="../../assets/sistema/instagram_full.svg" onload="SVGInject(this)"> Instagram:</span>
                     </div>
                     <div class="BlockBox">
                         <input type="text" name="facebook" id="facebook" value="<?php echo @$facebook?>" required>
-                        <span><img src="../../Clinica/assets/icons/facebook_full.svg" onload="SVGInject(this)"> Facebook:</span>
+                        <span><img src="../../assets/sistema/facebook_full.svg" onload="SVGInject(this)"> Facebook:</span>
                     </div>
                     <div class="BlockBox">
                         <input type="text" name="whatsapp" id="whatsapp" value="<?php echo @$whatsapp?>" required>
-                        <span><img src="../../Clinica/assets/icons/whatsapp_full.svg" onload="SVGInject(this)"> Whatsapp:</span>
+                        <span><img src="../../assets/sistema/whatsapp_full.svg" onload="SVGInject(this)"> Whatsapp:</span>
                     </div>
                 </div>
 
                 <?php
-                    if($status == 'inativo' && $nome_user != ""){ 
-                        echo '<button class="btns btn_salvar btn_desativado">Perfil desativado</button>'; 
-                    }
-                    if($status == 'inativo' && $nome_user == ""){ 
-                        echo'<input value="'.$idUserSession.'" class="hide" type="hidden" name="idUser" id="idUser">
-                            <input value="'.$status.'" class="hide" type="hidden" name="status" id="status">
-                            <button class="btns btn_salvar" type="submit">Ativar perfil</button>';
-                    }
-                    else{
-                        echo'<input value="'.$idUserSession.'" class="hide" type="hidden" name="idUser" id="idUser">
-                            <input value="'.$status.'" class="hide" type="hidden" name="status" id="status">
-                            <button class="btns btn_salvar" type="submit">Salvar informações</button>';
+                    $hiddenFields = '
+                        <input type="hidden" id="card_edit" name="card_edit" value="'.$card_edit.'">
+                        <input type="hidden" id="foto_edit" name="foto_edit" value="'.$foto_edit.'">
+                        <input type="hidden" id="video_edit" name="video_edit" value="'.$video_edit.'">
+                        <input type="hidden" id="nome_antigo" name="nome_antigo" value="'.$nome.'">
+                        <input type="hidden" id="idUser" name="idUser" value="'.$idUserSession.'">
+                        <input type="hidden" id="status" name="status" value="'.$status.'">
+                    ';
+
+                    if($status == 'inativo') {
+                        if($nome != "") {
+                            echo '<button class="btns btn_salvar btn_desativado" id="btn_salva">Perfil desativado</button>'; 
+                        } else {
+                            echo $hiddenFields;
+                            echo '<button class="btns btn_salvar" type="submit" id="btn_salva">Ativar perfil</button>';
+                        }
+                    } else {
+                        echo $hiddenFields;
+                        echo '<button class="btns btn_salvar" type="submit" id="btn_salva">Salvar informações</button>';
                     }
                 ?>
             </form>
@@ -494,7 +351,6 @@ else {
                 </div>
             </div>
         </div>
-
         <!-- Modal Editar perfil-->
         <div class="modal fade" id="ModalEditPerfil" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
@@ -526,7 +382,7 @@ else {
                                     </div>
             
                                     <input value="<?php echo $idUserSession ?>" class="hide" type="hidden" name="idUserEmail" id="idUserEmail">
-                                    <input value="<?php echo $emailAdm ?>" class="hide" type="hidden" name="emailUserSemAlteracoes" id="emailUserSemAlteracoes">
+                                    <input value="<?php echo $email ?>" class="hide" type="hidden" name="emailUserSemAlteracoes" id="emailUserSemAlteracoes">
                                     <button class="btns btn_salvar" type="submit">Salvar</button>
                                 </form>
                             </div>
@@ -537,32 +393,32 @@ else {
                                     <div class="BlockBox senhaInput">
                                         <input type="password" name="antigaSenha" id="antigaSenha" maxlength="25" required>
                                         <span>Senha antiga:</span>
-                                        <div id="eye_box" onclick="ShowPass('1')">
-                                            <img id="eye" src="../../../assets/Login/eye.svg" onload="SVGInject(this)">
-                                            <img id="eye_slash" class="hide" src="../../../assets/Login/eye_slash.svg" onload="SVGInject(this)">
+                                        <div id="eye_box" onclick="ShowPass('3')">
+                                            <img id="eye" src="../../assets/sistema/eye.svg" onload="SVGInject(this)">
+                                            <img id="eye_slash" class="hide" src="../../assets/sistema/eye_slash.svg" onload="SVGInject(this)">
                                         </div>
                                         <p class="lengthInput SenhaAntigaEditInput"></p>
                                     </div>
                                     <div class="BlockBox senhaInput">
                                         <input type="password" name="novaSenha" id="novaSenha" maxlength="25" required>
                                         <span>Nova senha:</span>
-                                        <div id="eye_boxRecup" onclick="ShowPass(`2`)">
-                                            <img id="eyeRecup" src="../../../assets/Login/eye.svg" onload="SVGInject(this)">
-                                            <img id="eye_slashRecup" class="hide" src="../../../assets/Login/eye_slash.svg" onload="SVGInject(this)">
+                                        <div id="eye_boxRecup" onclick="ShowPass(`4`)">
+                                            <img id="eyeRecup" src="../../assets/sistema/eye.svg" onload="SVGInject(this)">
+                                            <img id="eye_slashRecup" class="hide" src="../../assets/sistema/eye_slash.svg" onload="SVGInject(this)">
                                         </div>
                                         <p class="lengthInput NovaSenhaEditInput"></p>
                                     </div>
                                     <div class="BlockBox senhaInput">
                                         <input type="password" name="confirmaNovaSenha" id="confirmaNovaSenha" maxlength="25" required>
                                         <span>Confirma nova senha:</span>
-                                        <div id="eye_box_RecupRepet" onclick="ShowPass(`3`)">
-                                            <img id="eye_RecupRepet" src="../../../assets/Login/eye.svg" onload="SVGInject(this)">
-                                            <img id="eye_slash_RecupRepet" class="hide" src="../../../assets/Login/eye_slash.svg" onload="SVGInject(this)">
+                                        <div id="eye_box_RecupRepet" onclick="ShowPass(`5`)">
+                                            <img id="eye_RecupRepet" src="../../assets/sistema/eye.svg" onload="SVGInject(this)">
+                                            <img id="eye_slash_RecupRepet" class="hide" src="../../assets/sistema/eye_slash.svg" onload="SVGInject(this)">
                                         </div>
                                         <p class="lengthInput ConfirmaNovaSenhaEditInput"></p>
                                     </div>
                                     <input value="<?php echo $idUserSession ?>" class="hide" type="hidden" name="idUserAlteraSenha" id="idUserAlteraSenha">
-                                    <input value="<?php echo $senhaAdm ?>" class="hide" type="hidden" name="senhaUserSemAlteracoes" id="senhaUserSemAlteracoes">
+                                    <input value="<?php echo $senha ?>" class="hide" type="hidden" name="senhaUserSemAlteracoes" id="senhaUserSemAlteracoes">
                                     <button class="btns btn_salvar" type="submit">Salvar</button>
                                 </form>
                             </div>
@@ -575,6 +431,7 @@ else {
     </main>
 
     <script>
+        var fileSize = '';
         //VERICAÇÃO QUANTIDADE DE CARACTERES INPUT + Show Eye Icon
         function verificaTamanhoInput(inputId, displayClass, maxLen) {
             var inputElement = document.getElementById(inputId);
@@ -613,6 +470,21 @@ else {
                     eye: 'eye_Repet',
                     eyeSlash: 'eye_slash_Repet',
                     passwordInput: 'repetNovaSenhaUser'
+                },
+                '3': {
+                    eye: 'eye',
+                    eyeSlash: 'eye_slash',
+                    passwordInput: 'antigaSenha'
+                },
+                '4': {
+                    eye: 'eyeRecup',
+                    eyeSlash: 'eye_slashRecup',
+                    passwordInput: 'novaSenha'
+                },
+                '5': {
+                    eye: 'eye_RecupRepet',
+                    eyeSlash: 'eye_slash_RecupRepet',
+                    passwordInput: 'confirmaNovaSenha'
                 }
             };
             var element = elements[boxNum];
@@ -641,14 +513,24 @@ else {
 
             inputsOptions.forEach(input => { 
                 input.addEventListener('click', event => {
-                    selectedValue.textContent = input.dataset.label;
+
+                    var valor = '';
+                    if(input.dataset.label == 'null'){
+                        valor = 'Selecione sua especialidade';
+                    }
+                    else{
+                        valor = input.dataset.label;
+                    }
+                    selectedValue.textContent = valor;
                     optionsViewButton.click();
                 });
             });
         }
 
-        //INSERT IMG MEDICO
-        function carregarImgWeb(){ carregarImagem('img_User_Input', 'target_img', "../../Clinica/assets/users/user_placeholder.webp", 'img_user'); }
+        //INSERT IMGS MEDICO
+        function carregaCard(){ carregarImagem('Card_Input', 'target_card', '../../assets/medicos/user_placeholder.webp', 'card'); }
+        function carregaFoto(){ carregarImagem('Foto_Input', 'target_foto', '../../assets/medicos/foto_placeholder.webp', 'foto'); }
+        function carregaVideo(){ carregarImagem('Video_Input', 'target_video', '../../assets/medicos/video_vazio.mp4', 'video'); }
 
         // UPLOAD INFOS
         $(document).ready(function () {
@@ -682,7 +564,7 @@ else {
                 $('#msgErro_EditUser').removeClass('text-danger');
                 $('#msgErro_EditUser').removeClass('text-success');
                 $.ajax({
-                    url:"./Main_menus/EditEmail.php",
+                    url:"EditEmail.php",
                     method:"post",
                     data: $('form').serialize(),
                     dataType: "text",
@@ -690,8 +572,10 @@ else {
                         if(msg.trim() === 'E-mail alterado com Sucesso!'){
                             $('#msgErro_EditUser').addClass('text-success');
                             $('#msgErro_EditUser').text(msg);
-                            window.alert('Necessario relogar para alteração completa do email');
-                            window.location='../../configs/logout.php';
+                            setTimeout(() => { 
+                                window.alert('Necessario relogar para alteração completa do email');
+                                window.location='../configs/logout.php';
+                            }, 5000);
                         }
                         else{
                             $('#msgErro_EditUser').addClass('text-danger');
@@ -707,7 +591,7 @@ else {
                 $('#msgErro_EditUser').removeClass('text-danger');
                 $('#msgErro_EditUser').removeClass('text-success');
                 $.ajax({
-                    url:"./Main_menus/EditSenha.php",
+                    url:"EditSenha.php",
                     method:"post",
                     data: $('form').serialize(),
                     dataType: "text",
@@ -726,7 +610,7 @@ else {
             });
 
             $('.btn_salvar').click(function (e) {
-                $('#publico_alvo').prop('required',false);
+                $('#formacoes').prop('required',false);
                 $('#bio').prop('required',false);
                 $('#linkedin').prop('required',false);
                 $('#instagram').prop('required',false);
@@ -734,8 +618,25 @@ else {
                 $('#whatsapp').prop('required',false);
             });
 
+            $("#Video_Input").change(function(e){ 
+                const fileSize = e.target.files[0].size / 1024 / 1024; // para mb
+                if (fileSize > 20) {
+                    $('#btn_salva').addClass('btn_desativado');
+                    $('#btn_salva').removeAttr('type');
+                    $('#msg_DadosMedico').addClass('text-danger');
+                    $('#msg_DadosMedico').text('Tamanho do vídeo excedeu o limite do servidor! Apenas vídeos menores que 20 MB são aceitos.');
+                }
+                if (fileSize < 20) {
+                    $('#btn_salva').removeClass('btn_desativado');
+                    $('#btn_salva').attr('type', 'submit');
+                    $('#msg_DadosMedico').removeClass('text-danger');
+                    $('#msg_DadosMedico').text('');
+                }
+            });
+
             $("#Form_DadosMedico").submit(function (e) {
                 e.preventDefault();
+                $('#status_msg').text('');
                 $('#msg_DadosMedico').text('');
                 $('#msg_DadosMedico').removeClass('text-danger');
                 $('#msg_DadosMedico').removeClass('text-success');
@@ -766,6 +667,14 @@ else {
             });
         });
 
+        //RESET DE IMG
+        function imgPadrao(inputId, targetId, placeholder, imgContainerClass) {
+            document.getElementById(targetId).src = '../../assets/medicos/' + placeholder;
+            document.getElementById(inputId + '_default').value = 'true';
+            document.querySelector('.btn_VoltaPadrao_' + inputId).classList.add('hide');
+            document.querySelector('.' + imgContainerClass).classList.remove('imgSelected');
+        }
+
         //UPLOAD DE IMAGENS
         function carregarImagem(inputId, targetId, defaultImagePath, imgContainerClass) {
             var target = document.getElementById(targetId);
@@ -777,9 +686,12 @@ else {
 
             if (file) {
                 reader.readAsDataURL(file);
+                document.querySelector('.btn_VoltaPadrao_' + inputId).classList.remove('hide');
                 document.querySelector('.' + imgContainerClass).classList.add('imgSelected');
             } else {
                 target.src = defaultImagePath;
+                document.getElementById(inputId + '_default').value = 'true';
+                document.querySelector('.btn_VoltaPadrao_' + inputId).classList.add('hide');
                 document.querySelector('.' + imgContainerClass).classList.remove('imgSelected');
             }
         }

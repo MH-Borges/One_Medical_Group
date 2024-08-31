@@ -1,5 +1,5 @@
 <?php
-require_once("../../configs/conexao.php"); 
+require_once("../configs/conexao.php"); 
 
 $senhaAntiga = $_POST['antigaSenha'];
 $novaSenha = $_POST['novaSenha'];

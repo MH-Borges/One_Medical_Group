@@ -1332,6 +1332,19 @@ body #Main_Adm #Especialidades #ModalEspecialidade .modal-dialog .modal-content 
 body #Main_Adm #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec .editPen path {
   fill: #373435;
 }
+body #Main_Adm #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec .btn_VoltaPadrao_foto_espec_Input {
+  position: absolute;
+  z-index: 999 !important;
+  background-color: #373435;
+  bottom: -5vh;
+  left: 0;
+  width: 9vw;
+  height: 3.5vh;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #E0E0E0;
+  font-size: 0.8vw;
+}
 body #Main_Adm #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec span {
   position: absolute;
   top: -1vh;
@@ -1610,7 +1623,7 @@ body #Main_Adm #Medicos #List_Medicos .card {
   width: 18%;
   height: 55vh;
   overflow: hidden;
-  margin: 2vh 3%;
+  margin: 2vh 3% 6vh;
   border-radius: 0;
   background: none;
   display: flex;
@@ -1645,13 +1658,14 @@ body #Main_Adm #Medicos #List_Medicos .card .nome {
   font-weight: 900;
   color: #373435;
   text-align: center;
-  padding: 0;
+  padding: 0 0.5vw;
   z-index: 999;
 }
 body #Main_Adm #Medicos #List_Medicos .card .email {
   position: absolute;
   top: 82.5%;
-  width: 100%;
+  width: 90%;
+  left: 5%;
   font-family: "khmer-mn", sans-serif;
   font-size: 1.1vw;
   color: #373435;
@@ -1973,9 +1987,1041 @@ body #Main_Adm #Medicos #ModalDeletMedico .modal-dialog #msg_ModalDeletMedico {
   left: 0;
   min-height: 5vh;
   max-height: 28vh;
+  font-family: "TrajanPro", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+  overflow-y: auto;
+  z-index: 9999 !important;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog {
+  border-radius: 1vw;
+  background-color: #4B2F24;
+  color: #D0B498;
+  max-width: 100vw;
+  width: 40vw;
+  height: 35vh;
+  margin: 15vh auto;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #373435;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .CloseBtn::before, body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #E0E0E0;
+  transform: rotate(45deg);
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 80%;
+  padding: 1vw;
+  padding-bottom: 0.5vh;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-body h4 {
+  font-family: "TrajanPro", sans-serif;
+  font-size: 1.5vw;
+  color: #E0E0E0;
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 7.5% 0 2.5%;
+  text-align: center;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-body h4 span {
+  font-size: 0.9vw;
+  position: absolute;
+  bottom: 15%;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer .btn_cancel {
+  font-weight: 800;
+  background: #373435;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  color: #E0E0E0;
+  height: 4.5vh;
+  padding: 0 2vw;
+  padding-top: 0.25vh;
+  font-size: 1.05vw;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer .ativo, body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer .inativo {
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 800;
+  color: #E0E0E0;
+  margin-left: 2vw;
+  height: 4.5vh;
+  padding: 0 2vw;
+  padding-top: 0.25vh;
+  font-size: 1.05vw;
+  background: red;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer .inativo {
+  background: green;
+}
+body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog #msg_ModalStatusMedico {
+  position: absolute;
+  top: 110%;
+  width: 100%;
+  min-height: 5vh;
+  max-height: 28vh;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
   font-weight: 700;
   font-size: 1.25vw;
+  text-align: center;
+  overflow-y: auto;
+  z-index: 9999 !important;
+}
+body #menuMedico .menu li {
+  width: 12vw;
+  height: 8vh;
+  margin-left: 1vw;
+}
+body #menuMedico .menu li button {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  color: #E0E0E0;
+  transition: all ease-in-out 0.1s;
+}
+body #menuMedico .menu li button img, body #menuMedico .menu li button svg {
+  height: 40%;
+  width: auto;
+  margin-right: 0.75vw;
+}
+body #menuMedico .menu li button img path, body #menuMedico .menu li button svg path {
+  transition: all ease-in-out 0.1s;
+  fill: #E0E0E0;
+}
+body #menuMedico .menu li button:hover {
+  transform: scale(1.05);
+  color: #D2AE6D;
+}
+body #menuMedico .menu li button:hover img path, body #menuMedico .menu li button:hover svg path {
+  fill: #D2AE6D;
+}
+body #menuMedico .menu li:last-child {
+  width: 8vw;
+}
+body #menuMedico .menu #logo {
+  height: auto;
+}
+body #Main_Medicos {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+body #Main_Medicos #home {
+  padding: 0 5%;
+  padding-top: 210px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+body #Main_Medicos #home h2 {
+  position: absolute;
+  top: 15%;
+  font-family: "TrajanPro", sans-serif;
+  font-weight: 600;
+  font-size: 1.5vw;
+  color: red;
+}
+body #Main_Medicos #home #Form_DadosMedico {
+  width: 100%;
+  max-height: 77vh;
+  height: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+body #Main_Medicos #home #Form_DadosMedico #Card_foto_video {
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  justify-content: space-between;
+}
+body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block {
+  width: 32%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 1.25vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block h3, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block h3, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block h3 {
+  position: absolute;
+  top: 0;
+  font-family: "TrajanPro", sans-serif;
+  font-size: 1.25vw;
+  color: #4B2F24;
+}
+body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block span, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block span, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block span {
+  position: absolute;
+  bottom: -2.5vh;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-size: 0.75vw;
+  width: 100%;
+  text-align: center;
+}
+body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block input, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block input, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block input {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block img, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block video, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block img, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block video, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block img, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block video {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block .editPen, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block .editPen, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block .editPen {
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  bottom: 0;
+  padding: 0.8vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block .editPen path, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block .editPen path, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block .editPen path {
+  fill: #E0E0E0;
+}
+body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block::before, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block::before, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block::before {
+  content: "";
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  bottom: 0;
+  background: #4B2F24;
+  border-radius: 50%;
+}
+body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block .btn_VoltaPadrao_Card_Input, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block .btn_VoltaPadrao_Foto_Input, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block .btn_VoltaPadrao_Video_Input, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block .btn_VoltaPadrao_Card_Input, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block .btn_VoltaPadrao_Foto_Input, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block .btn_VoltaPadrao_Video_Input, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block .btn_VoltaPadrao_Card_Input, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block .btn_VoltaPadrao_Foto_Input, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block .btn_VoltaPadrao_Video_Input {
+  position: absolute;
+  z-index: 999 !important;
+  background-color: #373435;
+  top: 5vh;
+  width: 9vw;
+  height: 3.5vh;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #E0E0E0;
+  font-size: 0.8vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block {
+  padding: 7.5vh 1.25vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10vh 7.5vw 10vh 4vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox {
+  width: 50%;
+  height: 5.5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox input, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox textarea {
+  width: 90%;
+  border: none;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #4B2F24;
+  background: none;
+  outline: 1px solid #4B2F24;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 8%;
+  font-family: "TrajanPro", sans-serif;
+  position: absolute;
+  font-size: 1.05vw;
+  color: #4B2F24;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(6), body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(7), body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(8), body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(9) {
+  width: 25%;
+  margin: 7.5vh 0 3vh;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(6) span svg, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(7) span svg, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(8) span svg, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(9) span svg {
+  height: 100%;
+  width: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.25vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(6) span svg path, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(7) span svg path, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(8) span svg path, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(9) span svg path {
+  fill: none;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(6) span svg path:last-child, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(7) span svg path:last-child, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(8) span svg path:last-child, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(9) span svg path:last-child {
+  fill: #373435;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(8) span svg {
+  padding: 0.35vw;
+  padding-bottom: 0.5vw;
+  padding-top: 0.15vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 6vh 0 2vh;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 2%;
+  top: -4.5vh;
+  font-family: "TrajanPro", sans-serif;
+  position: absolute;
+  font-size: 1vw;
+  color: #4B2F24;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select {
+  position: relative;
+  width: 95%;
+  height: 100%;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select_input_espec {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  font-size: 1vw;
+  z-index: 5;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  outline: none;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button #selected_val_espec {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #4B2F24;
+  background: none;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+  outline: 1px solid #4B2F24;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button img, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button svg {
+  z-index: 99;
+  position: absolute;
+  right: 1vw;
+  width: 2vw;
+  height: 100%;
+  padding: 0.9vh;
+  transform: rotate(90deg);
+  transition: all ease-in-out 0.1s;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button img path, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button svg path {
+  fill: #373435;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options {
+  z-index: 999;
+  width: 95%;
+  left: 2.5%;
+  height: auto;
+  max-height: 35vh;
+  top: 5.1vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #4B2F24;
+  display: none;
+  position: absolute;
+  padding: 1vh 1vw;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_espec {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 6vh;
+  border-bottom: 1px solid #D0B498;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_espec span {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0.75vw;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 1vw;
+  font-weight: 500;
+  color: #D0B498;
+  z-index: 5;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_espec input[type=radio] {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_espec input[type=radio]:checked::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #D2AE6D;
+  opacity: 0.2;
+  z-index: -1;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_espec:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #D2AE6D;
+  opacity: 0.2;
+  z-index: -1;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_espec:last-child {
+  border: none;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #select_input_espec:checked + #select-button svg {
+  transform: rotate(-90deg);
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select:has(#select_input_espec:checked) + #options {
+  display: block;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .TextAreaBox {
+  height: 25vh;
+  margin-top: 6vh;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .TextAreaBox textarea {
+  border-radius: 1vw;
+  resize: none;
+  padding: 1vh 1vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .TextAreaBox span {
+  top: -10vh;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox input:focus ~ span, body #Main_Medicos #home #Form_DadosMedico #infos input:valid ~ span, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox textarea:focus ~ span, body #Main_Medicos #home #Form_DadosMedico #infos textarea:valid ~ span {
+  transform: translate(0.5vw, -5vh);
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+body #Main_Medicos #home #Form_DadosMedico .btn_salvar {
+  font-family: "TrajanPro", sans-serif;
+  font-weight: 700;
+  position: absolute;
+  bottom: 1.5vh;
+  left: 40%;
+  width: 20%;
+  height: 5.5vh;
+  background-color: #4B2F24;
+  color: #E0E0E0;
+  border-radius: 0.5vw;
+  z-index: 999;
+  font-size: 1.35vw;
+}
+body #Main_Medicos #home #Form_DadosMedico .btn_desativado {
+  opacity: 0.75;
+  pointer-events: none;
+}
+body #Main_Medicos #home #msg_DadosMedico {
+  position: absolute;
+  top: 13.5%;
+  width: 75%;
+  min-height: 7.5vh;
+  max-height: 10vh;
+  overflow-y: auto;
+  font-family: "khmer-mn", sans-serif;
+  font-weight: 800;
+  font-size: 1.35vw;
+  color: #373435;
+  z-index: 999 !important;
+  text-align: center;
+}
+body #Main_Medicos #ModalCriaSenha {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog {
+  border-radius: 1vw;
+  background-color: #4B2F24;
+  color: #D0B498;
+  max-width: 100vw;
+  width: 40vw;
+  height: 50vh;
+  margin: 15vh auto;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 75%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body h2 {
+  font-family: "TrajanPro", sans-serif;
+  font-size: 2vw;
+  color: #E0E0E0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3vh;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .BlockBox {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 3vh 0;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .BlockBox input {
+  width: 85%;
+  border: none;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #E0E0E0;
+  background: none;
+  outline: 1px solid #E0E0E0;
+  z-index: 10 !important;
+  border-radius: 0.75vw;
+  padding: 0 1.5vw;
+  padding-top: 0.2vh;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .BlockBox span {
+  all: unset;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.4vw;
+  color: #E0E0E0;
+  transition: 0.5s;
+  left: 11%;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .BlockBox .lengthInput {
+  position: absolute;
+  top: 100%;
+  left: 85%;
+  width: 4vw;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "khmer-mn", sans-serif;
+  color: #D0B498;
+  font-size: 1vw;
+  font-weight: 800;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .BlockBox input:focus ~ span, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body input:valid ~ span {
+  transform: translate(-0.9vw, -4.5vh);
+  font-size: 0.9vw;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput {
+  z-index: 4;
+  transition: all ease-in-out 0.25s;
+  z-index: 999 !important;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box_Repet {
+  position: absolute;
+  height: 100%;
+  width: 5vh;
+  right: 0;
+  z-index: 15 !important;
+  opacity: 0;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box img, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box svg, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box_Repet img, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box_Repet svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.35vw;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box img path, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box svg path, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box_Repet img path, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box_Repet svg path {
+  fill: #D2AE6D;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput:hover #eye_box, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput:hover #eye_box_Repet {
+  right: 8.5%;
+  opacity: 1;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-footer .btn_salvar {
+  font-family: "khmer-mn", sans-serif;
+  font-weight: 800;
+  background: #D2AE6D;
+  color: #373435;
+  margin-left: 2vw;
+  height: 4.5vh;
+  padding: 0 2vw;
+  padding-top: 0.5vh;
+  font-size: 1.25vw;
+}
+body #Main_Medicos #ModalCriaSenha #msg_ModalCriaMedico {
+  position: absolute;
+  top: 70%;
+  width: 50%;
+  left: 25%;
+  min-height: 10vh;
+  max-height: 25vh;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  color: #E0E0E0;
+  text-align: center;
+  overflow-y: auto;
+  z-index: 9999 !important;
+}
+body #Main_Medicos #ModalLogout {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Medicos #ModalLogout .modal-dialog {
+  border-radius: 1vw;
+  background-color: #4B2F24;
+  color: #E0E0E0;
+  max-width: 100vw;
+  width: 40vw;
+  height: 40vh;
+  margin: 15vh auto;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #373435;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .CloseBtn::before, body #Main_Medicos #ModalLogout .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #E0E0E0;
+  transform: rotate(45deg);
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 75%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-body h5, body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-body h6 {
+  font-family: "TrajanPro", sans-serif;
+  font-size: 2.75vw;
+  padding: 0 7.5vw;
+  text-align: center;
+  width: 100%;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-body h6 {
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin-top: 4vh;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-footer .btn_cancel {
+  font-weight: 800;
+  background: #373435;
+  color: #E0E0E0;
+  height: 4.5vh;
+  padding: 0 2vw;
+  padding-top: 0.5vh;
+  font-size: 1.25vw;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-footer .btn_salvar {
+  font-weight: 800;
+  font-family: "khmer-mn", sans-serif;
+  background: #D2AE6D;
+  color: #373435;
+  margin-left: 2vw;
+  height: 4.5vh;
+  padding: 0 2vw;
+  padding-top: 0.5vh;
+  font-size: 1.25vw;
+}
+body #Main_Medicos #ModalEditPerfil {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog {
+  border-radius: 1vw;
+  background-color: #4B2F24;
+  color: #D0B498;
+  max-width: 100vw;
+  width: 35vw;
+  height: 70vh;
+  margin: 10vh auto;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #373435;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .CloseBtn::before, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #E0E0E0;
+  transform: rotate(45deg);
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 75%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm a {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TrajanPro", sans-serif;
+  font-size: 1.25vw;
+  color: #E0E0E0;
+  border-bottom: 3px solid #D2AE6D;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm a:hover {
+  transform: scale(1.05);
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm .active {
+  color: #D2AE6D;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm {
+  width: 100%;
+  height: 90%;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca {
+  width: 100%;
+  height: 100%;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca h4, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca h4 {
+  font-family: "TrajanPro", sans-serif;
+  font-size: 2vw;
+  color: #E0E0E0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 7.5% 0 2.5%;
+  text-align: center;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 3.5vh 0;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox input, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox input, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox input, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox input {
+  width: 85%;
+  border: none;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #E0E0E0;
+  background: none;
+  outline: 1px solid #E0E0E0;
+  z-index: 10 !important;
+  border-radius: 0.75vw;
+  padding: 0 1.5vw;
+  padding-top: 0.2vh;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox span {
+  all: unset;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.4vw;
+  color: #E0E0E0;
+  transition: 0.5s;
+  left: 11%;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox .lengthInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox .lengthInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox .lengthInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox .lengthInput {
+  position: absolute;
+  top: 200%;
+  left: 85%;
+  width: 4vw;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "khmer-mn", sans-serif;
+  color: #D0B498;
+  font-size: 1vw;
+  font-weight: 800;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox input:focus ~ p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser input:valid ~ p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser input:focus ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser input:valid ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox input:focus ~ p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser input:valid ~ p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser input:focus ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser input:valid ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox input:focus ~ p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser input:valid ~ p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser input:focus ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser input:valid ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox input:focus ~ p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser input:valid ~ p, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser input:focus ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser input:valid ~ span {
+  transform: translate(-0.9vw, -4.5vh);
+  font-size: 0.9vw;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput {
+  z-index: 4;
+  transition: all ease-in-out 0.25s;
+  z-index: 999 !important;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet {
+  position: absolute;
+  height: 100%;
+  width: 5vh;
+  right: 0;
+  z-index: 15 !important;
+  opacity: 0;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.35vw;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg path {
+  fill: #D2AE6D;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput:hover #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput:hover #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput:hover #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput:hover #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput:hover #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput:hover #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput:hover #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput:hover #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput:hover #eye_box_RecupRepet {
+  right: 8.5%;
+  opacity: 1;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .btn_salvar, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .btn_salvar, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .btn_salvar, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .btn_salvar {
+  font-family: "khmer-mn", sans-serif;
+  font-weight: 800;
+  background: #D2AE6D;
+  color: #373435;
+  margin-left: 2vw;
+  margin-top: 7.5vh;
+  height: 4.5vh;
+  padding: 0 2vw;
+  padding-top: 0.5vh;
+  font-size: 1.25vw;
+}
+body #Main_Medicos #ModalEditPerfil #msgErro_EditUser {
+  position: absolute;
+  top: 82%;
+  width: 50%;
+  left: 25%;
+  min-height: 10vh;
+  max-height: 25vh;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  color: #E0E0E0;
   text-align: center;
   overflow-y: auto;
   z-index: 9999 !important;

@@ -4,7 +4,7 @@
 include('../../configs/conexao.php');
 
 if(@$_SESSION['id_user'] == null || @$_SESSION['nivel_user'] != 'adm'){
-    echo "<script language='javascript'> window.location='../index.php' </script>";
+    echo "<script language='javascript'> window.location='../../configs/logout.php' </script>";
     exit();
 }
 

@@ -6,7 +6,10 @@
     $nome_espec_edit = $_POST['nome_espec_edit'];
     $nome_espec = $_POST['nome_espec'];
     $descri_Espec = $_POST["descri_Espec"];
-    
+
+    $img_espec_edit = $_POST["img_espec_edit"];
+    @$foto_espec_Input_default = $_POST["foto_espec_Input_default"];
+
     // ===== VERIFICAÇÃO DE INPUTS VAZIOS + VERIFICAÇÃO DE POSSIVEIS ERROS =====
     if($id_espec_edit == ""){
         $res = $pdo->query("SELECT * FROM especialidade where nome = '$nome_espec'"); 
@@ -48,13 +51,11 @@
     }
 
     // ===== SCRIPTS PARA SUBIR IMG PARA O BANCO =====
-    function uploadImage($inputName, $targetDir, $defaultImage) {
+    function uploadImage($inputName, $targetDir) {
         $uploadedFile = @$_FILES[$inputName];
         $imageName = preg_replace('/[ -]+/' , '-' , $uploadedFile['name']);
         $imageName = preg_replace('/_/' , '-' , $uploadedFile['name']);
         $targetPath = $targetDir . $imageName;
-
-        if (empty($uploadedFile['name'])) { return $defaultImage; }
 
         $imageTemp = $uploadedFile['tmp_name'];
         $imageExt = pathinfo($imageName, PATHINFO_EXTENSION);
@@ -68,12 +69,27 @@
             exit();
         }
     }
-
-    // Diretórios e imagens padrão
-    $img_espec_Diret = '../../../assets/especialidades/';
-    $default_img_espec = 'placeholder.webp';
-    $img_espec = uploadImage('foto_espec_Input', $img_espec_Diret, $default_img_espec);
-
+    
+    if($_FILES['foto_espec_Input']['name'] == ""){
+        if($foto_espec_Input_default == "true"){
+            $img_espec = 'placeholder.webp';
+        }
+        else{
+            if($img_espec_edit != ""){
+                $img_espec = $img_espec_edit;
+            }
+        }
+    }
+    else{
+        if($_FILES['foto_espec_Input']['name'] == $img_espec_edit){
+            $img_espec = $img_espec_edit;
+        }
+        else{
+            // Diretórios e imagens padrão
+            $img_espec_Diret = '../../../assets/especialidades/';
+            $img_espec = uploadImage('foto_espec_Input', $img_espec_Diret);
+        }
+    }
 
     // ===== INSERÇÃO DE DADOS NO BANCO =====
     if($nome_espec != $nome_espec_edit && $nome_espec_edit != ""){
@@ -89,19 +105,13 @@
             $res2->execute();
         }
     }
-
     if($id_espec_edit == ""){
         $res = $pdo->prepare("INSERT INTO especialidade (nome, foto, descricao) VALUES (:nome, :foto, :descricao)");
         $res->bindValue(":foto", $img_espec);
     }
     else{
-        if($img_espec === "placeholder.webp"){
-            $res = $pdo->prepare("UPDATE especialidade SET nome = :nome, descricao = :descricao WHERE id = :id");
-        }
-        else if($img_espec !== "placeholder.webp"){
-            $res = $pdo->prepare("UPDATE especialidade SET foto = :foto, nome = :nome, descricao = :descricao WHERE id = :id");
-            $res->bindValue(":foto", $img_espec);
-        }
+        $res = $pdo->prepare("UPDATE especialidade SET foto = :foto, nome = :nome, descricao = :descricao WHERE id = :id");
+        $res->bindValue(":foto", $img_espec);
         $res->bindValue(":id", $id_espec_edit);
     }
 

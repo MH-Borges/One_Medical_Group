@@ -12,7 +12,7 @@ if(@count($dados) > 0){
 } 
 else {
     echo "<script language='javascript'> window.alert('Acesso Negado: Usuario não encontrado!') </script>";
-    echo "<script language='javascript'> window.location='../../sistema' </script>";
+    echo "<script language='javascript'> window.location='../configs/logout.php' </script>";
 }
 
 ?> 
@@ -380,7 +380,6 @@ else {
 
         //UPLOAD DE IMAGENS
         function carregarImagem(inputId, targetId, defaultImagePath, imgContainerClass) {
-
             var target = document.getElementById(targetId);
             var fileInput = document.querySelector("#" + inputId);
             var file = fileInput.files[0];
@@ -390,9 +389,12 @@ else {
 
             if (file) {
                 reader.readAsDataURL(file);
+                document.querySelector('.btn_VoltaPadrao_' + inputId).classList.remove('hide');
                 document.querySelector('.' + imgContainerClass).classList.add('imgSelected');
             } else {
                 target.src = defaultImagePath;
+                document.getElementById(inputId + '_default').value = 'true';
+                document.querySelector('.btn_VoltaPadrao_' + inputId).classList.add('hide');
                 document.querySelector('.' + imgContainerClass).classList.remove('imgSelected');
             }
         }

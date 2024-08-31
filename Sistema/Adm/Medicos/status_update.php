@@ -1,6 +1,6 @@
 <?php
     @session_start();
-    require_once("../../../configs/conexao.php"); 
+    require_once("../../configs/conexao.php"); 
 
     $id_Medico = $_POST['id_Medico'];
     $status_perfil = $_POST['status_perfil'];
