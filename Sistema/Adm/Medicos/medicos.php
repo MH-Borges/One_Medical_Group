@@ -78,9 +78,9 @@
                     <button class="btns btn_cancel" type="button" data-bs-dismiss="modal" onclick='window.location=`./index.php?pag=medicos`;'>Cancelar</button>
                     <button class="btns btn_salvar" type="submit">Salvar perfil</button>
                 </div>
+                <div id="msg_ModalCriaMedico"></div>
             </form>
         </div>
-        <div id="msg_ModalCriaMedico"></div>
     </div>
 
     <!-- Modal Delete medico-->
@@ -97,8 +97,8 @@
                     <button class="btns btn_cancel" type="button" data-bs-dismiss="modal" onclick='window.location=`./index.php?pag=medicos`;'>Cancelar</button>
                     <button class="btns btn_excluir" type="submit">Excluir</button>
                 </div>
+                <div id="msg_ModalDeletMedico"></div>
             </form>
-            <div id="msg_ModalDeletMedico"></div>
         </div>
     </div>
 
@@ -137,16 +137,13 @@
                 if($status_perfil == "ativo"){ $btn = 'Desativar'; } 
                 else { $btn = 'Ativar'; }
             ?>
-
             <form id="Form_ModalStatusMedico" method="post" class="modal-content">
                 <button type="button" class="CloseBtn" data-bs-dismiss="modal" aria-label="Close" onclick='window.location=`./index.php?pag=medicos`;'></button>
-                
                 <div class="modal-body">
                     <?php 
                         echo $mensagem; 
                     ?>
                 </div>
-
                 <div class="modal-footer">
                     <input type="hidden" id="id_Medico" name="id_Medico" value="<?php echo @$_GET['id'] ?>" required>
                     <input type="hidden" id="status_perfil" name="status_perfil" value="<?php echo $status_perfil ?>" required>
@@ -154,140 +151,134 @@
                     <button class="btns btn_cancel" type="button" data-bs-dismiss="modal" onclick='window.location=`./index.php?pag=medicos`;'>Cancelar</button>
                     <button class="btns <?php echo $status_perfil ?>" type="submit"><?php echo $btn; ?></button>
                 </div>
+                <div id="msg_ModalStatusMedico"></div>
             </form>
-            <div id="msg_ModalStatusMedico"></div>
         </div>
     </div>
 
     <!-- Modal Edit medico-->
     <div class="modal fade" id="ModalEditMedico" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
-
             <?php
                 $id_perfil = $_GET['id'];
-
                 $query = $pdo->query("SELECT * FROM medicos WHERE id = '$id_perfil' LIMIT 1");
                 $dados = $query->fetchAll(PDO::FETCH_ASSOC);
                 if(@count($dados) > 0){
-                    $status = $dados[0]['status_perfil'];
-                    $email = $dados[0]['email'];
-                    $senha = $dados[0]['senha'];
-                    $card = $dados[0]['card_'];
-                    $foto = $dados[0]['foto'];
-                    $video = $dados[0]['video'];
-                    $especialidade = $dados[0]['especialidade'];
-                    $nome = $dados[0]['nome'];
-                    $documento = $dados[0]['documento'];
-                    $descricao = $dados[0]['bio'];
-                    $formacoes = $dados[0]['formacoes'];
-                    $linkedin = $dados[0]['linkedin'];
-                    $instagram = $dados[0]['instagram'];
-                    $facebook = $dados[0]['facebook'];
-                    $whatsapp = $dados[0]['whatsapp'];
+                    $status_edit = $dados[0]['status_perfil'];
+                    $email_edit = $dados[0]['email'];
+                    $senha_edit = $dados[0]['senha'];
+                    $card_edit = $dados[0]['card_'];
+                    $foto_edit = $dados[0]['foto'];
+                    $video_edit = $dados[0]['video'];
+                    $especialidade_edit = $dados[0]['especialidade'];
+                    $nome_edit = $dados[0]['nome'];
+                    $documento_edit = $dados[0]['documento'];
+                    $descricao_edit = $dados[0]['bio'];
+                    $formacoes_edit = $dados[0]['formacoes'];
+                    $linkedin_edit = $dados[0]['linkedin'];
+                    $instagram_edit = $dados[0]['instagram'];
+                    $facebook_edit = $dados[0]['facebook'];
+                    $whatsapp_edit = $dados[0]['whatsapp'];
                 
                     //tratamentos
-                    $descricao = str_replace('<br />', " ", $descricao);
-                    $formacoes = str_replace('<br />', " ", $formacoes);
+                    $descricao_edit = str_replace('<br />', " ", $descricao_edit);
+                    $formacoes_edit = str_replace('<br />', " ", $formacoes_edit);
                 
-                    $nome_novo = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                    $nome_novo = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome_edit)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
                     $nome_tratado = preg_replace('/[ -]+/', '_', $nome_novo);
                 
-                    $card_edit = $card;
-                    $foto_edit = $foto;
-                    $video_edit = $video;
+                    $card_edit_antigo = $card_edit;
+                    $foto_edit_antigo = $foto_edit;
+                    $video_edit_antigo = $video_edit;
                 } 
-
             ?>
-
             <form id="Form_ModalEditMedico" method="post" class="modal-content">
                 <button type="button" class="CloseBtn" data-bs-dismiss="modal" aria-label="Close" onclick='window.location=`./index.php?pag=medicos`;'></button>
                 <div class="modal-body">
                     <h2>Edição de perfil</h2>
-
                     <div id="Block_Infos">
                         <div id="Card_foto_video">
                             <div id="Card_block">
-                                <h3>Selecione uma imagem para o seu card</h3>
+                                <h3>Selecione uma imagem para o perfil do medico</h3>
                                 <span>*Tamanho de imagem recomendado: 225 x 375</span>
                                 <input type="hidden" id="Card_Input_default" name="Card_Input_default" value="" required>
-                                <input type="file" value="<?php echo $card ?>" id="Card_Input" name="Card_Input" onChange="carregaCard();">
+                                <input type="file" value="<?php echo $card_edit ?>" id="Card_Input" name="Card_Input" onChange="carregaCard();">
                                 <?php
-                                    if($card == "user_placeholder.webp" || $card == ""){
-                                        $card = "
+                                    if($card_edit == "user_placeholder.webp" || $card_edit == ""){
+                                        $card_edit = "
                                             <img class='card' id='target_card' src='../../assets/medicos/user_placeholder.webp'>
                                             <button type='button' class='btns btn_VoltaPadrao_Card_Input hide' onclick='imgPadrao(`Card_Input`, `target_card`, `user_placeholder.webp`, `card`)'>Restaurar imagem</button>
                                         ";
                                     }else{
-                                        $card = "
-                                            <img class='card imgSelected' id='target_card' src='../../assets/medicos/$nome_tratado/$card'>
+                                        $card_edit = "
+                                            <img class='card imgSelected' id='target_card' src='../../assets/medicos/$nome_tratado/$card_edit'>
                                             <button type='button' class='btns btn_VoltaPadrao_Card_Input' onclick='imgPadrao(`Card_Input`, `target_card`, `user_placeholder.webp`, `card`)'>Restaurar imagem</button>
                                         ";
                                     }
                                     
-                                    echo $card;
+                                    echo $card_edit;
                                 ?>
                                 <img class="editPen" onclick="document.getElementById('Card_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
                             </div>
 
                             <div id="Foto_block">
-                                <h3>Selecione uma imagem para o seu perfil</h3>
+                                <h3>Selecione uma imagem para o perfil do medico</h3>
                                 <span>*Tamanho de imagem recomendado: 515 x 325</span>
                                 <input type="hidden" id="Foto_Input_default" name="Foto_Input_default" value="" required>
-                                <input type="file" value="<?php echo $foto ?>" id="Foto_Input" name="Foto_Input" onChange="carregaFoto();">
+                                <input type="file" value="<?php echo $foto_edit ?>" id="Foto_Input" name="Foto_Input" onChange="carregaFoto();">
                                 <?php
-                                    if($foto == "foto_placeholder.webp" || $foto == ""){
-                                        $foto = "
+                                    if($foto_edit == "foto_placeholder.webp" || $foto_edit == ""){
+                                        $foto_edit = "
                                             <img class='foto' id='target_foto' src='../../assets/medicos/foto_placeholder.webp'>
                                             <button type='button' class='btns btn_VoltaPadrao_Foto_Input hide' onclick='imgPadrao(`Foto_Input`, `target_foto`, `foto_placeholder.webp`, `foto`)'>Restaurar imagem</button>
                                         ";
                                     }else{
-                                        $foto = "
-                                            <img class='foto imgSelected' id='target_foto' src='../../assets/medicos/$nome_tratado/$foto'>
+                                        $foto_edit = "
+                                            <img class='foto imgSelected' id='target_foto' src='../../assets/medicos/$nome_tratado/$foto_edit'>
                                             <button type='button' class='btns btn_VoltaPadrao_Foto_Input' onclick='imgPadrao(`Foto_Input`, `target_foto`, `foto_placeholder.webp`, `foto`)'>Restaurar imagem</button>
                                         ";
                                     }
                                     
-                                    echo $foto;
+                                    echo $foto_edit;
                                 ?>
                                 <img class="editPen" onclick="document.getElementById('Foto_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
                             </div>
 
                             <div id="Video_block">
-                                <h3>Selecione um video para o seu perfil</h3>
+                                <h3>Selecione um video para o perfil do medico</h3>
                                 <span>*Tamanho de Video recomendado: 1920 x 1080</span>
                                 <input type="hidden" id="Video_Input_default" name="Video_Input_default" value="" required>
-                                <input type="file" value="<?php echo $video ?>" id="Video_Input" name="Video_Input" onChange="carregaVideo();">
+                                <input type="file" value="<?php echo $video_edit ?>" id="Video_Input" name="Video_Input" onChange="carregaVideo();">
                                 <?php
-                                    if($video == "video_vazio.mp4" || $video == ""){
-                                        $video = "
+                                    if($video_edit == "video_vazio.mp4" || $video_edit == ""){
+                                        $video_edit = "
                                             <video class='video' id='target_video'>
                                                 <source src='../../assets/medicos/video_vazio.mp4'>
                                             </video>
                                             <button type='button' class='btns btn_VoltaPadrao_Video_Input hide' onclick='imgPadrao(`Video_Input`, `target_video`, `video_vazio.mp4`, `video`)'>Restaurar imagem</button>
                                         ";
                                     }else{
-                                        $video = "
+                                        $video_edit = "
                                             <video class='video imgSelected' id='target_video'>
-                                                <source  src='../../assets/medicos/$nome_tratado/$video'>
+                                                <source  src='../../assets/medicos/$nome_tratado/$video_edit'>
                                             </video>
                                             <button type='button' class='btns btn_VoltaPadrao_Video_Input' onclick='imgPadrao(`Video_Input`, `target_video`, `video_vazio.mp4`, `video`)'>Restaurar Video</button>
                                         ";
                                     }
                                     
-                                    echo $video;
+                                    echo $video_edit;
                                 ?>
                                 <img class="editPen" onclick="document.getElementById('Video_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
                             </div>
                         </div>
-
                         <div id="infos">
                             <div class="BlockBox">
-                                <input type="text" name="nome" id="nome" value="<?php echo @$nome?>" maxlength="100" required>
+                                <input type="text" name="nome" id="nome" value="<?php echo @$nome_edit?>" maxlength="100" required>
                                 <span>Seu nome e sobrenome:</span>
                                 <p class="lengthInput NomeInput"></p>
                             </div>
                             <div class="BlockBox">
-                                <input type="text" name="doc" id="doc" value="<?php echo @$documento?>" maxlength="100" required>
+                                <input type="text" name="doc" id="doc" value="<?php echo @$documento_edit?>" maxlength="100" required>
                                 <span>Numero de documento (CRM/CRP/Outros):</span>
                             </div>
                             <div class="Seletor">
@@ -296,14 +287,13 @@
                                     <input type="checkbox" id="select_input_espec" onchange="OptionSelection('selected_val_espec', 'select_input_espec', 'options_espec');">
 
                                     <div id="select-button">
-                                        <div id='selected_val_espec'><?php if($especialidade == ""){ echo "Selecione sua especialidade"; } else{ echo $especialidade; } ?></div>
+                                        <div id='selected_val_espec'><?php if($especialidade_edit == ""){ echo "Selecione sua especialidade"; } else{ echo $especialidade_edit; } ?></div>
                                         <img src="../../assets/sistema/seta_fina.svg" onload="SVGInject(this)">
                                     </div>
                                 </div>
                                 
                                 <ul id="options">
                                     <?php 
-
                                         echo "
                                             <li class='options_espec'>
                                                 <input type='radio' name='especialidade' value='null' data-label='null'>
@@ -315,7 +305,7 @@
                                         $dados = $query->fetchAll(PDO::FETCH_ASSOC);
                                         for ($i=0; $i < count($dados); $i++) {
                                             $nome_espec = $dados[$i]['nome'];
-                                            if($nome_espec === $especialidade){
+                                            if($nome_espec === $especialidade_edit){
                                                 echo "
                                                     <li class='options_espec'>
                                                         <input type='radio' name='especialidade' value='$nome_espec' data-label='$nome_espec' checked>
@@ -336,90 +326,66 @@
                                 </ul>
                             </div>
                             <div class="BlockBox TextAreaBox">
-                                <textarea type="text" name="bio" id="bio" maxlength="5000" required><?php echo $descricao ?></textarea>
+                                <textarea type="text" name="bio" id="bio" maxlength="5000" required><?php echo $descricao_edit ?></textarea>
                                 <span>Sua Biografia:</span>
                             </div>
                             <div class="BlockBox TextAreaBox">
-                                <textarea type="text" name="formacoes" id="formacoes" maxlength="1500" required><?php echo $formacoes ?></textarea>
+                                <textarea type="text" name="formacoes" id="formacoes" maxlength="1500" required><?php echo $formacoes_edit ?></textarea>
                                 <span>Suas Formações:</span>
                             </div>
                             <div class="BlockBox">
-                                <input type="text" name="linkedin" id="linkedin" value="<?php echo @$linkedin?>" required>
+                                <input type="text" name="linkedin" id="linkedin" value="<?php echo @$linkedin_edit?>" required>
                                 <span><img src="../../assets/sistema/linkedin_full.svg" onload="SVGInject(this)"> Linkedin:</span>
                             </div>
                             <div class="BlockBox">
-                                <input type="text" name="instagram" id="instagram" value="<?php echo @$instagram?>" required>
+                                <input type="text" name="instagram" id="instagram" value="<?php echo @$instagram_edit?>" required>
                                 <span><img src="../../assets/sistema/instagram_full.svg" onload="SVGInject(this)"> Instagram:</span>
                             </div>
                             <div class="BlockBox">
-                                <input type="text" name="facebook" id="facebook" value="<?php echo @$facebook?>" required>
+                                <input type="text" name="facebook" id="facebook" value="<?php echo @$facebook_edit?>" required>
                                 <span><img src="../../assets/sistema/facebook_full.svg" onload="SVGInject(this)"> Facebook:</span>
                             </div>
                             <div class="BlockBox">
-                                <input type="text" name="whatsapp" id="whatsapp" value="<?php echo @$whatsapp?>" required>
+                                <input type="text" name="whatsapp" id="whatsapp" value="<?php echo @$whatsapp_edit?>" required>
                                 <span><img src="../../assets/sistema/whatsapp_full.svg" onload="SVGInject(this)"> Whatsapp:</span>
                             </div>
                         </div>
-
-                        <?php
-                            $hiddenFields = '
-                                <input type="hidden" id="card_edit" name="card_edit" value="'.$card_edit.'">
-                                <input type="hidden" id="foto_edit" name="foto_edit" value="'.$foto_edit.'">
-                                <input type="hidden" id="video_edit" name="video_edit" value="'.$video_edit.'">
-                                <input type="hidden" id="nome_antigo" name="nome_antigo" value="'.$nome.'">
-                                <input type="hidden" id="idUser" name="idUser" value="'.$idUserSession.'">
-                                <input type="hidden" id="status" name="status" value="'.$status.'">
-                            ';
-
-                            if($status == 'inativo') {
-                                if($nome != "") {
-                                    echo '<button class="btns btn_salvar btn_desativado" id="btn_salva">Perfil desativado</button>'; 
-                                } else {
-                                    echo $hiddenFields;
-                                    echo '<button class="btns btn_salvar" type="submit" id="btn_salva">Ativar perfil</button>';
-                                }
-                            } else {
-                                echo $hiddenFields;
-                                echo '<button class="btns btn_salvar" type="submit" id="btn_salva">Salvar informações</button>';
-                            }
-                        ?>
                     </div>
-
                     <div id="Block_SenhaEmail">
-                        <div id="EmailTroca">
+                        <div id="EmailTrocaBox">
                             <h4>Alteração de Email:</h4>
                             <div id="EditEmailUser">
                                 <div class="BlockBox">
-                                    <input type="text" name="novoEmail" id="novoEmail" maxlength="50" required>
+                                    <input type="text" name="novoEmailEditMedico" id="novoEmailEditMedico" maxlength="50" required>
                                     <span>Novo e-mail:</span>
                                     <p class="lengthInput novoEmailEditInput"></p>
                                 </div>
                                 <div class="BlockBox">
-                                    <input type="text" name="confirmaNovoEmail" id="confirmaNovoEmail" maxlength="50" required>
+                                    <input type="text" name="confirmaNovoEmailEditMedico" id="confirmaNovoEmailEditMedico" maxlength="50" required>
                                     <span>Confirma novo e-mail:</span>
                                     <p class="lengthInput ConfirmaNovoEmailEditInput"></p>
                                 </div>
                             </div>
                         </div>
 
-                        <div id="SenhaTroca">
+                        <div id="SenhaTrocaBox">
                             <h4>Alteração de Senha:</h4>
                             <div id="EditSenhaUser">
                                 <div class="BlockBox senhaInput">
-                                    <input type="password" name="novaSenha" id="novaSenha" maxlength="25" required>
+                                    <input type="password" name="novaSenhaEditMedico" id="novaSenhaEditMedico" maxlength="25" required>
                                     <span>Nova senha:</span>
-                                    <div id="eye_boxRecup" onclick="ShowPass(`2`)">
-                                        <img id="eyeRecup" src="../../../assets/Login/eye.svg" onload="SVGInject(this)">
-                                        <img id="eye_slashRecup" class="hide" src="../../../assets/Login/eye_slash.svg" onload="SVGInject(this)">
+                                    <div id="eye_boxRecup" onclick="ShowPass(`4`)">
+                                        <img id="eyeRecup" src="../../assets/sistema/eye.svg" onload="SVGInject(this)">
+                                        <img id="eye_slashRecup" class="hide" src="../../assets/sistema/eye_slash.svg" onload="SVGInject(this)">
                                     </div>
                                     <p class="lengthInput NovaSenhaEditInput"></p>
                                 </div>
                                 <div class="BlockBox senhaInput">
-                                    <input type="password" name="confirmaNovaSenha" id="confirmaNovaSenha" maxlength="25" required>
+                                    <input type="password" name="confirmaNovaSenhaEditMedico" id="confirmaNovaSenhaEditMedico" maxlength="25" required>
                                     <span>Confirma nova senha:</span>
-                                    <div id="eye_box_RecupRepet" onclick="ShowPass(`3`)">
-                                        <img id="eye_RecupRepet" src="../../../assets/Login/eye.svg" onload="SVGInject(this)">
-                                        <img id="eye_slash_RecupRepet" class="hide" src="../../../assets/Login/eye_slash.svg" onload="SVGInject(this)">
+                                    <div id="eye_box_RecupRepet" onclick="ShowPass(`5`)">
+                                        <img id="eye_RecupRepet" src="../../assets/sistema/eye.svg" onload="SVGInject(this)">
+                                        <img id="eye_slash_RecupRepet" class="hide" src="../../assets/sistema/eye_slash.svg" onload="SVGInject(this)">
                                     </div>
                                     <p class="lengthInput ConfirmaNovaSenhaEditInput"></p>
                                 </div>
@@ -427,22 +393,30 @@
                         </div>
                     </div>          
                 </div>
-                
                 <div class="modal-footer">
-                    <input type="hidden" id="id_Edit_Medico" name="id_Edit_Medico" value="<?php echo @$_GET['id'] ?>" required>
-                    
-                    <input value="<?php echo $email ?>" class="hide" type="hidden" name="emailUserSemAlteracoes" id="emailUserSemAlteracoes">
-                    <input value="<?php echo $senha ?>" class="hide" type="hidden" name="senhaUserSemAlteracoes" id="senhaUserSemAlteracoes">
-
                     <button class="btns btn_cancel" type="button" data-bs-dismiss="modal" onclick='window.location=`./index.php?pag=medicos`;'>Cancelar</button>
-                    <button class="btns btn_salvar" type="submit">Salvar alterações</button>
-                </div>
-            </form>
+                    <?php
+                        echo '
+                            <input type="hidden" id="id_Edit_Medico" name="id_Edit_Medico" value="'.@$_GET['id'].'" required>
+                            <input type="hidden" id="card_edit" name="card_edit" value="'.$card_edit_antigo.'">
+                            <input type="hidden" id="foto_edit" name="foto_edit" value="'.$foto_edit_antigo.'">
+                            <input type="hidden" id="video_edit" name="video_edit" value="'.$video_edit_antigo.'">
+                            <input type="hidden" id="nome_antigo" name="nome_antigo" value="'.$nome_edit.'">
+                            <input type="hidden" id="emailMedicoSemAlteracoes" name="emailMedicoSemAlteracoes" value="'.$email_edit.'">
+                            <input type="hidden" id="senhaMedicoSemAlteracoes" name="senhaMedicoSemAlteracoes" value="'.$senha_edit.'">
+                        ';
 
-            <div id="msg_ModalEditMedico"></div>
+                        if($nome_edit != "") {
+                            echo '<button class="btns btn_salvar" type="submit" id="btn_salva">Salvar alterações</button>';
+                        } else {
+                            echo '<button class="btns btn_salvar" type="submit" id="btn_salva">Ativar perfil</button>';
+                        }
+                    ?>
+                </div>
+                <div id="msg_ModalEditMedico"></div>
+            </form>
         </div>
     </div>
-    
 
     <!-- FUNÇÕES PHP NA CHAMADA DE MODAL -->
     <?php
@@ -473,55 +447,6 @@
     ?>
 
     <script>
-
-    /////*****!!!!ADICIONAR MEDICO PELO PAINEL ADM VERIFICAR TODAS ESSAS FUNÇÕES !!!!*****
-        var fileSize = '';
-        function ShowPass(boxNum) {
-            var elements = {
-                '1': {
-                    eye: 'eye',
-                    eyeSlash: 'eye_slash',
-                    passwordInput: 'novaSenhaUser'
-                },
-                '2': {
-                    eye: 'eye_Repet',
-                    eyeSlash: 'eye_slash_Repet',
-                    passwordInput: 'repetNovaSenhaUser'
-                },
-                '3': {
-                    eye: 'eye',
-                    eyeSlash: 'eye_slash',
-                    passwordInput: 'antigaSenha'
-                },
-                '4': {
-                    eye: 'eyeRecup',
-                    eyeSlash: 'eye_slashRecup',
-                    passwordInput: 'novaSenha'
-                },
-                '5': {
-                    eye: 'eye_RecupRepet',
-                    eyeSlash: 'eye_slash_RecupRepet',
-                    passwordInput: 'confirmaNovaSenha'
-                }
-            };
-            var element = elements[boxNum];
-            if (element) {
-                var eye = document.getElementById(element.eye);
-                var eyeSlash = document.getElementById(element.eyeSlash);
-                var passwordInput = document.getElementById(element.passwordInput);
-
-                if (eyeSlash.classList.contains('hide')) {
-                    eyeSlash.classList.remove('hide');
-                    eye.classList.add('hide');
-                    passwordInput.type = 'text';
-                } else {
-                    eyeSlash.classList.add('hide');
-                    eye.classList.remove('hide');
-                    passwordInput.type = 'password';
-                }
-            }
-        }
-
         //FUNÇÃO DE SELETORES CUSTOMIZADOS
         function OptionSelection(selectedValueId, optionsButtonId, optionInputsClass) {
             let selectedValue = document.getElementById(selectedValueId),
@@ -556,35 +481,6 @@
             document.querySelector('.btn_VoltaPadrao_' + inputId).classList.add('hide');
             document.querySelector('.' + imgContainerClass).classList.remove('imgSelected');
         }
-
-        $('.btn_salvar').click(function (e) {
-            $('#formacoes').prop('required',false);
-            $('#bio').prop('required',false);
-            $('#linkedin').prop('required',false);
-            $('#instagram').prop('required',false);
-            $('#facebook').prop('required',false);
-            $('#whatsapp').prop('required',false);
-        });
-
-        $("#Video_Input").change(function(e){ 
-            const fileSize = e.target.files[0].size / 1024 / 1024; // para mb
-            if (fileSize > 20) {
-                $('#btn_salva').addClass('btn_desativado');
-                $('#btn_salva').removeAttr('type');
-                $('#msg_DadosMedico').addClass('text-danger');
-                $('#msg_DadosMedico').text('Tamanho do vídeo excedeu o limite do servidor! Apenas vídeos menores que 20 MB são aceitos.');
-            }
-            if (fileSize < 20) {
-                $('#btn_salva').removeClass('btn_desativado');
-                $('#btn_salva').attr('type', 'submit');
-                $('#msg_DadosMedico').removeClass('text-danger');
-                $('#msg_DadosMedico').text('');
-            }
-        });
-
-    /////*****!!!!ADICIONAR MEDICO PELO PAINEL ADM VERIFICAR TODAS ESSAS FUNÇÕES !!!!*****
-
-
 
         //UPLOAD DAS INFOS NO BANCO DE DADOS
         $("#Form_ModalCriaMedico").submit(function (e) {
@@ -663,6 +559,68 @@
                     }
                 }
             })
+        });
+
+        $('.btn_salvar').click(function (e) {
+            $('#formacoes').prop('required',false);
+            $('#bio').prop('required',false);
+            $('#linkedin').prop('required',false);
+            $('#instagram').prop('required',false);
+            $('#facebook').prop('required',false);
+            $('#whatsapp').prop('required',false);
+
+            $('#novoEmailEditMedico').prop('required',false);
+            $('#confirmaNovoEmailEditMedico').prop('required',false);
+
+            $('#novaSenhaEditMedico').prop('required',false);
+            $('#confirmaNovaSenhaEditMedico').prop('required',false);
+        });
+
+        $("#Video_Input").change(function(e){ 
+            const fileSize = e.target.files[0].size / 1024 / 1024; // para mb
+            if (fileSize > 20) {
+                $('#btn_salva').addClass('btn_desativado');
+                $('#btn_salva').removeAttr('type');
+                $('#msg_ModalEditMedico').addClass('text-danger');
+                $('#msg_ModalEditMedico').text('Tamanho do vídeo excedeu o limite do servidor! Apenas vídeos menores que 20 MB são aceitos. Selecione outro video para salvar alterações');
+            }
+            if (fileSize < 20) {
+                $('#btn_salva').removeClass('btn_desativado');
+                $('#btn_salva').attr('type', 'submit');
+                $('#msg_ModalEditMedico').removeClass('text-danger');
+                $('#msg_ModalEditMedico').text('');
+            }
+        });
+
+        $("#Form_ModalEditMedico").submit(function (e) {
+            e.preventDefault();
+            $('#msg_ModalEditMedico').text('');
+            $('#msg_ModalEditMedico').removeClass('text-danger');
+            $('#msg_ModalEditMedico').removeClass('text-success');
+            $.ajax({
+                url: "Medicos/insert_dados_edit.php",
+                type: 'POST',
+                data: new FormData(this),
+                success: function (msg) {
+                    if (msg.trim() === "Perfil Atualizado com Sucesso!!") {
+                        $('#msg_ModalEditMedico').addClass('text-success');
+                        $('#msg_ModalEditMedico').text(msg);
+                        setTimeout(() => { window.location='./index.php?pag=medicos'; }, 2000);
+                    }
+                    else {
+                        $('#msg_ModalEditMedico').addClass('text-danger');
+                        $('#msg_ModalEditMedico').text(msg);
+                    }
+                },
+                cache: false,
+                contentType: false,
+                processData: false,
+                xhr: function () {
+                    var myXhr = $.ajaxSettings.xhr();
+                    if (myXhr.upload){ myXhr.upload.addEventListener('progress', function() {}, false); }
+                    return myXhr;
+                }
+            });
         });
     </script>
 </section>

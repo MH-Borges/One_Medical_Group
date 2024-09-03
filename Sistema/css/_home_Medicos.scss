@@ -177,7 +177,7 @@
                         background: none;
                         outline: 1px solid $Marrom;
                         z-index: 10 !important;
-                        border-radius: 2vw;
+                        border-radius: 0.25vw;
                         padding: 0 1.5vw;
                     }
                     span{
@@ -276,7 +276,7 @@
                                 font-weight: 600;
                                 color: $Marrom;
                                 background: none;
-                                border-radius: 2vw;
+                                border-radius: 0.25vw;
                                 padding: 0 1.5vw;
                                 outline: 1px solid $Marrom;
                             }
@@ -375,7 +375,7 @@
                     height: 25vh;
                     margin-top: 6vh;
                     textarea{
-                        border-radius: 1vw;
+                        border-radius: 0.25vw;
                         resize: none;
                         padding: 1vh 1vw;
                     }
@@ -482,7 +482,7 @@
                             background: none;
                             outline: 1px solid $Branco;
                             z-index: 10 !important;
-                            border-radius: 0.75vw;
+                            border-radius: 0.25vw;
                             padding: 0 1.5vw;
                             padding-top: 0.2vh;
                         }

@@ -358,6 +358,16 @@ else {
                     eye: 'eye_RecupRepet',
                     eyeSlash: 'eye_slash_RecupRepet',
                     passwordInput: 'confirmaNovaSenha'
+                },
+                '4': {
+                    eye: 'eyeRecup',
+                    eyeSlash: 'eye_slashRecup',
+                    passwordInput: 'novaSenhaEditMedico'
+                },
+                '5': {
+                    eye: 'eye_RecupRepet',
+                    eyeSlash: 'eye_slash_RecupRepet',
+                    passwordInput: 'confirmaNovaSenhaEditMedico'
                 }
             };
             var element = elements[boxNum];

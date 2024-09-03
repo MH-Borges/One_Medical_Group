@@ -34,7 +34,7 @@
 		$res->bindValue(":id", $id);
 
 		if ($res->execute()) {
-			echo 'Nova senha adicionada com Sucesso!';
+			echo 'Nova senha adicionada com Sucesso! Aguarde alguns segundos até a tela reiniciar.';
 		} else {
 			echo 'Erro: Tente novamente!';
 		}

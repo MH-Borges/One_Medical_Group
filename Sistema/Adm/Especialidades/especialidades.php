@@ -89,7 +89,7 @@
                         </div>
     
                         <div class="BlockBox descricaoBox">
-                            <textarea type="text" name="descri_Espec" id="descri_Espec" maxlength="5000" required><?php echo @$descri_espec_edit ?></textarea>
+                            <textarea type="text" name="descri_Espec" id="descri_Espec" maxlength="1750" required><?php echo @$descri_espec_edit ?></textarea>
                             <span>Descrição:</span>
                         </div>
                     </div>

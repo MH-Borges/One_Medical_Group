@@ -133,7 +133,7 @@ else {
             <div id="msg_ModalCriaMedico"></div>
         </div>
         <?php
-            if($senha == "" && $senha_temp != "" && $status == "inativo") {
+            if($senha == "" && $senha_temp != "") {
                 echo "
                     <button id='openModalCriaSenha' class='hide' type='button' data-bs-toggle='modal' data-bs-target='#ModalCriaSenha'></button>
                     <script language='javascript'>$('#openModalCriaSenha').click();</script>
@@ -431,7 +431,6 @@ else {
     </main>
 
     <script>
-        var fileSize = '';
         //VERICAÇÃO QUANTIDADE DE CARACTERES INPUT + Show Eye Icon
         function verificaTamanhoInput(inputId, displayClass, maxLen) {
             var inputElement = document.getElementById(inputId);
@@ -545,7 +544,7 @@ else {
                     data: $('form').serialize(),
                     dataType: "text",
                     success: function(msg){
-                        if(msg.trim() === 'Nova senha adicionada com Sucesso!'){
+                        if(msg.trim() === 'Nova senha adicionada com Sucesso! Aguarde alguns segundos até a tela reiniciar.'){
                             $('#msg_ModalCriaMedico').addClass('text-success');
                             $('#msg_ModalCriaMedico').text(msg);
                             setTimeout(() => { location.reload(); }, 5000);

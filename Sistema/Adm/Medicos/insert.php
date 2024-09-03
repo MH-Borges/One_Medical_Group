@@ -8,7 +8,6 @@
     $senha_crip = md5($senha_temp);
     $email = strtolower($email);
 
-
     // ===== VERIFICAÇÃO DE INPUTS VAZIOS + VERIFICAÇÃO DE POSSIVEIS ERROS =====
     if($email == ""){
         echo 'Preencha o campo de email';
