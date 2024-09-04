@@ -55,6 +55,7 @@
                         $dados = $query->fetchAll(PDO::FETCH_ASSOC);
                         if(@count($dados) > 0){
                             $card_edit = $dados[0]['card_banner'];
+                            $banner_edit = $dados[0]['banner'];
                             $titulo_edit = $dados[0]['titulo'];
                             $especialidade_edit = $dados[0]['especialidade_atr'];
                             $descricao_edit = $dados[0]['descricao'];
@@ -76,6 +77,7 @@
                             $video02 = $dados[0]['video_relac_02'];
 
                             $card_edit_antigo = $card_edit;
+                            $banner_edit_antigo = $banner_edit;
 
                             $foto01_edit_antigo = $foto01;
                             $foto02_edit_antigo = $foto02;
@@ -113,6 +115,7 @@
                         $titulo_modal_trat = "Novo Tratamento!"; 
                         $btn_trat = "Salvar tratamento";
                         $card_edit = "";
+                        $banner_edit = "";
                         $foto01 = "";
                         $foto02 = "";
                         $foto03 = "";
@@ -146,6 +149,28 @@
                                 echo $card_edit;
                             ?>
                             <img class="editPen" onclick="document.getElementById('Card_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
+                        </div>
+
+                        <div id="Banner_block">
+                            <h3>Selecione um banner para o tratamento</h3>
+                            <span>*Tamanho recomendado: 1920 x 1080</span>
+                            <input type="hidden" id="Banner_Input_default" name="Banner_Input_default" value="" required>
+                            <input type="file" id="Banner_Input" name="Banner_Input" onChange="carregaBanner();">
+                            <?php
+                                if($banner_edit == "banner_placeholder.webp" || $banner_edit == ""){
+                                    $banner_edit = "
+                                        <img class='banner' id='target_banner' src='../../assets/tratamentos/banner_placeholder.webp'>
+                                        <button type='button' class='btns btn_VoltaPadrao_Banner_Input hide' onclick='imgPadrao(`Banner_Input`, `target_banner`, `banner_placeholder.webp`, `banner`)'>Restaurar imagem</button>
+                                    ";
+                                }else{
+                                    $banner_edit = "
+                                        <img class='banner imgSelected' id='target_banner' src='../../assets/tratamentos/$titulo_tratado/$banner_edit'>
+                                        <button type='button' class='btns btn_VoltaPadrao_Banner_Input' onclick='imgPadrao(`Banner_Input`, `target_banner`, `banner_placeholder.webp`, `banner`)'>Restaurar imagem</button>
+                                    ";
+                                }
+                                echo $banner_edit;
+                            ?>
+                            <img class="editPen" onclick="document.getElementById('Banner_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
                         </div>
                         <div id="infos">
                             <div class="BlockBox">
@@ -389,6 +414,7 @@
                     <input type="hidden" id="titulo_trat_edit" name="titulo_trat_edit" value="<?php echo @$titulo_edit ?>">
                     
                     <input type="hidden" id="card_edit" name="card_edit" value="<?php echo @$card_edit_antigo ?>">
+                    <input type="hidden" id="banner_edit" name="banner_edit" value="<?php echo @$banner_edit_antigo ?>">
                     <input type="hidden" id="foto01_edit" name="foto01_edit" value="<?php echo @$foto01_edit_antigo ?>">
                     <input type="hidden" id="foto02_edit" name="foto02_edit" value="<?php echo @$foto02_edit_antigo ?>">
                     <input type="hidden" id="foto03_edit" name="foto03_edit" value="<?php echo @$foto03_edit_antigo ?>">
@@ -465,6 +491,7 @@
 
         //CHAMADA DE FUNÇÃO PARA UPLOAD DE IMG BANCO DE DADOS
         function carregaCard(){ carregarImagem('Card_Input', 'target_card', '../../assets/tratamentos/card_placeholder.webp', 'card'); }
+        function carregaBanner(){ carregarImagem('Banner_Input', 'target_banner', '../../assets/tratamentos/banner_placeholder.webp', 'banner'); }
         function carregaVideo01(){ carregarImagem('Video01_Input', 'target_video01', '../../assets/tratamentos/video_vazio.mp4', 'video01'); }
         function carregaVideo02(){ carregarImagem('Video02_Input', 'target_video02', '../../assets/tratamentos/video_vazio.mp4', 'video02'); }
         

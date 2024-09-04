@@ -12,6 +12,7 @@
     $etapas = $_POST['etapas'];
 
     $card_edit = $_POST['card_edit'];
+    $banner_edit = $_POST['banner_edit'];
 
     $foto01_edit = $_POST['foto01_edit'];
     $foto02_edit = $_POST['foto02_edit'];
@@ -22,6 +23,8 @@
     $video02_edit = $_POST['video02_edit'];
 
     @$Card_Input_default = $_POST["Card_Input_default"];
+    @$Banner_Input_default = $_POST["Banner_Input_default"];
+
     @$foto01_Input_default = $_POST["foto01_Input_default"];
     @$foto02_Input_default = $_POST["foto02_Input_default"];
     @$foto03_Input_default = $_POST["foto03_Input_default"];
@@ -65,7 +68,6 @@
         echo 'Selecione uma especialidade para continuar!';
         exit();
     }
-
     if($desc == ""){
         echo 'Preencha o campo de descrição com uma descrição simples';
         exit();
@@ -187,6 +189,28 @@
         }
         else{
             $card_Banner = uploadImage('Card_Input', $diretorio_User);
+        }
+    }
+
+    if($_FILES['Banner_Input']['name'] == ""){
+        if($Banner_Input_default == "true"){
+            $banner = 'banner_placeholder.webp';
+        }
+        else{
+            if($banner_edit != ""){
+                $banner = $banner_edit;
+            }
+            if($banner_edit == ""){
+                $banner = 'banner_placeholder.webp';
+            }
+        }
+    }
+    else{
+        if($_FILES['Banner_Input']['name'] == $banner_edit){
+            $banner = $banner_edit;
+        }
+        else{
+            $banner = uploadImage('Banner_Input', $diretorio_User);
         }
     }
 
@@ -320,14 +344,15 @@
 
     // ===== INSERÇÃO DE DADOS NO BANCO =====
     if($id_Tratamento == ""){
-        $res = $pdo->prepare("INSERT INTO tratamentos (titulo, card_banner, especialidade_atr, descricao, etapas, foto_relac_01, foto_relac_02, foto_relac_03, foto_relac_04, video_relac_01, video_relac_02, pgnt_01, pgnt_02, pgnt_03, pgnt_04, pgnt_05, pgnt_06, resp_01, resp_02, resp_03, resp_04, resp_05, resp_06) VALUES (:titulo, :card_banner, :especialidade_atr, :descricao, :etapas, :foto_relac_01, :foto_relac_02, :foto_relac_03, :foto_relac_04, :video_relac_01, :video_relac_02, :pgnt_01, :pgnt_02, :pgnt_03, :pgnt_04, :pgnt_05, :pgnt_06, :resp_01, :resp_02, :resp_03, :resp_04, :resp_05, :resp_06)");
+        $res = $pdo->prepare("INSERT INTO tratamentos (titulo, card_banner, banner, especialidade_atr, descricao, etapas, foto_relac_01, foto_relac_02, foto_relac_03, foto_relac_04, video_relac_01, video_relac_02, pgnt_01, pgnt_02, pgnt_03, pgnt_04, pgnt_05, pgnt_06, resp_01, resp_02, resp_03, resp_04, resp_05, resp_06) VALUES (:titulo, :card_banner, :banner, :especialidade_atr, :descricao, :etapas, :foto_relac_01, :foto_relac_02, :foto_relac_03, :foto_relac_04, :video_relac_01, :video_relac_02, :pgnt_01, :pgnt_02, :pgnt_03, :pgnt_04, :pgnt_05, :pgnt_06, :resp_01, :resp_02, :resp_03, :resp_04, :resp_05, :resp_06)");
     }
     else{
-        $res = $pdo->prepare("UPDATE tratamentos SET titulo = :titulo, card_banner = :card_banner, especialidade_atr = :especialidade_atr, descricao = :descricao, etapas = :etapas, foto_relac_01 = :foto_relac_01, foto_relac_02 = :foto_relac_02, foto_relac_03 = :foto_relac_03, foto_relac_04 = :foto_relac_04, video_relac_01 = :video_relac_01, video_relac_02 = :video_relac_02, pgnt_01 = :pgnt_01, pgnt_02 = :pgnt_02, pgnt_03 = :pgnt_03, pgnt_04 = :pgnt_04, pgnt_05 = :pgnt_05, pgnt_06 = :pgnt_06, resp_01 = :resp_01, resp_02 = :resp_02, resp_03 = :resp_03, resp_04 = :resp_04, resp_05 = :resp_05, resp_06 = :resp_06 WHERE id = :id");
+        $res = $pdo->prepare("UPDATE tratamentos SET titulo = :titulo, card_banner = :card_banner, banner = :banner, especialidade_atr = :especialidade_atr, descricao = :descricao, etapas = :etapas, foto_relac_01 = :foto_relac_01, foto_relac_02 = :foto_relac_02, foto_relac_03 = :foto_relac_03, foto_relac_04 = :foto_relac_04, video_relac_01 = :video_relac_01, video_relac_02 = :video_relac_02, pgnt_01 = :pgnt_01, pgnt_02 = :pgnt_02, pgnt_03 = :pgnt_03, pgnt_04 = :pgnt_04, pgnt_05 = :pgnt_05, pgnt_06 = :pgnt_06, resp_01 = :resp_01, resp_02 = :resp_02, resp_03 = :resp_03, resp_04 = :resp_04, resp_05 = :resp_05, resp_06 = :resp_06 WHERE id = :id");
         $res->bindValue(":id", $id_Tratamento);
     }
     $res->bindValue(":titulo", $titulo);
     $res->bindValue(":card_banner", $card_Banner);
+    $res->bindValue(":banner", $banner);
     $res->bindValue(":foto_relac_01", $foto01);
     $res->bindValue(":foto_relac_02", $foto02);
     $res->bindValue(":foto_relac_03", $foto03);

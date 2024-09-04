@@ -51,10 +51,11 @@
     }
 
     // ===== SCRIPTS PARA SUBIR IMG PARA O BANCO =====
-    function uploadImage($inputName, $targetDir) {
+    function uploadImage($inputName, $targetDir, $nome_espec) {
         $uploadedFile = @$_FILES[$inputName];
         $imageName = preg_replace('/[ -]+/' , '-' , $uploadedFile['name']);
         $imageName = preg_replace('/_/' , '-' , $uploadedFile['name']);
+        $imageName = $nome_espec." ".$uploadedFile['name'];
         $targetPath = $targetDir . $imageName;
 
         $imageTemp = $uploadedFile['tmp_name'];
@@ -87,7 +88,7 @@
         else{
             // Diretórios e imagens padrão
             $img_espec_Diret = '../../../assets/especialidades/';
-            $img_espec = uploadImage('foto_espec_Input', $img_espec_Diret);
+            $img_espec = uploadImage('foto_espec_Input', $img_espec_Diret, $nome_espec);
         }
     }
 
@@ -115,6 +116,7 @@
             $res2->bindValue(":id", $id_espec_Atrelada_tratamento);
             $res2->execute();
         }
+
     }
     if($id_espec_edit == ""){
         $res = $pdo->prepare("INSERT INTO especialidade (nome, foto, descricao) VALUES (:nome, :foto, :descricao)");

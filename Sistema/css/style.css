@@ -1461,7 +1461,7 @@ body #Main_Adm #Especialidades #ModalEspecialidade #msg_ModalEspecialidade {
   left: 25%;
   min-height: 5vh;
   max-height: 28vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "TrajanPro", sans-serif;
   font-weight: 700;
   font-size: 1.25vw;
   text-align: center;
@@ -2898,20 +2898,21 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
 }
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
   margin-top: 1.5vh;
 }
-body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block {
-  width: 35%;
-  height: 65vh;
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Banner_block {
+  width: 40%;
+  height: 60vh;
   display: flex;
   justify-content: center;
   position: relative;
   padding: 12vh 0 3vh;
 }
-body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block h3 {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block h3, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Banner_block h3 {
   position: absolute;
   top: 0;
   font-family: "TrajanPro", sans-serif;
@@ -2920,7 +2921,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   text-align: center;
   padding: 0 5vw;
 }
-body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block span {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block span, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Banner_block span {
   color: #D0B498;
   position: absolute;
   bottom: -3vh;
@@ -2929,12 +2930,12 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   width: 100%;
   text-align: center;
 }
-body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block input {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Banner_block input {
   opacity: 0;
   pointer-events: none;
   display: none;
 }
-body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block img, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block video {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block img, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Banner_block img {
   all: unset;
   width: 100%;
   height: 100%;
@@ -2945,17 +2946,17 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   align-items: center;
   justify-content: center;
 }
-body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block .editPen {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block .editPen, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Banner_block .editPen {
   position: absolute;
   width: 3vw;
   height: 3vw;
   bottom: 0;
   padding: 0.8vw;
 }
-body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block .editPen path {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block .editPen path, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Banner_block .editPen path {
   fill: #E0E0E0;
 }
-body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block::before {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block::before, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Banner_block::before {
   content: "";
   position: absolute;
   width: 3vw;
@@ -2965,7 +2966,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   border-radius: 50%;
   outline: 1px solid #373435;
 }
-body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block .btn_VoltaPadrao_Card_Input {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block .btn_VoltaPadrao_Card_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block .btn_VoltaPadrao_Banner_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Banner_block .btn_VoltaPadrao_Card_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Banner_block .btn_VoltaPadrao_Banner_Input {
   position: absolute;
   z-index: 999 !important;
   background-color: #373435;
@@ -2977,13 +2978,16 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   color: #E0E0E0;
   font-size: 0.8vw;
 }
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Banner_block {
+  width: 60%;
+}
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos {
-  width: 65%;
+  width: 100%;
   height: auto;
   padding: 0 2vw;
   display: flex;
   flex-direction: column;
-  padding-top: 2.5vh;
+  padding-top: 7.5vh;
 }
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .BlockBox {
   width: 100%;
@@ -3011,7 +3015,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   height: 100%;
   display: flex;
   align-items: center;
-  left: 6%;
+  left: 4.5%;
   font-family: "TrajanPro", sans-serif;
   position: absolute;
   font-size: 1.05vw;
@@ -3165,7 +3169,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   display: block;
 }
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .TextAreaBox {
-  height: 30vh;
+  height: 40vh;
   margin-top: 4vh;
 }
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .TextAreaBox textarea {
@@ -3174,7 +3178,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   padding: 1vh 1vw;
 }
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .TextAreaBox span {
-  top: -12vh;
+  top: -17vh;
 }
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .BlockBox input:focus ~ span, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos input:valid ~ span, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .BlockBox textarea:focus ~ span, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos textarea:valid ~ span {
   transform: translate(-1vw, -5vh);

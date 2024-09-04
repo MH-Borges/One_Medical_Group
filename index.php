@@ -390,7 +390,7 @@
                 <img id="LogoContato" src="assets/logo_vetor.svg" onload="SVGInject(this)">
                 <div class="blockContato">
                     <img src="assets/icons/relogio.svg" onload="SVGInject(this)">
-                    <p>Segunda a Sexta: 09:00 as 21:00hs</p>
+                    <p>Segunda a Sexta: 09:00 as 19:00hs</p>
                 </div>
                 <div class="blockContato">
                     <img src="assets/icons/telefone.svg" onload="SVGInject(this)">
@@ -465,15 +465,15 @@
             </div>
             <div id="redes_rodape">
                 <h5>Entre em contato</h5>
-                <a href="" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
-                <a href="" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>
+                <a href="https://www.instagram.com/one_medical_group/" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
+                <a href="https://www.facebook.com/profile.php?id=61558016380051" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>
                 <a href="https://wa.me/551151081977" target="_blank"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
                 <a href="https://malito:contato@onemedicalgroup.com.br" target="_blank"><img src="assets/icons/Email.svg" onload="SVGInject(this)"></a>
             </div>
         </div>
         <div id="smallFooter">
             <p>© <span id="data_footer"></span> One Medical Group</p>
-            <a aria-label="link para a VL7" href="https://www.google.com" target="_blank">
+            <a aria-label="link para a VL7" href="https://vl7.com.br" target="_blank">
                 <img src="assets/vl7_logo.png">
             </a>
         </div>

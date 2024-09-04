@@ -9,6 +9,7 @@
     if(@count($dados) > 0){
         $titulo = $dados[0]['titulo'];
         $card_banner = $dados[0]['card_banner'];
+        $banner = $dados[0]['banner'];
         $especialidade_atr = $dados[0]['especialidade_atr'];
         $descricao = $dados[0]['descricao'];
         $etapas = $dados[0]['etapas'];
@@ -35,7 +36,12 @@
         $resp_05 = $dados[0]['resp_05'];
         $resp_06 = $dados[0]['resp_06'];
 
-        $card_banner = "<img src='assets/tratamentos/$nome_get/$card_banner' alt='$titulo'>";
+        if($banner === "" || $banner === "banner_placeholder.webp"){
+            $banner = "<img src='assets/banner_tratamentos.webp' alt='$titulo'>";
+        }
+        else{
+            $banner = "<img src='assets/tratamentos/$nome_get/$banner' alt='$titulo'>";
+        }
 
         $nome_espec = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($especialidade_atr)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
         $especialidade_tratado = preg_replace('/[ -]+/', '_', $nome_espec);
@@ -121,7 +127,7 @@
         <a class="whats_link hide" target="_blank" href="https://wa.me/551151081977"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
 
         <section id="banner">
-            <?php echo $card_banner ?>
+            <?php echo $banner ?>
             <p> o tratamento de </p>
             <h1><?php echo $titulo ?></h1>
             <span>Especialidade:<?php echo "<a href='especialidade_de_$especialidade_tratado'>$especialidade_atr</a>" ?></span>
@@ -442,15 +448,15 @@
             </div>
             <div id="redes_rodape">
                 <h5>Entre em contato</h5>
-                <a href="" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
-                <a href="" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>
+                <a href="https://www.instagram.com/one_medical_group/" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
+                <a href="https://www.facebook.com/profile.php?id=61558016380051" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>
                 <a href="https://wa.me/551151081977" target="_blank"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
                 <a href="https://malito:contato@onemedicalgroup.com.br" target="_blank"><img src="assets/icons/Email.svg" onload="SVGInject(this)"></a>
             </div>
         </div>
         <div id="smallFooter">
             <p>© <span id="data_footer"></span> One Medical Group</p>
-            <a aria-label="link para a VL7" href="https://www.google.com" target="_blank">
+            <a aria-label="link para a VL7" href="https://vl7.com.br" target="_blank">
                 <img src="assets/vl7_logo.png">
             </a>
         </div>
