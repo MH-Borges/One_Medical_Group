@@ -533,6 +533,8 @@ else {
 
         // UPLOAD INFOS
         $(document).ready(function () {
+            $('#whatsapp').mask('(00) 00000 - 0000');
+
             $('#Form_ModalCriaSenha').submit(function(e){
                 e.preventDefault();
                 $('#msg_ModalCriaMedico').text('');

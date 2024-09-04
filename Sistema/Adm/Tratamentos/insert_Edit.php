@@ -65,6 +65,11 @@
         echo 'Selecione uma especialidade para continuar!';
         exit();
     }
+
+    if($desc == ""){
+        echo 'Preencha o campo de descrição com uma descrição simples';
+        exit();
+    }
     if($desc !== ""){
         $desc = nl2br(htmlentities($desc, ENT_QUOTES, 'UTF-8'));
     }

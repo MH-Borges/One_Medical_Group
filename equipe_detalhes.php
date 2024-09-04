@@ -1,10 +1,65 @@
+<?php 
+    require_once("./Sistema/configs/conexao.php"); 
+
+    $nome_get = @$_GET['nome'];
+    $nome_clean = preg_replace('/_/', ' ', $nome_get);
+
+    $query = $pdo->query("SELECT * FROM medicos WHERE nome = '$nome_clean'");
+    $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+    if(@count($dados) > 0){
+        $nome = $dados[0]['nome'];
+        $foto = $dados[0]['foto'];
+        $video = $dados[0]['video'];
+        $documento = $dados[0]['documento'];
+        $especialidade = $dados[0]['especialidade'];
+
+        $bio = $dados[0]['bio'];	
+        $formacoes = $dados[0]['formacoes'];
+
+        $linkedin = $dados[0]['linkedin'];		
+        $instagram = $dados[0]['instagram'];	
+        $facebook = $dados[0]['facebook'];		
+        $whatsapp = $dados[0]['whatsapp'];
+
+        if($whatsapp !== ""){
+            $whatsapp = str_replace('(', '', $whatsapp);
+            $whatsapp = str_replace(')', '', $whatsapp);
+            $whatsapp = str_replace('-', '', $whatsapp);
+            $whatsapp = str_replace(' ', '', $whatsapp);
+        }
+
+        if($foto == "foto_placeholder.webp" || $foto == ""){
+            $foto = "<img id='imgUser' src='assets/medicos/foto_placeholder.webp'>";
+        }else{
+            $foto = "<img id='imgUser' src='assets/medicos/$nome_get/$foto'>";
+        }
+
+        if($video !== "video_vazio.mp4" && $video !== ""){
+            $video = "
+                <div id='Block_VideoMedico'>
+                    <img src='assets/icons/play_btn.svg' onload='SVGInject(this)' onclick='PLayVideo(`VideoMedico`)'>
+                    <video controlsList='nodownload' id='VideoMedico' onclick='PLayVideo(`VideoMedico`)'>
+                        <source src='assets/medicos/$nome_get/$video' type='video/mp4'>
+                    </video>
+                </div>
+            ";
+        }else{ $video = ""; }
+    }
+    else{
+        echo "<script language='javascript'> window.location='./' </script>";
+    }
+?>
+
+
+        
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O doutor Lorem Ipsum | One medical group</title>
+    <title>Conheça o medico <?php echo $nome ?> | One medical group</title>
 
     <link rel="icon" href="assets/icons/icon.svg" />
     <link rel="canonical" href="" />
@@ -63,49 +118,66 @@
 
     <main id="Main_EquipeDetalhes">
         <a class="whats_link hide" target="_blank" href="https://wa.me/551151081977"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
-        <img id="background" src="assets/patter.svg" onload="SVGInject(this)">
 
         <section id="Block_user">
             <div id="imgVideo_User">
-                <div id="Block_VideoMedico">
-                    <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoMedico')">
-                    <video  controlsList="nodownload" id="VideoMedico" onclick="PLayVideo('VideoMedico')">
-                        <source src="assets/Videos/depo_01.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <img id="imgUser" src="assets/medicos/Dra.FranciniBelluci.webp">
+                <?php 
+                    echo $video;
+                    echo $foto;
+                ?>
             </div>
 
             <div id="infos_User">
-                <span id="especialidade">Dermatologista</span>
-                <h1 id="nome_user">Dra. Francini Belluci</h1>
-                <h2 id="doc">CRM 99/99999</h2>
+                <span id="especialidade"><?php echo $especialidade; ?></span>
+                <h1 id="nome_user"><?php echo $nome; ?></h1>
+                <h2 id="doc"><?php echo $documento; ?></h2>
                 <div id="bio">
                     <h3>Biografia:</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo. Viverra vitae congue eu consequat ac. Montes nascetur ridiculus mus mauris vitae. Massa tincidunt nunc pulvinar sapien. 
-                        <br><br>
-                        Diam vel quam elementum pulvinar etiam non quam lacus. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Sem viverra aliquet eget sit. Non consectetur a erat nam at lectus urna duis. Eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justis.
-                    </p>
+                    <p><?php echo $bio; ?></p>
                 </div>
-                <div id="formacoes">
-                    <h3>Formações:</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:
-                    </p>
-                    <ul>
-                        <li>Lorem ipsum (2015 - 2022)</li>
-                        <li>ipsum lorem (2023)</li>
-                        <li>Diam vel quam (2024)</li>
-                    </ul>
-                </div>
-                <div id="botoes">
-                    <a class="redes" href="" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
-                    <a class="redes" href="" target="_blank"><img src="assets/icons/Linkedin.svg" onload="SVGInject(this)"></a>
-                    <a class="redes" href="" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>
 
-                    <a class="btns btn_agendamento" href="" target="_blank">Agendar sessao</a>
-                </div>
+                <?php 
+                    if($formacoes !== ""){
+                        echo '
+                            <div id="formacoes">
+                                <h3>Formações:</h3>
+                                <p>'.$formacoes.'</p>
+                            </div>
+                        ';
+                    }
+
+                    $instagramResult = '';
+                    $linkedinResult = '';
+                    $facebookResult = '';
+                    $whatsappResult = '';
+
+                    
+
+
+                    if($instagram !== ""){
+                        $instagramResult = '<a class="redes" href="https://'.$instagram.'" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>';
+                    }
+                    if($linkedin !== ""){
+                        $linkedinResult = '<a class="redes" href="https://'.$linkedin.'" target="_blank"><img src="assets/icons/Linkedin.svg" onload="SVGInject(this)"></a>';
+                    }
+                    if($facebook !== ""){
+                        $facebookResult = '<a class="redes" href="https://'.$facebook.'" target="_blank"><img src="assets/icons/facebook.svg" onload="SVGInject(this)"></a>';
+                    }
+                    if($whatsapp !== ""){
+                        $whatsappResult = '<a class="btns btn_agendamento" href="https://wa.me/55'.$whatsapp.'" target="_blank">Agendar sessao</a>';
+                    }
+
+                    echo '
+                        <div id="botoes">
+                            '.$instagramResult.'
+                            '.$linkedinResult.'
+                            '.$facebookResult.'
+
+                            '.$whatsappResult.'
+                        </div>
+                    ';
+
+                ?>
             </div>
         </section>
     </main>

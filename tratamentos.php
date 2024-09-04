@@ -1,10 +1,23 @@
+<?php 
+    require_once("./Sistema/configs/conexao.php"); 
+
+    $nome_get = @$_GET['nome'];
+    $nome_clean = preg_replace('/_/', ' ', $nome_get);
+
+    if($nome_get !== "" && $nome_get !== NULL){
+        $title_page = "<title>Tratamentos de $nome_clean | One medical group</title>";
+    }
+    else{
+        $title_page = "<title>Tratamentos | One medical group</title>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tratamentos | One medical group</title>
+    <?php echo $title_page ?>
 
     <link rel="icon" href="assets/icons/icon.svg" />
     <link rel="canonical" href="" />
@@ -51,7 +64,7 @@
             <a class="itensMenu" href="clinica.php">A One</a>
             <a class="itensMenu" href="especialidades.php">Especialidades</a>
             <a class="itensMenu" href="equipe.php">Equipe one</a>
-            <a class="itensMenu active" href="tratamentos.php">Tratamentos</a>
+            <a class="itensMenu <?php if($nome_get === "" || $nome_get === NULL){ echo "active"; }?>" href="tratamentos.php">Tratamentos</a>
             <a class="itensMenu hide" href="blog.php">Blog</a>
             <a class="itensMenu" href="contato.html">Contato</a>
 
@@ -68,688 +81,333 @@
     <main id="Main_tratamentos">
         <a class="whats_link hide" target="_blank" href="https://wa.me/551151081977"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
 
-        <section id="banner">
-            <div id="Titulo_banner">
-                <span> Conheça todos os </span>
-                <h1>Tratamentos da One</h1>
-            </div>
-            <img src="assets/banner_tratamentos.webp" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo. Viverra vitae congue eu consequat ac. Montes nascetur ridiculus mus mauris vitae. Massa tincidunt nunc pulvinar sapien.  Diam vel quam elementum pulvinar etiam non quam lacus. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna.</p>
-        </section>
+        <?php
+            if($nome_get !== "" && $nome_get !== NULL){
+                $query = $pdo->query("SELECT * FROM especialidade where nome = '$nome_clean'");
+                $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                if(@count($dados) > 0){
+                    $foto_espec = $dados[0]['foto'];
+                    $nome_espec = $dados[0]['nome'];
+                    $descricao_espec = $dados[0]['descricao'];
+
+                    $cor_back = rand(0,3);
+                    if($cor_back == 0){ $cor_back = 'amarelo'; }
+                    if($cor_back == 1){ $cor_back = 'preto'; }
+                    if($cor_back == 2){ $cor_back = 'cinza'; }
+                    if($cor_back == 3){ $cor_back = 'marrom'; }
+
+                    if($foto_espec !== "placeholder.webp"){
+                        $foto_espec = "<img src='assets/especialidades/$foto_espec' alt='$nome_espec'>";
+                        echo "
+                            <section id='banner'>
+                                ".$foto_espec."
+                                <div id='Titulo_banner' class='$cor_back'>
+                                    <span> Especialidade de </span>
+                                    <h1>".$nome_espec."</h1>
+                                </div>
+                                <p>".$descricao_espec."</p>
+                            </section>
+                        ";
+                    }
+                    else{
+                        echo "<script language='javascript'> window.location='./' </script>";
+                    }
+                }
+                else{
+                    echo "<script language='javascript'> window.location='./' </script>";
+                }
+            }
+
+            else{
+                echo '
+                    <section id="banner">
+                        <div id="Titulo_banner">
+                            <span> Conheça todos os </span>
+                            <h1>Tratamentos da One</h1>
+                        </div>
+                        <img src="assets/banner_tratamentos.webp" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo. Viverra vitae congue eu consequat ac. Montes nascetur ridiculus mus mauris vitae. Massa tincidunt nunc pulvinar sapien.  Diam vel quam elementum pulvinar etiam non quam lacus. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna.</p>
+                    </section>
+                ';
+            }
+
+        ?>
+        
         <section id="Listagem_tratamentos">
-            <div class="tratamentos_block">
-                <a href="tratamentos.html"><h2>Otorringolaringologia</h2></a>
-                <div class="splide tratamento_splide" role="group">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento01.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">tratamentos avançados</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento02.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cirurgias plásticas</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento03.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cuidados dermatológicos</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento04.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">serviços de nutrologia</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento05.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento06.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento07.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="tratamentos_block">
-                <a href="tratamentos.html"><h2>Fisioterapia</h2></a>
-                <div class="splide tratamento_splide" role="group">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento01.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">tratamentos avançados</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento02.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cirurgias plásticas</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento03.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cuidados dermatológicos</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento04.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">serviços de nutrologia</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento05.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento06.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento07.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="tratamentos_block">
-                <a href="tratamentos.html"><h2>Cirurgia de face</h2></a>
-                <div class="splide tratamento_splide" role="group">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento01.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">tratamentos avançados</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento02.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cirurgias plásticas</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento03.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cuidados dermatológicos</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento04.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">serviços de nutrologia</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento05.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento06.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento07.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="tratamentos_block">
-                <a href="tratamentos.html"><h2>Ginecologia</h2></a>
-                <div class="splide tratamento_splide" role="group">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento01.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">tratamentos avançados</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento02.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cirurgias plásticas</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento03.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cuidados dermatológicos</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento04.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">serviços de nutrologia</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento05.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento06.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento07.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="tratamentos_block">
-                <a href="tratamentos.html"><h2>Cirurgia plástica</h2></a>
-                <div class="splide tratamento_splide" role="group">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento01.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">tratamentos avançados</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento02.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cirurgias plásticas</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento03.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cuidados dermatológicos</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento04.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">serviços de nutrologia</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento05.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento06.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento07.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="tratamentos_block">
-                <a href="tratamentos.html"><h2>Dermatologia</h2></a>
-                <div class="splide tratamento_splide" role="group">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento01.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">tratamentos avançados</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento02.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cirurgias plásticas</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento03.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cuidados dermatológicos</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento04.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">serviços de nutrologia</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento05.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento06.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento07.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="tratamentos_block">
-                <a href="tratamentos.html"><h2>Nutrologia</h2></a>
-                <div class="splide tratamento_splide" role="group">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento01.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">tratamentos avançados</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento02.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cirurgias plásticas</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento03.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">cuidados dermatológicos</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento04.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">serviços de nutrologia</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento05.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento06.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="Block_img">
-                                    <img src="assets/tratamentos/tratamento07.webp" alt="">
-                                </div>
-                                <div class="infosCards">
-                                    <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                    <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <?php
+                if($nome_get !== "" && $nome_get !== NULL){
+                    $query = $pdo->query("SELECT * FROM tratamentos WHERE especialidade_atr = '$nome_clean'");
+                    $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                    if(@count($dados) > 0){
+                        echo "<div class='tratamentosEspecialidade_block'>";
+                            for ($i=0; $i < count($dados); $i++) {
+                                $titulo_tratamento = $dados[$i]['titulo'];
+                                $card_Banner = $dados[$i]['card_banner'];
+
+                                $nome_novo_tratamento = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($titulo_tratamento)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                                $nome_tratado_tratamento = preg_replace('/[ -]+/', '_', $nome_novo_tratamento);
+                                
+                                if($card_Banner !== "card_placeholder.webp" && $titulo_tratamento !== ""){
+                                    $card_Banner = "<img src='assets/tratamentos/$nome_tratado_tratamento/$card_Banner' alt='$titulo_tratamento'>";
+                                    echo "
+                                        <div class='tratamento_card'>
+                                            <div class='Block_img'>
+                                                ".$card_Banner."
+                                            </div>
+                                            <div class='infosCards'>
+                                                <h3 class='nome'>$titulo_tratamento</h3>
+                                                <a href='tratamento_de_$nome_tratado_tratamento' class='btns btn_CardTratamento'>Veja mais</a>
+                                            </div>
+                                        </div>
+                                    ";
+                                }
+                            }
+                        echo "</div>";
+                    }
+                }
+                else{
+                    $query = $pdo->query("SELECT * FROM especialidade ORDER BY id DESC");
+                    $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                    for ($i=0; $i < count($dados); $i++) { 
+                        $foto_espec = $dados[$i]['foto'];
+                        $nome_espec = $dados[$i]['nome'];
+    
+                        $nome_novo_espec = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome_espec)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                        $nome_tratado_espec = preg_replace('/[ -]+/', '_', $nome_novo_espec);
+                        
+                        if($foto_espec !== "placeholder.webp"){
+                            $query2 = $pdo->query("SELECT * FROM tratamentos WHERE especialidade_atr = '$nome_espec'");
+                            $dados2 = $query2->fetchAll(PDO::FETCH_ASSOC);
+                            if(@count($dados2) > 0){
+                                echo "
+                                    <div class='tratamentos_block'>
+                                        <a href='especialidade_de_$nome_tratado_espec'><h2>".$nome_espec."</h2></a>
+        
+                                        <div class='splide tratamento_splide' role='group'>
+                                            <div class='splide__track'>
+                                                <ul class='splide__list'>";
+        
+                                                    $query3 = $pdo->query("SELECT * FROM tratamentos WHERE especialidade_atr = '$nome_espec'");
+                                                    $dados3 = $query3->fetchAll(PDO::FETCH_ASSOC);
+                                                    for ($j=0; $j < count($dados3); $j++) { 
+                                                        $titulo_tratamento = $dados3[$j]['titulo'];
+                                                        $card_Banner = $dados3[$j]['card_banner'];
+        
+                                                        $nome_novo_tratamento = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($titulo_tratamento)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                                                        $nome_tratado_tratamento = preg_replace('/[ -]+/', '_', $nome_novo_tratamento);
+                                                        
+                                                        if($card_Banner !== "card_placeholder.webp" && $titulo_tratamento !== ""){
+                                                            $card_Banner = "<img src='assets/tratamentos/$nome_tratado_tratamento/$card_Banner' alt='$titulo_tratamento'>";
+        
+                                                            echo "
+                                                                <li class='splide__slide'>
+                                                                    <div class='Block_img'>
+                                                                        ".$card_Banner."
+                                                                    </div>
+                                                                    <div class='infosCards'>
+                                                                        <h3 class='nome'>$titulo_tratamento</h3>
+                                                                        <a href='tratamento_de_$nome_tratado_tratamento' class='btns btn_CardTratamento'>Veja mais</a>
+                                                                    </div>
+                                                                </li>
+                                                            ";
+                                                        }
+                                                    }
+        
+                                                    echo "    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ";
+                            }
+                        }
+                    }
+                }
+
+            ?>
         </section>
-        <section id="depos"> 
-            <h2>Conexão One</h2>
-            <p>Experiências de quem confia na One.</p>
-            <div class="splide depo_splide" role="group">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <div class="Block_VideoDepo" id="Block_VideoDepo01">
-                                <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoDepo01')">
-                                <video controlsList="nodownload" id="VideoDepo01" onclick="PLayVideo('VideoDepo01')">
-                                    <source src="assets/Videos/depo_01.mp4" type="video/mp4">
-                                </video>
+
+        <?php
+            if($nome_get === "" || $nome_get === NULL){
+                echo '
+                    <section id="depos"> 
+                        <h2>Conexão One</h2>
+                        <p>Experiências de quem confia na One.</p>
+                        <div class="splide depo_splide" role="group">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div class="Block_VideoDepo" id="Block_VideoDepo01">
+                                            <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo(`VideoDepo01`)">
+                                            <video controlsList="nodownload" id="VideoDepo01" onclick="PLayVideo(`VideoDepo01`)">
+                                                <source src="assets/Videos/depo_01.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="Block_VideoDepo" id="Block_VideoDepo02">
+                                            <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo(`VideoDepo02`)">
+                                            <video controlsList="nodownload" id="VideoDepo02" onclick="PLayVideo(`VideoDepo02`)">
+                                                <source src="assets/Videos/depo_02.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="Block_VideoDepo" id="Block_VideoDepo03">
+                                            <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo(`VideoDepo03`)">
+                                            <video controlsList="nodownload" id="VideoDepo03" onclick="PLayVideo(`VideoDepo03`)">
+                                                <source src="assets/Videos/depo_01.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="Block_VideoDepo" id="Block_VideoDepo04">
+                                            <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo(`VideoDepo04`)">
+                                            <video controlsList="nodownload" id="VideoDepo04" onclick="PLayVideo(`VideoDepo04`)">
+                                                <source src="assets/Videos/depo_02.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_VideoDepo" id="Block_VideoDepo02">
-                                <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoDepo02')">
-                                <video controlsList="nodownload" id="VideoDepo02" onclick="PLayVideo('VideoDepo02')">
-                                    <source src="assets/Videos/depo_02.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_VideoDepo" id="Block_VideoDepo03">
-                                <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoDepo03')">
-                                <video controlsList="nodownload" id="VideoDepo03" onclick="PLayVideo('VideoDepo03')">
-                                    <source src="assets/Videos/depo_01.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_VideoDepo" id="Block_VideoDepo04">
-                                <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoDepo04')">
-                                <video controlsList="nodownload" id="VideoDepo04" onclick="PLayVideo('VideoDepo04')">
-                                    <source src="assets/Videos/depo_02.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+                        </div>
+                    </section>
+
+                    <script>
+                        document.addEventListener( `DOMContentLoaded`, function() {
+                            if(mobileCheck() === false){
+                                var depos = new Splide( `.depo_splide`, {
+                                    omitEnd: true,
+                                    perPage: 2,
+                                    perMove: 1,
+                                    drag   : false
+                                });
+                            } 
+                            else{
+                                var depos = new Splide( `.depo_splide`, {
+                                    drag   : `free`,
+                                    omitEnd: true,
+                                    perPage: 1,
+                                    perMove: 1,
+                                    drag   : false
+                                });
+                            }
+                            depos.mount();
+                        });
+                    </script>
+                ';
+            }
+        ?>
+        
         <section id="equipe">
-            <img class="patter" src="assets/patter.svg" onload="SVGInject(this)">
-            <h2>Corpo clínico <br> de excelência</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo. Viverra vitae congue eu consequat ac. Montes nascetur ridiculus mus mauris vitae. Massa tincidunt nunc pulvinar sapien.</p>
+            <h2>Conheça nosso corpo clínico</h2>
+            <p>Na ONE MEDICAL GROUP, valorizamos o que é mais importante: sua saúde e bem-estar. 
+                <br><br>
+                Na nossa equipe estão profissionais altamente qualificados em diversas áreas, comprometidos com diagnósticos precisos e tratamentos para atender suas necessidades, de forma integrada e humanizada. Explore nossas especialidades médicas e descubra como podemos ajudar a alcançar a sua melhor versão.
+            </p>
             <div class="splide equipe_splide" role="group">
                 <div class="splide__track">
                     <ul class="splide__list">
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico01.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Francini Belluci</h3>
-                                    <p class="espec_medico">Dermatologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico02.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dr. Rodrigo De Léo</h3>
-                                    <p class="espec_medico">Ginecologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico03.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Raquel Ferrari</h3>
-                                    <p class="espec_medico">Dermatologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico04.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Cybele Guedes</h3>
-                                    <p class="espec_medico">Dermatologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico05.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dr. Gabriel Costa</h3>
-                                    <p class="espec_medico">Nutrólogo</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/user_placeholder.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Lorem Ipsum</h3>
-                                    <p class="espec_medico">DolumsitAmet</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/user_placeholder.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Lorem Ipsum</h3>
-                                    <p class="espec_medico">DolumsitAmet</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/user_placeholder.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dr. Lorem Ipsum</h3>
-                                    <p class="espec_medico">DolumsitAmet</p>
-                                </div>
-                            </a>
-                        </li>
+                        <?php
+                            if($nome_get !== "" && $nome_get !== NULL){
+                                $query = $pdo->query("SELECT * FROM medicos WHERE especialidade = '$nome_clean'");
+                                $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                                if(@count($dados) == 0){
+                                    $query = $pdo->query("SELECT * FROM medicos ORDER BY id DESC");
+                                    $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                                }
+                            }
+                            else{
+                                $query = $pdo->query("SELECT * FROM medicos ORDER BY id DESC");
+                                $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                            }
+
+                            $j = 0;
+                            for ($i=0; $i < count($dados); $i++) {
+                                $status_medico = $dados[$i]['status_perfil'];
+                                $card_medico = $dados[$i]['card_'];
+                                $nome_medico = $dados[$i]['nome'];
+                                $especialidade_medico = $dados[$i]['especialidade'];
+
+                                $nome_novo_medico = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome_medico)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                                $nome_tratado_medico = preg_replace('/[ -]+/', '_', $nome_novo_medico);
+                                if($status_medico === "ativo" && $nome_medico !== "" && $j <= 9){
+                                    if($card_medico == "user_placeholder.webp" || $card_medico == ""){
+                                        $card_medico = "<img src='assets/medicos/user_placeholder.webp' alt='$nome_medico - $especialidade_medico'>";
+                                    }else{
+                                        $card_medico = "<img src='assets/medicos/$nome_tratado_medico/$card_medico' alt='$nome_medico - $especialidade_medico'>";
+                                    }
+
+                                    echo "
+                                        <li class='splide__slide'>
+                                            <a href='medico_$nome_tratado_medico'>
+                                                ".$card_medico."
+                                                <div class='infosCards'>
+                                                    <h3 class='nome'>$nome_medico</h3>
+                                                    <p class='espec_medico'>$especialidade_medico</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    ";
+
+                                    $j++;
+                                }
+                            }
+                        ?>
                     </ul>
                 </div>
             </div>
-            <a href="equipe.html" class="btns btn_equipe">Conheça toda a equipe<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+            <a href="equipe.php" class="btns btn_equipe">Conheça toda a equipe<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
         </section>
-        <section id="concierge">
-            <div id="Block_textConcierge">
-                <h2>Quem é a Concierge <br> de Beleza?</h2>
-                <p>
-                    ANNA FARFALLA é a especialista em atendimento ao paciente que atua como o elo entre você e todas as possiblidades
-                    de procedimentos estéticos que a ONE oferece.
-                    <br><br>
-                    Ela possui total conhecimento sobre serviços e tratamentos
-                    e estará sempre disponível para escutar suas necessidades, responder suas dúvidas e proporcionar orientações valiosas.
-                </p>
-                <span>
-                    Agende sua consulta e descubra como nossa Concierge de Beleza pode transformar sua jornada de beleza em uma experiência única.
-                </span>
-                <a href="especialidades.html" class="btns btn_Concierge">Agendar sessão</a>
-            </div>
-            <img src="assets/concierge.webp" alt="">
-        </section>
-        <section id="allInOne">
-            <div id="Block_VideoAllinOne">
-                <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoAllinOne')">
-                <video controlsList="nodownload" id="VideoAllinOne" onclick="PLayVideo('VideoAllinOne')">
-                    <source src="assets/Videos/atendimento.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div id="Block_textAllinOne">
-                <h2>O que é o atendimento all in one</h2>
-                <p>
-                    Acreditamos que o cuidado com a saúde e a beleza deve ser abrangente e contínuo e por isso, desenvolvemos o atendimento All In One, um serviço exclusivo que oferece um acompanhamento personalizado e único à você. 
-                    <br><br>
-                    O All In One começa com uma consulta inicial ampla, onde os profissionais de saúde realizam uma análise completa das suas expectativas e desejos.
-                    <br><br>
-                    Com base neste diagnóstico, elaboramos um plano personalizado que inclui as intervenções que serão executadas, avaliações periódicas e monitoramento da evolução do seu procedimento.
-                    <br><br>
-                    Nosso objetivo é garantir que você receba toda a atenção, além das indispensáveis a sua terapia, com avaliações detalhadas, sugestões de técnicas novas ou complementares e suporte contínuo.
-                    <br><br>
-                    Estamos comprometidos em oferecer um serviço de excelência, que se adapta às suas necessidades e que garanta que todas opções e recursos terapêuticos sejam considerados e discutidos em conjunto, proporcionando uma experiência de cuidado completa e personalizada.
-                    <br><br>
-                    Isso é parte integrante do compromisso da One Medical Group, a sua saúde. 
-                </p>
-                <a href="especialidades.html" class="btns btn_AllInOne">Agendar sessão</a>
-            </div>
-        </section>
+
+        <?php
+            if($nome_get === "" || $nome_get === NULL){
+                echo '
+                    <section id="concierge">
+                        <div id="Block_textConcierge">
+                            <h2>Quem é a Concierge <br> de Beleza?</h2>
+                            <p>
+                                ANNA FARFALLA é a especialista em atendimento ao paciente que atua como o elo entre você e todas as possiblidades
+                                de procedimentos estéticos que a ONE oferece.
+                                <br><br>
+                                Ela possui total conhecimento sobre serviços e tratamentos
+                                e estará sempre disponível para escutar suas necessidades, responder suas dúvidas e proporcionar orientações valiosas.
+                            </p>
+                            <span>
+                                Agende sua consulta e descubra como nossa Concierge de Beleza pode transformar sua jornada de beleza em uma experiência única.
+                            </span>
+                            <a target="_blank" href="https://wa.me/551151081977" class="btns btn_Concierge">Agendar Atendimento</a>
+                        </div>
+                        <img src="assets/concierge.webp" alt="">
+                    </section>
+                    <section id="allInOne">
+                        <div id="Block_VideoAllinOne">
+                            <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo(`VideoAllinOne`)">
+                            <video controlsList="nodownload" id="VideoAllinOne" onclick="PLayVideo(`VideoAllinOne`)">
+                                <source src="assets/Videos/atendimento.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div id="Block_textAllinOne">
+                            <h2>O que é o atendimento all in one</h2>
+                            <p>
+                                Acreditamos que o cuidado com a saúde e a beleza deve ser abrangente e contínuo e por isso, desenvolvemos o atendimento <b>All In One</b>, um serviço exclusivo que oferece um acompanhamento personalizado e único. 
+                                <br><br>
+                                O <b>All In One</b> começa com uma consulta ampla, onde os profissionais de saúde realizam uma análise completa das suas expectativas e desejos.
+                                <br><br>
+                                Com base nestas informações, elaboramos um plano personalizado que inclui as opções de intervenções que serão executadas, o programa de avaliações periódicas e o monitoramento da evolução do seu procedimento.
+                                <br><br>
+                                Nosso objetivo é garantir que você receba toda a atenção, além das indispensáveis a sua terapia, com detalhes, sugestões de técnicas novas, procedimentos complementares e suporte contínuo.
+                                <br><br>
+                                Estamos comprometidos em oferecer um serviço de excelência que se adapte aos seus sonhos e necessidades e que garanta todas opções e recursos terapêuticos sejam considerados e discutidos em conjunto, proporcionando uma experiência de cuidado completa e personalizada.
+                                <br><br>
+                                Isso é parte fundamental do compromisso da One Medical Group, a sua saúde.
+                            </p>
+                            <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Agendar sessão</a>
+                        </div>
+                    </section>
+                ';
+            }
+        ?>
     </main>
 
     <footer>
@@ -809,13 +467,6 @@
             }
 
             if(mobileCheck() === false){
-                var depos = new Splide( '.depo_splide', {
-                    omitEnd: true,
-                    perPage: 2,
-                    perMove: 1,
-                    drag   : false
-                });
-
                 var equipe = new Splide( '.equipe_splide', {
                     perPage: 5,
                     perMove: 1,
@@ -823,14 +474,6 @@
                 });
             } 
             else{
-                var depos = new Splide( '.depo_splide', {
-                    drag   : 'free',
-                    omitEnd: true,
-                    perPage: 1,
-                    perMove: 1,
-                    drag   : false
-                });
-
                 var equipe = new Splide( '.equipe_splide', {
                     drag   : 'free',
                     perPage: 1,
@@ -840,7 +483,6 @@
                 });
             }
 
-            depos.mount();
             equipe.mount();
         });
     </script>

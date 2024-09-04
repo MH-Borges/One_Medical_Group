@@ -3092,7 +3092,7 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
     margin: -2vh 0 2vh;
   }
   body #Main_clinica #oneMedical {
-    height: 125vh;
+    height: 190vh;
     flex-direction: column;
     padding: 0;
   }
@@ -3104,14 +3104,14 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
     order: 2;
   }
   body #Main_clinica #oneMedical::before {
-    top: 75vh;
+    top: 140vh;
     right: 0;
     width: 100%;
     height: 50vh;
   }
   body #Main_clinica #oneMedical #Block_textOne {
     width: 100%;
-    height: 75vh;
+    height: 140vh;
     padding: 2vh 7.5vw;
     flex-direction: column;
     order: 1;
@@ -3119,7 +3119,7 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
   body #Main_clinica #oneMedical #Block_textOne h2 {
     font-size: 7vw;
     padding-left: 4vw;
-    margin-bottom: 5vh;
+    margin: 1.5vh 0 5vh;
   }
   body #Main_clinica #oneMedical #Block_textOne h2::before {
     bottom: -1vh;
@@ -3157,12 +3157,17 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
   }
   body #Main_clinica #MVV #cards_MVV .card {
     width: 100%;
-    height: 25vh;
+    height: 35vh;
     border-radius: 2.5vw;
     margin: 2vh 0;
   }
   body #Main_clinica #MVV #cards_MVV .card h2 {
     font-size: 7.5vw;
+  }
+  body #Main_clinica #MVV #cards_MVV .card p {
+    padding-right: 5vw;
+    font-size: 1.5vw;
+    line-height: 3.75vh;
   }
   body #Main_clinica #MVV #cards_MVV .card .btn_card {
     z-index: 5;
@@ -3329,6 +3334,9 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
   body #Main_clinica #especialidades .especialidadeBlock .cinza {
     background: none;
   }
+  body #Main_clinica #especialidades .especialidadeBlock .marrom {
+    background: none;
+  }
   body #Main_clinica #especialidades #textEspecialidade {
     padding: 2vw;
     height: 32vh;
@@ -3441,6 +3449,9 @@ body #Main_especialidades #Especialidades #especialidadesCards .especialidade_ca
   opacity: 0.25;
   z-index: 2;
 }
+body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card .btn_card {
+  font-size: 1vw;
+}
 body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card h3, body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card p, body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card span {
   display: none;
 }
@@ -3457,6 +3468,13 @@ body #Main_especialidades #Especialidades #especialidadesCards .especialidade_ca
   font-size: 1.75vw;
   color: #E0E0E0;
   margin-bottom: 5vh;
+  width: 90%;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover p {
   display: flex;
@@ -3477,13 +3495,12 @@ body #Main_especialidades #Especialidades #especialidadesCards .especialidade_ca
   position: absolute;
   display: flex;
   z-index: 5;
-  width: 15%;
+  width: 20%;
   height: 3vh;
   right: 1vw;
   bottom: 1vw;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
   color: #E0E0E0;
-  font-size: 0.9vw;
 }
 body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card img, body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card svg {
   margin-left: 0.5vw;
@@ -3510,6 +3527,9 @@ body #Main_especialidades #Especialidades #especialidadesCards .preto {
 }
 body #Main_especialidades #Especialidades #especialidadesCards .cinza {
   background-color: #776F62;
+}
+body #Main_especialidades #Especialidades #especialidadesCards .marrom {
+  background-color: #4B2F24;
 }
 body #Main_especialidades #allInOne {
   position: relative;
@@ -4057,9 +4077,10 @@ body #Main_tratamentos #banner #Titulo_banner h1, body #Main_tratamentos #banner
 }
 body #Main_tratamentos #banner #Titulo_banner h1 {
   position: relative;
-  font-size: 3.5vw;
+  font-size: 3.25vw;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 body #Main_tratamentos #banner #Titulo_banner h1::before {
   content: "";
@@ -4072,6 +4093,36 @@ body #Main_tratamentos #banner #Titulo_banner h1::before {
 body #Main_tratamentos #banner #Titulo_banner span {
   font-size: 1.75vw;
   margin: -7.5vh 0 1vh;
+}
+body #Main_tratamentos #banner .amarelo {
+  background-color: #D2AE6D !important;
+}
+body #Main_tratamentos #banner .preto {
+  background-color: #373435 !important;
+}
+body #Main_tratamentos #banner .preto h1, body #Main_tratamentos #banner .preto span {
+  color: #D2AE6D !important;
+}
+body #Main_tratamentos #banner .preto h1::before {
+  background-color: #D2AE6D !important;
+}
+body #Main_tratamentos #banner .cinza {
+  background-color: #776F62 !important;
+}
+body #Main_tratamentos #banner .cinza h1, body #Main_tratamentos #banner .cinza span {
+  color: #E0E0E0 !important;
+}
+body #Main_tratamentos #banner .cinza h1::before {
+  background-color: #E0E0E0 !important;
+}
+body #Main_tratamentos #banner .marrom {
+  background-color: #4B2F24 !important;
+}
+body #Main_tratamentos #banner .marrom h1, body #Main_tratamentos #banner .marrom span {
+  color: #E0E0E0 !important;
+}
+body #Main_tratamentos #banner .marrom h1::before {
+  background-color: #E0E0E0 !important;
 }
 body #Main_tratamentos #banner p {
   width: 100%;
@@ -4104,12 +4155,15 @@ body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a {
   position: relative;
 }
 body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a h2 {
-  width: 100%;
+  width: 75%;
   height: 100%;
   font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
   color: #4B2F24;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a h2::before {
   content: "";
@@ -4119,6 +4173,9 @@ body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a h2::before {
   width: 15%;
   height: 0.4vh;
   background-color: #4B2F24;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentos_block a:hover h2 {
+  color: #D2AE6D;
 }
 body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide {
   width: 100%;
@@ -4226,6 +4283,94 @@ body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_spli
   text-align: center;
 }
 body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .infosCards .btn_CardTratamento {
+  transition: all ease-in-out 0.5s;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  height: 3.5vh;
+  width: 6.25vw;
+  color: #E0E0E0;
+  font-size: 1vw;
+  outline: 2px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5vw;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block {
+  width: 100%;
+  height: auto;
+  margin: 5vh 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card {
+  width: 24%;
+  height: 65vh;
+  position: relative;
+  padding: 1vw;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card:hover .Block_img img {
+  transform: scale(1.05);
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card:hover .Block_img::before {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card:hover .infosCards .nome {
+  transform: scale(1.07);
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card:hover .infosCards .btn_CardTratamento {
+  transform: scale(1.07);
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card .Block_img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1vw;
+  z-index: 1;
+  position: relative;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card .Block_img img {
+  transition: all ease-in-out 0.5s;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card .Block_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(75, 47, 36, 0.4);
+  z-index: 2;
+  transition: all ease-in-out 0.5s;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card .infosCards {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 7.5%;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card .infosCards .nome {
+  transition: all ease-in-out 0.5s;
+  width: 100%;
+  font-family: "TrajanPro", sans-serif;
+  font-size: 1.5vw;
+  color: #E0E0E0;
+  margin-bottom: 5vh;
+  padding: 0 2vw;
+  text-align: center;
+}
+body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card .infosCards .btn_CardTratamento {
   transition: all ease-in-out 0.5s;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
   height: 3.5vh;
@@ -4368,22 +4513,13 @@ body #Main_tratamentos #equipe {
   align-items: center;
   padding: 5vh 5%;
 }
-body #Main_tratamentos #equipe .patter {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.1;
-}
 body #Main_tratamentos #equipe h2 {
   width: 100%;
   height: auto;
   font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
-  margin-bottom: 6.5vh;
+  margin-bottom: 3.5vh;
   position: relative;
   color: #4B2F24;
 }
@@ -4481,16 +4617,25 @@ body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .spli
 }
 body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide a .infosCards .nome {
   font-family: "TrajanPro", sans-serif;
+  width: 90%;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
+  width: 90%;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
   font-size: 0.85vw;
   color: #4B2F24;
-  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide:hover {
   transform: scale(1.02);
@@ -4801,6 +4946,24 @@ body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
     font-size: 3.5vw;
     outline: 1px solid #E0E0E0;
   }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card {
+    width: 49%;
+    height: 40vh;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card .Block_img {
+    border-radius: 2.5vw;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card .infosCards .nome {
+    font-size: 5vw;
+    margin-bottom: 5vh;
+    padding: 0 10vw;
+  }
+  body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card .infosCards .btn_CardTratamento {
+    height: 3vh;
+    width: 22vw;
+    font-size: 3.5vw;
+    outline: 1px solid #E0E0E0;
+  }
   body #Main_tratamentos #depos {
     height: auto;
     padding: 3vh 7.5% 6vh;
@@ -5064,7 +5227,7 @@ body #Main_TratDetalhes #banner::before {
   width: 100%;
   height: 100%;
   background-color: #4B2F24;
-  opacity: 0.45;
+  opacity: 0.65;
   z-index: 2;
 }
 body #Main_TratDetalhes #banner h1, body #Main_TratDetalhes #banner p {
@@ -5091,6 +5254,7 @@ body #Main_TratDetalhes #banner p {
   margin: 1vh 0 1vh;
 }
 body #Main_TratDetalhes #banner span {
+  width: 30vw;
   z-index: 5;
   position: absolute;
   bottom: 3vh;
@@ -5098,12 +5262,19 @@ body #Main_TratDetalhes #banner span {
   font-family: "TrajanPro", sans-serif;
   font-size: 1.15vw;
   color: #E0E0E0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body #Main_TratDetalhes #banner span a {
   margin-left: 0.25vw;
   color: #D2AE6D;
 }
+body #Main_TratDetalhes #banner span a:hover {
+  color: #4B2F24;
+}
 body #Main_TratDetalhes #como_Funicona {
+  min-height: 50vh;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -5131,12 +5302,16 @@ body #Main_TratDetalhes #como_Funicona h2::before {
   background-color: #4B2F24;
 }
 body #Main_TratDetalhes #como_Funicona p {
+  width: 100%;
+  height: auto;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
   font-size: 1.1vw;
   color: #373435;
   line-height: 3.5vh;
+  text-align: left;
 }
 body #Main_TratDetalhes #etapas {
+  min-height: 50vh;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -5163,34 +5338,14 @@ body #Main_TratDetalhes #etapas h2::before {
   height: 0.35vh;
   background-color: #4B2F24;
 }
-body #Main_TratDetalhes #etapas ul {
+body #Main_TratDetalhes #etapas p {
+  width: 100%;
   height: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-body #Main_TratDetalhes #etapas ul li {
-  width: 100%;
-  height: 5vh;
-  display: flex;
-  align-items: center;
-  margin: 0.75vh 0;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
   font-size: 1.1vw;
   color: #373435;
-  margin-left: 1vw;
-  padding-left: 1vw;
-  position: relative;
-}
-body #Main_TratDetalhes #etapas ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 0.4vw;
-  height: 0.4vw;
-  border-radius: 50%;
-  background-color: #373435;
+  line-height: 3.5vh;
+  text-align: left;
 }
 body #Main_TratDetalhes #resultados {
   width: 100%;
@@ -5242,15 +5397,6 @@ body #Main_TratDetalhes #equipe {
   flex-direction: column;
   align-items: center;
 }
-body #Main_TratDetalhes #equipe .patter {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.09;
-}
 body #Main_TratDetalhes #equipe h2 {
   width: 100%;
   height: auto;
@@ -5270,7 +5416,17 @@ body #Main_TratDetalhes #equipe h2::before {
   height: 0.35vh;
   background-color: #4B2F24;
 }
+body #Main_TratDetalhes #equipe p {
+  width: 100%;
+  padding-right: 3.5vw;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #4B2F24;
+  line-height: 3vh;
+}
 body #Main_TratDetalhes #equipe .splide {
+  margin-top: 5vh;
   width: 100%;
   height: 50vh;
 }
@@ -5346,19 +5502,41 @@ body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__sl
 }
 body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
   font-family: "TrajanPro", sans-serif;
+  width: 90%;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
+  width: 90%;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
   font-size: 0.85vw;
   color: #4B2F24;
-  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide:hover {
   transform: scale(1.02);
+}
+body #Main_TratDetalhes #equipe .btn_equipe {
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  height: 3.5vh;
+  color: #373435;
+  font-size: 1.25vw;
+  margin-top: 7.5vh;
+}
+body #Main_TratDetalhes #equipe .btn_equipe img, body #Main_TratDetalhes #equipe .btn_equipe svg {
+  height: 100%;
+}
+body #Main_TratDetalhes #equipe .btn_equipe img path, body #Main_TratDetalhes #equipe .btn_equipe svg path {
+  fill: #373435;
 }
 body #Main_TratDetalhes #depos {
   height: 75vh;
@@ -5394,60 +5572,20 @@ body #Main_TratDetalhes #depos p {
   color: #4B2F24;
   line-height: 3vh;
 }
-body #Main_TratDetalhes #depos .splide {
+body #Main_TratDetalhes #depos .Block_videos {
   width: 100%;
   height: 50vh;
   margin-top: 5vh;
+  display: flex;
 }
-body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow {
-  width: 3.25vw;
-  height: 3.25vw;
-  padding: 0.55vw;
-  opacity: 1;
-  background: none;
-}
-body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow svg {
-  fill: #4B2F24;
-  width: 100%;
-  height: 100%;
-}
-body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow:disabled {
-  opacity: 0.3;
-}
-body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow--prev {
-  left: -0.5vw;
-}
-body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow--next {
-  right: -0.5vw;
-}
-body #Main_TratDetalhes #depos .splide .splide__pagination {
-  display: none;
-}
-body #Main_TratDetalhes #depos .splide .splide__track {
-  width: 95%;
-  height: 100%;
-  margin-left: 2.5%;
-}
-body #Main_TratDetalhes #depos .splide .splide__track .splide__list {
-  width: 100%;
-  height: 100%;
-}
-body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide {
-  width: 100%;
-  height: 100%;
-  padding: 1.5vw;
-  transition: all ease-in-out 0.15s;
-  z-index: 2;
-}
-body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide:hover {
-  transform: scale(1.02);
-}
-body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo {
-  width: 100%;
-  height: 100%;
+body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo {
+  width: 48%;
+  height: 90%;
   position: relative;
+  transition: all ease-in-out 0.15s;
+  margin: 0 1%;
 }
-body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img, body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg {
+body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo img, body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo svg {
   position: absolute;
   width: 7.5vw;
   height: 7.5vw;
@@ -5456,10 +5594,10 @@ body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__sli
   z-index: 5;
   transition: all ease-in-out 0.15s;
 }
-body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img:hover, body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg:hover {
+body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo img:hover, body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo svg:hover {
   transform: scale(1.1);
 }
-body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo video {
+body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -5468,7 +5606,7 @@ body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__sli
   z-index: 1;
   border-radius: 1vw;
 }
-body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo::before {
+body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -5480,7 +5618,10 @@ body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__sli
   opacity: 0.5;
   border-radius: 1vw;
 }
-body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .no-back::before {
+body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo:hover {
+  transform: scale(1.02);
+}
+body #Main_TratDetalhes #depos .Block_videos .no-back::before {
   display: none;
 }
 body #Main_TratDetalhes #espaco {
@@ -5490,18 +5631,6 @@ body #Main_TratDetalhes #espaco {
   justify-content: center;
   padding: 0;
   background-color: #4B2F24;
-}
-body #Main_TratDetalhes #espaco .patter {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0.03;
-}
-body #Main_TratDetalhes #espaco .patter path {
-  fill: #D0B498;
 }
 body #Main_TratDetalhes #espaco #Block_textEspaco {
   width: 50%;
@@ -5601,21 +5730,10 @@ body #Main_TratDetalhes #FAQ {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   background-color: #D0B498;
-}
-body #Main_TratDetalhes #FAQ .patter {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0.03;
-}
-body #Main_TratDetalhes #FAQ .patter path {
-  fill: #4B2F24;
+  padding: 1vh 0;
 }
 body #Main_TratDetalhes #FAQ h2 {
   width: 100%;
@@ -5691,6 +5809,7 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
     margin: 1vh 0;
   }
   body #Main_TratDetalhes #banner span {
+    width: 40vw;
     bottom: 2vh;
     right: 4vw;
     font-size: 3vw;
@@ -5728,15 +5847,9 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
     width: 45%;
     height: 0.35vh;
   }
-  body #Main_TratDetalhes #etapas ul li {
-    height: 6vh;
-    margin: 1vh 0;
+  body #Main_TratDetalhes #etapas p {
     font-size: 3.5vw;
-    padding-left: 2.5vw;
-  }
-  body #Main_TratDetalhes #etapas ul li::before {
-    width: 1vw;
-    height: 1vw;
+    line-height: 4.5vh;
   }
   body #Main_TratDetalhes #resultados {
     padding: 0 6% 7.5vh;
@@ -5762,13 +5875,6 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
     padding: 5vh 5%;
     height: auto;
   }
-  body #Main_TratDetalhes #equipe .patter {
-    width: auto;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-    opacity: 0.15;
-  }
   body #Main_TratDetalhes #equipe h2 {
     font-size: 7vw;
     padding-left: 4vw;
@@ -5778,6 +5884,10 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
     bottom: -1vh;
     width: 35%;
     height: 0.3vh;
+  }
+  body #Main_TratDetalhes #equipe p {
+    font-size: 3.5vw;
+    line-height: 4.5vh;
   }
   body #Main_TratDetalhes #equipe .splide {
     margin-top: 0;
@@ -5827,6 +5937,17 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
   body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
     font-size: 3.5vw;
   }
+  body #Main_TratDetalhes #equipe .btn_equipe {
+    width: 58vw;
+    height: 4vh;
+    font-size: 4.5vw;
+    margin-top: 5vh;
+  }
+  body #Main_TratDetalhes #equipe .btn_equipe img, body #Main_TratDetalhes #equipe .btn_equipe svg {
+    margin-left: auto;
+    width: 15%;
+    height: 100%;
+  }
   body #Main_TratDetalhes #depos {
     height: auto;
     padding: 3vh 7.5% 6vh;
@@ -5844,51 +5965,30 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
   body #Main_TratDetalhes #depos p {
     font-size: 2.75vw;
   }
-  body #Main_TratDetalhes #depos .splide {
+  body #Main_TratDetalhes #depos .Block_videos {
     width: 100%;
-    height: 25vh;
-    margin-top: 1vh;
+    height: 35vh;
+    margin-top: 5vh;
+    display: flex;
   }
-  body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow {
-    width: 12vw;
-    height: 12vw;
-    padding: 1.5vw;
+  body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo {
+    width: 100%;
   }
-  body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow--prev {
-    left: -5vw;
-  }
-  body #Main_TratDetalhes #depos .splide .splide__arrows .splide__arrow--next {
-    right: -5vw;
-  }
-  body #Main_TratDetalhes #depos .splide .splide__track {
-    width: 90%;
-    margin-left: 5%;
-  }
-  body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo img, body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo svg {
+  body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo img, body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo svg {
     width: 15vw;
     height: 15vw;
     top: 32%;
   }
-  body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo video {
+  body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo video {
     border-radius: 3.5vw;
   }
-  body #Main_TratDetalhes #depos .splide .splide__track .splide__list .splide__slide .Block_VideoDepo::before {
+  body #Main_TratDetalhes #depos .Block_videos .Block_VideoDepo::before {
     border-radius: 3.5vw;
   }
   body #Main_TratDetalhes #espaco {
     flex-direction: column;
     padding: 0;
     height: auto;
-  }
-  body #Main_TratDetalhes #espaco .patter {
-    width: auto;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-    opacity: 0.04;
-  }
-  body #Main_TratDetalhes #espaco .patter path {
-    fill: #D0B498;
   }
   body #Main_TratDetalhes #espaco #Block_VideoEspaco {
     order: 2;
@@ -5905,7 +6005,7 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
   }
   body #Main_TratDetalhes #espaco #Block_textEspaco {
     width: 100%;
-    height: 90vh;
+    height: 110vh;
     padding: 5vw;
     flex-direction: column;
     order: 1;
@@ -5923,8 +6023,8 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
   }
   body #Main_TratDetalhes #espaco #Block_textEspaco p {
     padding-right: 2vw;
-    font-size: 2.7vw;
-    line-height: 2.5vh;
+    font-size: 3.5vw;
+    line-height: 3vh;
   }
   body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco {
     width: 60vw;
@@ -5941,13 +6041,6 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
     height: auto;
     padding: 2vh 7.5%;
   }
-  body #Main_TratDetalhes #FAQ .patter {
-    width: auto;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-    opacity: 0.04;
-  }
   body #Main_TratDetalhes #FAQ h2 {
     font-size: 6.5vw;
   }
@@ -5956,7 +6049,7 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
   }
   body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta {
     width: 100%;
-    height: 25vh;
+    height: 35vh;
     padding: 1vh 2vw;
     border: none;
     margin: 1vh 0;
@@ -5980,15 +6073,6 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
 body #Main_Equipe {
   padding-top: 124px;
   background-color: #4B2F24;
-}
-body #Main_Equipe #background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  opacity: 0.03;
 }
 body #Main_Equipe #banner {
   height: 65vh;
@@ -6089,6 +6173,7 @@ body #Main_Equipe #Block_medicos .dropdown .dropdown-toggle {
   padding-top: 0.35vh;
   border-radius: 0.5vw;
   border: 1px solid #D2AE6D;
+  overflow: hidden;
 }
 body #Main_Equipe #Block_medicos .dropdown .dropdown-toggle::after {
   content: "";
@@ -6183,16 +6268,25 @@ body #Main_Equipe #Block_medicos .filter .mix a .infosCards {
 }
 body #Main_Equipe #Block_medicos .filter .mix a .infosCards .nome {
   font-family: "TrajanPro", sans-serif;
+  width: 90%;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 body #Main_Equipe #Block_medicos .filter .mix a .infosCards .espec_medico {
   all: unset;
+  width: 90%;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
   font-size: 0.85vw;
   color: #4B2F24;
-  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 body #Main_Equipe #Block_medicos .filter .mix a:hover {
   transform: scale(1.02);
@@ -6204,72 +6298,6 @@ body #Main_Equipe #espaco {
   justify-content: center;
   padding: 0;
   background-color: #4B2F24;
-}
-body #Main_Equipe #espaco .patter {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0.03;
-}
-body #Main_Equipe #espaco .patter path {
-  fill: #D0B498;
-}
-body #Main_Equipe #espaco #Block_textEspaco {
-  width: 50%;
-  height: 100%;
-  padding: 4.75vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 2;
-}
-body #Main_Equipe #espaco #Block_textEspaco h2 {
-  width: 100%;
-  height: auto;
-  font-family: "TrajanPro", sans-serif;
-  font-size: 2.5vw;
-  padding-left: 2.5vw;
-  margin-bottom: 7.5vh;
-  margin-top: -5vh;
-  position: relative;
-  color: #D2AE6D;
-}
-body #Main_Equipe #espaco #Block_textEspaco h2::before {
-  content: "";
-  position: absolute;
-  bottom: -1.5vh;
-  left: 0;
-  width: 35%;
-  height: 0.35vh;
-  background-color: #D2AE6D;
-}
-body #Main_Equipe #espaco #Block_textEspaco p {
-  width: 100%;
-  padding-right: 3.5vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
-  font-weight: 400;
-  font-size: 1vw;
-  color: #E0E0E0;
-  line-height: 4vh;
-}
-body #Main_Equipe #espaco #Block_textEspaco .btn_espaco {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
-  height: 3.5vh;
-  width: 45%;
-  color: #D2AE6D;
-  font-size: 1.2vw;
-  margin-top: 15vh;
-}
-body #Main_Equipe #espaco #Block_textEspaco .btn_espaco img, body #Main_Equipe #espaco #Block_textEspaco .btn_espaco svg {
-  height: 100%;
-  width: 25%;
-  margin-left: auto;
-}
-body #Main_Equipe #espaco #Block_textEspaco .btn_espaco img path, body #Main_Equipe #espaco #Block_textEspaco .btn_espaco svg path {
-  fill: #D2AE6D;
 }
 body #Main_Equipe #espaco #Block_VideoEspaco {
   width: 50%;
@@ -6312,6 +6340,61 @@ body #Main_Equipe #espaco #Block_VideoEspaco::before {
 body #Main_Equipe #espaco .no-back::before {
   display: none;
 }
+body #Main_Equipe #espaco #Block_textEspaco {
+  width: 50%;
+  height: 100%;
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body #Main_Equipe #espaco #Block_textEspaco h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", sans-serif;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 5vh;
+  position: relative;
+  color: #D2AE6D;
+}
+body #Main_Equipe #espaco #Block_textEspaco h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 35%;
+  height: 0.35vh;
+  background-color: #D2AE6D;
+}
+body #Main_Equipe #espaco #Block_textEspaco p {
+  width: 100%;
+  padding-right: 1vw;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 300;
+  font-size: 1vw;
+  color: #E0E0E0;
+  line-height: 3.5vh;
+}
+body #Main_Equipe #espaco #Block_textEspaco .btn_espaco {
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  height: 3.5vh;
+  width: 45%;
+  color: #D2AE6D;
+  font-size: 1.2vw;
+  margin-top: 7.5vh;
+  margin-right: auto;
+}
+body #Main_Equipe #espaco #Block_textEspaco .btn_espaco img, body #Main_Equipe #espaco #Block_textEspaco .btn_espaco svg {
+  height: 100%;
+  width: 25%;
+  margin-left: auto;
+}
+body #Main_Equipe #espaco #Block_textEspaco .btn_espaco img path, body #Main_Equipe #espaco #Block_textEspaco .btn_espaco svg path {
+  fill: #D2AE6D;
+}
 body #Main_Equipe #FAQ {
   position: relative;
   display: flex;
@@ -6320,18 +6403,6 @@ body #Main_Equipe #FAQ {
   flex-direction: column;
   background-color: #D0B498;
   z-index: 5;
-}
-body #Main_Equipe #FAQ .patter {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0.03;
-}
-body #Main_Equipe #FAQ .patter path {
-  fill: #4B2F24;
 }
 body #Main_Equipe #FAQ h2 {
   width: 100%;
@@ -6392,13 +6463,6 @@ body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(5)::before, bo
 @media only screen and (max-width: 479px) {
   body #Main_Equipe {
     padding-top: 90px;
-  }
-  body #Main_Equipe #background {
-    width: auto;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-    opacity: 0.04;
   }
   body #Main_Equipe #banner {
     height: 55vh;
@@ -6495,7 +6559,7 @@ body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(5)::before, bo
   }
   body #Main_Equipe #espaco #Block_textEspaco {
     width: 100%;
-    height: 60vh;
+    height: 90vh;
     padding: 5vw;
     flex-direction: column;
     order: 1;
@@ -6571,15 +6635,6 @@ body #Main_EquipeDetalhes {
   padding-top: 124px;
   background-color: #4B2F24;
 }
-body #Main_EquipeDetalhes #background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  opacity: 0.03;
-}
 body #Main_EquipeDetalhes #Block_user {
   z-index: 5;
   position: relative;
@@ -6649,6 +6704,7 @@ body #Main_EquipeDetalhes #Block_user #imgVideo_User #imgUser {
 }
 body #Main_EquipeDetalhes #Block_user #infos_User {
   width: 55vw;
+  min-height: 100vh;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -6724,33 +6780,6 @@ body #Main_EquipeDetalhes #Block_user #infos_User #bio p, body #Main_EquipeDetal
   color: #D0B498;
   line-height: 3.5vh;
   padding-right: 1vw;
-}
-body #Main_EquipeDetalhes #Block_user #infos_User #formacoes {
-  margin-top: 2vh;
-}
-body #Main_EquipeDetalhes #Block_user #infos_User #formacoes ul {
-  margin-top: 2vh;
-}
-body #Main_EquipeDetalhes #Block_user #infos_User #formacoes ul li {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
-  font-weight: 400;
-  font-size: 1vw;
-  color: #D0B498;
-  line-height: 3.5vh;
-  padding-left: 1.25vw;
-  margin: 1vh 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-body #Main_EquipeDetalhes #Block_user #infos_User #formacoes ul li::before {
-  content: "";
-  position: absolute;
-  left: 0.5vw;
-  width: 0.3vw;
-  height: 0.3vw;
-  background-color: #D0B498;
-  border-radius: 2vw;
 }
 body #Main_EquipeDetalhes #Block_user #infos_User #botoes {
   width: 100%;
@@ -8761,7 +8790,7 @@ body #Main_blogPost #equipe .btn_equipe img path, body #Main_blogPost #equipe .b
     padding: 0.5vh 0;
   }
   body footer #bigFooter #endereco_rodape p, body footer #bigFooter #telefone_rodape p {
-    line-height: 1vh;
+    line-height: 2vh;
     margin-top: 2vh;
   }
   body footer #bigFooter #telefone_rodape {
@@ -8933,6 +8962,9 @@ body #Main_blogPost #equipe .btn_equipe img path, body #Main_blogPost #equipe .b
     background: none;
   }
   body #Main_index #especialidades .especialidadeBlock .cinza {
+    background: none;
+  }
+  body #Main_index #especialidades .especialidadeBlock .marrom {
     background: none;
   }
   body #Main_index #especialidades #textEspecialidade {

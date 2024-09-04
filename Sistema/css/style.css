@@ -2733,7 +2733,6 @@ body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card {
   justify-content: center;
 }
 body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card .card_banner {
-  border: 2px solid #E0E0E0;
   width: 100%;
   height: 90%;
   -o-object-fit: cover;
@@ -2741,6 +2740,20 @@ body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card .card_banner {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  border-radius: 1vw;
+}
+body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: #4B2F24;
+  opacity: 0.5;
+  z-index: 2;
+  border-radius: 1vw;
 }
 body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card p {
   position: absolute;
@@ -2756,15 +2769,21 @@ body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card p {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  z-index: 5;
 }
 body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card span {
   position: absolute;
   top: 1vh;
   left: 0.5vw;
+  width: 90%;
   font-family: "TrajanPro", sans-serif;
   font-weight: 900;
   font-size: 0.75vw;
   color: #E0E0E0;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card span b {
   color: #D2AE6D;
@@ -3277,11 +3296,32 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   justify-content: center;
   padding: 0 1vw;
 }
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video01_block .editPen, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video02_block .editPen {
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  bottom: 0;
+  padding: 0.8vw;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video01_block .editPen path, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video02_block .editPen path {
+  fill: #E0E0E0;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video01_block::before, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video02_block::before {
+  content: "";
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  bottom: 0;
+  background: #D2AE6D;
+  border-radius: 50%;
+  outline: 1px solid #373435;
+}
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video01_block .btn_VoltaPadrao_Video01_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video01_block .btn_VoltaPadrao_Video02_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video02_block .btn_VoltaPadrao_Video01_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video02_block .btn_VoltaPadrao_Video02_Input {
   position: absolute;
   z-index: 999 !important;
   background-color: #373435;
   bottom: 1vh;
+  right: 2vw;
   width: 9vw;
   height: 3.5vh;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;

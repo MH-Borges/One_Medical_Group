@@ -1991,7 +1991,7 @@ body {
                 }
                 #endereco_rodape, #telefone_rodape{
                     p{
-                        line-height: 1vh;
+                        line-height: 2vh;
                         margin-top: 2vh;
                     }
                 }
@@ -2167,6 +2167,9 @@ body {
                         background: none;
                     }
                     .cinza{
+                        background: none;
+                    }
+                    .marrom{
                         background: none;
                     }
                 }

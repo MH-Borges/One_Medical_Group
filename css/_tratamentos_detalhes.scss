@@ -26,7 +26,7 @@
             width: 100%;
             height: 100%;
             background-color: $Marrom;
-            opacity: 0.45;
+            opacity: 0.65;
             z-index: 2;
         }
         h1, p{
@@ -53,6 +53,7 @@
             margin: 1vh 0 1vh;
         }
         span{
+            width: 30vw;
             z-index: 5;
             position: absolute;
             bottom: 3vh;
@@ -60,13 +61,20 @@
             font-family: $Main-font;
             font-size: 1.15vw;
             color: $Branco;
+            white-space: nowrap;                  
+            overflow: hidden;
+            text-overflow: ellipsis;
             a{
                 margin-left: 0.25vw;
                 color: $Amarelo;
+                &:hover{
+                    color: $Marrom
+                }
             }
         }
     }
     #como_Funicona{
+        min-height: 50vh;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -93,13 +101,17 @@
             }
         }
         p{
+            width: 100%;
+            height: auto;
             font-family: $Text-font;
             font-size: 1.1vw;
             color: $Preto;
             line-height: 3.5vh;
+            text-align: left;
         }
     }
     #etapas{
+        min-height: 50vh;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -125,34 +137,14 @@
                 background-color: $Marrom;
             }
         }
-        ul{
-            height: auto;
+        p{
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            li{
-                width: 100%;
-                height: 5vh;
-                display: flex;
-                align-items: center;
-                margin: 0.75vh 0;
-                font-family: $Text-font;
-                font-size: 1.1vw;
-                color: $Preto;
-                margin-left: 1vw;
-                padding-left: 1vw;
-                position: relative;
-                &::before{
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    width: 0.4vw;
-                    height: 0.4vw;
-                    border-radius: 50%;
-                    background-color: $Preto;
-                }
-            }
+            height: auto;
+            font-family: $Text-font;
+            font-size: 1.1vw;
+            color: $Preto;
+            line-height: 3.5vh;
+            text-align: left;
         }
     }
     #resultados{
@@ -203,15 +195,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        .patter{
-            position: absolute;
-            width: 100%;
-            height: auto;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            opacity: 0.09;
-        }
         h2{
             width: 100%;
             height: auto;
@@ -231,7 +214,17 @@
                 background-color: $Marrom;
             }
         }
+        p{
+            width: 100%;
+            padding-right: 3.5vw;
+            font-family: $Text-font;
+            font-weight: 400;
+            font-size: 1vw;
+            color: $Marrom;
+            line-height: 3vh;
+        }
         .splide{
+            margin-top: 5vh;
             width: 100%;
             height: 50vh;
             .splide__arrows{
@@ -302,16 +295,25 @@
                                 justify-content: center;
                                 .nome{
                                     font-family: $Main-font;
+                                    width: 90%;
                                     font-size: 1.05vw;
                                     color: $Marrom;
                                     margin-bottom: 1.25vh;
+                                    white-space: nowrap;                  
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    text-align: center;
                                 }
                                 .espec_medico{
                                     all: unset;
+                                    width: 90%;
                                     font-family: $Text-font;
                                     font-size: 0.85vw;
                                     color: $Marrom;
-                                    font-style: italic;
+                                    white-space: nowrap;                  
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    text-align: center;
                                 }
                             }
                         }
@@ -319,6 +321,19 @@
                             transform: scale(1.02);
                         }
                     }
+                }
+            }
+        }
+        .btn_equipe{
+            font-family: $Text-font;
+            height: 3.5vh;
+            color: $Preto;
+            font-size: 1.25vw;
+            margin-top: 7.5vh;
+            img, svg{
+                height: 100%;
+                path{
+                    fill: $Preto;
                 }
             }
         }
@@ -356,95 +371,56 @@
             color: $Marrom;
             line-height: 3vh;
         }
-        .splide{
+        .Block_videos{
             width: 100%;
             height: 50vh;
             margin-top: 5vh;
-            .splide__arrows{
-                .splide__arrow {
-                    width: 3.25vw;
-                    height: 3.25vw;
-                    padding: 0.55vw;
-                    opacity: 1;
-                    background: none;
-                    svg{
-                        fill: $Marrom;
-                        width: 100%;
-                        height: 100%;
+            display: flex;
+            .Block_VideoDepo{
+                width: 48%;
+                height: 90%;
+                position: relative;
+                transition: all ease-in-out .15s;
+                margin: 0 1%;
+                img, svg{
+                    position: absolute;
+                    width: 7.5vw;
+                    height: 7.5vw;
+                    left: 42%;
+                    top: 30%;
+                    z-index: 5;
+                    transition: all ease-in-out .15s;
+                    &:hover{
+                        transform: scale(1.1);
                     }
-                    &:disabled{
-                        opacity: 0.3;
-                    }
                 }
-                .splide__arrow--prev{
-                    left: -0.5vw;
-                }
-                .splide__arrow--next{
-                    right: -0.5vw;
-                }
-            }
-            .splide__pagination {
-                display: none;
-            }
-            .splide__track {
-                width: 95%;
-                height: 100%;
-                margin-left: 2.5%;
-                .splide__list{
+                video{
                     width: 100%;
                     height: 100%;
-                    .splide__slide{
-                        width: 100%;
-                        height: 100%;
-                        padding: 1.5vw;
-                        transition: all ease-in-out .15s;
-                        z-index: 2;
-                        &:hover{
-                            transform: scale(1.02);
-                        }
-                        .Block_VideoDepo{
-                            width: 100%;
-                            height: 100%;
-                            position: relative;
-                            img, svg{
-                                position: absolute;
-                                width: 7.5vw;
-                                height: 7.5vw;
-                                left: 42%;
-                                top: 30%;
-                                z-index: 5;
-                                transition: all ease-in-out .15s;
-                                &:hover{
-                                    transform: scale(1.1);
-                                }
-                            }
-                            video{
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                                position: relative;
-                                z-index: 1;
-                                border-radius: 1vw;
-                            }
-                            &::before{
-                                content: '';
-                                position: absolute;
-                                width: 100%;
-                                height: 100%;
-                                top: 0;
-                                left: 0;
-                                background-color: $Marrom;
-                                z-index: 2;
-                                opacity: 0.5;
-                                border-radius: 1vw;
-                            }
-                        }
-                        .no-back{
-                            &::before{
-                                display: none;
-                            }
-                        }
-                    }
+                    object-fit: cover;
+                    position: relative;
+                    z-index: 1;
+                    border-radius: 1vw;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: $Marrom;
+                    z-index: 2;
+                    opacity: 0.5;
+                    border-radius: 1vw;
+                }
+                &:hover{
+                    transform: scale(1.02);
+                }
+            }
+            .no-back{
+                &::before{
+                    display: none;
                 }
             }
         }
@@ -456,18 +432,6 @@
         justify-content: center;
         padding: 0;
         background-color: $Marrom;
-        .patter{
-            position: absolute;
-            width: 100%;
-            height: auto;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            opacity: 0.03;
-            path{
-                fill: $Creme;
-            }
-        }
         #Block_textEspaco{
             width: 50%;
             height: 100%;
@@ -569,21 +533,10 @@
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         flex-direction: column;
         background-color: $Creme;
-        .patter{
-            position: absolute;
-            width: 100%;
-            height: auto;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            opacity: 0.03;
-            path{
-                fill: $Marrom;
-            }
-        }
+        padding: 1vh 0;
         h2{
             width: 100%;
             height: 7.5vh;
@@ -663,6 +616,7 @@
                 margin: 1vh 0;
             }
             span{
+                width: 40vw;
                 bottom: 2vh;
                 right: 4vw;
                 font-size: 3vw;
@@ -700,17 +654,9 @@
                     height: 0.35vh;
                 }
             }
-            ul{
-                li{
-                    height: 6vh;
-                    margin: 1vh 0;
-                    font-size: 3.5vw;
-                    padding-left: 2.5vw;
-                    &::before{
-                        width: 1vw;
-                        height: 1vw;
-                    }
-                }
+            p{
+                font-size: 3.5vw;
+                line-height: 4.5vh;
             }
         }
         #resultados{
@@ -736,12 +682,6 @@
             justify-content: center;
             padding: 5vh 5%;
             height: auto;
-            .patter{
-                width: auto;
-                height: 100%;
-                object-fit: contain;
-                opacity: 0.15;
-            }
             h2{
                 font-size: 7vw;
                 padding-left: 4vw;
@@ -751,6 +691,10 @@
                     width: 35%;
                     height: 0.3vh;
                 }
+            }
+            p{
+                font-size: 3.5vw;
+                line-height: 4.5vh;
             }
             .splide{
                 margin-top: 0;
@@ -807,6 +751,17 @@
                     }
                 }
             }
+            .btn_equipe{
+                width: 58vw;
+                height: 4vh;
+                font-size: 4.5vw;
+                margin-top: 5vh;
+                img, svg{
+                    margin-left: auto;
+                    width: 15%;
+                    height: 100%;
+                }
+            }
         }
         #depos{
             height: auto;
@@ -824,59 +779,32 @@
             p{
                 font-size: 2.75vw;
             }
-            .splide{
+            .Block_videos{
                 width: 100%;
-                height: 25vh;
-                margin-top: 1vh;
-                .splide__arrows{
-                    .splide__arrow {
-                        width: 12vw;
-                        height: 12vw;
-                        padding: 1.5vw;
+                height: 35vh;
+                margin-top: 5vh;
+                display: flex;
+                .Block_VideoDepo{
+                    width: 100%;
+                    img, svg{
+                        width: 15vw;
+                        height: 15vw;
+                        top: 32%;
                     }
-                    .splide__arrow--prev{
-                        left: -5vw;
+                    video{
+                        border-radius: 3.5vw;
                     }
-                    .splide__arrow--next{
-                        right: -5vw;
-                    }
-                }
-                .splide__track {
-                    width: 90%;
-                    margin-left: 5%;
-                    .splide__list{
-                        .splide__slide{
-                            .Block_VideoDepo{
-                                img, svg{
-                                    width: 15vw;
-                                    height: 15vw;
-                                    top: 32%;
-                                }
-                                video{
-                                    border-radius: 3.5vw;
-                                }
-                                &::before{
-                                    border-radius: 3.5vw;
-                                }
-                            }
-                        }
+                    &::before{
+                        border-radius: 3.5vw;
                     }
                 }
             }
+            
         }
         #espaco{
             flex-direction: column;
             padding: 0;
             height: auto;
-            .patter{
-                width: auto;
-                height: 100%;
-                object-fit: contain;
-                opacity: 0.04;
-                path{
-                    fill: $Creme;
-                }
-            }
             #Block_VideoEspaco{
                 order: 2;
                 width: 100%;
@@ -892,7 +820,7 @@
             }
             #Block_textEspaco{
                 width: 100%;
-                height: 90vh;
+                height: 110vh;
                 padding: 5vw;
                 flex-direction: column;
                 order: 1;
@@ -909,8 +837,8 @@
                 }
                 p{
                     padding-right: 2vw;
-                    font-size: 2.7vw;
-                    line-height: 2.5vh;
+                    font-size: 3.5vw;
+                    line-height: 3vh;
                 }
                 .btn_espaco{
                     width: 60vw;
@@ -928,12 +856,6 @@
         #FAQ{
             height: auto;
             padding: 2vh 7.5%;
-            .patter{
-                width: auto;
-                height: 100%;
-                object-fit: contain;
-                opacity: 0.04;
-            }
             h2{
                 font-size: 6.5vw;
             }
@@ -941,7 +863,7 @@
                 margin: 2vh 0;
                 .Block_pergunta{
                     width: 100%;
-                    height: 25vh;
+                    height: 35vh;
                     padding: 1vh 2vw;
                     border: none;
                     margin: 1vh 0;

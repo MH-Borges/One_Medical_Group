@@ -1,3 +1,4 @@
+<?php require_once("./Sistema/configs/conexao.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -73,48 +74,36 @@
             <h2>Em nossa equipe estão profissionais altamente qualificados em diversas áreas, comprometidos em proporcionar diagnósticos precisos e tratamentos para atender suas necessidades, de forma integrada e humanizada. Explore nossas especialidades médicas e descubra como podemos ajudar a alcançar a sua melhor versão e uma vida mais saudável e equilibrada.</h2>
             
             <div id="especialidadesCards">
-                <div class="especialidade_card">
-                    <img src="assets/especialidades/otorrinolaringologia.webp" alt="">
-                    <h3>Otorrinolaringologia</h3>
-                    <p>Nossos médicos são especializados em diagnosticar e tratar uma ampla gama de condições que envolvem esta atividade, principalmente com procedimentos para melhorar a respiração e a estética nasal, garantindo um equilíbrio perfeito entre função e aparência.</p>
-                    <a class="btns btn_card" href="tratamentos.html">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
-                </div>
-                <div class="especialidade_card amarelo">
-                    <img src="assets/especialidades/fisioterapia.webp" alt="">
-                    <h3>Fisioterapia</h3>
-                    <p>Nossa equipe de Fisioterapia é dedicada à recuperação funcional e estética. Além de tratar lesões e condições crônicas, nossos fisioterapeutas utilizam técnicas avançadas de fisioterapia dermatofuncional para corrigir intercorrências e auxiliar você a alcançar a excelência.</p>
-                    <a class="btns btn_card" href="tratamentos.html">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
-                </div>
-                <div class="especialidade_card preto">
-                    <img src="assets/especialidades/Cirurgia_de_face.webp" alt="">
-                    <h3>Cirurgia de face</h3>
-                    <p>A Cirurgia da Face são procedimentos estéticos que visam melhorar a aparência e a confiança. Nossos cirurgiões faciais realizam rinoplastias, liftings faciais, blefaroplastias, otoplastia e outros procedimentos com precisão, focando na harmonia facial e em resultados naturais que realçam sua beleza.</p>
-                    <a class="btns btn_card" href="tratamentos.html">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
-                </div>
-                <div class="especialidade_card amarelo">
-                    <img src="assets/especialidades/ginecologia.webp" alt="">
-                    <h3>Ginecologia</h3>
-                    <p>Na One Clínica Médica, a Ginecologia oferece tratamentos estéticos, como rejuvenescimento vaginal e cuidados com a estética íntima. Nossos ginecologistas fornecem um atendimento completo, garantindo bem-estar e confiança em todas as fases da vida da mulher.</p>
-                    <a class="btns btn_card" href="tratamentos.html">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
-                </div>
-                <div class="especialidade_card cinza">
-                    <img src="assets/especialidades/cirurgia_plástica.webp" alt="">
-                    <h3>Cirurgia plástica</h3>
-                    <p>A Cirurgia Plástica na One Clínica Médica é o coração da nossa especialização estética. Nossos cirurgiões plásticos são capacitados em uma ampla gama de procedimentos reconstrutivos e estéticos, como lipoaspiração, abdominoplastia, mamoplastia e contorno corporal, sempre buscando resultados naturais que realcem o encanto individual do paciente.</p>
-                    <a class="btns btn_card" href="tratamentos.html">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
-                </div>
-                <div class="especialidade_card preto">
-                    <img src="assets/especialidades/dermatologia.webp" alt="">
-                    <h3>Dermatologia</h3>
-                    <p>A Dermatologia, voltada para a estética e saúde da pele, oferece tratamentos avançados como preenchimentos, toxina botulínica, peelings e laser, além de cuidados com a pele para tratar acne, manchas e envelhecimento, proporcionando uma aparência rejuvenescida e saudável.</p>
-                    <a class="btns btn_card" href="tratamentos.html">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
-                </div>
-                <div class="especialidade_card">
-                    <img src="assets/especialidades/nutrologia.webp" alt="">
-                    <h3>Nutrologia</h3>
-                    <p>Nutrologia na One Clínica Médica foca na nutrição estética, auxiliando na gestão de peso, melhoria do desempenho físico e tratamento de condições metabólicas com um olhar voltado para a beleza. Nossos nutrólogos elaboram planos alimentares personalizados que promovem uma alimentação saudável e resultados visíveis na aparência e bem-estar.</p>
-                    <a class="btns btn_card" href="tratamentos.html">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
-                </div>
+                <?php
+                    $query = $pdo->query("SELECT * FROM especialidade ORDER BY id DESC");
+                    $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                    for ($i=0; $i < count($dados); $i++) { 
+                        $foto_espec = $dados[$i]['foto'];
+                        $nome_espec = $dados[$i]['nome'];
+                        $descricao_espec = $dados[$i]['descricao'];
+
+                        $cor_back = rand(0,3);
+                        if($cor_back == 0){ $cor_back = 'amarelo'; }
+                        if($cor_back == 1){ $cor_back = 'preto'; }
+                        if($cor_back == 2){ $cor_back = 'cinza'; }
+                        if($cor_back == 3){ $cor_back = 'marrom'; }
+
+                        $nome_novo_espec = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome_espec)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                        $nome_tratado_espec = preg_replace('/[ -]+/', '_', $nome_novo_espec);
+                        if($foto_espec !== "placeholder.webp"){
+                            $foto_espec = "<img src='assets/especialidades/$foto_espec' alt='$nome_espec'>";
+                            
+                            echo "
+                                <div class='especialidade_card $cor_back'>
+                                    ".$foto_espec."
+                                    <h3>".$nome_espec."</h3>
+                                    <p>".$descricao_espec."</p>
+                                    <a class='btns btn_card' href='especialidade_de_$nome_tratado_espec'>Saiba mais <img src='assets/icons/seta.svg' onload='SVGInject(this)'></a>
+                                </div>
+                            ";
+                        }
+                    }
+                ?>
             </div>
         </section>
 
@@ -131,7 +120,7 @@
                 <span>
                     Agende sua consulta e descubra como nossa Concierge de Beleza pode transformar sua jornada de beleza em uma experiência única.
                 </span>
-                <a href="especialidades.html" class="btns btn_Concierge">Agendar sessão</a>
+                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_Concierge">Agendar sessão</a>
             </div>
             <img src="assets/concierge.webp" alt="">
         </section>
@@ -158,7 +147,7 @@
                     <br><br>
                     Isso é parte integrante do compromisso da One Medical Group, a sua saúde. 
                 </p>
-                <a href="especialidades.html" class="btns btn_AllInOne">Agendar sessão</a>
+                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Agendar sessão</a>
             </div>
         </section>
         

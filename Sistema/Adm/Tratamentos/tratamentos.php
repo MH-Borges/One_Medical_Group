@@ -304,6 +304,7 @@
                                 
                                 echo $video01;
                             ?>
+                            <img class="editPen" onclick="document.getElementById('Video01_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
                         </div>
 
                         <div id="Video02_block">
@@ -328,56 +329,57 @@
                                 
                                 echo $video02;
                             ?>
+                            <img class="editPen" onclick="document.getElementById('Video02_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
                         </div>
                     </div>
                     <div id="Block_FAQ">
                         <h2>Perguntas e respostas</h2>
                         <div class="BlockBox">
-                            <input type="text" name="pgnt_01" id="pgnt_01" value="<?php echo @$pgnt_01?>" maxlength="500" required>
+                            <input type="text" name="pgnt_01" id="pgnt_01" value="<?php echo @$pgnt_01?>" maxlength="130" required>
                             <span>Pergunta 01:</span>
                         </div>
                         <div class="BlockBox TextAreaBox">
-                            <textarea type="text" name="resp_01" id="resp_01" maxlength="2500" required><?php echo @$resp_01 ?></textarea>
+                            <textarea type="text" name="resp_01" id="resp_01" maxlength="325" required><?php echo @$resp_01 ?></textarea>
                             <span>Resposta para a pergunta 01:</span>
                         </div>
                         <div class="BlockBox">
-                            <input type="text" name="pgnt_02" id="pgnt_02" value="<?php echo @$pgnt_02?>" maxlength="500" required>
+                            <input type="text" name="pgnt_02" id="pgnt_02" value="<?php echo @$pgnt_02?>" maxlength="130" required>
                             <span>Pergunta 02:</span>
                         </div>
                         <div class="BlockBox TextAreaBox">
-                            <textarea type="text" name="resp_02" id="resp_02" maxlength="2500" required><?php echo @$resp_02 ?></textarea>
+                            <textarea type="text" name="resp_02" id="resp_02" maxlength="325" required><?php echo @$resp_02 ?></textarea>
                             <span>Resposta para a pergunta 02:</span>
                         </div>
                         <div class="BlockBox">
-                            <input type="text" name="pgnt_03" id="pgnt_03" value="<?php echo @$pgnt_03?>" maxlength="500" required>
+                            <input type="text" name="pgnt_03" id="pgnt_03" value="<?php echo @$pgnt_03?>" maxlength="130" required>
                             <span>Pergunta 03:</span>
                         </div>
                         <div class="BlockBox TextAreaBox">
-                            <textarea type="text" name="resp_03" id="resp_03" maxlength="2500" required><?php echo @$resp_03 ?></textarea>
+                            <textarea type="text" name="resp_03" id="resp_03" maxlength="325" required><?php echo @$resp_03 ?></textarea>
                             <span>Resposta para a pergunta 03:</span>
                         </div>
                         <div class="BlockBox">
-                            <input type="text" name="pgnt_04" id="pgnt_04" value="<?php echo @$pgnt_04?>" maxlength="500" required>
+                            <input type="text" name="pgnt_04" id="pgnt_04" value="<?php echo @$pgnt_04?>" maxlength="130" required>
                             <span>Pergunta 04:</span>
                         </div>
                         <div class="BlockBox TextAreaBox">
-                            <textarea type="text" name="resp_04" id="resp_04" maxlength="2500" required><?php echo @$resp_04 ?></textarea>
+                            <textarea type="text" name="resp_04" id="resp_04" maxlength="325" required><?php echo @$resp_04 ?></textarea>
                             <span>Resposta para a pergunta 04:</span>
                         </div>
                         <div class="BlockBox">
-                            <input type="text" name="pgnt_05" id="pgnt_05" value="<?php echo @$pgnt_05?>" maxlength="500" required>
+                            <input type="text" name="pgnt_05" id="pgnt_05" value="<?php echo @$pgnt_05?>" maxlength="130" required>
                             <span>Pergunta 05:</span>
                         </div>
                         <div class="BlockBox TextAreaBox">
-                            <textarea type="text" name="resp_05" id="resp_05" maxlength="2500" required><?php echo @$resp_05 ?></textarea>
+                            <textarea type="text" name="resp_05" id="resp_05" maxlength="325" required><?php echo @$resp_05 ?></textarea>
                             <span>Resposta para a pergunta 05:</span>
                         </div>
                         <div class="BlockBox">
-                            <input type="text" name="pgnt_06" id="pgnt_06" value="<?php echo @$pgnt_06?>" maxlength="500" required>
+                            <input type="text" name="pgnt_06" id="pgnt_06" value="<?php echo @$pgnt_06?>" maxlength="130" required>
                             <span>Pergunta 06:</span>
                         </div>
                         <div class="BlockBox TextAreaBox">
-                            <textarea type="text" name="resp_06" id="resp_06" maxlength="2500" required><?php echo @$resp_06 ?></textarea>
+                            <textarea type="text" name="resp_06" id="resp_06" maxlength="325" required><?php echo @$resp_06 ?></textarea>
                             <span>Resposta para a pergunta 06:</span>
                         </div>
                     </div>

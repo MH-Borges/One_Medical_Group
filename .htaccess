@@ -6,11 +6,6 @@ RewriteRule ^especialidade_de_(.*)$ tratamentos.php?nome=$1 [L]
 RewriteRule ^medico_(.*)$ equipe_detalhes.php?nome=$1 [L]
 RewriteRule ^tratamento_de_(.*)$ tratamentos_detalhes.php?nome=$1 [L]
 
-
-
-RewriteRule ^produtos_(.*)$ produtos.php?nome=$1 [L]
-
-
 AddHandler application/x-httpd-ea-php82___lsphp .php .php8 .phtml
 
 RewriteEngine on

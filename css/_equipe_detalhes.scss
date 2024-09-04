@@ -1,15 +1,6 @@
 #Main_EquipeDetalhes{
     padding-top: 124px;
     background-color: $Marrom;
-    #background{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        z-index: 1;
-        opacity: 0.03;
-    }
     #Block_user{
         z-index: 5;
         position: relative;
@@ -78,6 +69,7 @@
         }
         #infos_User{
             width: 55vw;
+            min-height: 100vh;
             height: auto;
             display: flex;
             flex-direction: column;
@@ -151,33 +143,6 @@
                     color: $Creme;
                     line-height: 3.5vh;
                     padding-right: 1vw;
-                }
-            }
-            #formacoes{
-                margin-top: 2vh;
-                ul{
-                    margin-top: 2vh;
-                    li{
-                        font-family: $Text-font;
-                        font-weight: 400;
-                        font-size: 1vw;
-                        color: $Creme;
-                        line-height: 3.5vh;
-                        padding-left: 1.25vw;
-                        margin: 1vh 0;
-                        position: relative;
-                        display: flex;
-                        align-items: center;
-                        &::before{
-                            content: '';
-                            position: absolute;
-                            left: 0.5vw;
-                            width: 0.3vw;
-                            height: 0.3vw;
-                            background-color: $Creme;
-                            border-radius: 2vw;
-                        }
-                    }
                 }
             }
             #botoes{

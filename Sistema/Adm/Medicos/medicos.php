@@ -450,6 +450,8 @@
     ?>
 
     <script>
+        $('#whatsapp').mask('(00) 00000 - 0000');
+
         //FUNÇÃO DE SELETORES CUSTOMIZADOS
         function OptionSelection(selectedValueId, optionsButtonId, optionInputsClass) {
             let selectedValue = document.getElementById(selectedValueId),

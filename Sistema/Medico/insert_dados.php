@@ -60,6 +60,10 @@
         echo 'Selecione uma especialidade para continuar!';
         exit();
     }
+    if($bio == ""){
+        echo 'Preencha o campo de descrição com uma descrição simples';
+        exit();
+    }
     if($bio !== ""){
         $bio = nl2br(htmlentities($bio, ENT_QUOTES, 'UTF-8'));
     }

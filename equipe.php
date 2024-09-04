@@ -1,3 +1,4 @@
+<?php require_once("./Sistema/configs/conexao.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -70,7 +71,6 @@
 
     <main id="Main_Equipe">
         <a class="whats_link hide" target="_blank" href="https://wa.me/551151081977"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
-        <img id="background" src="assets/patter.svg" onload="SVGInject(this)">
 
         <section id="banner">
             <img src="assets/banner_equipe.webp" alt="">
@@ -85,160 +85,91 @@
                 </button>
                 <ul class="dropdown-menu controls" aria-labelledby="dropdownMenu">
                     <li class="active" data-filter="*" onclick="changeButton(this)">Ver todas especialidades</li>
-                    <li data-filter=".Dermatologia" onclick="changeButton(this)">Dermatologia</li>
-                    <li data-filter=".Otorrinolaringologia" onclick="changeButton(this)">Otorrinolaringologia</li>
-                    <li data-filter=".Ginecologia" onclick="changeButton(this)">Ginecologia</li>
-                    <li data-filter=".Nutrologia" onclick="changeButton(this)">Nutrologia</li>
+                    <?php
+                        $query = $pdo->query("SELECT * FROM especialidade ORDER BY id DESC");
+                        $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                        for ($i=0; $i < count($dados); $i++) { 
+                            $nome_espec = $dados[$i]['nome'];
+                            $foto_espec = $dados[$i]['foto'];
+
+                            $nome_novo_espec = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome_espec)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                            $nome_tratado_espec = preg_replace('/[ -]+/', '_', $nome_novo_espec);
+                            if($foto_espec !== "placeholder.webp"){
+                                $query2 = $pdo->query("SELECT * FROM medicos WHERE especialidade = '$nome_espec'");
+                                $dados2 = $query2->fetchAll(PDO::FETCH_ASSOC);
+                                if(@count($dados2) > 0){
+                                    echo "<li data-filter='.$nome_tratado_espec' onclick='changeButton(this)'>$nome_espec</li>";
+                                }
+                            }
+                        }
+                    ?>
                 </ul>
             </div>
 
             <div class="filter">
-                <div class="mix Dermatologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/medico01.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Francini Belluci</h3>
-                            <p class="espec_medico">Dermatologista</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Ginecologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/medico02.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dr. Rodrigo De Léo</h3>
-                            <p class="espec_medico">Ginecologista</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Dermatologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/medico03.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Raquel Ferrari</h3>
-                            <p class="espec_medico">Dermatologista</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Dermatologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/medico04.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Cybele Guedes</h3>
-                            <p class="espec_medico">Dermatologista</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Nutrologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/medico05.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dr. Gabriel Costa</h3>
-                            <p class="espec_medico">Nutrólogo</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Ginecologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/user_placeholder.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Lorem Ipsum</h3>
-                            <p class="espec_medico">DolumsitAmet</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Nutrologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/user_placeholder.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Lorem Ipsum</h3>
-                            <p class="espec_medico">DolumsitAmet</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Dermatologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/user_placeholder.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Lorem Ipsum</h3>
-                            <p class="espec_medico">DolumsitAmet</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Nutrologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/user_placeholder.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Lorem Ipsum</h3>
-                            <p class="espec_medico">DolumsitAmet</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Dermatologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/user_placeholder.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Lorem Ipsum</h3>
-                            <p class="espec_medico">DolumsitAmet</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Nutrologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/user_placeholder.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Lorem Ipsum</h3>
-                            <p class="espec_medico">DolumsitAmet</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Dermatologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/user_placeholder.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Lorem Ipsum</h3>
-                            <p class="espec_medico">DolumsitAmet</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Nutrologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/user_placeholder.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Lorem Ipsum</h3>
-                            <p class="espec_medico">DolumsitAmet</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mix Dermatologia">
-                    <a href="equipe_detalhes.html">
-                        <img src="assets/medicos/user_placeholder.webp" alt="">
-                        <div class="infosCards">
-                            <h3 class="nome">Dra. Lorem Ipsum</h3>
-                            <p class="espec_medico">DolumsitAmet</p>
-                        </div>
-                    </a>
-                </div>
+                <?php
+                    $query = $pdo->query("SELECT * FROM medicos ORDER BY id DESC");
+                    $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                    for ($i=0; $i < count($dados); $i++) {
+                        $status_medico = $dados[$i]['status_perfil'];
+                        $card_medico = $dados[$i]['card_'];
+                        $nome_medico = $dados[$i]['nome'];
+                        $especialidade_medico = $dados[$i]['especialidade'];
+
+                        $nome_novo_medico = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome_medico)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                        $nome_tratado_medico = preg_replace('/[ -]+/', '_', $nome_novo_medico);
+                        
+                        $espec_novo_medico = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($especialidade_medico)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                        $espec_tratado_medico = preg_replace('/[ -]+/', '_', $espec_novo_medico);
+                        
+                        if($status_medico === "ativo" && $nome_medico !== ""){
+                            if($card_medico == "user_placeholder.webp" || $card_medico == ""){
+                                $card_medico = "<img src='assets/medicos/user_placeholder.webp' alt='$nome_medico - $especialidade_medico'>";
+                            }else{
+                                $card_medico = "<img src='assets/medicos/$nome_tratado_medico/$card_medico' alt='$nome_medico - $especialidade_medico'>";
+                            }
+
+                            echo "
+                                <div class='mix $espec_tratado_medico'>
+                                    <a href='medico_$nome_tratado_medico'>
+                                        ".$card_medico."
+                                        <div class='infosCards'>
+                                            <h3 class='nome'>$nome_medico</h3>
+                                            <p class='espec_medico'>$especialidade_medico</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            ";
+                        }
+                    }
+                ?>
             </div>
         </section>
-       
         <section id="espaco">
             <div id="Block_textEspaco">
-                <h2>A clinica <br> One medical group</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo. Viverra vitae congue eu consequat ac. Montes nascetur ridiculus mus mauris vitae. Massa tincidunt nunc pulvinar sapien. 
+                <h2>Nosso espaço</h2>
+                <p>
+                    É um imenso prazer apresentar para você um pouco da ONEMEDICAL GROUP, onde a excelência em atendimento encontra a mais avançada estrutura física e tecnologica. 
                     <br><br>
-                    Diam vel quam elementum pulvinar etiam non quam lacus. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Sem viverra aliquet eget sit. Non consectetur a erat nam at lectus urna duis. Eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justis.</p>
-                <a href="clinica.html" class="btns btn_espaco">Conheça nossa historia<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+                    Localizada no <b>Cidade Jardim Corporate Center Continental Tower</b>, em um dos bairros mais nobres de São Paulo, a ONE foi projetada para oferecer conforto, elegância, conveniência e uma experiência de saúde premium para nossos pacientes.
+                    <br><br>
+                    Na ONE, redefinimos o conceito de cuidado médico para uma experiencia única e exclusiva.
+                    <br><br>
+                    Em um ambiente de elegância e conforto, nossa ampla estrutura inclui uma área exclusiva, um espaço acolhedor e tranquilo enquanto você aguarda seu atendimento. Os consultórios são totalmente equipados, cada um desenhado para garantir que os procedimentos sejam realizados com a máxima precisão, garantindo que você tenha acesso a todos os recursos em um único lugar e com muito conforto. 
+                    <br><br>
+                    Na ONE, nosso compromisso é proporcionar um atendimento humanizado e de excelência, onde cada paciente recebe um plano de cuidado orientado pelas melhores práticas e inovações na área da saúde. Experimente o padrão ONE de excelência médica, onde seu bem-estar é nossa prioridade. 
+                </p>
+                <a href="clinica.php" class="btns btn_espaco">Conheça nossa historia<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
             <div id="Block_VideoEspaco">
                 <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoEspaco')">
                 <video controlsList="nodownload" id="VideoEspaco" onclick="PLayVideo('VideoEspaco')">
-                    <source src="assets/Videos/clinica.mp4" type="video/mp4">
+                    <source src="assets/Videos/Bg_video.mp4" type="video/mp4">
                 </video>
             </div>
+            
         </section>
         <section id="FAQ">
-            <img class="patter" src="assets/patter.svg" onload="SVGInject(this)">
             <h2>Perguntas frequentes</h2>
             <div class="block_perguntas">
                 <div class="Block_pergunta">

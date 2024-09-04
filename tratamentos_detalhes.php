@@ -1,10 +1,59 @@
+<?php 
+    require_once("./Sistema/configs/conexao.php"); 
+
+    $nome_get = @$_GET['nome'];
+    $nome_clean = preg_replace('/_/', ' ', $nome_get);
+
+    $query = $pdo->query("SELECT * FROM tratamentos WHERE titulo = '$nome_clean'");
+    $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+    if(@count($dados) > 0){
+        $titulo = $dados[0]['titulo'];
+        $card_banner = $dados[0]['card_banner'];
+        $especialidade_atr = $dados[0]['especialidade_atr'];
+        $descricao = $dados[0]['descricao'];
+        $etapas = $dados[0]['etapas'];
+
+        $foto_relac_01 = $dados[0]['foto_relac_01'];	
+        $foto_relac_02 = $dados[0]['foto_relac_02'];		
+        $foto_relac_03 = $dados[0]['foto_relac_03'];		
+        $foto_relac_04 = $dados[0]['foto_relac_04'];	
+
+        $video_relac_01 = $dados[0]['video_relac_01'];		
+        $video_relac_02 = $dados[0]['video_relac_02'];
+
+        $pgnt_01 = $dados[0]['pgnt_01'];		
+        $pgnt_02 = $dados[0]['pgnt_02'];		
+        $pgnt_03 = $dados[0]['pgnt_03'];		
+        $pgnt_04 = $dados[0]['pgnt_04'];		
+        $pgnt_05 = $dados[0]['pgnt_05'];		
+        $pgnt_06 = $dados[0]['pgnt_06'];	
+
+        $resp_01 = $dados[0]['resp_01'];
+        $resp_02 = $dados[0]['resp_02'];
+        $resp_03 = $dados[0]['resp_03'];
+        $resp_04 = $dados[0]['resp_04'];
+        $resp_05 = $dados[0]['resp_05'];
+        $resp_06 = $dados[0]['resp_06'];
+
+        $card_banner = "<img src='assets/tratamentos/$nome_get/$card_banner' alt='$titulo'>";
+
+        $nome_espec = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($especialidade_atr)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+        $especialidade_tratado = preg_replace('/[ -]+/', '_', $nome_espec);
+    }
+    else{
+        echo "<script language='javascript'> window.location='./' </script>";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O tratamnento de Lorem ipsum | One medical group</title>
+    
+    <title>O tratamnento de <?php echo $titulo ?> | One medical group</title>
+
 
     <link rel="icon" href="assets/icons/icon.svg" />
     <link rel="canonical" href="" />
@@ -72,222 +121,304 @@
         <a class="whats_link hide" target="_blank" href="https://wa.me/551151081977"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
 
         <section id="banner">
-            <img src="assets/especialidades/Cirurgia_de_face.webp" alt="">
+            <?php echo $card_banner ?>
             <p> o tratamento de </p>
-            <h1>Lorem ipsum dolum</h1>
-            <span>Especialidade:<a href="tratamentos.html">Cirurgia de face</a></span>
+            <h1><?php echo $titulo ?></h1>
+            <span>Especialidade:<?php echo "<a href='especialidade_de_$especialidade_tratado'>$especialidade_atr</a>" ?></span>
         </section>
         <section id="como_Funicona">
-           <h2>Como funciona o tratamento de Lorem ipsum?</h2>
-           <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim lobortis scelerisque fermentum dui faucibus in ornare quam. Sapien faucibus et molestie ac feugiat sed. Platea dictumst quisque sagittis purus sit amet volutpat. Nulla malesuada pellentesque elit eget. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. 
-                <br><br>
-                Rutrum quisque non tellus orci ac auctor. Tellus in hac habitasse platea. Elementum facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Nec feugiat in fermentum posuere urna nec tincidunt. Enim lobortis scelerisque fermentum dui. Eget mauris pharetra et ultrices neque ornare. Vestibulum sed arcu non odio euismod lacinia at. Feugiat vivamus at augue eget arcu dictum varius duis at. Maecenas pharetra convallis posuere morbi.
-                <br><br>
-                Felis eget velit aliquet sagittis. Arcu dictum varius duis at consectetur lorem donec massa. Urna duis convallis convallis tellus id interdum velit. Nulla porttitor massa id neque aliquam vestibulum. Sit amet nisl purus in mollis nunc sed id semper. Tincidunt vitae semper quis lectus nulla at volutpat diam ut. Diam quis enim lobortis scelerisque. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. Condimentum lacinia quis vel eros. Amet tellus cras adipiscing enim eu. Fermentum leo vel orci porta non pulvinar neque.
-                <br><br>
-                Vestibulum lorem sed risus ultricies. Sit amet venenatis urna cursus. Tempus urna et pharetra pharetra massa massa ultricies mi. Magna etiam tempor orci eu lobortis. Ultrices gravida dictum fusce ut placerat. Luctus venenatis lectus magna fringilla urna porttitor. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Lectus mauris ultrices eros in cursus. Auctor augue mauris augue neque gravida in.
-           </p>
+           <h2>Como funciona o tratamento de <?php echo $titulo ?>?</h2>
+           <p><?php echo $descricao ?></p>
         </section>
-        <section id="etapas">
-            <h2>Etapas de tratamento</h2>
-            <ul>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Consectetur adipiscing elit</li>
-                <li>Sed do eiusmod tempor incididunt</li>
-                <li>Ut labore et dolore magna aliqua</li>
-                <li>Enim lobortis scelerisque</li>
-                <li>fermentum dui faucibus</li>
-                <li>Sapien faucibus et molestie</li>
-            </ul>
-        </section>
-        <section id="resultados">
-            <h2>Nossos resultados</h2>
-            <div class="img_block">
-                <img src="assets/Resultado01.webp" alt="">
-            </div>
-            <div class="img_block">
-                <img src="assets/Resultado02.webp" alt="">
-            </div>
-        </section>
-        <section id="equipe">
-            <img class="patter" src="assets/patter.svg" onload="SVGInject(this)">
-            <h2>Nossa equipe de Cirurgiões plásticos</h2>
-            <div class="splide" role="group">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico01.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Francini Belluci</h3>
-                                    <p class="espec_medico">Dermatologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico02.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dr. Rodrigo De Léo</h3>
-                                    <p class="espec_medico">Ginecologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico03.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Raquel Ferrari</h3>
-                                    <p class="espec_medico">Dermatologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico04.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Cybele Guedes</h3>
-                                    <p class="espec_medico">Dermatologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico05.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dr. Gabriel Costa</h3>
-                                    <p class="espec_medico">Nutrólogo</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/user_placeholder.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Lorem Ipsum</h3>
-                                    <p class="espec_medico">DolumsitAmet</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/user_placeholder.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Lorem Ipsum</h3>
-                                    <p class="espec_medico">DolumsitAmet</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/user_placeholder.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dr. Lorem Ipsum</h3>
-                                    <p class="espec_medico">DolumsitAmet</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="depos"> 
-            <h2>Experiência dos nossos pacientes</h2>
-            <div class="splide" role="group">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <div class="Block_VideoDepo" id="Block_VideoDepo01">
-                                <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoDepo01')">
-                                <video controlsList="nodownload"  id="VideoDepo01" onclick="PLayVideo('VideoDepo01')">
-                                    <source src="assets/Videos/depo_01.mp4" type="video/mp4">
-                                </video>
+
+        <?php 
+            // ETAPAS
+            if($etapas !== ""){
+                echo '
+                     <section id="etapas">
+                        <h2>Etapas do tratamento</h2>
+                        <p>'.$etapas.'</p>
+                    </section>
+                ';
+            }
+
+            // FOTOS RESULTADOS
+            if($foto_relac_01 !== "resultado.webp" || $foto_relac_02 !== "resultado.webp" || $foto_relac_03 !== "resultado.webp" || $foto_relac_04 !== "resultado.webp"){
+                if($foto_relac_01 !== "resultado.webp"){
+                    $result01 = '
+                        <div class="img_block">
+                            <img src="assets/tratamentos/'.$nome_get.'/'.$foto_relac_01.'">
+                        </div> 
+                    ';
+                }else{ $result01 = '';}
+
+                if($foto_relac_02 !== "resultado.webp"){
+                    $result02 = '
+                        <div class="img_block">
+                            <img src="assets/tratamentos/'.$nome_get.'/'.$foto_relac_02.'">
+                        </div> 
+                    ';
+                }else{ $result02 = '';}
+
+                if($foto_relac_03 !== "resultado.webp"){
+                    $result03 = '
+                        <div class="img_block">
+                            <img src="assets/tratamentos/'.$nome_get.'/'.$foto_relac_03.'">
+                        </div> 
+                    ';
+                }else{ $result03 = '';}
+
+                if($foto_relac_04 !== "resultado.webp"){
+                    $result04 = '
+                        <div class="img_block">
+                            <img src="assets/tratamentos/'.$nome_get.'/'.$foto_relac_04.'">
+                        </div> 
+                    ';
+                }else{ $result04 = '';}
+
+                echo '
+                    <section id="resultados">
+                        <h2>Nossos resultados</h2>
+                        '.$result01.'
+                        '.$result02.'
+                        '.$result03.'
+                        '.$result04.'
+                    </section>
+                ';
+            }
+        
+            // EQUIPE
+            $query = $pdo->query("SELECT * FROM medicos where especialidade = '$especialidade_atr'");
+            $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+            if(@count($dados) > 0){
+                echo '
+                    <section id="equipe">
+                        <h2>Nossa equipe de '.$titulo.'</h2>
+                        <div class="splide" role="group">
+                            <div class="splide__track">
+                                <ul class="splide__list">';
+                                    for ($i=0; $i < count($dados); $i++) {
+                                        $status_medico = $dados[$i]['status_perfil'];
+                                        $card_medico = $dados[$i]['card_'];
+                                        $nome_medico = $dados[$i]['nome'];
+                                        $especialidade_medico = $dados[$i]['especialidade'];
+        
+                                        $nome_novo_medico = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome_medico)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                                        $nome_tratado_medico = preg_replace('/[ -]+/', '_', $nome_novo_medico);
+        
+                                        if($status_medico === "ativo" && $nome_medico !== ""){
+                                            if($card_medico == "user_placeholder.webp" || $card_medico == ""){
+                                                $card_medico = "<img src='assets/medicos/user_placeholder.webp' alt='$nome_medico - $especialidade_medico'>";
+                                            }else{
+                                                $card_medico = "<img src='assets/medicos/$nome_tratado_medico/$card_medico' alt='$nome_medico - $especialidade_medico'>";
+                                            }
+        
+                                            echo "
+                                                <li class='splide__slide'>
+                                                    <a href='medico_$nome_tratado_medico'>
+                                                        ".$card_medico."
+                                                        <div class='infosCards'>
+                                                            <h3 class='nome'>$nome_medico</h3>
+                                                            <p class='espec_medico'>$especialidade_medico</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            ";
+                                        }
+                                    }
+                                    echo '
+                                </ul>
                             </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_VideoDepo" id="Block_VideoDepo02">
-                                <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoDepo02')">
-                                <video controlsList="nodownload"  id="VideoDepo02" onclick="PLayVideo('VideoDepo02')">
-                                    <source src="assets/Videos/depo_02.mp4" type="video/mp4">
-                                </video>
+                        </div>
+                    </section>
+                ';
+            }
+            else{
+                echo '
+                    <section id="equipe">
+                        <h2>Conheça nosso corpo clínico</h2>
+                        <p>Na ONE MEDICAL GROUP, valorizamos o que é mais importante: sua saúde e bem-estar. 
+                            <br><br>
+                            Na nossa equipe estão profissionais altamente qualificados em diversas áreas, comprometidos com diagnósticos precisos e tratamentos para atender suas necessidades, de forma integrada e humanizada. Explore nossas especialidades médicas e descubra como podemos ajudar a alcançar a sua melhor versão.
+                        </p>
+                        <div class="splide" role="group">
+                            <div class="splide__track">
+                                <ul class="splide__list">';
+                                    $query = $pdo->query("SELECT * FROM medicos ORDER BY id DESC");
+                                    $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                                    $j = 0;
+                                    for ($i=0; $i < count($dados); $i++) {
+                                        $status_medico = $dados[$i]['status_perfil'];
+                                        $card_medico = $dados[$i]['card_'];
+                                        $nome_medico = $dados[$i]['nome'];
+                                        $especialidade_medico = $dados[$i]['especialidade'];
+
+                                        $nome_novo_medico = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome_medico)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                                        $nome_tratado_medico = preg_replace('/[ -]+/', '_', $nome_novo_medico);
+                                        if($status_medico === "ativo" && $nome_medico !== "" && $j <= 9){
+                                            if($card_medico == "user_placeholder.webp" || $card_medico == ""){
+                                                $card_medico = "<img src='assets/medicos/user_placeholder.webp' alt='$nome_medico - $especialidade_medico'>";
+                                            }else{
+                                                $card_medico = "<img src='assets/medicos/$nome_tratado_medico/$card_medico' alt='$nome_medico - $especialidade_medico'>";
+                                            }
+
+                                            echo "
+                                                <li class='splide__slide'>
+                                                    <a href='medico_$nome_tratado_medico'>
+                                                        ".$card_medico."
+                                                        <div class='infosCards'>
+                                                            <h3 class='nome'>$nome_medico</h3>
+                                                            <p class='espec_medico'>$especialidade_medico</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            ";
+
+                                            $j++;
+                                        }
+                                    }
+                                    echo'
+                                </ul>
                             </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_VideoDepo" id="Block_VideoDepo03">
-                                <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoDepo03')">
-                                <video controlsList="nodownload"  id="VideoDepo03" onclick="PLayVideo('VideoDepo03')">
-                                    <source src="assets/Videos/depo_01.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_VideoDepo" id="Block_VideoDepo04">
-                                <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoDepo04')">
-                                <video controlsList="nodownload"  id="VideoDepo04" onclick="PLayVideo('VideoDepo04')">
-                                    <source src="assets/Videos/depo_02.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+                        </div>
+                        <a href="equipe.php" class="btns btn_equipe">Conheça toda a equipe<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+                    </section>
+                ';
+            }
+        
+            // VIDEOS RESULTADOS
+            if($video_relac_01 !== "video_vazio.mp4" || $video_relac_02 !== "video_vazio.mp4"){
+                if($video_relac_01 !== "video_vazio.mp4"){
+                    $result01 = '
+                        <div class="Block_VideoDepo" id="Block_VideoDepo01">
+                            <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo(`VideoDepo01`)">
+                            <video controlsList="nodownload"  id="VideoDepo01" onclick="PLayVideo(`VideoDepo01`)">
+                                <source src="assets/tratamentos/'.$nome_get.'/'.$video_relac_01.'" type="video/mp4">
+                            </video>
+                        </div>
+                    ';
+                }else{ $result01 = '';}
+
+                if($video_relac_02 !== "video_vazio.mp4"){
+                    $result02 = '
+                        <div class="Block_VideoDepo" id="Block_VideoDepo02">
+                            <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo(`VideoDepo02`)">
+                            <video controlsList="nodownload"  id="VideoDepo02" onclick="PLayVideo(`VideoDepo02`)">
+                                <source src="assets/tratamentos/'.$nome_get.'/'.$video_relac_02.'" type="video/mp4">
+                            </video>
+                        </div>
+                    ';
+                }else{ $result02 = '';}
+
+                echo '
+                    <section id="depos"> 
+                        <h2>Experiência dos nossos pacientes</h2>
+                        <div class="Block_videos">
+                            '.$result01.'
+                            '.$result02.'
+                        </div>
+                    </section>
+                ';
+            }
+        ?>
+
         <section id="espaco">
-            <img class="patter" src="assets/patter.svg" onload="SVGInject(this)">
             <div id="Block_textEspaco">
-                <h2>Conheça <br> nosso espaço</h2>
+                <h2>Nosso espaço</h2>
                 <p>
-                    É um imenso prazer apresentar para você um pouco da ONEMEDICAL GROUP, onde a excelência em atendimento encontra o que há de mais avançado em estrutura física e tecnologia. 
+                    É um imenso prazer apresentar para você um pouco da ONEMEDICAL GROUP, onde a excelência em atendimento encontra a mais avançada estrutura física e tecnologica. 
                     <br><br>
-                    Localizada no Cidade Jardim Corporate Center - Continental Tower, em um dos bairros mais nobres de São Paulo, a ONE foi projetada para oferecer conforto, elegância, conveniência e uma experiência de saúde premium para nossos pacientes.
+                    Localizada no <b>Cidade Jardim Corporate Center Continental Tower</b>, em um dos bairros mais nobres de São Paulo, a ONE foi projetada para oferecer conforto, elegância, conveniência e uma experiência de saúde premium para nossos pacientes.
                     <br><br>
-                    Na ONE, redefinimos o conceito de cuidado médico ao oferecer uma experiencia única e exclusiva.
+                    Na ONE, redefinimos o conceito de cuidado médico para uma experiencia única e exclusiva.
                     <br><br>
                     Em um ambiente de elegância e conforto, nossa ampla estrutura inclui uma área exclusiva, um espaço acolhedor e tranquilo enquanto você aguarda seu atendimento. Os consultórios são totalmente equipados, cada um desenhado para garantir que os procedimentos sejam realizados com a máxima precisão, garantindo que você tenha acesso a todos os recursos em um único lugar e com muito conforto. 
                     <br><br>
-                    Na ONE, nosso compromisso é proporcionar um atendimento humanizado e de excelência, onde cada paciente recebe um plano de cuidado orientado pelas melhores práticas e inovações na área da saúde. Experimente o padrão ONE de excelência médica, onde seu bem-estar é nossa prioridade
+                    Na ONE, nosso compromisso é proporcionar um atendimento humanizado e de excelência, onde cada paciente recebe um plano de cuidado orientado pelas melhores práticas e inovações na área da saúde. Experimente o padrão ONE de excelência médica, onde seu bem-estar é nossa prioridade. 
                 </p>
-                <a href="clinica.html" class="btns btn_espaco">Conheça nossa historia<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+                <a href="clinica.php" class="btns btn_espaco">Conheça nossa historia<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
             <div id="Block_VideoEspaco">
                 <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoEspaco')">
                 <video controlsList="nodownload" id="VideoEspaco" onclick="PLayVideo('VideoEspaco')">
-                    <source src="assets/Videos/clinica.mp4" type="video/mp4">
+                    <source src="assets/Videos/Bg_video.mp4" type="video/mp4">
                 </video>
             </div>
         </section>
-        
-        <section id="FAQ">
-            <img class="patter" src="assets/patter.svg" onload="SVGInject(this)">
-            <h2>Perguntas frequentes</h2>
-            <div class="block_perguntas">
-                <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
-                </div>
-                <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
-                </div>
-                <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
-                </div>
-                <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
-                </div>
-                <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
-                </div>
-                <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
-                </div>
-            </div>
-        </section>
+
+        <!-- FAQ -->
+        <?php
+            if($pgnt_01 !== "" || $pgnt_02 !== "" || $pgnt_03 !== "" || $pgnt_04 !== "" || $pgnt_05 !== "" || $pgnt_06 !== ""){
+                // FAQ
+                if($pgnt_01 !== ""){
+                    $result01 = '
+                        <div class="Block_pergunta">
+                            <h3>'.$pgnt_01.'</h3>
+                            <p>'.$resp_01.'</p>
+                        </div>
+                    ';
+                }else{ $result01 = '';}
+
+                if($pgnt_02 !== ""){
+                    $result02 = '
+                        <div class="Block_pergunta">
+                            <h3>'.$pgnt_02.'</h3>
+                            <p>'.$resp_02.'</p>
+                        </div>
+                    ';
+                }else{ $result02 = '';}
+
+                if($pgnt_03 !== ""){
+                    $result03 = '
+                        <div class="Block_pergunta">
+                            <h3>'.$pgnt_03.'</h3>
+                            <p>'.$resp_03.'</p>
+                        </div>
+                    ';
+                }else{ $result03 = '';}
+
+                if($pgnt_04 !== ""){
+                    $result04 = '
+                        <div class="Block_pergunta">
+                            <h3>'.$pgnt_04.'</h3>
+                            <p>'.$resp_04.'</p>
+                        </div>
+                    ';
+                }else{ $result04 = '';}
+
+                if($pgnt_05 !== ""){
+                    $result05 = '
+                        <div class="Block_pergunta">
+                            <h3>'.$pgnt_05.'</h3>
+                            <p>'.$resp_05.'</p>
+                        </div>
+                    ';
+                }else{ $result05 = '';}
+
+                if($pgnt_06 !== ""){
+                    $result06 = '
+                        <div class="Block_pergunta">
+                            <h3>'.$pgnt_06.'</h3>
+                            <p>'.$resp_06.'</p>
+                        </div>
+                    ';
+                }else{ $result06 = '';}
+
+                echo'
+                    <section id="FAQ">
+                        <h2>Perguntas frequentes</h2>
+                        <div class="block_perguntas">
+                            '.$result01.'
+                            '.$result02.'
+                            '.$result03.'
+                            '.$result04.'
+                            '.$result05.'
+                            '.$result06.'
+                        </div>
+                    </section>
+                ';
+            }
+        ?>
     </main>
 
     <footer>
@@ -337,14 +468,6 @@
                             omitEnd: true,
                         }).mount();
                     }
-                    if(i == 1){
-                        new Splide( elms[i], {
-                            omitEnd: true,
-                            perPage: 2,
-                            perMove: 1,
-                            drag   : false
-                        }).mount();
-                    }
                 } 
                 else{
                     if(i == 0){
@@ -354,15 +477,6 @@
                             perMove: 1,
                             omitEnd: true,
                             autoplay: true
-                        }).mount();
-                    }
-                    if(i == 1){
-                        new Splide( elms[i], {
-                            drag   : 'free',
-                            omitEnd: true,
-                            perPage: 1,
-                            perMove: 1,
-                            drag   : false
                         }).mount();
                     }
                 }
