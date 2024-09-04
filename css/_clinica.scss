@@ -485,6 +485,8 @@
                 font-family: $Main-font;
                 font-size: 1.35vw;
                 color: $Branco;
+                padding: 0 7.5vw;
+                text-align: center;
             }
             .amarelo{
                 background-color: $Amarelo;
@@ -494,6 +496,9 @@
             }
             .cinza{
                 background-color: $Cinza;
+            }
+            .marrom{
+                background-color: $Marrom;
             }
             &:hover{
                 img{

@@ -2714,7 +2714,7 @@ body #Main_Adm #Tratamentos .btn_cria p {
   font-family: "khmer-mn", sans-serif;
   font-weight: 900;
 }
-body #Main_Adm #Tratamentos #List_Espec {
+body #Main_Adm #Tratamentos #List_Tratamentos {
   width: 100%;
   height: 80vh;
   display: flex;
@@ -2722,9 +2722,9 @@ body #Main_Adm #Tratamentos #List_Espec {
   justify-content: space-evenly;
   overflow-y: auto;
 }
-body #Main_Adm #Tratamentos #List_Espec .espec_card {
-  width: 17%;
-  height: 35vh;
+body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card {
+  width: 23%;
+  height: 70vh;
   margin: 2vh 2vw;
   position: relative;
   display: flex;
@@ -2732,80 +2732,87 @@ body #Main_Adm #Tratamentos #List_Espec .espec_card {
   align-items: center;
   justify-content: center;
 }
-body #Main_Adm #Tratamentos #List_Espec .espec_card .icon_espec {
+body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card .card_banner {
   border: 2px solid #E0E0E0;
-  border-radius: 0.5vw;
   width: 100%;
-  height: 80%;
+  height: 90%;
   -o-object-fit: cover;
      object-fit: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #4B2F24;
 }
-body #Main_Adm #Tratamentos #List_Espec .espec_card p {
-  width: 75%;
-  max-width: 75%;
-  height: 20%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
-  font-weight: 900;
-  font-size: 0.9vw;
-  color: #373435;
-  padding: 1.75vh 0.25vw 1vh 1vw;
-  margin-right: auto;
-  white-space: nowrap;
+body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card p {
+  position: absolute;
+  width: 95%;
+  height: auto;
+  font-family: "TrajanPro", sans-serif;
+  font-size: 2vw;
+  color: #E0E0E0;
+  text-align: center;
+  margin-top: -7.5vh;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-body #Main_Adm #Tratamentos #List_Espec .espec_card .acoes {
+body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card span {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 20%;
-  width: 30%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
+  top: 1vh;
+  left: 0.5vw;
+  font-family: "TrajanPro", sans-serif;
+  font-weight: 900;
+  font-size: 0.75vw;
+  color: #E0E0E0;
 }
-body #Main_Adm #Tratamentos #List_Espec .espec_card .acoes a {
+body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card span b {
+  color: #D2AE6D;
+}
+body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card .acoes {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card .acoes a {
   padding: 0;
-  width: 40%;
-  height: 65%;
-  margin-left: 0.45vw;
+  width: 15%;
+  height: 75%;
   background-color: #D2AE6D;
   border-radius: 0.25vw;
   border: 1px solid #E0E0E0;
   transition: all ease-in-out 0.1s;
 }
-body #Main_Adm #Tratamentos #List_Espec .espec_card .acoes a img, body #Main_Adm #Tratamentos #List_Espec .espec_card .acoes a svg {
+body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card .acoes a img, body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card .acoes a svg {
   width: 100%;
   height: 100%;
-  padding: 0.3vw;
+  padding: 0.45vw;
   -o-object-fit: fill;
      object-fit: fill;
   border: none;
 }
-body #Main_Adm #Tratamentos #List_Espec .espec_card .acoes a:last-child {
+body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card .acoes a:last-child {
   background-color: red;
 }
-body #Main_Adm #Tratamentos #List_Espec .espec_card .acoes a:hover {
+body #Main_Adm #Tratamentos #List_Tratamentos .tratamentos_card .acoes a:hover {
   transform: scale(1.05);
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade {
+body #Main_Adm #Tratamentos #ModalTratamentos {
   padding: 0;
   margin: 0;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog {
   border-radius: 1vw;
   background-color: #4B2F24;
-  color: #E0E0E0;
+  color: #D0B498;
   max-width: 100vw;
-  width: 40vw;
-  height: 60vh;
-  margin: 15vh auto;
+  width: 75vw;
+  height: 90vh;
+  margin: 5vh auto;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content {
   width: 100%;
   height: 100%;
   background: none;
@@ -2816,7 +2823,7 @@ body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content {
   justify-content: center;
   border: none;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .CloseBtn {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .CloseBtn {
   width: 3vw;
   height: 3vw;
   position: absolute;
@@ -2832,7 +2839,7 @@ body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .Cl
   z-index: 10 !important;
   transition: all ease-in-out 0.25s;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .CloseBtn::before, body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .CloseBtn::after {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .CloseBtn::before, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .CloseBtn::after {
   content: "";
   position: absolute;
   width: 60%;
@@ -2841,71 +2848,109 @@ body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .Cl
   background-color: #E0E0E0;
   transform: rotate(45deg);
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .CloseBtn::after {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .CloseBtn::after {
   transform: rotate(-45deg);
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .CloseBtn:hover {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .CloseBtn:hover {
   transform: scale(1.1);
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body {
   width: 100%;
-  height: 80%;
-  padding: 1vw;
-  padding-bottom: 0.5vh;
+  height: auto;
+  overflow: auto;
+  padding: 1vh 1vw 5vh;
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body h4 {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body h2 {
   font-family: "TrajanPro", sans-serif;
-  font-size: 2vw;
+  font-size: 2.25vw;
   color: #E0E0E0;
   width: 100%;
-  height: 5%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 7.5% 0 2.5%;
-  text-align: center;
-}
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec {
   margin: 0;
-  width: 40%;
-  height: 70%;
+  text-align: center;
+  padding: 2vh 0;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init {
   display: flex;
-  align-items: center;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 1.5vh;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block {
+  width: 35%;
+  height: 65vh;
+  display: flex;
   justify-content: center;
   position: relative;
+  padding: 12vh 0 3vh;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec input {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block h3 {
+  position: absolute;
+  top: 0;
+  font-family: "TrajanPro", sans-serif;
+  font-size: 1.25vw;
+  color: #E0E0E0;
+  text-align: center;
+  padding: 0 5vw;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block span {
+  color: #D0B498;
+  position: absolute;
+  bottom: -3vh;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-size: 0.75vw;
+  width: 100%;
+  text-align: center;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block input {
   opacity: 0;
   pointer-events: none;
   display: none;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec .img_espec_modal {
-  width: 80%;
-  height: 85%;
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block img, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block video {
+  all: unset;
+  width: 100%;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec .editPen {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block .editPen {
   position: absolute;
-  width: 2.75vw;
-  height: 2.75vw;
-  bottom: 7.5%;
-  padding: 0.6vw;
+  width: 3vw;
+  height: 3vw;
+  bottom: 0;
+  padding: 0.8vw;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec .editPen path {
-  fill: #373435;
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block .editPen path {
+  fill: #E0E0E0;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec .btn_VoltaPadrao_foto_espec_Input {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block::before {
+  content: "";
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  bottom: 0;
+  background: #D2AE6D;
+  border-radius: 50%;
+  outline: 1px solid #373435;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #Card_block .btn_VoltaPadrao_Card_Input {
   position: absolute;
   z-index: 999 !important;
   background-color: #373435;
-  bottom: -5vh;
-  left: 0;
+  top: 6.5vh;
   width: 9vw;
   height: 3.5vh;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
@@ -2913,95 +2958,416 @@ body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .mo
   color: #E0E0E0;
   font-size: 0.8vw;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec span {
-  position: absolute;
-  top: -1vh;
-  left: -0.5vw;
-  font-family: "khmer-mn", sans-serif;
-  font-size: 0.75vw;
-  width: 100%;
-  text-align: center;
-}
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec::before {
-  content: "";
-  position: absolute;
-  width: 2.75vw;
-  height: 2.75vw;
-  bottom: 7.5%;
-  background: #D2AE6D;
-  border-radius: 50%;
-}
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs {
-  width: 60%;
-  height: 70%;
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos {
+  width: 65%;
+  height: auto;
+  padding: 0 2vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  padding-top: 2.5vh;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .BlockBox {
   width: 100%;
-  height: 5vh;
+  height: 5.5vh;
   display: flex;
   justify-content: center;
   align-self: center;
   position: relative;
-  margin: 3.5vh 0;
+  margin: 2vh 0;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox input, body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox textarea {
-  width: 85%;
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .BlockBox input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .BlockBox textarea {
+  width: 95%;
   border: none;
-  font-family: "khmer-mn", sans-serif;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
   font-size: 1vw;
-  font-weight: 400;
+  font-weight: 600;
   color: #E0E0E0;
   background: none;
   outline: 1px solid #E0E0E0;
   z-index: 10 !important;
-  border-radius: 0.75vw;
+  border-radius: 0.25vw;
   padding: 0 1.5vw;
-  padding-top: 0.2vh;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox span {
-  all: unset;
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .BlockBox span {
   height: 100%;
   display: flex;
   align-items: center;
+  left: 6%;
+  font-family: "TrajanPro", sans-serif;
   position: absolute;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
-  font-weight: 400;
-  font-size: 1.25vw;
+  font-size: 1.05vw;
   color: #E0E0E0;
+  font-weight: 500;
   transition: 0.5s;
-  left: 11%;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .descricaoBox {
-  margin-top: 1vh;
-  height: 20vh;
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 6vh 0 2vh;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .descricaoBox textarea {
-  border-radius: 0.5vw;
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 2%;
+  top: -4.5vh;
+  font-family: "TrajanPro", sans-serif;
+  position: absolute;
+  font-size: 1vw;
+  color: #E0E0E0;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #especialidades-select {
+  position: relative;
+  width: 95%;
+  height: 100%;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #especialidades-select #select_input_espec {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  font-size: 1vw;
+  z-index: 5;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #especialidades-select #select-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  outline: none;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #especialidades-select #select-button #selected_val_espec {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #E0E0E0;
+  background: none;
+  border-radius: 0.25vw;
+  padding: 0 1.25vw;
+  outline: 1px solid #E0E0E0;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #especialidades-select #select-button img, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #especialidades-select #select-button svg {
+  z-index: 99;
+  position: absolute;
+  right: 1vw;
+  width: 2vw;
+  height: 100%;
+  padding: 0.9vh;
+  transform: rotate(90deg);
+  transition: all ease-in-out 0.1s;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #especialidades-select #select-button img path, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #especialidades-select #select-button svg path {
+  fill: #D2AE6D;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #options {
+  z-index: 999;
+  width: 96%;
+  left: 2.25%;
+  height: auto;
+  max-height: 35vh;
+  top: 5.1vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #D0B498;
+  display: none;
+  position: absolute;
+  padding: 1vh 1vw;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #options .options_espec {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 6vh;
+  border-bottom: 1px solid #4B2F24;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #options .options_espec span {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0.75vw;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 1vw;
+  font-weight: 500;
+  color: #4B2F24;
+  z-index: 5;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #options .options_espec input[type=radio] {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #options .options_espec input[type=radio]:checked::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #373435;
+  opacity: 0.2;
+  z-index: -1;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #options .options_espec:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #373435;
+  opacity: 0.2;
+  z-index: -1;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #options .options_espec:last-child {
+  border: none;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #select_input_espec:checked + #select-button svg {
+  transform: rotate(-90deg);
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .Seletor #especialidades-select:has(#select_input_espec:checked) + #options {
+  display: block;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .TextAreaBox {
+  height: 30vh;
+  margin-top: 4vh;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .TextAreaBox textarea {
+  border-radius: 0.25vw;
   resize: none;
   padding: 1vh 1vw;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .descricaoBox span {
-  top: -6.5vh;
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .TextAreaBox span {
+  top: -12vh;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox input:focus ~ span, body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs input:valid ~ span, body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox textarea:focus ~ span, body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs textarea:valid ~ span {
-  transform: translate(-0.9vw, -3.5vh);
-  font-size: 0.9vw;
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .BlockBox input:focus ~ span, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos input:valid ~ span, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .BlockBox textarea:focus ~ span, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos textarea:valid ~ span {
+  transform: translate(-1vw, -5vh);
+  font-size: 0.95vw;
+  font-weight: 800;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-footer {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2vh;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos h2 {
+  font-family: "TrajanPro", sans-serif;
+  font-size: 2vw;
+  color: #E0E0E0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  padding: 2vh 0;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos span {
+  color: #D0B498;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-size: 1vw;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4vh;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto01_block, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto02_block, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto03_block, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto04_block {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 5vh;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto01_block input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto02_block input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto03_block input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto04_block input {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto01_block img, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto02_block img, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto03_block img, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto04_block img {
+  all: unset;
+  width: 100%;
+  height: 85%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto01_block .btn_VoltaPadrao_foto01_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto01_block .btn_VoltaPadrao_foto02_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto01_block .btn_VoltaPadrao_foto03_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto01_block .btn_VoltaPadrao_foto04_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto02_block .btn_VoltaPadrao_foto01_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto02_block .btn_VoltaPadrao_foto02_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto02_block .btn_VoltaPadrao_foto03_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto02_block .btn_VoltaPadrao_foto04_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto03_block .btn_VoltaPadrao_foto01_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto03_block .btn_VoltaPadrao_foto02_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto03_block .btn_VoltaPadrao_foto03_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto03_block .btn_VoltaPadrao_foto04_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto04_block .btn_VoltaPadrao_foto01_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto04_block .btn_VoltaPadrao_foto02_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto04_block .btn_VoltaPadrao_foto03_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos #foto04_block .btn_VoltaPadrao_foto04_Input {
+  position: absolute;
+  z-index: 999 !important;
+  background-color: #373435;
+  bottom: 0;
+  width: 9vw;
+  height: 3.5vh;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #E0E0E0;
+  font-size: 0.8vw;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2vh;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos h2 {
+  font-family: "TrajanPro", sans-serif;
+  font-size: 2vw;
+  color: #E0E0E0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  padding: 2vh 0;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos span {
+  color: #D0B498;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-size: 1vw;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video01_block, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video02_block {
+  width: 50%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video01_block input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video02_block input {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video01_block video, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video02_block video {
+  all: unset;
+  width: 100%;
+  height: 85%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1vw;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video01_block .btn_VoltaPadrao_Video01_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video01_block .btn_VoltaPadrao_Video02_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video02_block .btn_VoltaPadrao_Video01_Input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos #Video02_block .btn_VoltaPadrao_Video02_Input {
+  position: absolute;
+  z-index: 999 !important;
+  background-color: #373435;
+  bottom: 1vh;
+  width: 9vw;
+  height: 3.5vh;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #E0E0E0;
+  font-size: 0.8vw;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 5vh;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ h2 {
+  font-family: "TrajanPro", sans-serif;
+  font-size: 2vw;
+  color: #E0E0E0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  padding: 2vh 0 5vh;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ .BlockBox {
+  width: 50%;
+  height: 5.5vh;
+  display: flex;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ .BlockBox input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ .BlockBox textarea {
+  width: 95%;
+  border: none;
+  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #E0E0E0;
+  background: none;
+  outline: 1px solid #E0E0E0;
+  z-index: 10 !important;
+  border-radius: 0.25vw;
+  padding: 0 1.5vw;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 3.5%;
+  font-family: "TrajanPro", sans-serif;
+  position: absolute;
+  font-size: 1.05vw;
+  color: #E0E0E0;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ .TextAreaBox {
+  height: 15vh;
+  margin-bottom: 5vh;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ .TextAreaBox textarea {
+  border-radius: 0.25vw;
+  resize: none;
+  padding: 1vh 1vw;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ .TextAreaBox span {
+  top: -4.5vh;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ .BlockBox input:focus ~ span, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ input:valid ~ span, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ .BlockBox textarea:focus ~ span, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ textarea:valid ~ span {
+  transform: translate(-1vw, -5vh);
+  font-size: 0.95vw;
+  font-weight: 800;
+}
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-footer {
   border: none;
   width: 100%;
-  height: 25%;
+  height: 7.5%;
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-footer .btn_cancel {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-footer .btn_cancel {
   font-weight: 800;
   background: #373435;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
@@ -3011,7 +3377,7 @@ body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .mo
   padding-top: 0.25vh;
   font-size: 1.05vw;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .modal-footer .btn_salvar {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-footer .btn_salvar {
   font-weight: 800;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
   background: #D2AE6D;
@@ -3022,25 +3388,32 @@ body #Main_Adm #Tratamentos #ModalEspecialidade .modal-dialog .modal-content .mo
   padding-top: 0.25vh;
   font-size: 1.05vw;
 }
-body #Main_Adm #Tratamentos #ModalEspecialidade #msg_ModalEspecialidade {
-  position: absolute;
-  top: 77%;
-  width: 50%;
-  left: 25%;
-  min-height: 5vh;
-  max-height: 28vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
-  font-weight: 700;
-  font-size: 1.25vw;
-  text-align: center;
-  overflow-y: auto;
-  z-index: 9999 !important;
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-footer .btn_desativado {
+  opacity: 0.75;
+  pointer-events: none;
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade {
+body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content #msg_ModalTratamento {
+  position: absolute;
+  top: 10%;
+  max-width: 30%;
+  left: 102.5%;
+  min-height: 5vh;
+  max-height: 45vh;
+  font-family: "TrajanPro", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: auto;
+  color: #D0B498;
+  z-index: 9999 !important;
+  padding: 0 1vw;
+}
+body #Main_Adm #Tratamentos #ModalDeletTratamentos {
   padding: 0;
   margin: 0;
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog {
   border-radius: 1vw;
   background-color: #4B2F24;
   color: #D0B498;
@@ -3049,7 +3422,7 @@ body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog {
   height: 35vh;
   margin: 15vh auto;
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-content {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content {
   width: 100%;
   height: 100%;
   background: none;
@@ -3060,7 +3433,7 @@ body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-conten
   justify-content: center;
   border: none;
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-content .CloseBtn {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content .CloseBtn {
   width: 3vw;
   height: 3vw;
   position: absolute;
@@ -3076,7 +3449,7 @@ body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-conten
   z-index: 10 !important;
   transition: all ease-in-out 0.25s;
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-content .CloseBtn::before, body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-content .CloseBtn::after {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content .CloseBtn::before, body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content .CloseBtn::after {
   content: "";
   position: absolute;
   width: 60%;
@@ -3085,13 +3458,13 @@ body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-conten
   background-color: #E0E0E0;
   transform: rotate(45deg);
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-content .CloseBtn::after {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content .CloseBtn::after {
   transform: rotate(-45deg);
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-content .CloseBtn:hover {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content .CloseBtn:hover {
   transform: scale(1.1);
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-content .modal-body {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content .modal-body {
   width: 100%;
   height: 80%;
   padding: 1vw;
@@ -3102,18 +3475,19 @@ body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-conten
   align-items: center;
   justify-content: center;
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-content .modal-body h4 {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content .modal-body h4 {
   font-family: "TrajanPro", sans-serif;
   font-size: 1.75vw;
   color: #E0E0E0;
   width: 100%;
+  height: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 7.5% 0 2.5%;
   text-align: center;
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-content .modal-footer {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content .modal-footer {
   border: none;
   width: 100%;
   height: 20%;
@@ -3123,7 +3497,7 @@ body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-conten
   align-items: center;
   justify-content: center;
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-content .modal-footer .btn_cancel {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content .modal-footer .btn_cancel {
   font-weight: 800;
   background: #373435;
   font-family: "khmer-mn", sans-serif;
@@ -3133,7 +3507,7 @@ body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-conten
   padding-top: 0.25vh;
   font-size: 1.05vw;
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-content .modal-footer .btn_excluir {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content .modal-footer .btn_excluir {
   font-weight: 800;
   font-family: "khmer-mn", sans-serif;
   background: red;
@@ -3144,19 +3518,22 @@ body #Main_Adm #Tratamentos #ModalDeletEspecialidade .modal-dialog .modal-conten
   padding-top: 0.25vh;
   font-size: 1.05vw;
 }
-body #Main_Adm #Tratamentos #ModalDeletEspecialidade #msg_ModalDeletEspecialidade {
+body #Main_Adm #Tratamentos #ModalDeletTratamentos .modal-dialog .modal-content #msg_ModalDeletTratamento {
   position: absolute;
-  top: 55%;
-  width: 50%;
-  left: 25%;
+  top: 105%;
+  max-width: 100%;
+  left: 0;
   min-height: 5vh;
   max-height: 28vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "TrajanPro", sans-serif;
   font-weight: 700;
   font-size: 1.25vw;
   text-align: center;
+  overflow: hidden;
   overflow-y: auto;
+  color: #D0B498;
   z-index: 9999 !important;
+  padding: 0 1vw;
 }
 body #menuMedico .menu li {
   width: 12vw;

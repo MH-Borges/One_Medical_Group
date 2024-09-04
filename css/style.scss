@@ -755,7 +755,7 @@ body {
                     font-family: $Main-font;
                     font-size: 1.35vw;
                     color: $Branco;
-                    padding: 0 10vw;
+                    padding: 0 7.5vw;
                     text-align: center;
                 }
                 .amarelo{
@@ -766,6 +766,9 @@ body {
                 }
                 .cinza{
                     background-color: $Cinza;
+                }
+                .marrom{
+                    background-color: $Marrom;
                 }
                 &:hover{
                     img{
@@ -921,15 +924,25 @@ body {
                                     justify-content: center;
                                     .nome{
                                         font-family: $Main-font;
+                                        width: 90%;
                                         font-size: 1.05vw;
                                         color: $Marrom;
                                         margin-bottom: 1.25vh;
+                                        white-space: nowrap;                  
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        text-align: center;
                                     }
                                     .espec_medico{
                                         all: unset;
+                                        width: 90%;
                                         font-family: $Text-font;
                                         font-size: 0.85vw;
                                         color: $Marrom;
+                                        white-space: nowrap;                  
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        text-align: center;
                                     }
                                 }
                             }

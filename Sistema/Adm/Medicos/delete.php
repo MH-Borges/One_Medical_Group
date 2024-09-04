@@ -7,9 +7,15 @@ $res = $pdo->query("SELECT * FROM medicos WHERE id = '$id' LIMIT 1");
 $dados = $res->fetchAll(PDO::FETCH_ASSOC);
 if(@count($dados) > 0){
     $nome = $dados[0]['nome'];
-    $nome_novo = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
-    $nome_tratado = preg_replace('/[ -]+/', '_', $nome_novo);
-    $diretorio = '../../../assets/medicos/'.$nome_tratado.'';
+
+    if($nome != ""){
+      $nome_novo = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+      $nome_tratado = preg_replace('/[ -]+/', '_', $nome_novo);
+      $diretorio = '../../../assets/medicos/'.$nome_tratado.'';
+    }
+    else{
+      $diretorio = 'false';
+    }
 }
 
 function deletar($pasta){ 

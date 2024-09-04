@@ -1,22 +1,37 @@
 <?php
 
 require_once("../../configs/conexao.php"); 
+$id = $_POST['id_tratamento_delete'];
 
-$id = $_POST['id_espec_delete'];
-
-$res = $pdo->query("SELECT * FROM especialidade where id = '$id'"); 
+$res = $pdo->query("SELECT * FROM tratamentos WHERE id = '$id' LIMIT 1"); 
 $dados = $res->fetchAll(PDO::FETCH_ASSOC);
+if(@count($dados) > 0){
+    $titulo = $dados[0]['titulo'];
+    if($titulo != ""){
+      $titulo_novo = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($titulo)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+      $titulo_tratado = preg_replace('/[ -]+/', '_', $titulo_novo);
+      $diretorio = '../../../assets/tratamentos/'.$titulo_tratado.'';
+    }
+    else{
+      $diretorio = 'false';
+    }
+}
 
-$nome_espec = $dados[0]['nome'];
-$res2 = $pdo->query("SELECT * FROM medicos where especialidade = '$nome_espec'"); 
-$dados2 = $res2->fetchAll(PDO::FETCH_ASSOC);
-if(@count($dados2) != 0){
-    echo 'Existe um medico(a) atrelado(a) a esta especialidade, remova esta especialidade de todos os medicos antes de exclui-lá';
-    exit();
+function deletar($pasta){ 
+  $iterator     = new RecursiveDirectoryIterator($pasta,FilesystemIterator::SKIP_DOTS);
+  $rec_iterator = new RecursiveIteratorIterator($iterator, RecursiveIteratorIterator::CHILD_FIRST);
+
+  foreach($rec_iterator as $file){ 
+    $file->isFile() ? unlink($file->getPathname()) : rmdir($file->getPathname()); 
+  } 
+  rmdir($pasta); 
 }
-else{
-    $pdo->query("DELETE from especialidade WHERE id = '$id'");
-    echo 'Excluído com Sucesso!!';
+
+if(is_dir($diretorio) == "true"){
+    deletar($diretorio);
 }
+
+$pdo->query("DELETE from tratamentos WHERE id = '$id'");
+echo 'Excluído com Sucesso!!';
 
 ?>

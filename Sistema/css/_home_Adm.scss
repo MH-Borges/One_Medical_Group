@@ -1382,7 +1382,6 @@
                 }
             }
         }
-
         #ModalEditMedico{
             padding: 0;
             margin: 0;
@@ -1974,61 +1973,68 @@
                 font-weight: 900;
             }
         }
-        #List_Espec{
+        #List_Tratamentos{
             width: 100%;
             height: 80vh;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
             overflow-y: auto;
-            .espec_card{
-                width: 17%;
-                height: 35vh;
+            .tratamentos_card{
+                width: 23%;
+                height: 70vh;
                 margin: 2vh 2vw;
                 position: relative;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                .icon_espec{
+                .card_banner{
                     border: 2px solid $Branco;
-                    border-radius: 0.5vw;
                     width: 100%;
-                    height: 80%;
+                    height: 90%;
                     object-fit: cover;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: $Marrom;
                 }
                 p{
-                    width: 75%;
-                    max-width: 75%;
-                    height: 20%;
-                    font-family: $Text-font;
-                    font-weight: 900;
-                    font-size: 0.9vw;
-                    color: $Preto;
-                    padding: 1.75vh 0.25vw 1vh 1vw;
-                    margin-right: auto;
-                    white-space: nowrap;                  
+                    position: absolute;
+                    width: 95%;
+                    height: auto;
+                    font-family: $Main-font;
+                    font-size: 2vw;
+                    color: $Branco;
+                    text-align: center;
+                    margin-top: -7.5vh;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
-                .acoes{
+                span{
                     position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    height: 20%;
-                    width: 30%;
+                    top: 1vh;
+                    left: 0.5vw;
+                    font-family: $Main-font;
+                    font-weight: 900;
+                    font-size: 0.75vw;
+                    color: $Branco;
+                    b{
+                        color: $Amarelo;
+                    }
+                }
+                .acoes{
+                    height: 10%;
+                    width: 100%;
                     display: flex;
-                    justify-content: end;
                     align-items: center;
+                    justify-content: space-evenly;
                     a{
                         padding: 0;
-                        width: 40%;
-                        height: 65%;
-                        margin-left: 0.45vw;
+                        width: 15%;
+                        height: 75%;
                         background-color: $Amarelo;
                         border-radius: 0.25vw;
                         border: 1px solid $Branco;
@@ -2036,7 +2042,7 @@
                         img, svg{
                             width: 100%;
                             height: 100%;
-                            padding: 0.3vw;
+                            padding: 0.45vw;
                             object-fit: fill;
                             border: none;
                         }
@@ -2051,17 +2057,17 @@
             }
         }
 
-        #ModalEspecialidade{
+        #ModalTratamentos{
             padding: 0;
             margin: 0;
             .modal-dialog{
                 border-radius: 1vw;
                 background-color: $Marrom;
-                color: $Branco;
+                color: $Creme;
                 max-width: 100vw;
-                width: 40vw;
-                height: 60vh;
-                margin: 15vh auto;
+                width: 75vw;
+                height: 90vh;
+                margin: 5vh auto;
                 .modal-content{
                     width: 100%;
                     height: 100%;
@@ -2105,151 +2111,511 @@
                     }
                     .modal-body {
                         width: 100%;
-                        height: 80%;
-                        padding: 1vw;
-                        padding-bottom: 0.5vh;
+                        height: auto;
+                        overflow: auto;
+                        padding: 1vh 1vw 5vh;
                         margin: 0;
                         display: flex;
-                        flex-wrap: wrap;
+                        flex-direction: column;
                         align-items: center;
-                        justify-content: center;
-                        h4{
+                        h2{
                             font-family: $Main-font;
-                            font-size: 2vw;
+                            font-size: 2.25vw;
                             color: $Branco;
                             width: 100%;
-                            height: 5%;
+                            height: auto;
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            margin: 7.5% 0 2.5%;
-                            text-align: center;
-                        }
-                        .Img_Espec{
                             margin: 0;
-                            width: 40%;
-                            height: 70%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            position: relative;
-                            input{
-                                opacity: 0;
-                                pointer-events: none;
-                                display: none;
-                            }
-                            .img_espec_modal{
-                                width: 80%;
-                                height: 85%;
-                                object-fit: contain;
-                            }
-                            .editPen{
-                                position: absolute;
-                                width: 2.75vw;
-                                height: 2.75vw;
-                                bottom: 7.5%;
-                                padding: 0.6vw;
-                                path{
-                                    fill: $Preto;
-                                }
-                            }
-                            .btn_VoltaPadrao_foto_espec_Input{
-                                position: absolute;
-                                z-index: 999 !important;
-                                background-color: $Preto;
-                                bottom: -5vh;
-                                left: 0;
-                                width: 9vw;
-                                height: 3.5vh;
-                                font-family: $Text-font;
-                                font-weight: 700;
-                                color: $Branco;
-                                font-size: 0.8vw;
-                            }
-                            span{
-                                position: absolute;
-                                top: -1vh;
-                                left: -0.5vw;
-                                font-family: $Second-font;
-                                font-size: 0.75vw;
-                                width: 100%;
-                                text-align: center;
-                            }
-                            &::before{
-                                content: '';
-                                position: absolute;
-                                width: 2.75vw;
-                                height: 2.75vw;
-                                bottom: 7.5%;
-                                background: $Amarelo;
-                                border-radius: 50%;
-                            }
+                            text-align: center;
+                            padding: 2vh 0;
                         }
-                        #inputs{
-                            width: 60%;
-                            height: 70%;
+                        #Block_init{
                             display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: space-evenly;
-                            .BlockBox{
-                                width: 100%;
-                                height: 5vh;
+                            width: 100%;
+                            height: fit-content;
+                            margin-top: 1.5vh;
+                            #Card_block{
+                                width: 35%;
+                                height: 65vh;
                                 display: flex;
                                 justify-content: center;
-                                align-self: center;
                                 position: relative;
-                                margin: 3.5vh 0;
+                                padding: 12vh 0 3vh;
+                                h3{
+                                    position: absolute;
+                                    top: 0;
+                                    font-family: $Main-font;
+                                    font-size: 1.25vw;
+                                    color: $Branco;
+                                    text-align: center;
+                                    padding: 0 5vw;
+                                }
+                                span{
+                                    color: $Creme;
+                                    position: absolute;
+                                    bottom: -3vh;
+                                    font-family: $Text-font;
+                                    font-size: 0.75vw;
+                                    width: 100%;
+                                    text-align: center;
+                                }
+                                input{
+                                    opacity: 0;
+                                    pointer-events: none;
+                                    display: none;
+                                }
+                                img, video{
+                                    all: unset;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                    border-radius: 1vw;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                                .editPen{
+                                    position: absolute;
+                                    width: 3vw;
+                                    height: 3vw;
+                                    bottom: 0;
+                                    padding: 0.8vw;
+                                    path{
+                                        fill: $Branco;
+                                    }
+                                }
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    width: 3vw;
+                                    height: 3vw;
+                                    bottom: 0;
+                                    background: $Amarelo;
+                                    border-radius: 50%;
+                                    outline: 1px solid $Preto;
+                                }
+                                .btn_VoltaPadrao_Card_Input{
+                                    position: absolute;
+                                    z-index: 999 !important;
+                                    background-color: $Preto;
+                                    top: 6.5vh;
+                                    width: 9vw;
+                                    height: 3.5vh;
+                                    font-family: $Text-font;
+                                    font-weight: 700;
+                                    color: $Branco;
+                                    font-size: 0.8vw;
+                                }
+                            }
+                            #infos{
+                                width: 65%;
+                                height: auto;
+                                padding: 0 2vw;
+                                display: flex;
+                                flex-direction: column;
+                                padding-top: 2.5vh;
+                                .BlockBox{
+                                    width: 100%;
+                                    height: 5.5vh;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-self: center;
+                                    position: relative;
+                                    margin: 2vh 0;
+                                    input, textarea{
+                                        width: 95%;
+                                        border: none;
+                                        font-family: $Text-font;
+                                        font-size: 1vw;
+                                        font-weight: 600;
+                                        color: $Branco;
+                                        background: none;
+                                        outline: 1px solid $Branco;
+                                        z-index: 10 !important;
+                                        border-radius: 0.25vw;
+                                        padding: 0 1.5vw;
+                                    }
+                                    span{
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        left: 6%;
+                                        font-family: $Main-font;
+                                        position: absolute;
+                                        font-size: 1.05vw;
+                                        color: $Branco;
+                                        font-weight: 500;
+                                        transition: 0.5s;
+                                    }
+                                }
+                                .Seletor{
+                                    width: 100%;
+                                    height: 5vh;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    position: relative;
+                                    margin: 6vh 0 2vh;
+                                    span{
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        left: 2%;
+                                        top: -4.5vh;
+                                        font-family: $Main-font;
+                                        position: absolute;
+                                        font-size: 1vw;
+                                        color: $Branco;
+                                        font-weight: 500;
+                                        transition: 0.5s;
+                                    }
+                                    #especialidades-select{
+                                        position: relative;
+                                        width: 95%;
+                                        height: 100%;
+                                        #select_input_espec{
+                                            all: unset;
+                                            position: absolute;
+                                            inset: 0;
+                                            cursor: pointer;
+                                            font-size: 1vw;
+                                            z-index:5;
+                                        }
+                                        #select-button {
+                                            width: 100%;
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            position: relative;
+                                            outline: none;
+                                            #selected_val_espec{
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                white-space: nowrap;                  
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                font-family: $Text-font;
+                                                font-size: 1vw;
+                                                font-weight: 600;
+                                                color: $Branco;
+                                                background: none;
+                                                border-radius: 0.25vw;
+                                                padding: 0 1.25vw;
+                                                outline: 1px solid $Branco;
+                                            }
+                                            img, svg{
+                                                z-index: 99;
+                                                position: absolute;
+                                                right: 1vw;
+                                                width: 2vw;
+                                                height: 100%;
+                                                padding: 0.9vh;
+                                                transform: rotate(90deg);
+                                                transition: all ease-in-out .1s;
+                                                path{
+                                                    fill: $Amarelo;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    #options {
+                                        z-index: 999;
+                                        width: 96%;
+                                        left: 2.25%;
+                                        height: auto;
+                                        max-height: 35vh;
+                                        top: 5.1vh;
+                                        overflow-x: hidden;
+                                        overflow-y: auto;
+                                        background: $Creme;
+                                        display: none;
+                                        position: absolute;
+                                        padding: 1vh 1vw;
+                                        border-bottom-left-radius: 1vw;
+                                        border-bottom-right-radius: 1vw;
+                                        .options_espec{
+                                            display: flex;
+                                            align-items: center;
+                                            position: relative;
+                                            width: 100%;
+                                            height: 6vh;
+                                            border-bottom: 1px solid $Marrom;
+                                            span{
+                                                all: unset;
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                white-space: nowrap;                  
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                padding-left: 0.75vw;
+                                                font-family: $Second-font;
+                                                font-size: 1vw;
+                                                font-weight: 500;
+                                                color: $Marrom;
+                                                z-index: 5;
+                                            }
+                                            input[type="radio"]{
+                                                all: unset;
+                                                position: absolute;
+                                                inset: 0;
+                                                z-index: 10;
+                                                &:checked{
+                                                    &::before{
+                                                        content: '';
+                                                        position: absolute;
+                                                        inset: 0;
+                                                        background: $Preto;
+                                                        opacity: 0.2;
+                                                        z-index: -1;
+                                                    }
+                                                }
+                                            }
+                                            &:hover{
+                                                &::before{
+                                                    content: '';
+                                                    position: absolute;
+                                                    inset: 0;
+                                                    background: $Preto;
+                                                    opacity: 0.2;
+                                                    z-index: -1;
+                                                }
+                                            }
+                                            &:last-child{
+                                                border: none;
+                                            }
+                                        }
+                                    }
+                                    #select_input_espec:checked + #select-button svg{
+                                        transform: rotate(-90deg);
+                                    }
+                                    #especialidades-select:has(#select_input_espec:checked) + #options{
+                                        display: block;
+                                    }
+                                }
+                                .TextAreaBox{
+                                    height: 30vh;
+                                    margin-top: 4vh;
+                                    textarea{
+                                        border-radius: 0.25vw;
+                                        resize: none;
+                                        padding: 1vh 1vw;
+                                    }
+                                    span{
+                                        top: -12vh;
+                                    }
+                                }
+                                .BlockBox input:focus ~ span, input:valid ~ span, .BlockBox textarea:focus ~ span, textarea:valid ~ span{
+                                    transform:translate(-1vw, -5vh);
+                                    font-size: 0.95vw;
+                                    font-weight: 800;
+                                }
+                            }
+                        }
+                        #Block_fotos{
+                            display: flex;
+                            flex-wrap: wrap;
+                            width: 100%;
+                            margin-top: 2vh;
+                            h2{
+                                font-family: $Main-font;
+                                font-size: 2vw;
+                                color: $Branco;
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0;
+                                text-align: center;
+                                padding: 2vh 0;
+                            }
+                            span{
+                                color: $Creme;
+                                font-family: $Text-font;
+                                font-size: 1vw;
+                                width: 100%;
+                                text-align: center;
+                                margin-bottom: 4vh;
+                            }
+                            #foto01_block, #foto02_block, #foto03_block, #foto04_block{
+                                width: 50%;
+                                height: 50vh;
+                                display: flex;
+                                justify-content: center;
+                                position: relative;
+                                margin-bottom: 5vh;
+                                input{
+                                    opacity: 0;
+                                    pointer-events: none;
+                                    display: none;
+                                }
+                                img{
+                                    all: unset;
+                                    width: 100%;
+                                    height: 85%;
+                                    object-fit: contain;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 0 5vw;
+                                }
+                                .btn_VoltaPadrao_foto01_Input, .btn_VoltaPadrao_foto02_Input, .btn_VoltaPadrao_foto03_Input, .btn_VoltaPadrao_foto04_Input{
+                                    position: absolute;
+                                    z-index: 999 !important;
+                                    background-color: $Preto;
+                                    bottom: 0;
+                                    width: 9vw;
+                                    height: 3.5vh;
+                                    font-family: $Text-font;
+                                    font-weight: 700;
+                                    color: $Branco;
+                                    font-size: 0.8vw;
+                                }
+                            }
+                        }
+                        #Block_videos{
+                            display: flex;
+                            flex-wrap: wrap;
+                            width: 100%;
+                            margin-top: 2vh;
+                            h2{
+                                font-family: $Main-font;
+                                font-size: 2vw;
+                                color: $Branco;
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0;
+                                text-align: center;
+                                padding: 2vh 0;
+                            }
+                            span{
+                                color: $Creme;
+                                font-family: $Text-font;
+                                font-size: 1vw;
+                                width: 100%;
+                                text-align: center;
+                                margin-bottom: 2vh;
+                            }
+                            #Video01_block, #Video02_block{
+                                width: 50%;
+                                height: 40vh;
+                                display: flex;
+                                justify-content: center;
+                                position: relative;
+                                padding: 0;
+                                input{
+                                    opacity: 0;
+                                    pointer-events: none;
+                                    display: none;
+                                }
+                                video{
+                                    all: unset;
+                                    width: 100%;
+                                    height: 85%;
+                                    object-fit: contain;
+                                    border-radius: 1vw;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 0 1vw;
+                                }
+                                .btn_VoltaPadrao_Video01_Input, .btn_VoltaPadrao_Video02_Input{
+                                    position: absolute;
+                                    z-index: 999 !important;
+                                    background-color: $Preto;
+                                    bottom: 1vh;
+                                    width: 9vw;
+                                    height: 3.5vh;
+                                    font-family: $Text-font;
+                                    font-weight: 700;
+                                    color: $Branco;
+                                    font-size: 0.8vw;
+                                }
+                            }
+                        }
+                        #Block_FAQ{
+                            display: flex;
+                            flex-wrap: wrap;
+                            width: 100%;
+                            margin-top: 5vh;
+                            h2{
+                                font-family: $Main-font;
+                                font-size: 2vw;
+                                color: $Branco;
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0;
+                                text-align: center;
+                                padding: 2vh 0 5vh;
+                            }
+                            .BlockBox{
+                                width: 50%;
+                                height: 5.5vh;
+                                display: flex;
+                                position: relative;
+                                margin: 2vh 0;
                                 input, textarea{
-                                    width: 85%;
+                                    width: 95%;
                                     border: none;
-                                    font-family: $Second-font;
+                                    font-family: $Text-font;
                                     font-size: 1vw;
-                                    font-weight: 400;
+                                    font-weight: 600;
                                     color: $Branco;
                                     background: none;
                                     outline: 1px solid $Branco;
                                     z-index: 10 !important;
-                                    border-radius: 0.75vw;
+                                    border-radius: 0.25vw;
                                     padding: 0 1.5vw;
-                                    padding-top: 0.2vh;
                                 }
                                 span{
-                                    all: unset;
                                     height: 100%;
                                     display: flex;
                                     align-items: center;
+                                    left: 3.5%;
+                                    font-family: $Main-font;
                                     position: absolute;
-                                    font-family: $Text-font;
-                                    font-weight: 400;
-                                    font-size: 1.25vw;
+                                    font-size: 1.05vw;
                                     color: $Branco;
+                                    font-weight: 500;
                                     transition: 0.5s;
-                                    left: 11%;
                                 }
                             }
-                            .descricaoBox{
-                                margin-top: 1vh;
-                                height: 20vh;
+                            .TextAreaBox{
+                                height: 15vh;
+                                margin-bottom: 5vh;
                                 textarea{
-                                    border-radius: 0.5vw;
+                                    border-radius: 0.25vw;
                                     resize: none;
                                     padding: 1vh 1vw;
                                 }
                                 span{
-                                    top: -6.5vh;
+                                    top: -4.5vh;
                                 }
                             }
                             .BlockBox input:focus ~ span, input:valid ~ span, .BlockBox textarea:focus ~ span, textarea:valid ~ span{
-                                transform:translate(-0.9vw, -3.5vh);
-                                font-size: 0.9vw;
+                                transform:translate(-1vw, -5vh);
+                                font-size: 0.95vw;
+                                font-weight: 800;
                             }
                         }
                     }
                     .modal-footer{
                         border: none;
                         width: 100%;
-                        height: 25%;
+                        height: 7.5%;
                         padding: 0;
                         margin: 0;
                         display: flex;
@@ -2276,25 +2642,32 @@
                             padding-top: 0.25vh;
                             font-size: 1.05vw;
                         }
+                        .btn_desativado{
+                            opacity: 0.75;
+                            pointer-events: none;
+                        }
+                    }
+                    #msg_ModalTratamento{
+                        position: absolute;
+                        top: 10%;
+                        max-width: 30%;
+                        left: 102.5%;
+                        min-height: 5vh;
+                        max-height: 45vh;
+                        font-family: $Main-font;
+                        font-weight: 700;
+                        font-size: 1vw;
+                        text-align: center;
+                        overflow: hidden;
+                        overflow-y: auto;
+                        color: $Creme;
+                        z-index: 9999 !important;
+                        padding: 0 1vw;
                     }
                 }
             }
-            #msg_ModalEspecialidade{ 
-                position: absolute;
-                top: 77%;
-                width: 50%;
-                left: 25%;
-                min-height: 5vh;
-                max-height: 28vh;
-                font-family: $Text-font;
-                font-weight: 700;
-                font-size: 1.25vw;
-                text-align: center;
-                overflow-y: auto;
-                z-index: 9999 !important;
-            }
         }
-        #ModalDeletEspecialidade{
+        #ModalDeletTratamentos{
             padding: 0;
             margin: 0;
             .modal-dialog{
@@ -2361,6 +2734,7 @@
                             font-size: 1.75vw;
                             color: $Branco;
                             width: 100%;
+                            height: 5%;
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -2399,22 +2773,26 @@
                             font-size: 1.05vw;
                         }
                     }
+                    #msg_ModalDeletTratamento{
+                        position: absolute;
+                        top: 105%;
+                        max-width: 100%;
+                        left: 0;
+                        min-height: 5vh;
+                        max-height: 28vh;
+                        font-family: $Main-font;
+                        font-weight: 700;
+                        font-size: 1.25vw;
+                        text-align: center;
+                        overflow: hidden;
+                        overflow-y: auto;
+                        color: $Creme;
+                        z-index: 9999 !important;
+                        padding: 0 1vw;
+                    }
                 }
             }
-            #msg_ModalDeletEspecialidade{ 
-                position: absolute;
-                top: 55%;
-                width: 50%;
-                left: 25%;
-                min-height: 5vh;
-                max-height: 28vh;
-                font-family: $Text-font;
-                font-weight: 700;
-                font-size: 1.25vw;
-                text-align: center;
-                overflow-y: auto;
-                z-index: 9999 !important;
-            }
+            
         }
     }
 }

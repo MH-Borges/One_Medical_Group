@@ -15,6 +15,9 @@
                 $card = $dados[$i]['card_'];
                 $status = $dados[$i]['status_perfil'];
 
+                $nome_novo = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome_medico)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                $nome_tratado = preg_replace('/[ -]+/', '_', $nome_novo);
+
                 if($nome_medico == ""){
                     if($status == "ativo"){
                         $ação = "
@@ -38,7 +41,7 @@
                 if($card == "user_placeholder.webp" || $card == ""){
                     $card = "<img class='cardMedico' src='../../assets/medicos/user_placeholder.webp'>";
                 }else{
-                    $card = "<img class='cardMedico' src='../../assets/medicos/$card'>";
+                    $card = "<img class='cardMedico' src='../../assets/medicos/$nome_tratado/$card'>";
                 }
 
                 echo "

@@ -834,7 +834,7 @@ body #Main_index #especialidades .especialidadeBlock p {
   font-family: "TrajanPro", sans-serif;
   font-size: 1.35vw;
   color: #E0E0E0;
-  padding: 0 10vw;
+  padding: 0 7.5vw;
   text-align: center;
 }
 body #Main_index #especialidades .especialidadeBlock .amarelo {
@@ -845,6 +845,9 @@ body #Main_index #especialidades .especialidadeBlock .preto {
 }
 body #Main_index #especialidades .especialidadeBlock .cinza {
   background-color: #776F62;
+}
+body #Main_index #especialidades .especialidadeBlock .marrom {
+  background-color: #4B2F24;
 }
 body #Main_index #especialidades .especialidadeBlock:hover img {
   display: none;
@@ -1002,15 +1005,25 @@ body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .
 }
 body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
   font-family: "TrajanPro", sans-serif;
+  width: 90%;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
+  width: 90%;
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
   font-size: 0.85vw;
   color: #4B2F24;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 body #Main_index #equipe .btn_equipe {
   font-family: "Proxima-nova", "Times New Roman", Times, serif;
@@ -3003,6 +3016,8 @@ body #Main_clinica #especialidades .especialidadeBlock p {
   font-family: "TrajanPro", sans-serif;
   font-size: 1.35vw;
   color: #E0E0E0;
+  padding: 0 7.5vw;
+  text-align: center;
 }
 body #Main_clinica #especialidades .especialidadeBlock .amarelo {
   background-color: #D2AE6D;
@@ -3012,6 +3027,9 @@ body #Main_clinica #especialidades .especialidadeBlock .preto {
 }
 body #Main_clinica #especialidades .especialidadeBlock .cinza {
   background-color: #776F62;
+}
+body #Main_clinica #especialidades .especialidadeBlock .marrom {
+  background-color: #4B2F24;
 }
 body #Main_clinica #especialidades .especialidadeBlock:hover img {
   display: none;
