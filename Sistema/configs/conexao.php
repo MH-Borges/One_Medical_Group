@@ -1,14 +1,15 @@
 <?php
 
-$servidor = 'localhost';
-$usuario = 'root';
-$senha = '';
-$banco = 'one_medical_group';
-
 // $servidor = 'localhost';
-// $usuario = '';
+// $usuario = 'root';
 // $senha = '';
-// $banco = '';
+// $banco = 'one_medical_group';
+
+
+$servidor = 'localhost';
+$usuario = 'OneRoot';
+$senha = 'One_Medical_Group312';
+$banco = 'One_Medical_Group';
 
 date_default_timezone_set('America/Sao_Paulo');
 
