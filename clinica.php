@@ -8,17 +8,18 @@
     <title>A clinica | One medical group</title>
 
     <link rel="icon" href="assets/icons/icon.svg" />
-    <link rel="canonical" href="" />
+    <link rel="canonical" href="https://onemedicalgroup.com.br/clinica" />
 
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-
+    <meta name="author" content="VL7 marketing estrategico">
+    <meta name="description" content="Conheça a One Medical Group: uma clínica dedicada a proporcionar transformações pessoais seguras e impactantes com tecnologias avançadas e atendimento personalizado. Descubra nossa missão, visão, princípios e o atendimento All In One. Saiba mais sobre nossa especialista em Concierge de Beleza e como agendar uma sessão.">
+    <meta name="keywords" content="One Medical Group, clínica, transformações pessoais, saúde e estética, tecnologias avançadas, atendimento personalizado, missão, visão, princípios, atendimento All In One, Concierge de Beleza, agendar sessão">
+    
+    <meta property="og:title" content="One Medical Group - Clínica de Saúde e Estética">
+    <meta property="og:description" content="Explore a One Medical Group, uma clínica especializada em saúde e estética com uma abordagem inovadora. Conheça nossa missão, visão, princípios e o conceito All In One. Agende uma sessão com nossa Concierge de Beleza e descubra como podemos transformar sua jornada de beleza.">
+    
+    <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
-    <meta name="og:title" property="og:title" content="">
-    <meta name="og:type" property="og:type" content="">
-    <meta name="og:image" property="og:image" content="">
-    <meta property=”og:description” content=""/>
+    <meta name="og:image" property="og:image" content="assets/logo.png">
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

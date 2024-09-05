@@ -8,17 +8,18 @@
     <title>A Equipe | One medical group</title>
 
     <link rel="icon" href="assets/icons/icon.svg" />
-    <link rel="canonical" href="" />
+    <link rel="canonical" href="https://onemedicalgroup.com.br/equipe" />
 
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="author" content="VL7 marketing estrategico">
+    <meta name="description" content="Na One Medical Group, contamos com um time de profissionais altamente capacitados e reconhecidos em suas áreas de atuação. Cada membro de nossa equipe se destaca por sua expertise e compromisso com a atualização constante nas mais recentes inovações e técnicas médicas. Conheça nossa equipe e a excelência dos nossos serviços médicos.">
+    <meta name="keywords" content="One Medical Group, profissionais de saúde, equipe médica, especialistas, atendimento médico, saúde, inovação médica, estrutura médica, excelência em saúde">
 
     <meta property="og:locale" content="pt_BR">
-    <meta name="og:title" property="og:title" content="">
-    <meta name="og:type" property="og:type" content="">
-    <meta name="og:image" property="og:image" content="">
-    <meta property=”og:description” content=""/>
+    <meta name="og:title" property="og:title" content="One Medical Group">
+    <meta name="og:type" property="og:type" content="website">
+    <meta name="og:image" property="og:image" content="assets/logo.png">
+    <meta property="og:description" content="Na One Medical Group, oferecemos um atendimento médico de excelência com uma equipe de especialistas altamente capacitados. Localizados no Cidade Jardim Corporate Center Continental Tower, proporcionamos uma experiência de saúde premium com conforto e inovação.">
+
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

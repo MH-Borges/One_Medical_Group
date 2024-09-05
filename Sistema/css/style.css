@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 @font-face {
   font-family: "TrajanPro";
   src: url("../../fonts/TrajanPro-Bold.otf") format("opentype");
@@ -7,46 +8,6 @@
   font-family: "khmer-mn";
   src: url("../../fonts/khmer-mn.ttf") format("truetype");
   font-weight: 400;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../../fonts/proximanova-thin.otf") format("opentype");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../../fonts/proximanova-light.otf") format("opentype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../../fonts/proximanova-regular.otf") format("opentype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../../fonts/proximanova-medium.otf") format("opentype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../../fonts/proximanova-semibold.otf") format("opentype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../../fonts/proximanova-bold.otf") format("opentype");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../../fonts/proximanova-extrabold.otf") format("opentype");
-  font-weight: 800;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../../fonts/proximanova-black.otf") format("opentype");
-  font-weight: 900;
 }
 *,
 *::after,
@@ -184,7 +145,7 @@ body header .menu li .dropdown .dropdown-menu li button, body header .menu li .d
   height: 100%;
   display: flex;
   align-items: center;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.1vw;
   color: #E0E0E0;
@@ -385,7 +346,7 @@ body #Main_login #login_sreen #LoginBox .BlockBox p, body #Main_login #login_sre
   display: flex;
   align-items: center;
   position: absolute;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.4vw;
   color: #E0E0E0;
@@ -425,7 +386,7 @@ body #Main_login #login_sreen #LoginBox #senhaRecoverBtn {
   position: absolute;
   width: 30%;
   height: 4vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   color: #E0E0E0;
   font-weight: 500;
   font-size: 0.9vw;
@@ -494,7 +455,7 @@ body #Main_login #login_sreen #Recupera_senha .BlockBox p, body #Main_login #log
   display: flex;
   align-items: center;
   position: absolute;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.4vw;
   color: #E0E0E0;
@@ -561,7 +522,7 @@ body #Main_login #login_sreen #msg_RecupSenha {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   color: #E0E0E0;
   font-size: 1.25vw;
@@ -574,7 +535,7 @@ body #Main_login #login_sreen #voltaTela {
   position: absolute;
   bottom: 2vh;
   left: 2vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.25vw;
   color: #E0E0E0;
@@ -686,7 +647,7 @@ body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .mo
   display: flex;
   align-items: center;
   position: absolute;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.4vw;
   color: #E0E0E0;
@@ -744,7 +705,7 @@ body #Main_login #ModalRecoverSenha .ModalRecoverSenha #msg_ModalRecupSenha {
   margin-top: 2vh;
   width: 100%;
   min-height: 10vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   color: #E0E0E0;
   font-weight: 800;
   font-size: 1.25vw;
@@ -763,7 +724,7 @@ body #Main_Adm #alertaBD {
   position: absolute;
   bottom: 1vh;
   left: 1.5vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   font-weight: 900;
 }
@@ -868,7 +829,7 @@ body #Main_Adm #ModalLogout .modal-dialog .modal-content .modal-body h5, body #M
   width: 100%;
 }
 body #Main_Adm #ModalLogout .modal-dialog .modal-content .modal-body h6 {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5vw;
   font-weight: 600;
   margin-top: 4vh;
@@ -1048,7 +1009,7 @@ body #Main_Adm #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAd
   display: flex;
   align-items: center;
   position: absolute;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.4vw;
   color: #E0E0E0;
@@ -1117,7 +1078,7 @@ body #Main_Adm #ModalEditPerfil #msgErro_EditUser {
   left: 25%;
   min-height: 10vh;
   max-height: 25vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.25vw;
   color: #E0E0E0;
@@ -1180,7 +1141,7 @@ body #Main_Adm #Especialidades #List_Espec .espec_card p {
   width: 75%;
   max-width: 75%;
   height: 20%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 0.9vw;
   color: #373435;
@@ -1340,7 +1301,7 @@ body #Main_Adm #Especialidades #ModalEspecialidade .modal-dialog .modal-content 
   left: 0;
   width: 9vw;
   height: 3.5vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #E0E0E0;
   font-size: 0.8vw;
@@ -1400,7 +1361,7 @@ body #Main_Adm #Especialidades #ModalEspecialidade .modal-dialog .modal-content 
   display: flex;
   align-items: center;
   position: absolute;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.25vw;
   color: #E0E0E0;
@@ -1436,7 +1397,7 @@ body #Main_Adm #Especialidades #ModalEspecialidade .modal-dialog .modal-content 
 body #Main_Adm #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-footer .btn_cancel {
   font-weight: 800;
   background: #373435;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   color: #E0E0E0;
   height: 4.5vh;
   padding: 0 2vw;
@@ -1445,7 +1406,7 @@ body #Main_Adm #Especialidades #ModalEspecialidade .modal-dialog .modal-content 
 }
 body #Main_Adm #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-footer .btn_salvar {
   font-weight: 800;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   background: #D2AE6D;
   color: #373435;
   margin-left: 2vw;
@@ -1583,7 +1544,7 @@ body #Main_Adm #Especialidades #ModalDeletEspecialidade #msg_ModalDeletEspeciali
   left: 25%;
   min-height: 5vh;
   max-height: 28vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.25vw;
   text-align: center;
@@ -1815,7 +1776,7 @@ body #Main_Adm #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-bod
   display: flex;
   align-items: center;
   position: absolute;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.25vw;
   color: #E0E0E0;
@@ -1839,7 +1800,7 @@ body #Main_Adm #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-foo
 body #Main_Adm #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-footer .btn_cancel {
   font-weight: 800;
   background: #373435;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   color: #E0E0E0;
   height: 4.5vh;
   padding: 0 2vw;
@@ -1848,7 +1809,7 @@ body #Main_Adm #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-foo
 }
 body #Main_Adm #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-footer .btn_salvar {
   font-weight: 800;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   background: #D2AE6D;
   color: #373435;
   margin-left: 2vw;
@@ -2096,7 +2057,7 @@ body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-f
 body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer .btn_cancel {
   font-weight: 800;
   background: #373435;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   color: #E0E0E0;
   height: 4.5vh;
   padding: 0 2vw;
@@ -2104,7 +2065,7 @@ body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-f
   font-size: 1.05vw;
 }
 body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer .ativo, body #Main_Adm #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer .inativo {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   color: #E0E0E0;
   margin-left: 2vw;
@@ -2243,7 +2204,7 @@ body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-bod
   color: #D0B498;
   position: absolute;
   bottom: -2.5vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.75vw;
   width: 100%;
   text-align: center;
@@ -2291,7 +2252,7 @@ body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-bod
   top: 7vh;
   width: 9vw;
   height: 3.5vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #E0E0E0;
   font-size: 0.8vw;
@@ -2319,7 +2280,7 @@ body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-bod
 body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox input, body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox textarea {
   width: 90%;
   border: none;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   font-weight: 600;
   color: #E0E0E0;
@@ -2566,7 +2527,7 @@ body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-bod
 body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTrocaBox #EditEmailUser .BlockBox input, body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTrocaBox #EditSenhaUser .BlockBox input, body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTrocaBox #EditEmailUser .BlockBox input, body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTrocaBox #EditSenhaUser .BlockBox input {
   width: 90%;
   border: none;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   font-weight: 600;
   color: #E0E0E0;
@@ -2654,7 +2615,7 @@ body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-foo
 body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-footer .btn_cancel {
   font-weight: 800;
   background: #373435;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   color: #E0E0E0;
   height: 4.5vh;
   padding: 0 2vw;
@@ -2663,7 +2624,7 @@ body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-foo
 }
 body #Main_Adm #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-footer .btn_salvar {
   font-weight: 800;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   background: #D2AE6D;
   color: #373435;
   margin-left: 2vw;
@@ -2925,7 +2886,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   color: #D0B498;
   position: absolute;
   bottom: -3vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.75vw;
   width: 100%;
   text-align: center;
@@ -2973,7 +2934,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   top: 6.5vh;
   width: 9vw;
   height: 3.5vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #E0E0E0;
   font-size: 0.8vw;
@@ -3001,7 +2962,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .BlockBox input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_init #infos .BlockBox textarea {
   width: 95%;
   border: none;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   font-weight: 600;
   color: #E0E0E0;
@@ -3075,7 +3036,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   font-weight: 600;
   color: #E0E0E0;
@@ -3206,7 +3167,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
 }
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_fotos span {
   color: #D0B498;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   width: 100%;
   text-align: center;
@@ -3243,7 +3204,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   bottom: 0;
   width: 9vw;
   height: 3.5vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #E0E0E0;
   font-size: 0.8vw;
@@ -3269,7 +3230,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
 }
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_videos span {
   color: #D0B498;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   width: 100%;
   text-align: center;
@@ -3328,7 +3289,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
   right: 2vw;
   width: 9vw;
   height: 3.5vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #E0E0E0;
   font-size: 0.8vw;
@@ -3362,7 +3323,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ .BlockBox input, body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-body #Block_FAQ .BlockBox textarea {
   width: 95%;
   border: none;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   font-weight: 600;
   color: #E0E0E0;
@@ -3414,7 +3375,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-footer .btn_cancel {
   font-weight: 800;
   background: #373435;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   color: #E0E0E0;
   height: 4.5vh;
   padding: 0 2vw;
@@ -3423,7 +3384,7 @@ body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .moda
 }
 body #Main_Adm #Tratamentos #ModalTratamentos .modal-dialog .modal-content .modal-footer .btn_salvar {
   font-weight: 800;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   background: #D2AE6D;
   color: #373435;
   margin-left: 2vw;
@@ -3591,7 +3552,7 @@ body #menuMedico .menu li button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.25vw;
   color: #E0E0E0;
@@ -3676,7 +3637,7 @@ body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block h3, body
 body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block span, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Foto_block span, body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Video_block span {
   position: absolute;
   bottom: -2.5vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.75vw;
   width: 100%;
   text-align: center;
@@ -3723,7 +3684,7 @@ body #Main_Medicos #home #Form_DadosMedico #Card_foto_video #Card_block .btn_Vol
   top: 5vh;
   width: 9vw;
   height: 3.5vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #E0E0E0;
   font-size: 0.8vw;
@@ -3751,7 +3712,7 @@ body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox {
 body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox input, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox textarea {
   width: 90%;
   border: none;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   font-weight: 600;
   color: #4B2F24;
@@ -4064,7 +4025,7 @@ body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .Blo
   display: flex;
   align-items: center;
   position: absolute;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.4vw;
   color: #E0E0E0;
@@ -4143,7 +4104,7 @@ body #Main_Medicos #ModalCriaSenha #msg_ModalCriaMedico {
   left: 25%;
   min-height: 10vh;
   max-height: 25vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.25vw;
   color: #E0E0E0;
@@ -4223,7 +4184,7 @@ body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-body h5, bod
   width: 100%;
 }
 body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-body h6 {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5vw;
   font-weight: 600;
   margin-top: 4vh;
@@ -4403,7 +4364,7 @@ body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #Ta
   display: flex;
   align-items: center;
   position: absolute;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.4vw;
   color: #E0E0E0;
@@ -4473,7 +4434,7 @@ body #Main_Medicos #ModalEditPerfil #msgErro_EditUser {
   left: 25%;
   min-height: 10vh;
   max-height: 25vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.25vw;
   color: #E0E0E0;

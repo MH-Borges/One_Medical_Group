@@ -8,17 +8,18 @@
     <title>One medical group</title>
 
     <link rel="icon" href="assets/icons/icon.svg" />
-    <link rel="canonical" href="" />
+    <link rel="canonical" href="https://onemedicalgroup.com.br" />
 
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="author" content="VL7 marketing estrategico">
+    <meta name="description" content="A One Medical Group oferece atendimento personalizado e exclusivo para saúde e beleza, com serviços como o All In One, suporte contínuo e a Concierge de Beleza. Localizada em São Paulo, a clínica oferece consultas detalhadas e acompanhamento completo. Agende uma consulta para uma experiência única e diferenciada.">
+    <meta name="keywords" content="One Medical Group, saúde, beleza, All In One, Concierge de Beleza, clínica em São Paulo, atendimento personalizado, tratamentos estéticos, consultas, acompanhamento, estética, bem-estar">
 
     <meta property="og:locale" content="pt_BR">
-    <meta name="og:title" property="og:title" content="">
-    <meta name="og:type" property="og:type" content="">
-    <meta name="og:image" property="og:image" content="">
-    <meta property=”og:description” content=""/>
+    <meta name="og:title" property="og:title" content="One Medical Group">
+    <meta name="og:type" property="og:type" content="website">
+    <meta name="og:image" property="og:image" content="assets/logo.png">
+    <meta property="og:description" content="A One Medical Group oferece atendimento personalizado de saúde e estética com tecnologias avançadas, como o serviço exclusivo All In One e a Concierge de Beleza para um acompanhamento completo.">
+
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

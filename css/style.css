@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 @font-face {
   font-family: "TrajanPro";
   src: url("../fonts/TrajanPro-Bold.otf") format("opentype");
@@ -7,46 +8,6 @@
   font-family: "khmer-mn";
   src: url("../fonts/khmer-mn.ttf") format("truetype");
   font-weight: 400;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../fonts/proximanova-thin.otf") format("opentype");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../fonts/proximanova-light.otf") format("opentype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../fonts/proximanova-regular.otf") format("opentype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../fonts/proximanova-medium.otf") format("opentype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../fonts/proximanova-semibold.otf") format("opentype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../fonts/proximanova-bold.otf") format("opentype");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../fonts/proximanova-extrabold.otf") format("opentype");
-  font-weight: 800;
-}
-@font-face {
-  font-family: "Proxima-nova";
-  src: url("../fonts/proximanova-black.otf") format("opentype");
-  font-weight: 900;
 }
 *,
 *::after,
@@ -395,7 +356,7 @@ body footer #bigFooter #consulta_rodape h5, body footer #bigFooter #endereco_rod
 }
 body footer #bigFooter #consulta_rodape p, body footer #bigFooter #endereco_rodape p, body footer #bigFooter #telefone_rodape p, body footer #bigFooter #redes_rodape p {
   width: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 0.9vw;
   color: #E0E0E0;
@@ -465,7 +426,7 @@ body footer #smallFooter {
   z-index: 5;
 }
 body footer #smallFooter p {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1vw;
   color: #E0E0E0;
@@ -514,7 +475,7 @@ body #Main_index #home .sideBanner a {
   transform: rotate(-90deg);
   display: flex;
   align-items: center;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: #373435;
   font-size: 2.25vw;
@@ -539,7 +500,7 @@ body #Main_index #home #whats_home {
 }
 body #Main_index #home #whats_home a {
   color: #E0E0E0;
-  width: 28vw;
+  width: 32vw;
 }
 body #Main_index #home #whats_home a img, body #Main_index #home #whats_home a svg {
   margin-right: 1vw;
@@ -620,7 +581,7 @@ body #Main_index #home #banner h2 {
   z-index: 5;
 }
 body #Main_index #home #banner h3 {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   color: #E0E0E0;
   text-align: right;
@@ -681,7 +642,7 @@ body #Main_index #clinica #Block_textClinica h2::before {
 body #Main_index #clinica #Block_textClinica p {
   width: 100%;
   padding-right: 3.5vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #4B2F24;
@@ -784,7 +745,7 @@ body #Main_index #espaco #Block_textEspaco h2::before {
 body #Main_index #espaco #Block_textEspaco p {
   width: 100%;
   padding-right: 1vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 1vw;
   color: #E0E0E0;
@@ -874,7 +835,7 @@ body #Main_index #especialidades #textEspecialidade h2 {
 body #Main_index #especialidades #textEspecialidade p {
   all: unset;
   width: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.05vw;
   color: #E0E0E0;
@@ -920,7 +881,7 @@ body #Main_index #equipe h2::before {
 body #Main_index #equipe p {
   width: 100%;
   padding-right: 3.5vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #4B2F24;
@@ -1017,7 +978,7 @@ body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .
 body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
   width: 90%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.85vw;
   color: #4B2F24;
   white-space: nowrap;
@@ -1026,7 +987,7 @@ body #Main_index #equipe .splide .splide__track .splide__list .splide__slide a .
   text-align: center;
 }
 body #Main_index #equipe .btn_equipe {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   color: #373435;
   font-size: 1.25vw;
@@ -1083,14 +1044,14 @@ body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos h2::befor
 }
 body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos p {
   width: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #E0E0E0;
   line-height: 3.75vh;
 }
 body #Main_index #tratamentos #tratamentosInfos #Block_textTratamentos .btn_tratamentos {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   color: #D2AE6D;
   font-size: 1.25vw;
@@ -1229,7 +1190,7 @@ body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__l
 }
 body #Main_index #tratamentos #tratamentosimgs .splide .splide__track .splide__list .splide__slide .infosCards .btn_CardTratamento {
   transition: all ease-in-out 0.5s;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   width: 6.25vw;
   color: #E0E0E0;
@@ -1321,7 +1282,7 @@ body #Main_index #allInOne #Block_textAllinOne h2::before {
 body #Main_index #allInOne #Block_textAllinOne p {
   width: 100%;
   padding-left: 1vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   text-align: right;
@@ -1329,7 +1290,7 @@ body #Main_index #allInOne #Block_textAllinOne p {
   line-height: 3vh;
 }
 body #Main_index #allInOne #Block_textAllinOne .btn_AllInOne {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   height: 4.5vh;
   width: 13.5vw;
@@ -1380,7 +1341,7 @@ body #Main_index #concierge #Block_textConcierge h2::before {
 body #Main_index #concierge #Block_textConcierge p {
   width: 100%;
   padding-left: 5vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   text-align: right;
@@ -1390,7 +1351,7 @@ body #Main_index #concierge #Block_textConcierge p {
 body #Main_index #concierge #Block_textConcierge span {
   width: 100%;
   padding-left: 10vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.1vw;
   text-align: right;
@@ -1399,7 +1360,7 @@ body #Main_index #concierge #Block_textConcierge span {
   margin-top: 12.5vh;
 }
 body #Main_index #concierge #Block_textConcierge .btn_Concierge {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   height: 4.5vh;
   width: 17.5vw;
@@ -1454,7 +1415,7 @@ body #Main_index #depos h2::before {
 }
 body #Main_index #depos p {
   width: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.1vw;
   color: #4B2F24;
@@ -1578,7 +1539,7 @@ body #Main_index #blog h2::before {
 }
 body #Main_index #blog p {
   width: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.1vw;
   color: #D0B498;
@@ -1661,7 +1622,7 @@ body #Main_index #blog #Blog_cards .cards .titulo {
   text-overflow: ellipsis;
 }
 body #Main_index #blog #Blog_cards .cards .btn_BlogCard {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   width: 27%;
   color: #E0E0E0;
@@ -1678,7 +1639,7 @@ body #Main_index #blog #Blog_cards .cards .btn_BlogCard img path, body #Main_ind
   fill: #E0E0E0;
 }
 body #Main_index #blog .btn_blog {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   color: #D2AE6D;
   font-size: 1.25vw;
@@ -1766,7 +1727,7 @@ body #Main_index #form h2 {
 }
 body #Main_index #form p {
   width: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #4B2F24;
@@ -1809,7 +1770,7 @@ body #Main_index #form .formBlock form .BlockBox p, body #Main_index #form .form
   all: unset;
   position: absolute;
   left: 1vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 1vw;
   color: #4B2F24;
@@ -1863,7 +1824,7 @@ body #Main_index #form .formBlock form .termosPrivacidade input {
   outline: none;
 }
 body #Main_index #form .formBlock form .termosPrivacidade h3 {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.9vw;
   color: #373435;
   margin-left: 0.5vw;
@@ -1877,7 +1838,7 @@ body #Main_index #form .formBlock form .termosPrivacidade h3 a:hover {
   color: #D2AE6D;
 }
 body #Main_index #form .formBlock form #btn_form {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 4.5vh;
   width: 25%;
   background-color: #D2AE6D;
@@ -1897,7 +1858,7 @@ body #Main_index #form .formBlock #msg_form {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1vw;
   text-align: center;
@@ -1947,7 +1908,7 @@ body #Main_404 section h1 {
   -webkit-text-stroke-color: #D2AE6D;
 }
 body #Main_404 section h2 {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 9vw;
   color: #D2AE6D;
@@ -1963,7 +1924,7 @@ body #Main_404 section #Voltar_404 {
   flex-direction: column;
 }
 body #Main_404 section #Voltar_404 p {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.1vw;
   font-weight: 400;
   color: #373435;
@@ -2002,7 +1963,7 @@ body #Main_404 section #Voltar_404 .btn_404 {
     flex-direction: column;
   }
   body #Main_404 section #Voltar_404 p {
-    font-family: "Proxima-nova", "Times New Roman", Times, serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 3vw;
     line-height: 2.75vh;
   }
@@ -2034,7 +1995,7 @@ body #Main_PoliticaPrivacidade section h1, body #Main_PoliticaPrivacidade sectio
   padding: 4vh 0;
 }
 body #Main_PoliticaPrivacidade section p, body #Main_PoliticaPrivacidade section a {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.1vw;
   color: #373435;
@@ -2060,7 +2021,7 @@ body #Main_PoliticaPrivacidade section a:hover {
 }
 body #Main_PoliticaPrivacidade section ul li {
   list-style: disc;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   color: #373435;
   margin: 3vh 0;
@@ -2118,7 +2079,7 @@ body #Main_contato #contatos h1 {
 }
 body #Main_contato #contatos p {
   width: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #4B2F24;
@@ -2209,7 +2170,7 @@ body #Main_contato #contatos #infosContato .blockContato p {
 body #Main_contato #contatos #infosContato .blockContato a {
   position: absolute;
   bottom: 1vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.9vw;
   color: #E0E0E0;
   text-decoration: underline !important;
@@ -2279,7 +2240,7 @@ body #Main_contato #form .formBlock form .BlockBox p, body #Main_contato #form .
   all: unset;
   position: absolute;
   left: 1vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 1vw;
   color: #4B2F24;
@@ -2333,7 +2294,7 @@ body #Main_contato #form .formBlock form .termosPrivacidade input {
   outline: none;
 }
 body #Main_contato #form .formBlock form .termosPrivacidade h3 {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.9vw;
   color: #373435;
   margin-left: 0.5vw;
@@ -2347,7 +2308,7 @@ body #Main_contato #form .formBlock form .termosPrivacidade h3 a:hover {
   color: #D2AE6D;
 }
 body #Main_contato #form .formBlock form #btn_form {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 4.5vh;
   width: 25%;
   background-color: #D2AE6D;
@@ -2367,7 +2328,7 @@ body #Main_contato #form .formBlock #msg_form {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1vw;
   text-align: center;
@@ -2633,14 +2594,14 @@ body #Main_clinica #oneMedical #Block_textOne h2::before {
 body #Main_clinica #oneMedical #Block_textOne p {
   width: 100%;
   padding-right: 3.5vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #373435;
   line-height: 3.75vh;
 }
 body #Main_clinica #oneMedical #Block_textOne .btn_tratamentos {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   color: #D2AE6D;
   font-size: 1.25vw;
@@ -2751,7 +2712,7 @@ body #Main_clinica #MVV #cards_MVV .card:hover h2::before {
 body #Main_clinica #MVV #cards_MVV .card:hover p {
   display: block;
   z-index: 5;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   color: #E0E0E0;
   line-height: 4vh;
@@ -2827,7 +2788,7 @@ body #Main_clinica #concierge #Block_textConcierge h2::before {
 body #Main_clinica #concierge #Block_textConcierge p {
   width: 100%;
   padding-left: 5vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   text-align: right;
@@ -2837,7 +2798,7 @@ body #Main_clinica #concierge #Block_textConcierge p {
 body #Main_clinica #concierge #Block_textConcierge span {
   width: 100%;
   padding-left: 10vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.1vw;
   text-align: right;
@@ -2846,7 +2807,7 @@ body #Main_clinica #concierge #Block_textConcierge span {
   margin-top: 12.5vh;
 }
 body #Main_clinica #concierge #Block_textConcierge .btn_Concierge {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 4.5vh;
   width: 13.5vw;
   background-color: #D2AE6D;
@@ -2954,7 +2915,7 @@ body #Main_clinica #allInOne #Block_textAllinOne h2::before {
 body #Main_clinica #allInOne #Block_textAllinOne p {
   width: 100%;
   padding-left: 2vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   text-align: right;
@@ -2962,7 +2923,7 @@ body #Main_clinica #allInOne #Block_textAllinOne p {
   line-height: 3vh;
 }
 body #Main_clinica #allInOne #Block_textAllinOne .btn_AllInOne {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 4.5vh;
   width: 13.5vw;
   background-color: #D2AE6D;
@@ -3056,7 +3017,7 @@ body #Main_clinica #especialidades #textEspecialidade h2 {
 body #Main_clinica #especialidades #textEspecialidade p {
   all: unset;
   width: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 0.9vw;
   color: #E0E0E0;
@@ -3401,7 +3362,7 @@ body #Main_especialidades #Especialidades h2 {
   width: 100%;
   height: auto;
   padding: 3vh 5%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25vw;
   color: #373435;
   line-height: 5vh;
@@ -3478,7 +3439,7 @@ body #Main_especialidades #Especialidades #especialidadesCards .especialidade_ca
 }
 body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover p {
   display: flex;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.1vw;
   color: #D0B498;
   line-height: 4vh;
@@ -3499,7 +3460,7 @@ body #Main_especialidades #Especialidades #especialidadesCards .especialidade_ca
   height: 3vh;
   right: 1vw;
   bottom: 1vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   color: #E0E0E0;
 }
 body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card img, body #Main_especialidades #Especialidades #especialidadesCards .especialidade_card:hover .btn_card svg {
@@ -3612,7 +3573,7 @@ body #Main_especialidades #allInOne #Block_textAllinOne h2::before {
 body #Main_especialidades #allInOne #Block_textAllinOne p {
   width: 100%;
   padding-left: 2vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   text-align: right;
@@ -3620,7 +3581,7 @@ body #Main_especialidades #allInOne #Block_textAllinOne p {
   line-height: 3vh;
 }
 body #Main_especialidades #allInOne #Block_textAllinOne .btn_AllInOne {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 4.5vh;
   width: 13.5vw;
   background-color: #D2AE6D;
@@ -3670,7 +3631,7 @@ body #Main_especialidades #concierge #Block_textConcierge h2::before {
 body #Main_especialidades #concierge #Block_textConcierge p {
   width: 100%;
   padding-left: 5vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   text-align: right;
@@ -3680,7 +3641,7 @@ body #Main_especialidades #concierge #Block_textConcierge p {
 body #Main_especialidades #concierge #Block_textConcierge span {
   width: 100%;
   padding-left: 10vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.1vw;
   text-align: right;
@@ -3689,7 +3650,7 @@ body #Main_especialidades #concierge #Block_textConcierge span {
   margin-top: 12.5vh;
 }
 body #Main_especialidades #concierge #Block_textConcierge .btn_Concierge {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 4.5vh;
   width: 13.5vw;
   background-color: #D2AE6D;
@@ -3744,7 +3705,7 @@ body #Main_especialidades #depos h2::before {
 }
 body #Main_especialidades #depos p {
   width: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #4B2F24;
@@ -4128,7 +4089,7 @@ body #Main_tratamentos #banner p {
   width: 100%;
   height: 20vh;
   padding: 0 5%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25vw;
   color: #373435;
   line-height: 5vh;
@@ -4284,7 +4245,7 @@ body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_spli
 }
 body #Main_tratamentos #Listagem_tratamentos .tratamentos_block .tratamento_splide .splide__track .splide__list .splide__slide .infosCards .btn_CardTratamento {
   transition: all ease-in-out 0.5s;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   width: 6.25vw;
   color: #E0E0E0;
@@ -4372,7 +4333,7 @@ body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tr
 }
 body #Main_tratamentos #Listagem_tratamentos .tratamentosEspecialidade_block .tratamento_card .infosCards .btn_CardTratamento {
   transition: all ease-in-out 0.5s;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   width: 6.25vw;
   color: #E0E0E0;
@@ -4411,7 +4372,7 @@ body #Main_tratamentos #depos h2::before {
 }
 body #Main_tratamentos #depos p {
   width: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #4B2F24;
@@ -4535,7 +4496,7 @@ body #Main_tratamentos #equipe h2::before {
 body #Main_tratamentos #equipe p {
   width: 100%;
   padding-right: 3.5vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #4B2F24;
@@ -4629,7 +4590,7 @@ body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .spli
 body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
   width: 90%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.85vw;
   color: #4B2F24;
   white-space: nowrap;
@@ -4641,7 +4602,7 @@ body #Main_tratamentos #equipe .equipe_splide .splide__track .splide__list .spli
   transform: scale(1.02);
 }
 body #Main_tratamentos #equipe .btn_equipe {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   color: #373435;
   font-size: 1.25vw;
@@ -4694,7 +4655,7 @@ body #Main_tratamentos #concierge #Block_textConcierge h2::before {
 body #Main_tratamentos #concierge #Block_textConcierge p {
   width: 100%;
   padding-left: 5vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   text-align: right;
@@ -4704,7 +4665,7 @@ body #Main_tratamentos #concierge #Block_textConcierge p {
 body #Main_tratamentos #concierge #Block_textConcierge span {
   width: 100%;
   padding-left: 10vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.1vw;
   text-align: right;
@@ -4713,9 +4674,10 @@ body #Main_tratamentos #concierge #Block_textConcierge span {
   margin-top: 12.5vh;
 }
 body #Main_tratamentos #concierge #Block_textConcierge .btn_Concierge {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   height: 4.5vh;
-  width: 13.5vw;
+  width: 17.5vw;
   background-color: #D2AE6D;
   color: #373435;
   font-size: 1.25vw;
@@ -4821,7 +4783,7 @@ body #Main_tratamentos #allInOne #Block_textAllinOne h2::before {
 body #Main_tratamentos #allInOne #Block_textAllinOne p {
   width: 100%;
   padding-left: 2vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   text-align: right;
@@ -4829,7 +4791,7 @@ body #Main_tratamentos #allInOne #Block_textAllinOne p {
   line-height: 3vh;
 }
 body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 4.5vh;
   width: 13.5vw;
   background-color: #D2AE6D;
@@ -5304,7 +5266,7 @@ body #Main_TratDetalhes #como_Funicona h2::before {
 body #Main_TratDetalhes #como_Funicona p {
   width: 100%;
   height: auto;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.1vw;
   color: #373435;
   line-height: 3.5vh;
@@ -5341,7 +5303,7 @@ body #Main_TratDetalhes #etapas h2::before {
 body #Main_TratDetalhes #etapas p {
   width: 100%;
   height: auto;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.1vw;
   color: #373435;
   line-height: 3.5vh;
@@ -5419,7 +5381,7 @@ body #Main_TratDetalhes #equipe h2::before {
 body #Main_TratDetalhes #equipe p {
   width: 100%;
   padding-right: 3.5vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #4B2F24;
@@ -5514,7 +5476,7 @@ body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__sl
 body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
   width: 90%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.85vw;
   color: #4B2F24;
   white-space: nowrap;
@@ -5526,7 +5488,7 @@ body #Main_TratDetalhes #equipe .splide .splide__track .splide__list .splide__sl
   transform: scale(1.02);
 }
 body #Main_TratDetalhes #equipe .btn_equipe {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   color: #373435;
   font-size: 1.25vw;
@@ -5566,7 +5528,7 @@ body #Main_TratDetalhes #depos h2::before {
 }
 body #Main_TratDetalhes #depos p {
   width: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #4B2F24;
@@ -5663,14 +5625,14 @@ body #Main_TratDetalhes #espaco #Block_textEspaco h2::before {
 body #Main_TratDetalhes #espaco #Block_textEspaco p {
   width: 100%;
   padding-right: 1vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   color: #E0E0E0;
   line-height: 3vh;
 }
 body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   width: 45%;
   color: #D2AE6D;
@@ -5771,16 +5733,16 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta::before {
   background-color: #373435;
 }
 body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta h3 {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 1.3vw;
+  font-size: 1.15vw;
   color: #4B2F24;
   margin-bottom: 1.5vh;
 }
 body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta p {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1vw;
+  font-size: 0.9vw;
   line-height: 3vh;
   color: #373435;
   margin-bottom: 1.5vh;
@@ -6139,7 +6101,7 @@ body #Main_Equipe #banner p {
   z-index: 5;
   padding: 0 10%;
   text-align: center;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #E0E0E0;
   font-size: 1.2vw;
@@ -6196,7 +6158,7 @@ body #Main_Equipe #Block_medicos .dropdown .dropdown-menu {
 }
 body #Main_Equipe #Block_medicos .dropdown .dropdown-menu li {
   margin: 1vh 0;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1vw;
   color: #4B2F24;
@@ -6280,7 +6242,7 @@ body #Main_Equipe #Block_medicos .filter .mix a .infosCards .nome {
 body #Main_Equipe #Block_medicos .filter .mix a .infosCards .espec_medico {
   all: unset;
   width: 90%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.85vw;
   color: #4B2F24;
   white-space: nowrap;
@@ -6372,14 +6334,14 @@ body #Main_Equipe #espaco #Block_textEspaco h2::before {
 body #Main_Equipe #espaco #Block_textEspaco p {
   width: 100%;
   padding-right: 1vw;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 1vw;
   color: #E0E0E0;
   line-height: 3.5vh;
 }
 body #Main_Equipe #espaco #Block_textEspaco .btn_espaco {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   width: 45%;
   color: #D2AE6D;
@@ -6440,14 +6402,14 @@ body #Main_Equipe #FAQ .block_perguntas .Block_pergunta::before {
   background-color: #373435;
 }
 body #Main_Equipe #FAQ .block_perguntas .Block_pergunta h3 {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.3vw;
   color: #4B2F24;
   margin-bottom: 1.5vh;
 }
 body #Main_Equipe #FAQ .block_perguntas .Block_pergunta p {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1vw;
   line-height: 3vh;
@@ -6714,7 +6676,7 @@ body #Main_EquipeDetalhes #Block_user #infos_User #especialidade {
   all: unset;
   width: 100%;
   height: 5vh;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5vw;
   font-weight: 500;
   font-style: italic;
@@ -6767,14 +6729,14 @@ body #Main_EquipeDetalhes #Block_user #infos_User #bio, body #Main_EquipeDetalhe
   margin-top: 5vh;
 }
 body #Main_EquipeDetalhes #Block_user #infos_User #bio h3, body #Main_EquipeDetalhes #Block_user #infos_User #formacoes h3 {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1.75vw;
   color: #E0E0E0;
   padding: 1vh 0;
 }
 body #Main_EquipeDetalhes #Block_user #infos_User #bio p, body #Main_EquipeDetalhes #Block_user #infos_User #formacoes p {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.1vw;
   color: #D0B498;
@@ -6997,7 +6959,7 @@ body #Main_blog #Block_blog #menu_blog .splide .splide__track .splide__list .spl
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1.1vw;
   color: #4B2F24;
@@ -7061,7 +7023,7 @@ body #Main_blog #Block_blog #menu_blog .searchBar input {
   all: unset;
   width: 90%;
   height: 80%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   font-weight: 500;
   font-style: italic;
@@ -7187,7 +7149,7 @@ body #Main_blog #Block_blog #menu_blog .Search_resultBox .nullResult span {
   position: relative;
   width: 100%;
   height: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7276,7 +7238,7 @@ body #Main_blog #Block_blog .Blog_cards .card_blog .titulo {
   text-overflow: ellipsis;
 }
 body #Main_blog #Block_blog .Blog_cards .card_blog .btn_BlogCard {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   width: 27%;
   color: #E0E0E0;
@@ -7424,7 +7386,7 @@ body #Main_blog #tratamentos .splide .splide__track .splide__list .splide__slide
 }
 body #Main_blog #tratamentos .splide .splide__track .splide__list .splide__slide .infosCards .btn_CardTratamento {
   transition: all ease-in-out 0.5s;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   width: 6.25vw;
   color: #E0E0E0;
@@ -7546,13 +7508,13 @@ body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a .i
 }
 body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.85vw;
   color: #4B2F24;
   font-style: italic;
 }
 body #Main_blog #equipe .btn_equipe {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   color: #373435;
   font-size: 1.25vw;
@@ -7672,7 +7634,7 @@ body #Main_blog #equipe .btn_equipe img path, body #Main_blog #equipe .btn_equip
   }
   body #Main_blog #Block_blog #menu_blog .Search_resultBox .nullResult span {
     all: unset;
-    font-family: "Proxima-nova", "Times New Roman", Times, serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 3vw;
     font-weight: 800;
     letter-spacing: 0.15vw;
@@ -7909,7 +7871,7 @@ body #Main_blogPost #banner span {
   font-size: 1vw;
   padding: 0.75vh 1.5vw;
   border: 1px solid #E0E0E0;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #E0E0E0;
   border-radius: 0.3vw;
@@ -7944,7 +7906,7 @@ body #Main_blogPost #conteudo .Postagem span {
   top: 3vh;
   left: 3vw;
   outline: 2px solid #D2AE6D;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   font-weight: 800;
   color: #D2AE6D;
@@ -7967,7 +7929,7 @@ body #Main_blogPost #conteudo .Postagem p, body #Main_blogPost #conteudo .Postag
   margin: 1vh 0;
 }
 body #Main_blogPost #conteudo .Postagem p {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   margin: 3vh 0;
 }
 body #Main_blogPost #conteudo .Postagem h2 {
@@ -8017,7 +7979,7 @@ body #Main_blogPost #conteudo aside .searchBar input {
   all: unset;
   width: 90%;
   height: 80%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   font-weight: 500;
   font-style: italic;
@@ -8143,7 +8105,7 @@ body #Main_blogPost #conteudo aside .Search_resultBox .nullResult span {
   position: relative;
   width: 100%;
   height: 100%;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8172,7 +8134,7 @@ body #Main_blogPost #conteudo aside .tags {
   align-items: center;
   justify-content: center;
   background-color: #4B2F24;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1vw;
   color: #E0E0E0;
@@ -8267,7 +8229,7 @@ body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .titulo {
   text-overflow: ellipsis;
 }
 body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .btn_BlogCard {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   width: 30%;
   color: #E0E0E0;
@@ -8394,13 +8356,13 @@ body #Main_blogPost #equipe .splide .splide__track .splide__list .splide__slide 
 }
 body #Main_blogPost #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.85vw;
   color: #4B2F24;
   font-style: italic;
 }
 body #Main_blogPost #equipe .btn_equipe {
-  font-family: "Proxima-nova", "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   color: #373435;
   font-size: 1.25vw;
@@ -8533,7 +8495,7 @@ body #Main_blogPost #equipe .btn_equipe img path, body #Main_blogPost #equipe .b
   }
   body #Main_blogPost #conteudo aside .Search_resultBox .nullResult span {
     all: unset;
-    font-family: "Proxima-nova", "Times New Roman", Times, serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 3vw;
     font-weight: 800;
     letter-spacing: 0.15vw;

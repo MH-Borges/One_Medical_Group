@@ -50,9 +50,6 @@
     }
 ?>
 
-
-        
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -62,17 +59,17 @@
     <title>Conheça o medico <?php echo $nome ?> | One medical group</title>
 
     <link rel="icon" href="assets/icons/icon.svg" />
-    <link rel="canonical" href="" />
+    <link rel="canonical" href="https://onemedicalgroup.com.br/medico_<?php echo $nome_clean ?>" />
 
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="author" content="VL7 marketing estrategico">
+    <meta name="description" content="One Medical Group, <?php echo $nome_clean ?>">
+    <meta name="keywords" content="One Medical Group, <?php echo $nome_clean ?>">
 
     <meta property="og:locale" content="pt_BR">
-    <meta name="og:title" property="og:title" content="">
-    <meta name="og:type" property="og:type" content="">
-    <meta name="og:image" property="og:image" content="">
-    <meta property=”og:description” content=""/>
+    <meta name="og:title" property="og:title" content="One Medical Group">
+    <meta name="og:type" property="og:type" content="website">
+    <meta name="og:image" property="og:image" content="assets/logo.png">
+    <meta property="og:description" content="Na One Medical Group, oferecemos um atendimento médico de excelência com uma equipe de especialistas altamente capacitados. Localizados no Cidade Jardim Corporate Center Continental Tower, proporcionamos uma experiência de saúde premium com conforto e inovação.">
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

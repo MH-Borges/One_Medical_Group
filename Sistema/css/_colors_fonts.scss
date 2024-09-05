@@ -8,50 +8,11 @@
     src: url('../../fonts/khmer-mn.ttf') format('truetype');
     font-weight: 400;
 }
-@font-face {
-    font-family: 'Proxima-nova';
-    src: url("../../fonts/proximanova-thin.otf") format("opentype");
-    font-weight: 200;
-}
-@font-face {
-    font-family: 'Proxima-nova';
-    src: url("../../fonts/proximanova-light.otf") format("opentype");
-    font-weight: 300;
-}
-@font-face {
-    font-family: 'Proxima-nova';
-    src: url("../../fonts/proximanova-regular.otf") format("opentype");
-    font-weight: 400;
-}
-@font-face {
-    font-family: 'Proxima-nova';
-    src: url("../../fonts/proximanova-medium.otf") format("opentype");
-    font-weight: 500;
-}
-@font-face {
-    font-family: 'Proxima-nova';
-    src: url("../../fonts/proximanova-semibold.otf") format("opentype");
-    font-weight: 600;
-}
-@font-face {
-    font-family: 'Proxima-nova';
-    src: url("../../fonts/proximanova-bold.otf") format("opentype");
-    font-weight: 700;
-}
-@font-face {
-    font-family: 'Proxima-nova';
-    src: url("../../fonts/proximanova-extrabold.otf") format("opentype");
-    font-weight: 800;
-}
-@font-face {
-    font-family: 'Proxima-nova';
-    src: url("../../fonts/proximanova-black.otf") format("opentype");
-    font-weight: 900;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
 $Main-font: 'TrajanPro', sans-serif;
 $Second-font: 'khmer-mn', sans-serif;
-$Text-font: 'Proxima-nova', 'Times New Roman', Times, serif;
+$Text-font: "Montserrat", sans-serif;
 
 ////// TrajanPro pesos
 // Regular = 700
@@ -59,7 +20,7 @@ $Text-font: 'Proxima-nova', 'Times New Roman', Times, serif;
 /////// khmer-mn pesos
 // Regular = 400
 
-/////// Proxima-nova pesos
+/////// Montserrat pesos
 // thin = 200
 // light = 300
 // Regular = 400
