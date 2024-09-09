@@ -50,12 +50,12 @@
         <div id="sideMenu" class="hide">
             <button type="button" onclick="sideMenu()"></button>
 
-            <a class="itensMenu active" href="clinica.php">A One</a>
-            <a class="itensMenu" href="especialidades.php">Especialidades</a>
-            <a class="itensMenu" href="equipe.php">Equipe one</a>
-            <a class="itensMenu" href="tratamentos.php">Tratamentos</a>
-            <a class="itensMenu hide" href="blog.php">Blog</a>
-            <a class="itensMenu" href="contato.html">Contato</a>
+            <a class="itensMenu active" href="clinica">A One</a>
+            <a class="itensMenu" href="especialidades">Especialidades</a>
+            <a class="itensMenu" href="equipe">Equipe one</a>
+            <a class="itensMenu" href="tratamentos">Tratamentos</a>
+            <a class="itensMenu hide" href="blog">Blog</a>
+            <a class="itensMenu" href="contato">Contato</a>
 
             <div id="contato_sideMenu">
                 <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
@@ -94,7 +94,7 @@
                     <br><br>
                     Juntos vamos auxiliar você a encontrar sua melhor versão. Vem pra ONE!
                 </p>
-                <a href="tratamentos.php" class="btns btn_tratamentos">Conheça nossos tratamentos<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+                <a href="tratamentos" class="btns btn_tratamentos">Conheça nossos tratamentos<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
         </section>
         <section id="MVV">
@@ -173,7 +173,7 @@
             <div id="textEspecialidade" class="especialidadeBlock">
                 <h2>As especialidades da One Medical</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo.</p>
-                <a href="especialidades.php" class="btns btn_especialidades">Veja as especialidades<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+                <a href="especialidades" class="btns btn_especialidades">Veja as especialidades<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
 
             <?php

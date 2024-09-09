@@ -53,12 +53,12 @@
         <div id="sideMenu" class="hide">
             <button type="button" onclick="sideMenu()"></button>
 
-            <a class="itensMenu" href="clinica.php">A One</a>
-            <a class="itensMenu" href="especialidades.php">Especialidades</a>
-            <a class="itensMenu active" href="equipe.php">Equipe one</a>
-            <a class="itensMenu" href="tratamentos.php">Tratamentos</a>
-            <a class="itensMenu hide" href="blog.php">Blog</a>
-            <a class="itensMenu" href="contato.html">Contato</a>
+            <a class="itensMenu" href="clinica">A One</a>
+            <a class="itensMenu" href="especialidades">Especialidades</a>
+            <a class="itensMenu active" href="equipe">Equipe one</a>
+            <a class="itensMenu" href="tratamentos">Tratamentos</a>
+            <a class="itensMenu hide" href="blog">Blog</a>
+            <a class="itensMenu" href="contato">Contato</a>
 
             <div id="contato_sideMenu">
                 <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
@@ -160,7 +160,7 @@
                     <br><br>
                     Na ONE, nosso compromisso é proporcionar um atendimento humanizado e de excelência, onde cada paciente recebe um plano de cuidado orientado pelas melhores práticas e inovações na área da saúde. Experimente o padrão ONE de excelência médica, onde seu bem-estar é nossa prioridade. 
                 </p>
-                <a href="clinica.php" class="btns btn_espaco">Conheça nossa historia<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+                <a href="clinica" class="btns btn_espaco">Conheça nossa historia<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
             <div id="Block_VideoEspaco">
                 <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoEspaco')">

@@ -54,12 +54,12 @@
         <div id="sideMenu" class="hide">
             <button type="button" onclick="sideMenu()"></button>
 
-            <a class="itensMenu" href="clinica.php">A One</a>
-            <a class="itensMenu" href="especialidades.php">Especialidades</a>
-            <a class="itensMenu" href="equipe.php">Equipe one</a>
-            <a class="itensMenu" href="tratamentos.php">Tratamentos</a>
-            <a class="itensMenu hide" href="blog.php">Blog</a>
-            <a class="itensMenu" href="contato.html">Contato</a>
+            <a class="itensMenu" href="clinica">A One</a>
+            <a class="itensMenu" href="especialidades">Especialidades</a>
+            <a class="itensMenu" href="equipe">Equipe one</a>
+            <a class="itensMenu" href="tratamentos">Tratamentos</a>
+            <a class="itensMenu hide" href="blog">Blog</a>
+            <a class="itensMenu" href="contato">Contato</a>
 
             <div id="contato_sideMenu">
                 <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
@@ -88,7 +88,7 @@
                     FIND YOUR BEST VERSION.
                 </h2>
                 <h3>Experiencia única, especialistas de referência e tecnologia de última geração.</h3>
-                <a href="clinica.php" class="btns btn_banner">Veja mais da clínica <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+                <a href="clinica" class="btns btn_banner">Veja mais da clínica <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
             <div class="sideBanner" id="whats_home">
                 <a href="" target="_blank" class="redes_banner"><img src="assets/icons/whats.svg" onload="SVGInject(this)">Agendar uma consulta</a>
@@ -106,7 +106,7 @@
                     Com uma infraestrutura moderna e acolhedora, desenhada para garantir privacidade e conforto, a ONE se destaca pelo atendimento excepcional e pela busca constante pela excelência em saúde. 
                     <br><br>
                     Aqui, você encontra mais do que uma clínica médica; encontra um verdadeiro parceiro na sua jornada pela beleza.</p>
-                <a href="clinica.php" class="btns btn_clinica">Veja mais da clínica <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+                <a href="clinica" class="btns btn_clinica">Veja mais da clínica <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
             <img id="clinica_Img" src="assets/Clinica.webp" alt="">
         </section>
@@ -136,7 +136,7 @@
             <div id="textEspecialidade" class="especialidadeBlock">
                 <h2>As especialidades da One Medical</h2>
                 <p>Na ONE MEDICAL GROUP, valorizamos o que é mais importante para você: a sua saúde e bem-estar. Por isso, oferecemos um atendimento personalizado e de excelência.</p>
-                <a href="especialidades.php" class="btns btn_especialidades">Veja as especialidades</a>
+                <a href="especialidades" class="btns btn_especialidades">Veja as especialidades</a>
             </div>
             <?php
                 $query = $pdo->query("SELECT * FROM especialidade ORDER BY id DESC");
@@ -214,7 +214,7 @@
                     </ul>
                 </div>
             </div>
-            <a href="equipe.php" class="btns btn_equipe">Conheça toda a equipe<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+            <a href="equipe" class="btns btn_equipe">Conheça toda a equipe<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
         </section>
         <section id="tratamentos">
             <div id="tratamentosInfos">
@@ -227,7 +227,7 @@
                         <br><br>
                         Cada um desses <b>equipamentos é uma peça fundamental no nosso compromisso com a qualidade e a inovação.</b> Clique e conheça cada um.
                     </p>
-                    <a href="tratamentos.php" class="btns btn_tratamentos">Conheça todos tratamentos<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+                    <a href="tratamentos" class="btns btn_tratamentos">Conheça todos tratamentos<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
                 </div>
                 <img src="assets/tratamentos/tratamentos.webp" alt="">
             </div>
@@ -434,7 +434,7 @@
                     </div>
                     <div class="termosPrivacidade">
                         <input type="checkbox" name="termosPrivacidade" id="termosPrivacidade" required>
-                        <h3>Li e estou de acordo com os termos da <a href="politica_Privacidades.html">Política de Privacidade</a></h3>
+                        <h3>Li e estou de acordo com os termos da <a href="politica_Privacidades">Política de Privacidade</a></h3>
                     </div>
                     
                     <button id="btn_form" class="btns" type="submit">Enviar mensagem</button>

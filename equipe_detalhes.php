@@ -96,12 +96,12 @@
         <div id="sideMenu" class="hide">
             <button type="button" onclick="sideMenu()"></button>
 
-            <a class="itensMenu" href="clinica.php">A One</a>
-            <a class="itensMenu" href="especialidades.php">Especialidades</a>
-            <a class="itensMenu" href="equipe.php">Equipe one</a>
-            <a class="itensMenu" href="tratamentos.php">Tratamentos</a>
-            <a class="itensMenu hide" href="blog.php">Blog</a>
-            <a class="itensMenu" href="contato.html">Contato</a>
+            <a class="itensMenu" href="clinica">A One</a>
+            <a class="itensMenu" href="especialidades">Especialidades</a>
+            <a class="itensMenu" href="equipe">Equipe one</a>
+            <a class="itensMenu" href="tratamentos">Tratamentos</a>
+            <a class="itensMenu hide" href="blog">Blog</a>
+            <a class="itensMenu" href="contato">Contato</a>
 
             <div id="contato_sideMenu">
                 <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>

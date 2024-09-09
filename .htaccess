@@ -1,16 +1,18 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^especialidade_de_(.*)$ tratamentos.php?nome=$1 [L]
 RewriteRule ^medico_(.*)$ equipe_detalhes.php?nome=$1 [L]
 RewriteRule ^tratamento_de_(.*)$ tratamentos_detalhes.php?nome=$1 [L]
 
-RewriteRule ^(.*)$ $1.php
-RewriteRule ^(.*)$ $1.html
+RewriteRule ^sistema(.*)$ https://www.onemedicalgroup.com.br/Sistema [L]
 
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
 
 ErrorDocument 404 /404.html
 
