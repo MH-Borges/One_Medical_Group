@@ -22,7 +22,7 @@ if(@count($dados) > 0){
     $res->bindValue(":id", $idUser);
     $res->execute();
 
-    $link = "https://www.onemedicalgroup.com.br/sistema/index.php?chave=$chave_recuperar_senha";
+    $link = "https://www.onemedicalgroup.com.br/Sistema/index.php?chave=$chave_recuperar_senha";
 
    //ENVIAR O EMAIL COM A SENHA
     $destinatario = $email;

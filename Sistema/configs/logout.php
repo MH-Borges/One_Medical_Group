@@ -2,6 +2,6 @@
 
 @session_start();
 @session_destroy();
-echo "<script language='javascript'> window.location='../../sistema' </script>";
+echo "<script language='javascript'> window.location='../../Sistema' </script>";
 
 ?>

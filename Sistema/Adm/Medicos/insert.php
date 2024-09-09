@@ -36,7 +36,7 @@
         $res->bindValue(":data_registro", $date_criacao);
         $res->execute();
 
-        $link = "https://www.onemedicalgroup.com.br/sistema/";
+        $link = "https://www.onemedicalgroup.com.br/Sistema/";
 
         //ENVIAR O EMAIL DE ACESSO
         $destinatario = $email;

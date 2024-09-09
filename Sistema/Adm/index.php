@@ -54,7 +54,7 @@ else {
         <ul class="menu">
             <li id="logo">
                 <a href="../../">
-                    <img src="../../assets/sistema/logo.webp" alt="logo one medical">
+                    <img src="../../assets/sistema/Logo.webp" alt="logo one medical">
                 </a>
             </li>
             <li <?php if (@$_GET["pag"] == "") { echo 'class="hide"'; } ?>>

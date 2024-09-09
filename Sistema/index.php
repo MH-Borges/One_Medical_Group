@@ -13,7 +13,7 @@ if (!empty($chave)) {
     }
     else{
 		echo "<script language='javascript'> window.alert('Erro: Link inválido, solicite novo link para atualizar a senha!') </script>";
-		echo "<script language='javascript'> window.location='../sistema' </script>";
+		echo "<script language='javascript'> window.location='../Sistema' </script>";
     }
 }
 else{
@@ -70,13 +70,11 @@ else{
 <body>
     <main id="Main_login">
         <section id="login_sreen">
-            <img class="patter" src="../assets/patter.svg" onload="SVGInject(this)">
-
             <?php 
                 if(!$Recup_True){
                     echo '
                         <a id="logo" href="../">
-                            <img src="../assets/sistema/logo.webp" alt="logo one medical">
+                            <img src="../assets/sistema/Logo.webp" alt="logo one medical">
                         </a>
 
                         <form id="LoginBox" action="configs/autenticar.php" method="post">
@@ -126,7 +124,7 @@ else{
                             <button class="btns btn_Resetlogin" type="submit" id="ResetSenhaBtn">Atualizar senha</button>
                         </form>
                         <div id="msg_RecupSenha"></div>
-                        <p id="voltaTela">Lembrou da senha? <a href="../sistema"> Clique aqui </a> para conectar-se agora! </p>
+                        <p id="voltaTela">Lembrou da senha? <a href="../Sistema"> Clique aqui </a> para conectar-se agora! </p>
                     ';
                 }
             ?> 
@@ -269,7 +267,7 @@ else{
                         if (msg.trim() === 'Senha atualizada com sucesso!') {
                             $('#msg_RecupSenha').addClass('text-success');
                             $('#msg_RecupSenha').text(msg);
-                            setTimeout(() => { window.location='../sistema'; }, 2000)
+                            setTimeout(() => { window.location='../Sistema'; }, 2000)
                         }
                         else if(msg.trim() == 'Preencha o campo de nova senha!' || msg.trim() == 'Preencha o campo de repetição de senha!' || msg.trim() == 'As senhas não são iguais!' || msg.trim() == 'Erro: Tente novamente!' ) {
                             $('#msg_RecupSenha').addClass('text-danger');
