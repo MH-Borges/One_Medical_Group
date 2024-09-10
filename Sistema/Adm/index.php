@@ -86,9 +86,9 @@ else {
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="">
+                            <a class="dropdown-item" href="index.php?pag=blog">
                                 <img src="../../assets/sistema/blog.svg" onload="SVGInject(this)">
-                                Blog (em breve)
+                                Blog
                             </a>
                         </li>
                     </ul>
@@ -148,10 +148,9 @@ else {
                 Tratamentos
             </a>
 
-            <!-- href="index.php?pag=blog" -->
-            <a class="itens" href="">
+            <a class="itens" href="index.php?pag=blog">
                 <img src="../../assets/sistema/blog.svg" onload="SVGInject(this)">
-                Blog (em breve)
+                Blog
             </a>
         </section>
             

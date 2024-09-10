@@ -40,8 +40,21 @@
 
         //ENVIAR O EMAIL DE ACESSO
         $destinatario = $email;
-        $assunto = 'One Medical Group - Seja bem vindo!';
-        $mensagem = utf8_decode("Seja Bem vindo a equipe One Medical Group! <br><br> Por favor acesse o seu perfil e preencha suas informações! <b>IMPORTANTE!!<b> <br><br> Apenas após o preenchimento das informações do seu perfil ele se tornará ativo. <br><br><br><br> O Link para acesso do seu perfil é: <a href='".$link."'>".$link."</a> <br><br><br><br> O email para acesso é: ".$email." <br><br> A senha temporaria de acesso é: ".$senha_temp."");
+        $assunto = 'One Medical Group - Seja bem vindo(a)!';
+        $mensagem = utf8_decode("
+                                Seja Bem vindo a equipe One Medical Group!
+                                
+                                Por favor acesse o seu perfil e preencha suas informações! 
+                                
+                                IMPORTANTE!!
+                                Apenas após o preenchimento das informações do seu perfil ele se tornará ativo.
+                                
+                                
+
+                                O Link para acesso do seu perfil é: $link
+                                
+                                O email para acesso é: ".$email."
+                                A senha temporaria de acesso é: ".$senha_temp."");
         $cabecalhos = "From: ".$email;
         
         if(mail($destinatario, $assunto, $mensagem, $cabecalhos)){

@@ -27,8 +27,18 @@ if(@count($dados) > 0){
    //ENVIAR O EMAIL COM A SENHA
     $destinatario = $email;
     $assunto = 'Sicuro Psicologia - Recuperação de Senha';
-    $mensagem = utf8_decode("Prezado(a) " . $dados[0]['nome'] . ".<br><br>Você solicitou alteração de senha para o usuario" . $dados[0]['email'] .  ".<br><br>Para continuar o processo de recuperação de sua senha, clique no link abaixo ou cole o endereço no seu navegador: <br><br><a href='" . $link . "'>" . $link . "</a><br><br>Se você não solicitou essa alteração, nenhuma ação é necessária. Sua senha permanecerá a mesma até que você ative este código.<br><br>");
+    $mensagem = utf8_decode("
+                        Prezado(a) " . $dados[0]['nome'] . ".
+                        
+                        Você solicitou alteração de senha para o usuario" . $dados[0]['email'] .  ".
+                        
+                        Para continuar o processo de recuperação de sua senha, clique no link abaixo ou cole o endereço no seu navegador: 
+                        " . $link . "
+                        
+
+                        Se você não solicitou essa alteração, nenhuma ação é necessária, sua senha permanecerá a mesma.");
     $cabecalhos = "From: ".$email;
+
     mail($destinatario, $assunto, $mensagem, $cabecalhos);
 
     echo 'Link para a recuperação de senha enviado para o e-mail informado!';

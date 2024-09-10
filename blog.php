@@ -1,23 +1,24 @@
+<?php require_once("./Sistema/configs/conexao.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One medical group</title>
+    <title>Blog | One medical group</title>
 
     <link rel="icon" href="assets/icons/icon.svg" />
-    <link rel="canonical" href="" />
+    <link rel="canonical" href="https://onemedicalgroup.com.br/blog" />
 
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-
+    <meta name="author" content="VL7 marketing estrategico">
+    <meta name="description" content="Acompanhe nosso blog e saiba o que nossos médicos têm a dizer. Explore tratamentos, conheça nosso corpo clínico e fique por dentro das novidades da ONE MEDICAL GROUP.">
+    <meta name="keywords" content="blog médico, tratamentos, equipe médica, saúde, bem-estar, especialidades, ONE MEDICAL GROUP">
+    
+    <meta name="og:title" property="og:title" content="Blog da ONE MEDICAL GROUP">
+    <meta property="og:description" content="Descubra informações relevantes sobre tratamentos e conheça nossa equipe de médicos altamente qualificados. Valorizamos sua saúde e bem-estar com diagnósticos precisos e tratamentos humanizados.">
+    <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
-    <meta name="og:title" property="og:title" content="">
-    <meta name="og:type" property="og:type" content="">
-    <meta name="og:image" property="og:image" content="">
-    <meta property=”og:description” content=""/>
+    <meta name="og:image" property="og:image" content="assets/logo.png">
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -51,12 +52,12 @@
         <div id="sideMenu" class="hide">
             <button type="button" onclick="sideMenu()"></button>
 
-            <a class="itensMenu" href="clinica.php">A One</a>
-            <a class="itensMenu" href="especialidades.php">Especialidades</a>
-            <a class="itensMenu" href="equipe.php">Equipe one</a>
-            <a class="itensMenu" href="tratamentos.php">Tratamentos</a>
-            <a class="itensMenu active" href="blog.php">Blog</a>
-            <a class="itensMenu" href="contato.html">Contato</a>
+            <a class="itensMenu" href="clinica">A One</a>
+            <a class="itensMenu" href="especialidades">Especialidades</a>
+            <a class="itensMenu" href="equipe">Equipe one</a>
+            <a class="itensMenu" href="tratamentos">Tratamentos</a>
+            <a class="itensMenu active" href="blog">Blog</a>
+            <a class="itensMenu" href="contato">Contato</a>
 
             <div id="contato_sideMenu">
                 <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
@@ -69,6 +70,22 @@
     </header>
 
     <main id="Main_blog">
+        <?php
+            $nome_get = @$_GET['nome'];
+            if($nome_get !== ""){
+                echo "
+                    <script language='javascript'> 
+                        setTimeout(() => { 
+                            var list = document.getElementsByClassName('$nome_get');
+                            for(var i=0;i<list.length;i++){
+                                list[i].click();
+                            }
+                        }, 100);
+                    </script>
+                ";
+            }
+        ?>
+
         <a class="whats_link hide" target="_blank" href="https://wa.me/551151081977"><img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
 
         <section id="banner">
@@ -81,13 +98,25 @@
                     <div class="splide__track">
                         <ul class="controls splide__list">
                             <li class="splide__slide active" data-filter="*">Todos</li>
-                            <li class="splide__slide" data-filter=".Otorrinolaringologia">Otorrinolaringologia</li>
-                            <li class="splide__slide" data-filter=".Fisioterapia">Fisioterapia</li>
-                            <li class="splide__slide" data-filter=".Cirurgia_de_face">Cirurgia de face</li>
-                            <li class="splide__slide" data-filter=".Ginecologia">Ginecologia</li>
-                            <li class="splide__slide" data-filter=".Cirurgia_plastica">Cirurgia plástica</li>
-                            <li class="splide__slide" data-filter=".Dermatologia">Dermatologia</li>
-                            <li class="splide__slide" data-filter=".Nutrologia">Nutrologia</li>
+
+                            <?php
+                                $query = $pdo->query("SELECT * FROM especialidade ORDER BY id DESC");
+                                $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                                
+                                for ($i=0; $i < count($dados); $i++) { 
+                                    $nome_espec = $dados[$i]['nome'];
+
+                                    $query2 = $pdo->query("SELECT * FROM blog where tag_especialidade = '$nome_espec'");
+                                    $dados2 = $query2->fetchAll(PDO::FETCH_ASSOC);
+
+                                    if(@count($dados2) !== 0){
+                                        $nome_novo_espec = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome_espec)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                                        $nome_tratado_espec = preg_replace('/[ -]+/', '_', $nome_novo_espec);
+
+                                        echo "<li class='splide__slide $nome_tratado_espec' data-filter='._$nome_tratado_espec'>$nome_espec</li>";
+                                    } 
+                                }
+                            ?>
                         </ul>
                     </div>
                 </div>
@@ -98,287 +127,129 @@
                 <div class="Search_resultBox hide"></div>
             </div>
             <div class="Blog_cards filter">
-                <a href="blog_post.html" class="mix Otorrinolaringologia card_blog">
-                    <img src="assets/blog/blog_01.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Fisioterapia card_blog">
-                    <img src="assets/blog/blog_02.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Cirurgia_de_face card_blog">
-                    <img src="assets/blog/blog_03.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Ginecologia card_blog">
-                    <img src="assets/especialidades/otorrinolaringologia.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Cirurgia_plastica card_blog">
-                    <img src="assets/especialidades/dermatologia.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Dermatologia card_blog">
-                    <img src="assets/especialidades/cirurgia_plástica.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Nutrologia card_blog">
-                    <img src="assets/blog/blog_03.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Nutrologia card_blog">
-                    <img src="assets/especialidades/Cirurgia_de_face.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Otorrinolaringologia card_blog">
-                    <img src="assets/A_Clinica/card_1.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Cirurgia_de_face card_blog">
-                    <img src="assets/tratamentos/tratamento01.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Ginecologia card_blog">
-                    <img src="assets/tratamentos/tratamento02.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Fisioterapia card_blog">
-                    <img src="assets/tratamentos/tratamento03.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Cirurgia_plastica card_blog">
-                    <img src="assets/especialidades/ginecologia.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Dermatologia card_blog">
-                    <img src="assets/especialidades/nutrologia.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Nutrologia card_blog">
-                    <img src="assets/tratamentos/tratamentos.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Otorrinolaringologia card_blog">
-                    <img src="assets/tratamentos/tratamento07.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Cirurgia_de_face card_blog">
-                    <img src="assets/concierge.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
-                <a href="blog_post.html" class="mix Ginecologia card_blog">
-                    <img src="assets/banner_equipe.webp" alt="">
-                    <span class="data">31/12/2024</span>
-                    <p class="doutor">Dra. Aline farias</p>
-                    <h3 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                    <button type="button" class="btns btn_BlogCard" onclick="window.location='clinica.html'">Saiba mais <img src="assets/icons/seta.svg" onload="SVGInject(this)"></button>
-                </a>
+                <?php
+                    $query = $pdo->query("SELECT * FROM blog ORDER BY id DESC");
+                    $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                    for ($i=0; $i < count($dados); $i++) {
+                        $banner_post = $dados[$i]['banner'];
+                        $titulo_post = $dados[$i]['titulo_princ'];
+                        $data_post = $dados[$i]['data_criacao'];
+                        $especialidade_post = $dados[$i]['tag_especialidade'];
+
+                        $titulo_novo_post = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($titulo_post)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                        $titulo_tratado_post = preg_replace('/[ -]+/', '_', $titulo_novo_post);
+
+                        $especialidade_novo_post = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($especialidade_post)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                        $especialidade_tratado_post = preg_replace('/[ -]+/', '_', $especialidade_novo_post);
+
+                        $banner_post = "<img src='assets/blog/$banner_post' alt='$titulo_post'>";
+                        
+                        echo "
+                            <div class='mix _$especialidade_tratado_post card_blog'>
+                                $banner_post
+                                <span class='data'>$data_post</span>
+                                <p class='doutor' onclick='window.location=`blog_tag_$especialidade_tratado_post`'>$especialidade_post</p>
+                                <h3 class='titulo'>$titulo_post</h3>
+                                <button type='button' class='btns btn_BlogCard' onclick='window.location=`postagem_$titulo_tratado_post`'>Saiba mais <img src='assets/icons/seta.svg' onload='SVGInject(this)'></button>
+                            </div>
+                        ";
+                    }
+                ?>
             </div>
         </section>
-        <section id="tratamentos">
-            <h2>Saiba mais sobre nossos tratamentos</h2>
-            <div class="splide" role="group">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <div class="Block_img">
-                                <img src="assets/tratamentos/tratamento01.webp" alt="">
+        
+        <?php
+            $query = $pdo->query("SELECT * FROM tratamentos ORDER BY id DESC");
+            $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+            if(@count($dados) !== 0){
+                echo "
+                    <section id='tratamentos'>
+                        <h2>Saiba mais sobre nossos tratamentos</h2>
+                        <div class='splide' role='group'>
+                            <div class='splide__track'>
+                                <ul class='splide__list'>";
+
+                                    $j = 0;
+                                    for ($i=0; $i < count($dados); $i++) {
+                                        $titulo_tratamento = $dados[$i]['titulo'];
+                                        $card_Banner = $dados[$i]['card_banner'];
+        
+                                        $nome_novo_tratamento = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($titulo_tratamento)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                                        $nome_tratado_tratamento = preg_replace('/[ -]+/', '_', $nome_novo_tratamento);
+                                        if($card_Banner !== "card_placeholder.webp" && $titulo_tratamento !== "" && $j <= 11){
+                                            $card_Banner = "<img src='assets/tratamentos/$nome_tratado_tratamento/$card_Banner' alt='$titulo_tratamento'>";
+                                            echo "
+                                                <li class='splide__slide'>
+                                                    <div class='Block_img'>
+                                                        ".$card_Banner."
+                                                    </div>
+                                                    <div class='infosCards'>
+                                                        <h3 class='nome'>$titulo_tratamento</h3>
+                                                        <a href='tratamento_de_$nome_tratado_tratamento' class='btns btn_CardTratamento'>Veja mais</a>
+                                                    </div>
+                                                </li>
+                                            ";
+                                            $j++;
+                                        }
+                                    }
+                                echo"</ul>
                             </div>
-                            <div class="infosCards">
-                                <h3 class="nome">tratamentos avançados</h3>
-                                <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_img">
-                                <img src="assets/tratamentos/tratamento02.webp" alt="">
-                            </div>
-                            <div class="infosCards">
-                                <h3 class="nome">cirurgias plásticas</h3>
-                                <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_img">
-                                <img src="assets/tratamentos/tratamento03.webp" alt="">
-                            </div>
-                            <div class="infosCards">
-                                <h3 class="nome">cuidados dermatológicos</h3>
-                                <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_img">
-                                <img src="assets/tratamentos/tratamento04.webp" alt="">
-                            </div>
-                            <div class="infosCards">
-                                <h3 class="nome">serviços de nutrologia</h3>
-                                <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_img">
-                                <img src="assets/tratamentos/tratamento05.webp" alt="">
-                            </div>
-                            <div class="infosCards">
-                                <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_img">
-                                <img src="assets/tratamentos/tratamento06.webp" alt="">
-                            </div>
-                            <div class="infosCards">
-                                <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="Block_img">
-                                <img src="assets/tratamentos/tratamento07.webp" alt="">
-                            </div>
-                            <div class="infosCards">
-                                <h3 class="nome">Lorem Ipsum Dolum sit amet</h3>
-                                <a href="tratamentos_detalhes.html" class="btns btn_CardTratamento">Veja mais</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+                        </div>
+                    </section>";
+            }
+        ?>
+                    
         <section id="equipe">
-            <h2>Conheça os doutores responsáveis pelos conteúdos</h2>
+            <h2>Conheça nosso corpo clínico</h2>
+            <p>Na ONE MEDICAL GROUP, valorizamos o que é mais importante: sua saúde e bem-estar. 
+                <br><br>
+                Na nossa equipe estão profissionais altamente qualificados em diversas áreas, comprometidos com diagnósticos precisos e tratamentos para atender suas necessidades, de forma integrada e humanizada. Explore nossas especialidades médicas e descubra como podemos ajudar a alcançar a sua melhor versão.
+            </p>
             <div class="splide" role="group">
                 <div class="splide__track">
                     <ul class="splide__list">
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico01.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Francini Belluci</h3>
-                                    <p class="espec_medico">Dermatologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico02.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dr. Rodrigo De Léo</h3>
-                                    <p class="espec_medico">Ginecologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico03.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Raquel Ferrari</h3>
-                                    <p class="espec_medico">Dermatologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico04.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Cybele Guedes</h3>
-                                    <p class="espec_medico">Dermatologista</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/medico05.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dr. Gabriel Costa</h3>
-                                    <p class="espec_medico">Nutrólogo</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/user_placeholder.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Lorem Ipsum</h3>
-                                    <p class="espec_medico">DolumsitAmet</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/user_placeholder.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dra. Lorem Ipsum</h3>
-                                    <p class="espec_medico">DolumsitAmet</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="equipe_detalhes.html">
-                                <img src="assets/medicos/user_placeholder.webp" alt="">
-                                <div class="infosCards">
-                                    <h3 class="nome">Dr. Lorem Ipsum</h3>
-                                    <p class="espec_medico">DolumsitAmet</p>
-                                </div>
-                            </a>
-                        </li>
+                        <?php
+                            $query = $pdo->query("SELECT * FROM medicos ORDER BY id DESC");
+                            $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                            $j = 0;
+                            for ($i=0; $i < count($dados); $i++) {
+                                $status_medico = $dados[$i]['status_perfil'];
+                                $nome_medico = $dados[$i]['nome'];
+                                
+                                if($status_medico === "ativo" && $nome_medico !== "" && $j <= 9){
+                                    
+                                    $card_medico = $dados[$i]['card_'];
+                                    $especialidade_medico = $dados[$i]['especialidade'];
+                                    
+                                    $nome_novo_medico = strtolower(preg_replace("[^a-zA-Z0-9-]", "_", strtr(utf8_decode(trim($nome_medico)), utf8_decode("áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ"), "aaaaeeiooouuncAAAAEEIOOOUUNC-")));
+                                    $nome_tratado_medico = preg_replace('/[ -]+/', '_', $nome_novo_medico);
+
+
+                                    if($card_medico == "user_placeholder.webp" || $card_medico == ""){
+                                        $card_medico = "<img src='assets/medicos/user_placeholder.webp' alt='$nome_medico - $especialidade_medico'>";
+                                    }else{
+                                        $card_medico = "<img src='assets/medicos/$nome_tratado_medico/$card_medico' alt='$nome_medico - $especialidade_medico'>";
+                                    }
+
+                                    echo "
+                                        <li class='splide__slide'>
+                                            <a href='medico_$nome_tratado_medico'>
+                                                ".$card_medico."
+                                                <div class='infosCards'>
+                                                    <h3 class='nome'>$nome_medico</h3>
+                                                    <p class='espec_medico'>$especialidade_medico</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    ";
+                                    $j++;
+                                }
+                            }
+                        ?>
                     </ul>
                 </div>
             </div>
-            <a href="equipe.html" class="btns btn_equipe">Conheça toda a equipe<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
+            <a href="equipe" class="btns btn_equipe">Conheça toda a equipe<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
         </section>
     </main>
 
@@ -521,9 +392,11 @@
                     
                     document.querySelector('.Search_resultBox').classList.remove('hide');
                     
+                    const tituloTratado = post.titulo.replace(/\s+/g, '_');
+
                     const resultElement = document.createElement('a');
                     resultElement.classList.add('searchResult');
-                    resultElement.href = 'blog_post.html';
+                    resultElement.href = `postagem_${tituloTratado}`;
                     resultElement.innerHTML = `
                         <img src="${post.img}" alt="">
                         <span class="data">${post.data}</span>

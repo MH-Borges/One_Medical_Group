@@ -106,6 +106,7 @@
             $res2->execute();
         }
 
+
         $query = $pdo->query("SELECT * FROM tratamentos WHERE especialidade_atr = '$nome_espec_edit'");
         $dados = $query->fetchAll(PDO::FETCH_ASSOC);
         for ($i=0; $i < count($dados); $i++) { 
@@ -114,6 +115,17 @@
             $res2 = $pdo->prepare("UPDATE tratamentos SET especialidade_atr = :especialidade_atr WHERE id = :id");
             $res2->bindValue(":especialidade_atr", $nome_espec);
             $res2->bindValue(":id", $id_espec_Atrelada_tratamento);
+            $res2->execute();
+        }
+
+        $query = $pdo->query("SELECT * FROM blog WHERE tag_especialidade = '$nome_espec_edit'");
+        $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+        for ($i=0; $i < count($dados); $i++) { 
+            $id_espec_Atrelada_blog = $dados[$i]['id'];
+
+            $res2 = $pdo->prepare("UPDATE blog SET tag_especialidade = :tag_especialidade WHERE id = :id");
+            $res2->bindValue(":tag_especialidade", $nome_espec);
+            $res2->bindValue(":id", $id_espec_Atrelada_blog);
             $res2->execute();
         }
 

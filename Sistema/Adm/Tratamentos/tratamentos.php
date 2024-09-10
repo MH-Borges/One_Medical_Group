@@ -114,14 +114,6 @@
                     else{ 
                         $titulo_modal_trat = "Novo Tratamento!"; 
                         $btn_trat = "Salvar tratamento";
-                        $card_edit = "";
-                        $banner_edit = "";
-                        $foto01 = "";
-                        $foto02 = "";
-                        $foto03 = "";
-                        $foto04 = "";
-                        $video01 = "";
-                        $video02 = "";
                     }
                 ?>
                 <button type="button" class="CloseBtn" data-bs-dismiss="modal" aria-label="Close" onclick='window.location=`./index.php?pag=tratamentos`;'></button>
@@ -134,7 +126,7 @@
                             <input type="hidden" id="Card_Input_default" name="Card_Input_default" value="" required>
                             <input type="file" id="Card_Input" name="Card_Input" onChange="carregaCard();">
                             <?php
-                                if($card_edit == "card_placeholder.webp" || $card_edit == ""){
+                                if(@$card_edit == "card_placeholder.webp" || @$card_edit == ""){
                                     $card_edit = "
                                         <img class='card' id='target_card' src='../../assets/tratamentos/card_placeholder.webp'>
                                         <button type='button' class='btns btn_VoltaPadrao_Card_Input hide' onclick='imgPadrao(`Card_Input`, `target_card`, `card_placeholder.webp`, `card`)'>Restaurar imagem</button>
@@ -157,7 +149,7 @@
                             <input type="hidden" id="Banner_Input_default" name="Banner_Input_default" value="" required>
                             <input type="file" id="Banner_Input" name="Banner_Input" onChange="carregaBanner();">
                             <?php
-                                if($banner_edit == "banner_placeholder.webp" || $banner_edit == ""){
+                                if(@$banner_edit == "banner_placeholder.webp" || @$banner_edit == ""){
                                     $banner_edit = "
                                         <img class='banner' id='target_banner' src='../../assets/tratamentos/banner_placeholder.webp'>
                                         <button type='button' class='btns btn_VoltaPadrao_Banner_Input hide' onclick='imgPadrao(`Banner_Input`, `target_banner`, `banner_placeholder.webp`, `banner`)'>Restaurar imagem</button>
@@ -235,7 +227,7 @@
                             <input type="hidden" id="foto01_Input_default" name="foto01_Input_default" value="" required>
                             <input type="file" id="foto01_Input" name="foto01_Input" onChange="carregafoto(1);">
                             <?php
-                                if($foto01 == "resultado.webp" || $foto01 == ""){
+                                if(@$foto01 == "resultado.webp" || @$foto01 == ""){
                                     $foto01 = "
                                         <img class='foto01' id='target_foto01' src='../../assets/tratamentos/resultado.webp' onclick='document.getElementById(`foto01_Input`).click();'>
                                         <button type='button' class='btns btn_VoltaPadrao_foto01_Input hide' onclick='imgPadrao(`foto01_Input`, `target_foto01`, `resultado.webp`, `foto01`)'>Restaurar imagem</button>
@@ -253,7 +245,7 @@
                             <input type="hidden" id="foto02_Input_default" name="foto02_Input_default" value="" required>
                             <input type="file" id="foto02_Input" name="foto02_Input" onChange="carregafoto(2);">
                             <?php
-                                if($foto02 == "resultado.webp" || $foto02 == ""){
+                                if(@$foto02 == "resultado.webp" || @$foto02 == ""){
                                     $foto02 = "
                                         <img class='foto02' id='target_foto02' src='../../assets/tratamentos/resultado.webp' onclick='document.getElementById(`foto02_Input`).click();'>
                                         <button type='button' class='btns btn_VoltaPadrao_foto02_Input hide' onclick='imgPadrao(`foto02_Input`, `target_foto02`, `resultado.webp`, `foto02`)'>Restaurar imagem</button>
@@ -271,7 +263,7 @@
                             <input type="hidden" id="foto03_Input_default" name="foto03_Input_default" value="" required>
                             <input type="file" id="foto03_Input" name="foto03_Input" onChange="carregafoto(3);">
                             <?php
-                                if($foto03 == "resultado.webp" || $foto03 == ""){
+                                if(@$foto03 == "resultado.webp" || @$foto03 == ""){
                                     $foto03 = "
                                         <img class='foto03' id='target_foto03' src='../../assets/tratamentos/resultado.webp' onclick='document.getElementById(`foto03_Input`).click();'>
                                         <button type='button' class='btns btn_VoltaPadrao_foto03_Input hide' onclick='imgPadrao(`foto03_Input`, `target_foto03`, `resultado.webp`, `foto03`)'>Restaurar imagem</button>
@@ -289,7 +281,7 @@
                             <input type="hidden" id="foto04_Input_default" name="foto04_Input_default" value="" required>
                             <input type="file" id="foto04_Input" name="foto04_Input" onChange="carregafoto(4);">
                             <?php
-                                if($foto04 == "resultado.webp" || $foto04 == ""){
+                                if(@$foto04 == "resultado.webp" || @$foto04 == ""){
                                     $foto04 = "
                                         <img class='foto04' id='target_foto04' src='../../assets/tratamentos/resultado.webp' onclick='document.getElementById(`foto04_Input`).click();'>
                                         <button type='button' class='btns btn_VoltaPadrao_foto04_Input hide' onclick='imgPadrao(`foto04_Input`, `target_foto04`, `resultado.webp`, `foto04`)'>Restaurar imagem</button>
@@ -311,7 +303,7 @@
                             <input type="hidden" id="Video01_Input_default" name="Video01_Input_default" value="" required>
                             <input type="file" id="Video01_Input" name="Video01_Input" onChange="carregaVideo01();">
                             <?php
-                                if($video01 == "video_vazio.mp4" || $video01 == ""){
+                                if(@$video01 == "video_vazio.mp4" || @$video01 == ""){
                                     $video01 = "
                                         <video class='video01' id='target_video01' onclick='document.getElementById(`Video01_Input`).click();'>
                                             <source src='../../assets/tratamentos/video_vazio.mp4'>
@@ -336,7 +328,7 @@
                             <input type="hidden" id="Video02_Input_default" name="Video02_Input_default" value="" required>
                             <input type="file" id="Video02_Input" name="Video02_Input" onChange="carregaVideo02();">
                             <?php
-                                if($video02 == "video_vazio.mp4" || $video02 == ""){
+                                if(@$video02 == "video_vazio.mp4" || @$video02 == ""){
                                     $video02 = "
                                         <video class='video02' id='target_video02' onclick='document.getElementById(`Video02_Input`).click();'>
                                             <source src='../../assets/tratamentos/video_vazio.mp4'>

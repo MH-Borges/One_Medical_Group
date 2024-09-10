@@ -53,7 +53,7 @@
             <a class="itensMenu active" href="especialidades">Especialidades</a>
             <a class="itensMenu" href="equipe">Equipe one</a>
             <a class="itensMenu" href="tratamentos">Tratamentos</a>
-            <a class="itensMenu hide" href="blog">Blog</a>
+            <a class="itensMenu" href="blog">Blog</a>
             <a class="itensMenu" href="contato">Contato</a>
 
             <div id="contato_sideMenu">

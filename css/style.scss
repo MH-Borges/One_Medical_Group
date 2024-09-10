@@ -415,6 +415,21 @@ body {
         #espaco, #especialidades, #depos, #contatos, #form{
             height: 75vh;
         }
+        #onHolding{
+            width: 100vw;
+            height: 100vh;
+            background-color: $Marrom;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h1{
+                font-family: $Main-font;
+                font-size: 4.5vw;
+                color: $Creme;
+                padding: 0 10vw;
+                text-align: center;
+            }
+        }
         #home{
             padding: 0;
             padding-top: 125px;
@@ -1560,23 +1575,25 @@ body {
                         position: relative;
                     }
                     .data, .doutor{
+                        position: absolute;
                         background-color: $Preto;
                         font-family: $Second-font;
                         font-size: 1vw;
                         color: $Branco;
-                        width: 9vw;
-                        height: 2.75vh;
-                        position: absolute;
+                        max-width: 9vw;
                         top: 1vw;
                         left: 1vw;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        line-height: 0;
+                        padding: 0.15vh 0.5vw;
+                        padding-top: 0.3vh;
+                        z-index: 5;
+                        white-space: nowrap;                  
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                         border-radius: 0.5vw;
-                        padding-top: 0.35vh;
+                        text-align: center;
                     }
                     .doutor{
+                        z-index: 10 !important;
                         left: auto;
                         right: 1vw;
                     }
@@ -1861,7 +1878,6 @@ body {
     @import 'equipe_detalhes';
     @import 'blog';
     @import 'blogPost';
-
 }
 
 @media only screen and (max-width: 479px){

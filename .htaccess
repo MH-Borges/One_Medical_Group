@@ -5,6 +5,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^especialidade_de_(.*)$ tratamentos.php?nome=$1 [L]
 RewriteRule ^medico_(.*)$ equipe_detalhes.php?nome=$1 [L]
 RewriteRule ^tratamento_de_(.*)$ tratamentos_detalhes.php?nome=$1 [L]
+RewriteRule ^postagem_(.*)$ blog_post.php?nome=$1 [L]
+RewriteRule ^blog_tag_(.*)$ blog.php?nome=$1 [L]
+
 
 RewriteRule ^sistema(.*)$ https://www.onemedicalgroup.com.br/Sistema [L]
 

@@ -207,7 +207,7 @@
                                 <input type="hidden" id="Card_Input_default" name="Card_Input_default" value="" required>
                                 <input type="file" value="<?php echo $card_edit ?>" id="Card_Input" name="Card_Input" onChange="carregaCard();">
                                 <?php
-                                    if($card_edit == "user_placeholder.webp" || $card_edit == ""){
+                                    if(@$card_edit == "user_placeholder.webp" || @$card_edit == ""){
                                         $card_edit = "
                                             <img class='card' id='target_card' src='../../assets/medicos/user_placeholder.webp'>
                                             <button type='button' class='btns btn_VoltaPadrao_Card_Input hide' onclick='imgPadrao(`Card_Input`, `target_card`, `user_placeholder.webp`, `card`)'>Restaurar imagem</button>
@@ -228,9 +228,9 @@
                                 <h3>Selecione uma imagem para o perfil do medico</h3>
                                 <span>*Tamanho de imagem recomendado: 515 x 325</span>
                                 <input type="hidden" id="Foto_Input_default" name="Foto_Input_default" value="" required>
-                                <input type="file" value="<?php echo $foto_edit ?>" id="Foto_Input" name="Foto_Input" onChange="carregaFoto();">
+                                <input type="file" id="Foto_Input" name="Foto_Input" onChange="carregaFoto();">
                                 <?php
-                                    if($foto_edit == "foto_placeholder.webp" || $foto_edit == ""){
+                                    if(@$foto_edit == "foto_placeholder.webp" || @$foto_edit == ""){
                                         $foto_edit = "
                                             <img class='foto' id='target_foto' src='../../assets/medicos/foto_placeholder.webp'>
                                             <button type='button' class='btns btn_VoltaPadrao_Foto_Input hide' onclick='imgPadrao(`Foto_Input`, `target_foto`, `foto_placeholder.webp`, `foto`)'>Restaurar imagem</button>
@@ -251,9 +251,9 @@
                                 <h3>Selecione um video para o perfil do medico</h3>
                                 <span>*Tamanho de Video recomendado: 1920 x 1080</span>
                                 <input type="hidden" id="Video_Input_default" name="Video_Input_default" value="" required>
-                                <input type="file" value="<?php echo $video_edit ?>" id="Video_Input" name="Video_Input" onChange="carregaVideo();">
+                                <input type="file" id="Video_Input" name="Video_Input" onChange="carregaVideo();">
                                 <?php
-                                    if($video_edit == "video_vazio.mp4" || $video_edit == ""){
+                                    if(@$video_edit == "video_vazio.mp4" || @$video_edit == ""){
                                         $video_edit = "
                                             <video class='video' id='target_video'>
                                                 <source src='../../assets/medicos/video_vazio.mp4'>
@@ -503,7 +503,7 @@
                     if (msg.trim() === "Perfil de medico(a) criado com Sucesso!!") {
                         $('#msg_ModalCriaMedico').addClass('text-success');
                         $('#msg_ModalCriaMedico').text(msg);
-                        setTimeout(() => { window.location='./index.php?pag=medicos'; }, 1500);
+                        setTimeout(() => { window.location='./index.php?pag=medicos'; }, 2500);
                     }
                     if (msg.trim() === "E-mail ja cadastrado no banco de dados!!") {
                         $('#msg_ModalCriaMedico').addClass('text-danger');
@@ -511,8 +511,7 @@
                     }
                     else {
                         $('#msg_ModalCriaMedico').addClass('text-warning');
-                        $('#msg_ModalCriaMedico').text('O perfil foi criado!! Mas o e-mail com link de acesso para o novo medico não pode ser enviado por falhas com a comunicação do servidor.');
-                        setTimeout(() => { window.location='./index.php?pag=medicos'; }, 5000);
+                        $('#msg_ModalCriaMedico').text('O perfil foi criado!! O E-mail com link de acesso para o novo medico pode ter sido enviado e caiu na caixa de SPAM ou pode não ter sido enviado por falhas com a comunicação do servidor.');
                     }
                 }
             });

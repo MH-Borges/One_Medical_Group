@@ -57,13 +57,15 @@
                             position: relative;
                             border-left: 2px solid $Amarelo;
                             border-right: 2px solid $Amarelo;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
                             font-family: $Text-font;
                             font-weight: 500;
                             font-size: 1.1vw;
                             color: $Marrom;
+                            white-space: nowrap;                  
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            text-align: center;
+                            padding: 1.25vh 1vw;
                             &:first-child{
                                 border-left: none;
                             }
@@ -167,7 +169,7 @@
                 .searchResult{
                     position: relative;
                     width: 100%;
-                    height: 16vh;
+                    height: 18vh;
                     border-top: 1px solid $Creme;
                     border-bottom: 1px solid $Creme;
                     margin: 1vh 0;
@@ -194,17 +196,21 @@
                     }
                     span{
                         position: absolute;
-                        z-index: 5;
-                        top: 1vh;
-                        left: 0.5vw;
+                        background-color: $Preto;
                         font-family: $Second-font;
-                        font-weight: 400;
                         font-size: 0.75vw;
                         color: $Branco;
-                        background-color: $Preto;
-                        padding: 0 1vw;
-                        padding-top: 0.15vh;
-                        border-radius: 0.25vw;
+                        max-width: 7.5vw;
+                        top: 1vh;
+                        left: 0.5vw;
+                        padding: 0.15vh 0.5vw;
+                        padding-top: 0.3vh;
+                        z-index: 5;
+                        white-space: nowrap;                  
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        border-radius: 0.5vw;
+                        text-align: center;
                     }
                     .tag{
                         left: auto;
@@ -214,7 +220,7 @@
                         z-index: 5;
                         font-family: $Main-font;
                         font-weight: 800;
-                        font-size: 1.25vw;
+                        font-size: 1.2vw;
                         color: $Branco;
                         text-align: center;
                         padding: 0 1vw;
@@ -302,28 +308,29 @@
                     position: relative;
                 }
                 .data, .doutor{
+                    position: absolute;
                     background-color: $Preto;
                     font-family: $Second-font;
                     font-size: 1vw;
                     color: $Branco;
-                    width: 9vw;
-                    height: 2.75vh;
-                    position: absolute;
+                    max-width: 9vw;
                     top: 1vw;
                     left: 1vw;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    line-height: 0;
+                    padding: 0.15vh 0.5vw;
+                    padding-top: 0.3vh;
+                    z-index: 5;
+                    white-space: nowrap;                  
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                     border-radius: 0.5vw;
-                    padding-top: 0.15vw;
+                    text-align: center;
                 }
                 .doutor{
                     left: auto;
                     right: 1vw;
                 }
                 .titulo{
-                    width: 73%;
+                    width: 68%;
                     margin-top: auto;
                     font-family: $Main-font;
                     font-size: 1vw;
@@ -337,11 +344,11 @@
                 .btn_BlogCard{
                     font-family: $Text-font;
                     height: 3.5vh;
-                    width: 27%;
+                    width: 30%;
                     color: $Branco;
                     font-size: 1vw;
-                    margin-top: 5vh;
                     margin-top: auto;
+                    margin-left: auto;
                     img, svg{
                         height: 95%;
                         width: 25%;
@@ -633,6 +640,154 @@
             }
         }
     }
+    #equipe{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 7.5vh 5%;
+        h2{
+            width: 100%;
+            height: auto;
+            font-family: $Main-font;
+            font-size: 2.5vw;
+            padding-left: 2.5vw;
+            margin-bottom: 3.5vh;
+            position: relative;
+            color: $Marrom;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -1.5vh;
+                left: 0;
+                width: 15%;
+                height: 0.35vh;
+                background-color: $Marrom;
+            }
+        }
+        p{
+            width: 100%;
+            padding-right: 3.5vw;
+            font-family: $Text-font;
+            font-weight: 400;
+            font-size: 1vw;
+            color: $Marrom;
+            line-height: 3vh;
+        }
+        .splide{
+            margin-top: 5vh;
+            width: 100%;
+            height: 50vh;
+            .splide__arrows{
+                .splide__arrow {
+                    width: 3.25vw;
+                    height: 3.25vw;
+                    padding: 0.55vw;
+                    opacity: 1;
+                    background: none;
+                    svg{
+                        fill: $Preto;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:disabled{
+                        opacity: 0.3;
+                    }
+                }
+                .splide__arrow--prev{
+                    left: -0.5vw;
+                }
+                .splide__arrow--next{
+                    right: -0.5vw;
+                }
+            }
+            .splide__pagination {
+                display: none;
+            }
+            .splide__track {
+                width: 95%;
+                height: 100%;
+                margin-left: 2.5%;
+                .splide__list{
+                    width: 100%;
+                    height: 100%;
+                    .splide__slide{
+                        width: 100%;
+                        height: 100%;
+                        transition: all ease-in-out .15s;
+                        &:hover{
+                            transform: scale(1.02);
+                        }
+                        a{
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            position: relative;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                                padding: 1.5vw;
+                            }
+                            .infosCards{
+                                position: absolute;
+                                width: 83%;
+                                height: 20%;
+                                bottom: 0;
+                                left: 0;
+                                z-index: 2;
+                                margin: 8.5%;
+                                background-color: $Branco;
+                                border-bottom-left-radius: 0.5vw;
+                                border-bottom-right-radius: 0.5vw;
+                                border: 3px solid $Amarelo;
+                                border-top: none;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                .nome{
+                                    font-family: $Main-font;
+                                    width: 90%;
+                                    font-size: 1.05vw;
+                                    color: $Marrom;
+                                    margin-bottom: 1.25vh;
+                                    white-space: nowrap;                  
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    text-align: center;
+                                }
+                                .espec_medico{
+                                    all: unset;
+                                    width: 90%;
+                                    font-family: $Text-font;
+                                    font-size: 0.85vw;
+                                    color: $Marrom;
+                                    white-space: nowrap;                  
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn_equipe{
+            font-family: $Text-font;
+            height: 3.5vh;
+            color: $Preto;
+            font-size: 1.25vw;
+            margin-top: 7.5vh;
+            img, svg{
+                height: 100%;
+                path{
+                    fill: $Preto;
+                }
+            }
+        }
+    }
 }
 
 
@@ -853,20 +1008,25 @@
         }
         #equipe{
             justify-content: center;
-            padding: 5vh 5%;
+            padding: 5vh 5% 7.5vh;
             height: auto;
             h2{
-                font-size: 6.5vw;
+                font-size: 7vw;
                 padding-left: 4vw;
-                margin-bottom: 3vh;
+                margin-bottom: 5vh;
                 &::before{
                     bottom: -1vh;
                     width: 35%;
                     height: 0.3vh;
                 }
             }
+            p{
+                padding-right: 3vw;
+                font-size: 2.75vw;
+                line-height: 2.5vh;
+            }
             .splide{
-                margin-top: 0;
+                margin-top: 1vh;
                 .splide__arrows{
                     .splide__arrow {
                         width: 12vw;

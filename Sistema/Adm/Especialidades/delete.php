@@ -24,6 +24,13 @@ if(@count($dados3) != 0){
     exit();
 }
 
+$res4 = $pdo->query("SELECT * FROM blog where tag_especialidade = '$nome_espec'"); 
+$dados4 = $res4->fetchAll(PDO::FETCH_ASSOC);
+if(@count($dados4) != 0){
+    echo 'Existe postagens do blog com especialidade trelada, remova esta especialidade de todas as postagens antes de exclui-lá';
+    exit();
+}
+
 $caminho_arquivo = '../../../assets/especialidades/'.$foto_espec;
 if(file_exists($caminho_arquivo) && $foto_espec !== "placeholder.webp"){
     unlink($caminho_arquivo);

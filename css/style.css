@@ -452,6 +452,21 @@ body footer #smallFooter a:hover {
 body #Main_index #espaco, body #Main_index #especialidades, body #Main_index #depos, body #Main_index #contatos, body #Main_index #form {
   height: 75vh;
 }
+body #Main_index #onHolding {
+  width: 100vw;
+  height: 100vh;
+  background-color: #4B2F24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_index #onHolding h1 {
+  font-family: "TrajanPro", sans-serif;
+  font-size: 4.5vw;
+  color: #D0B498;
+  padding: 0 10vw;
+  text-align: center;
+}
 body #Main_index #home {
   padding: 0;
   padding-top: 125px;
@@ -1589,23 +1604,25 @@ body #Main_index #blog #Blog_cards .cards .data, body #Main_index #blog #Blog_ca
   position: relative;
 }
 body #Main_index #blog #Blog_cards .cards .data, body #Main_index #blog #Blog_cards .cards .doutor {
+  position: absolute;
   background-color: #373435;
   font-family: "khmer-mn", sans-serif;
   font-size: 1vw;
   color: #E0E0E0;
-  width: 9vw;
-  height: 2.75vh;
-  position: absolute;
+  max-width: 9vw;
   top: 1vw;
   left: 1vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
+  padding: 0.15vh 0.5vw;
+  padding-top: 0.3vh;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   border-radius: 0.5vw;
-  padding-top: 0.35vh;
+  text-align: center;
 }
 body #Main_index #blog #Blog_cards .cards .doutor {
+  z-index: 10 !important;
   left: auto;
   right: 1vw;
 }
@@ -2952,7 +2969,7 @@ body #Main_clinica #especialidades .especialidadeBlock img {
   z-index: 2;
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -6956,13 +6973,15 @@ body #Main_blog #Block_blog #menu_blog .splide .splide__track .splide__list .spl
   position: relative;
   border-left: 2px solid #D2AE6D;
   border-right: 2px solid #D2AE6D;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1.1vw;
   color: #4B2F24;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  padding: 1.25vh 1vw;
 }
 body #Main_blog #Block_blog #menu_blog .splide .splide__track .splide__list .splide__slide:first-child {
   border-left: none;
@@ -7067,7 +7086,7 @@ body #Main_blog #Block_blog #menu_blog .Search_resultBox {
 body #Main_blog #Block_blog #menu_blog .Search_resultBox .searchResult {
   position: relative;
   width: 100%;
-  height: 16vh;
+  height: 18vh;
   border-top: 1px solid #D0B498;
   border-bottom: 1px solid #D0B498;
   margin: 1vh 0;
@@ -7097,17 +7116,21 @@ body #Main_blog #Block_blog #menu_blog .Search_resultBox .searchResult img {
 }
 body #Main_blog #Block_blog #menu_blog .Search_resultBox .searchResult span {
   position: absolute;
-  z-index: 5;
-  top: 1vh;
-  left: 0.5vw;
+  background-color: #373435;
   font-family: "khmer-mn", sans-serif;
-  font-weight: 400;
   font-size: 0.75vw;
   color: #E0E0E0;
-  background-color: #373435;
-  padding: 0 1vw;
-  padding-top: 0.15vh;
-  border-radius: 0.25vw;
+  max-width: 7.5vw;
+  top: 1vh;
+  left: 0.5vw;
+  padding: 0.15vh 0.5vw;
+  padding-top: 0.3vh;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 0.5vw;
+  text-align: center;
 }
 body #Main_blog #Block_blog #menu_blog .Search_resultBox .searchResult .tag {
   left: auto;
@@ -7117,7 +7140,7 @@ body #Main_blog #Block_blog #menu_blog .Search_resultBox .searchResult .titulo {
   z-index: 5;
   font-family: "TrajanPro", sans-serif;
   font-weight: 800;
-  font-size: 1.25vw;
+  font-size: 1.2vw;
   color: #E0E0E0;
   text-align: center;
   padding: 0 1vw;
@@ -7205,28 +7228,29 @@ body #Main_blog #Block_blog .Blog_cards .card_blog .data, body #Main_blog #Block
   position: relative;
 }
 body #Main_blog #Block_blog .Blog_cards .card_blog .data, body #Main_blog #Block_blog .Blog_cards .card_blog .doutor {
+  position: absolute;
   background-color: #373435;
   font-family: "khmer-mn", sans-serif;
   font-size: 1vw;
   color: #E0E0E0;
-  width: 9vw;
-  height: 2.75vh;
-  position: absolute;
+  max-width: 9vw;
   top: 1vw;
   left: 1vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
+  padding: 0.15vh 0.5vw;
+  padding-top: 0.3vh;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   border-radius: 0.5vw;
-  padding-top: 0.15vw;
+  text-align: center;
 }
 body #Main_blog #Block_blog .Blog_cards .card_blog .doutor {
   left: auto;
   right: 1vw;
 }
 body #Main_blog #Block_blog .Blog_cards .card_blog .titulo {
-  width: 73%;
+  width: 68%;
   margin-top: auto;
   font-family: "TrajanPro", sans-serif;
   font-size: 1vw;
@@ -7240,11 +7264,11 @@ body #Main_blog #Block_blog .Blog_cards .card_blog .titulo {
 body #Main_blog #Block_blog .Blog_cards .card_blog .btn_BlogCard {
   font-family: "Montserrat", sans-serif;
   height: 3.5vh;
-  width: 27%;
+  width: 30%;
   color: #E0E0E0;
   font-size: 1vw;
-  margin-top: 5vh;
   margin-top: auto;
+  margin-left: auto;
 }
 body #Main_blog #Block_blog .Blog_cards .card_blog .btn_BlogCard img, body #Main_blog #Block_blog .Blog_cards .card_blog .btn_BlogCard svg {
   height: 95%;
@@ -7526,6 +7550,153 @@ body #Main_blog #equipe .btn_equipe img, body #Main_blog #equipe .btn_equipe svg
 body #Main_blog #equipe .btn_equipe img path, body #Main_blog #equipe .btn_equipe svg path {
   fill: #373435;
 }
+body #Main_blog #equipe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7.5vh 5%;
+}
+body #Main_blog #equipe h2 {
+  width: 100%;
+  height: auto;
+  font-family: "TrajanPro", sans-serif;
+  font-size: 2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 3.5vh;
+  position: relative;
+  color: #4B2F24;
+}
+body #Main_blog #equipe h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0;
+  width: 15%;
+  height: 0.35vh;
+  background-color: #4B2F24;
+}
+body #Main_blog #equipe p {
+  width: 100%;
+  padding-right: 3.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #4B2F24;
+  line-height: 3vh;
+}
+body #Main_blog #equipe .splide {
+  margin-top: 5vh;
+  width: 100%;
+  height: 50vh;
+}
+body #Main_blog #equipe .splide .splide__arrows .splide__arrow {
+  width: 3.25vw;
+  height: 3.25vw;
+  padding: 0.55vw;
+  opacity: 1;
+  background: none;
+}
+body #Main_blog #equipe .splide .splide__arrows .splide__arrow svg {
+  fill: #373435;
+  width: 100%;
+  height: 100%;
+}
+body #Main_blog #equipe .splide .splide__arrows .splide__arrow:disabled {
+  opacity: 0.3;
+}
+body #Main_blog #equipe .splide .splide__arrows .splide__arrow--prev {
+  left: -0.5vw;
+}
+body #Main_blog #equipe .splide .splide__arrows .splide__arrow--next {
+  right: -0.5vw;
+}
+body #Main_blog #equipe .splide .splide__pagination {
+  display: none;
+}
+body #Main_blog #equipe .splide .splide__track {
+  width: 95%;
+  height: 100%;
+  margin-left: 2.5%;
+}
+body #Main_blog #equipe .splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+  transition: all ease-in-out 0.15s;
+}
+body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide:hover {
+  transform: scale(1.02);
+}
+body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 1.5vw;
+}
+body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a .infosCards {
+  position: absolute;
+  width: 83%;
+  height: 20%;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin: 8.5%;
+  background-color: #E0E0E0;
+  border-bottom-left-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+  border: 3px solid #D2AE6D;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
+  font-family: "TrajanPro", sans-serif;
+  width: 90%;
+  font-size: 1.05vw;
+  color: #4B2F24;
+  margin-bottom: 1.25vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
+  all: unset;
+  width: 90%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85vw;
+  color: #4B2F24;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+body #Main_blog #equipe .btn_equipe {
+  font-family: "Montserrat", sans-serif;
+  height: 3.5vh;
+  color: #373435;
+  font-size: 1.25vw;
+  margin-top: 7.5vh;
+}
+body #Main_blog #equipe .btn_equipe img, body #Main_blog #equipe .btn_equipe svg {
+  height: 100%;
+}
+body #Main_blog #equipe .btn_equipe img path, body #Main_blog #equipe .btn_equipe svg path {
+  fill: #373435;
+}
 @media only screen and (max-width: 479px) {
   body #Main_blog {
     padding-top: 90px;
@@ -7739,21 +7910,26 @@ body #Main_blog #equipe .btn_equipe img path, body #Main_blog #equipe .btn_equip
   }
   body #Main_blog #equipe {
     justify-content: center;
-    padding: 5vh 5%;
+    padding: 5vh 5% 7.5vh;
     height: auto;
   }
   body #Main_blog #equipe h2 {
-    font-size: 6.5vw;
+    font-size: 7vw;
     padding-left: 4vw;
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
   }
   body #Main_blog #equipe h2::before {
     bottom: -1vh;
     width: 35%;
     height: 0.3vh;
   }
+  body #Main_blog #equipe p {
+    padding-right: 3vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+  }
   body #Main_blog #equipe .splide {
-    margin-top: 0;
+    margin-top: 1vh;
   }
   body #Main_blog #equipe .splide .splide__arrows .splide__arrow {
     width: 12vw;
@@ -7855,7 +8031,7 @@ body #Main_blogPost #banner h1 {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 0 25vw;
+  padding: 0 5vw;
   margin-top: -5vh;
 }
 body #Main_blogPost #banner h1::before {
@@ -7867,6 +8043,7 @@ body #Main_blogPost #banner h1::before {
   background-color: #E0E0E0;
 }
 body #Main_blogPost #banner span {
+  max-width: 20vw;
   z-index: 5;
   font-size: 1vw;
   padding: 0.75vh 1.5vw;
@@ -7876,6 +8053,9 @@ body #Main_blogPost #banner span {
   color: #E0E0E0;
   border-radius: 0.3vw;
   margin-top: 7.5vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body #Main_blogPost #conteudo {
   padding: 0;
@@ -7902,6 +8082,7 @@ body #Main_blogPost #conteudo .Postagem {
   position: relative;
 }
 body #Main_blogPost #conteudo .Postagem span {
+  max-width: 20vw;
   position: absolute;
   top: 3vh;
   left: 3vw;
@@ -7912,6 +8093,9 @@ body #Main_blogPost #conteudo .Postagem span {
   color: #D2AE6D;
   padding: 0.5vh 2vw;
   border-radius: 0.25vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body #Main_blogPost #conteudo .Postagem .tag {
   left: auto;
@@ -8026,7 +8210,7 @@ body #Main_blogPost #conteudo aside .Search_resultBox .searchResult {
   height: 18vh;
   border-top: 1px solid #D0B498;
   border-bottom: 1px solid #D0B498;
-  margin: 2vh 0;
+  margin: 1vh 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8053,17 +8237,21 @@ body #Main_blogPost #conteudo aside .Search_resultBox .searchResult img {
 }
 body #Main_blogPost #conteudo aside .Search_resultBox .searchResult span {
   position: absolute;
-  z-index: 5;
-  top: 1vh;
-  left: 0.5vw;
+  background-color: #373435;
   font-family: "khmer-mn", sans-serif;
-  font-weight: 400;
   font-size: 0.75vw;
   color: #E0E0E0;
-  background-color: #373435;
-  padding: 0 1vw;
-  padding-top: 0.15vh;
-  border-radius: 0.25vw;
+  max-width: 7.5vw;
+  top: 1vh;
+  left: 0.5vw;
+  padding: 0.15vh 0.5vw;
+  padding-top: 0.3vh;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 0.5vw;
+  text-align: center;
 }
 body #Main_blogPost #conteudo aside .Search_resultBox .searchResult .tag {
   left: auto;
@@ -8073,11 +8261,11 @@ body #Main_blogPost #conteudo aside .Search_resultBox .searchResult .titulo {
   z-index: 5;
   font-family: "TrajanPro", sans-serif;
   font-weight: 800;
-  font-size: 1.25vw;
+  font-size: 1.2vw;
   color: #E0E0E0;
   text-align: center;
   padding: 0 1vw;
-  margin-top: 3vh;
+  margin-top: 2vh;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -8129,10 +8317,6 @@ body #Main_blogPost #conteudo aside #postsH2 {
 }
 body #Main_blogPost #conteudo aside .tags {
   width: 60%;
-  height: 4.5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #4B2F24;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -8140,7 +8324,12 @@ body #Main_blogPost #conteudo aside .tags {
   color: #E0E0E0;
   border-radius: 0.5vw;
   margin: 1vh 0;
+  padding: 1vh 1vw 1.25vh;
   transition: all ease-in-out 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 body #Main_blogPost #conteudo aside .tags:hover {
   transform: scale(1.05);
@@ -8164,10 +8353,6 @@ body #Main_blogPost #conteudo aside .block_cardsAside .card_blog {
   display: flex;
   flex-direction: row;
   margin: 2vh 0;
-  transition: all ease-in-out 0.2s;
-}
-body #Main_blogPost #conteudo aside .block_cardsAside .card_blog:hover {
-  transform: scale(1.05);
 }
 body #Main_blogPost #conteudo aside .block_cardsAside .card_blog::before {
   content: "";
@@ -8196,28 +8381,29 @@ body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .data, body #Ma
   position: relative;
 }
 body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .data, body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .doutor {
+  position: absolute;
   background-color: #373435;
   font-family: "khmer-mn", sans-serif;
   font-size: 1vw;
   color: #E0E0E0;
-  width: 9vw;
-  height: 2.75vh;
-  position: absolute;
+  max-width: 9vw;
   top: 1vw;
   left: 1vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
+  padding: 0.15vh 0.5vw;
+  padding-top: 0.3vh;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   border-radius: 0.5vw;
-  padding-top: 0.15vw;
+  text-align: center;
 }
 body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .doutor {
   left: auto;
   right: 1vw;
 }
 body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .titulo {
-  width: 70%;
+  width: 77%;
   margin-top: auto;
   font-family: "TrajanPro", sans-serif;
   font-size: 1vw;
@@ -8231,27 +8417,25 @@ body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .titulo {
 body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .btn_BlogCard {
   font-family: "Montserrat", sans-serif;
   height: 3.5vh;
-  width: 30%;
+  width: 33%;
   color: #E0E0E0;
-  font-size: 1vw;
-  margin-top: 5vh;
+  font-size: 0.9vw;
   margin-top: auto;
 }
 body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .btn_BlogCard img, body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .btn_BlogCard svg {
   height: 95%;
-  width: 20%;
+  width: 25%;
   margin-left: auto;
 }
 body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .btn_BlogCard img path, body #Main_blogPost #conteudo aside .block_cardsAside .card_blog .btn_BlogCard svg path {
   fill: #E0E0E0;
 }
 body #Main_blogPost #equipe {
-  padding: 5vh 5% 7.5vh;
-  height: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 7.5vh 5%;
 }
 body #Main_blogPost #equipe h2 {
   width: 100%;
@@ -8259,6 +8443,7 @@ body #Main_blogPost #equipe h2 {
   font-family: "TrajanPro", sans-serif;
   font-size: 2.5vw;
   padding-left: 2.5vw;
+  margin-bottom: 3.5vh;
   position: relative;
   color: #4B2F24;
 }
@@ -8270,6 +8455,15 @@ body #Main_blogPost #equipe h2::before {
   width: 15%;
   height: 0.35vh;
   background-color: #4B2F24;
+}
+body #Main_blogPost #equipe p {
+  width: 100%;
+  padding-right: 3.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #4B2F24;
+  line-height: 3vh;
 }
 body #Main_blogPost #equipe .splide {
   margin-top: 5vh;
@@ -8350,23 +8544,32 @@ body #Main_blogPost #equipe .splide .splide__track .splide__list .splide__slide 
 }
 body #Main_blogPost #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
   font-family: "TrajanPro", sans-serif;
+  width: 90%;
   font-size: 1.05vw;
   color: #4B2F24;
   margin-bottom: 1.25vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 body #Main_blogPost #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
   all: unset;
+  width: 90%;
   font-family: "Montserrat", sans-serif;
   font-size: 0.85vw;
   color: #4B2F24;
-  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 body #Main_blogPost #equipe .btn_equipe {
   font-family: "Montserrat", sans-serif;
   height: 3.5vh;
   color: #373435;
   font-size: 1.25vw;
-  margin-top: 5vh;
+  margin-top: 7.5vh;
 }
 body #Main_blogPost #equipe .btn_equipe img, body #Main_blogPost #equipe .btn_equipe svg {
   height: 100%;
@@ -8556,21 +8759,26 @@ body #Main_blogPost #equipe .btn_equipe img path, body #Main_blogPost #equipe .b
   }
   body #Main_blogPost #equipe {
     justify-content: center;
-    padding: 5vh 5%;
+    padding: 5vh 5% 7.5vh;
     height: auto;
   }
   body #Main_blogPost #equipe h2 {
-    font-size: 6.5vw;
+    font-size: 7vw;
     padding-left: 4vw;
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
   }
   body #Main_blogPost #equipe h2::before {
     bottom: -1vh;
     width: 35%;
     height: 0.3vh;
   }
+  body #Main_blogPost #equipe p {
+    padding-right: 3vw;
+    font-size: 2.75vw;
+    line-height: 2.5vh;
+  }
   body #Main_blogPost #equipe .splide {
-    margin-top: 0;
+    margin-top: 1vh;
   }
   body #Main_blogPost #equipe .splide .splide__arrows .splide__arrow {
     width: 12vw;
