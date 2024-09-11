@@ -120,8 +120,6 @@
             <div id="Block_textEspaco">
                 <h2>Nosso espaço</h2>
                 <p>
-                    É um imenso prazer apresentar para você um pouco da ONEMEDICAL GROUP, onde a excelência em atendimento encontra a mais avançada estrutura física e tecnologica. 
-                    <br><br>
                     Localizada no <b>Cidade Jardim Corporate Center Continental Tower</b>, em um dos bairros mais nobres de São Paulo, a ONE foi projetada para oferecer conforto, elegância, conveniência e uma experiência de saúde premium para nossos pacientes.
                     <br><br>
                     Na ONE, redefinimos o conceito de cuidado médico para uma experiencia única e exclusiva.
@@ -169,10 +167,7 @@
         </section>
         <section id="equipe">
             <h2>Conheça nosso corpo clínico</h2>
-            <p>Na ONE MEDICAL GROUP, valorizamos o que é mais importante: sua saúde e bem-estar. 
-                <br><br>
-                Na nossa equipe estão profissionais altamente qualificados em diversas áreas, comprometidos com diagnósticos precisos e tratamentos para atender suas necessidades, de forma integrada e humanizada. Explore nossas especialidades médicas e descubra como podemos ajudar a alcançar a sua melhor versão.
-            </p>
+            <p>Na One Medical Group, contamos com um time de profissionais altamente capacitados e reconhecidos em suas áreas de atuação. Cada membro de nossa equipe se destaca por sua expertise e compromisso com a atualização constante nas mais recentes inovações e técnicas médicas. Aqui estão os nossos renomados especialistas que fazem parte da nossa equipe</p>
             <div class="splide" role="group">
                 <div class="splide__track">
                     <ul class="splide__list">
@@ -289,7 +284,7 @@
                     <br><br>
                     Isso é parte fundamental do compromisso da One Medical Group, a sua saúde.
                 </p>
-                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Agendar sessão</a>
+                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Marcar Consulta</a>
             </div>
         </section>
         <section id="concierge">
@@ -397,7 +392,7 @@
             <a href="blog" class="btns btn_blog">Veja todas as postagens <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
         </section>
         <section id="contatos">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12303.41041010213!2d-46.47628642649605!3d-23.538767081983615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66c8ef039471%3A0xe1157635939c9bc!2sR.%20Manuel%20Ribas%2C%201396%20-%20Vila%20Campanela%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008220-430!5e0!3m2!1spt-BR!2sbr!4v1722559281456!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0716611460825!2d-46.70095038821422!3d-23.60176277868368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57f8afa36267%3A0x1a3578348e2ae1bd!2sEdif%C3%ADcio%20Continental%20Tower!5e0!3m2!1spt-BR!2sbr!4v1726078441393!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
             <div id="infosContato">
                 <img id="LogoContato" src="assets/logo_vetor.svg" onload="SVGInject(this)">
                 <div class="blockContato">

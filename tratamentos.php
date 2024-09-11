@@ -126,7 +126,10 @@
                             <h1>Tratamentos da One</h1>
                         </div>
                         <img src="assets/banner_tratamentos.webp" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo. Viverra vitae congue eu consequat ac. Montes nascetur ridiculus mus mauris vitae. Massa tincidunt nunc pulvinar sapien.  Diam vel quam elementum pulvinar etiam non quam lacus. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna.</p>
+                        <p>
+                        Oferecemos uma ampla gama de tratamentos estéticos faciais, corporais e íntimos que combinam técnicas avançadas e tecnologias de última geração para proporcionar resultados naturais e eficazes.
+                        <br><br>
+                        São procedimentos, cirurgías estéticas ou reparadores que têm como objetivo melhorar a aparência e a função de determinadas áreas do rosto e do corpo e que podem ajudar a corrigir imperfeições, melhorar contornos, restaurar a harmonia e reverter sinais de envelhecimento.</p>
                     </section>
                 ';
             }
@@ -301,10 +304,7 @@
         
         <section id="equipe">
             <h2>Conheça nosso corpo clínico</h2>
-            <p>Na ONE MEDICAL GROUP, valorizamos o que é mais importante: sua saúde e bem-estar. 
-                <br><br>
-                Na nossa equipe estão profissionais altamente qualificados em diversas áreas, comprometidos com diagnósticos precisos e tratamentos para atender suas necessidades, de forma integrada e humanizada. Explore nossas especialidades médicas e descubra como podemos ajudar a alcançar a sua melhor versão.
-            </p>
+            <p>Na One Medical Group, contamos com um time de profissionais altamente capacitados e reconhecidos em suas áreas de atuação. Cada membro de nossa equipe se destaca por sua expertise e compromisso com a atualização constante nas mais recentes inovações e técnicas médicas. Aqui estão os nossos renomados especialistas que fazem parte da nossa equipe</p>
             <div class="splide equipe_splide" role="group">
                 <div class="splide__track">
                     <ul class="splide__list">
@@ -402,7 +402,7 @@
                                 <br><br>
                                 Isso é parte fundamental do compromisso da One Medical Group, a sua saúde.
                             </p>
-                            <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Agendar sessão</a>
+                            <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Marcar Consulta</a>
                         </div>
                     </section>
                 ';

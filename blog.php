@@ -201,10 +201,7 @@
                     
         <section id="equipe">
             <h2>Conheça nosso corpo clínico</h2>
-            <p>Na ONE MEDICAL GROUP, valorizamos o que é mais importante: sua saúde e bem-estar. 
-                <br><br>
-                Na nossa equipe estão profissionais altamente qualificados em diversas áreas, comprometidos com diagnósticos precisos e tratamentos para atender suas necessidades, de forma integrada e humanizada. Explore nossas especialidades médicas e descubra como podemos ajudar a alcançar a sua melhor versão.
-            </p>
+            <p>Na One Medical Group, contamos com um time de profissionais altamente capacitados e reconhecidos em suas áreas de atuação. Cada membro de nossa equipe se destaca por sua expertise e compromisso com a atualização constante nas mais recentes inovações e técnicas médicas. Aqui estão os nossos renomados especialistas que fazem parte da nossa equipe</p>
             <div class="splide" role="group">
                 <div class="splide__track">
                     <ul class="splide__list">

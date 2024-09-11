@@ -12,7 +12,7 @@
 
     <meta name="author" content="VL7 marketing estrategico">
     <meta name="description" content="Conheça a One Medical Group: uma clínica dedicada a proporcionar transformações pessoais seguras e impactantes com tecnologias avançadas e atendimento personalizado. Descubra nossa missão, visão, princípios e o atendimento All In One. Saiba mais sobre nossa especialista em Concierge de Beleza e como agendar uma sessão.">
-    <meta name="keywords" content="One Medical Group, clínica, transformações pessoais, saúde e estética, tecnologias avançadas, atendimento personalizado, missão, visão, princípios, atendimento All In One, Concierge de Beleza, agendar sessão">
+    <meta name="keywords" content="One Medical Group, clínica, transformações pessoais, saúde e estética, tecnologias avançadas, atendimento personalizado, missão, visão, princípios, atendimento All In One, Concierge de Beleza, Marcar Consulta">
     
     <meta property="og:title" content="One Medical Group - Clínica de Saúde e Estética">
     <meta property="og:description" content="Explore a One Medical Group, uma clínica especializada em saúde e estética com uma abordagem inovadora. Conheça nossa missão, visão, princípios e o conceito All In One. Agende uma sessão com nossa Concierge de Beleza e descubra como podemos transformar sua jornada de beleza.">
@@ -140,7 +140,7 @@
                 <span>
                     Agende sua consulta e descubra como nossa Concierge de Beleza pode transformar sua jornada de beleza em uma experiência única.
                 </span>
-                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_Concierge">Agendar sessão</a>
+                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_Concierge">Marcar Consulta</a>
             </div>
             <img src="assets/concierge.webp" alt="">
         </section>
@@ -166,13 +166,13 @@
                     <br><br>
                     Isso é parte integrante do compromisso da One Medical Group, a sua saúde. 
                 </p>
-                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Agendar sessão</a>
+                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Marcar Consulta</a>
             </div>
         </section>
         <section id="especialidades">
             <div id="textEspecialidade" class="especialidadeBlock">
                 <h2>As especialidades da One Medical</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo.</p>
+                <p>Na ONE MEDICAL GROUP, valorizamos o que é mais importante para você: a sua saúde e bem-estar. Por isso, oferecemos um atendimento personalizado e de excelência.</p>
                 <a href="especialidades" class="btns btn_especialidades">Veja as especialidades<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
 

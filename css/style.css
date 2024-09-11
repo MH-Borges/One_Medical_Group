@@ -764,7 +764,7 @@ body #Main_index #espaco #Block_textEspaco p {
   font-weight: 300;
   font-size: 1vw;
   color: #E0E0E0;
-  line-height: 2.5vh;
+  line-height: 3.25vh;
 }
 body #Main_index #especialidades {
   display: flex;
@@ -4026,11 +4026,12 @@ body #Main_tratamentos {
   padding-top: 124px;
 }
 body #Main_tratamentos #banner {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   align-items: flex-start;
+  overflow: visible;
 }
 body #Main_tratamentos #banner img {
   width: 50%;
@@ -4104,7 +4105,7 @@ body #Main_tratamentos #banner .marrom h1::before {
 }
 body #Main_tratamentos #banner p {
   width: 100%;
-  height: 20vh;
+  height: 40vh;
   padding: 0 5%;
   font-family: "Montserrat", sans-serif;
   font-size: 1.25vw;
@@ -7420,135 +7421,6 @@ body #Main_blog #tratamentos .splide .splide__track .splide__list .splide__slide
   align-items: center;
   justify-content: center;
   border-radius: 5vw;
-}
-body #Main_blog #equipe {
-  padding: 5vh 5% 7.5vh;
-  height: auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-body #Main_blog #equipe h2 {
-  width: 100%;
-  height: auto;
-  font-family: "TrajanPro", sans-serif;
-  font-size: 2.5vw;
-  padding-left: 2.5vw;
-  position: relative;
-  color: #4B2F24;
-}
-body #Main_blog #equipe h2::before {
-  content: "";
-  position: absolute;
-  bottom: -1.5vh;
-  left: 0;
-  width: 15%;
-  height: 0.35vh;
-  background-color: #4B2F24;
-}
-body #Main_blog #equipe .splide {
-  margin-top: 5vh;
-  width: 100%;
-  height: 50vh;
-}
-body #Main_blog #equipe .splide .splide__arrows .splide__arrow {
-  width: 3.25vw;
-  height: 3.25vw;
-  padding: 0.55vw;
-  opacity: 1;
-  background: none;
-}
-body #Main_blog #equipe .splide .splide__arrows .splide__arrow svg {
-  fill: #373435;
-  width: 100%;
-  height: 100%;
-}
-body #Main_blog #equipe .splide .splide__arrows .splide__arrow:disabled {
-  opacity: 0.3;
-}
-body #Main_blog #equipe .splide .splide__arrows .splide__arrow--prev {
-  left: -0.5vw;
-}
-body #Main_blog #equipe .splide .splide__arrows .splide__arrow--next {
-  right: -0.5vw;
-}
-body #Main_blog #equipe .splide .splide__pagination {
-  display: none;
-}
-body #Main_blog #equipe .splide .splide__track {
-  width: 95%;
-  height: 100%;
-  margin-left: 2.5%;
-}
-body #Main_blog #equipe .splide .splide__track .splide__list {
-  width: 100%;
-  height: 100%;
-}
-body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide {
-  width: 100%;
-  height: 100%;
-  transition: all ease-in-out 0.15s;
-}
-body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide:hover {
-  transform: scale(1.02);
-}
-body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: relative;
-}
-body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  padding: 1.5vw;
-}
-body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a .infosCards {
-  position: absolute;
-  width: 83%;
-  height: 20%;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  margin: 8.5%;
-  background-color: #E0E0E0;
-  border-bottom-left-radius: 0.5vw;
-  border-bottom-right-radius: 0.5vw;
-  border: 3px solid #D2AE6D;
-  border-top: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .nome {
-  font-family: "TrajanPro", sans-serif;
-  font-size: 1.05vw;
-  color: #4B2F24;
-  margin-bottom: 1.25vh;
-}
-body #Main_blog #equipe .splide .splide__track .splide__list .splide__slide a .infosCards .espec_medico {
-  all: unset;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.85vw;
-  color: #4B2F24;
-  font-style: italic;
-}
-body #Main_blog #equipe .btn_equipe {
-  font-family: "Montserrat", sans-serif;
-  height: 3.5vh;
-  color: #373435;
-  font-size: 1.25vw;
-  margin-top: 5vh;
-}
-body #Main_blog #equipe .btn_equipe img, body #Main_blog #equipe .btn_equipe svg {
-  height: 100%;
-}
-body #Main_blog #equipe .btn_equipe img path, body #Main_blog #equipe .btn_equipe svg path {
-  fill: #373435;
 }
 body #Main_blog #equipe {
   position: relative;

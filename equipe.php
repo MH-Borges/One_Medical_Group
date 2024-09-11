@@ -77,7 +77,7 @@
             <img src="assets/banner_equipe.webp" alt="">
             <span> Corpo clínico One Medical </span>
             <h1>O De excelência</h1>
-            <p>Na One Medical Group, contamos com um time de profissionais altamente capacitados e reconhecidos em suas áreas de atuação. Cada membro de nossa equipe se destaca por sua expertise e compromisso com a atualização constante nas mais recentes inovações e técnicas médicas. Aqui estão alguns dos renomados especialistas que fazem parte da nossa equipe:</p>
+            <p>Na One Medical Group, contamos com um time de profissionais altamente capacitados e reconhecidos em suas áreas de atuação. Cada membro de nossa equipe se destaca por sua expertise e compromisso com a atualização constante nas mais recentes inovações e técnicas médicas. Aqui estão os nossos renomados especialistas que fazem parte da nossa equipe</p>
         </section>
         <section id="Block_medicos">
             <div class="dropdown">
@@ -150,8 +150,6 @@
             <div id="Block_textEspaco">
                 <h2>Nosso espaço</h2>
                 <p>
-                    É um imenso prazer apresentar para você um pouco da ONEMEDICAL GROUP, onde a excelência em atendimento encontra a mais avançada estrutura física e tecnologica. 
-                    <br><br>
                     Localizada no <b>Cidade Jardim Corporate Center Continental Tower</b>, em um dos bairros mais nobres de São Paulo, a ONE foi projetada para oferecer conforto, elegância, conveniência e uma experiência de saúde premium para nossos pacientes.
                     <br><br>
                     Na ONE, redefinimos o conceito de cuidado médico para uma experiencia única e exclusiva.
@@ -174,28 +172,28 @@
             <h2>Perguntas frequentes</h2>
             <div class="block_perguntas">
                 <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
+                    <h3>A toxina botulínica faz mal à saúde?</h3>
+                    <p>Quando usada de forma adequada e administrada por profissionais qualificados, a toxina botulínica é segura e eficaz. Ela já utilizada há décadas para fins médicos e estéticos e os riscos geralmente estão associados a procedimentos mal executados, excesso de produto ou aplicação em locais inadequados.</p>
                 </div>
                 <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
+                    <h3>⁠Preenchimentos faciais podem deixar o rosto artificial?</h3>
+                    <p>Sim, é possível, especialmente se houver excesso de produto ou se não houver um planejamento adequado. No entanto, quando realizados por profissionais experientes que respeitam a harmonia facial, os preenchimentos proporcionam resultados naturais que melhoram a aparência sem exageros.</p>
                 </div>
                 <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
+                    <h3>⁠O que é melhor: toxina botulínica ou preenchimento?</h3>
+                    <p>Depende do objetivo do paciente. A toxina botulínica é ideal para suavizar rugas dinâmicas (como linhas de expressão), enquanto os preenchimentos faciais são usados para repor volume perdido e melhorar contornos faciais. Um profissional pode indicar a melhor opção, ou até a combinação de ambos, conforme o caso.</p>
                 </div>
                 <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
+                    <h3>⁠Quanto tempo leva para ver os resultados de um tratamento com laser?</h3>
+                    <p>Os resultados podem variar dependendo do tipo de laser e da condição tratada. Geralmente, os resultados iniciais começam a ser percebidos dentro de alguns dias a semanas após o tratamento, mas melhorias significativas podem ser notadas após algumas sessões.</p>
                 </div>
                 <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
+                    <h3>⁠Qual é o tratamento mais eficaz para acabar com a flacidez?</h3>
+                    <p>Existem várias opções, como radiofrequência, ultrassom microfocado (Ultraformer), bioestimuladores de colágeno, e lifting facial cirúrgico. A escolha do tratamento depende da área afetada, grau de flacidez e expectativas do paciente. Uma consulta é essencial para determinar o melhor plano de tratamento.</p>
                 </div>
                 <div class="Block_pergunta">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?</h3>
-                    <p>Mauris sit amet massa vitae. Sit amet justo donec enim diam vulputate ut pharetra. Massa id neque aliquam vestibulum morbi blandit. Egestas pretium aenean pharetra magna ac placerat. Quam viverra orci sagittis eu volutpat odio facilisis.</p>
+                    <h3>Quais são os efeitos colaterais comuns de tratamentos estéticos?</h3>
+                    <p>Efeitos colaterais comuns incluem vermelhidão, inchaço, hematomas, sensibilidade no local da aplicação e leve desconforto. Estes geralmente desaparecem em alguns dias. Reações adversas graves são raras, mas podem ocorrer, especialmente se o procedimento for realizado por profissionais não qualificados.</p>
                 </div>
             </div>
         </section>

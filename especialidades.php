@@ -120,7 +120,7 @@
                 <span>
                     Agende sua consulta e descubra como nossa Concierge de Beleza pode transformar sua jornada de beleza em uma experiência única.
                 </span>
-                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_Concierge">Agendar sessão</a>
+                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_Concierge">Marcar Consulta</a>
             </div>
             <img src="assets/concierge.webp" alt="">
         </section>
@@ -147,7 +147,7 @@
                     <br><br>
                     Isso é parte integrante do compromisso da One Medical Group, a sua saúde. 
                 </p>
-                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Agendar sessão</a>
+                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Marcar Consulta</a>
             </div>
         </section>
         
