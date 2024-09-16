@@ -23,9 +23,17 @@
     $date_criacao = date('Y/m/d H:i:s');
 
     // ===== INSERÇÃO DE DADOS NO BANCO =====
+    $res2 = $pdo->query("SELECT * FROM medicos where nivel = 'adm'"); 
+    $dados2 = $res2->fetchAll(PDO::FETCH_ASSOC);
+    $email_adm = $dados2[0]['email'];
+
+    if($email === $email_adm){
+        echo 'E-mail do perfil administrativo não pode ser utilizado! Por riscos de gerar conflitos no banco de dados.';
+        exit();
+    }
+
     $res = $pdo->query("SELECT * FROM medicos where email = '$email'"); 
     $dados = $res->fetchAll(PDO::FETCH_ASSOC);
-
     if(@count($dados) == 0){
         $res = $pdo->prepare("INSERT INTO medicos (status_perfil, nivel, email, senha_crip, senha_temp, data_registro) VALUES (:status_perfil, :nivel, :email, :senha_crip, :senha_temp, :data_registro)");
         $res->bindValue(":status_perfil", $status);
@@ -62,6 +70,6 @@
         }
     }
     else{
-        echo 'E-mail ja cadastrado no banco de dados!!';
+        echo 'E-mail ja cadastrado no banco de dados!! O e-mail deve ser unico para cada perfil!';
     }
 ?>

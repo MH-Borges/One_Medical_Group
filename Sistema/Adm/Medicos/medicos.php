@@ -505,7 +505,7 @@
                         $('#msg_ModalCriaMedico').text(msg);
                         setTimeout(() => { window.location='./index.php?pag=medicos'; }, 2500);
                     }
-                    if (msg.trim() === "E-mail ja cadastrado no banco de dados!!") {
+                    if (msg.trim() === "E-mail ja cadastrado no banco de dados!! O e-mail deve ser unico para cada perfil!" || msg.trim() === "E-mail do perfil administrativo não pode ser utilizado! Por riscos de gerar conflitos no banco de dados.") {
                         $('#msg_ModalCriaMedico').addClass('text-danger');
                         $('#msg_ModalCriaMedico').text(msg);
                     }

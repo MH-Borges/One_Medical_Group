@@ -8,6 +8,9 @@ $confirmaNovoEmail = filter_var($_POST['confirmaNovoEmail'], FILTER_SANITIZE_EMA
 $idUser = $_POST['idUserEmail'];
 $emailUserSemAlteracoes = $_POST['emailUserSemAlteracoes'];
 
+$novoEmail = strtolower($novoEmail);
+$confirmaNovoEmail = strtolower($confirmaNovoEmail);
+
 if($emailAntigo == ""){
     echo 'Por-favor preencha o campo de e-mail antigo!';
     exit();
@@ -35,6 +38,15 @@ if($novoEmail != $confirmaNovoEmail){
 
 if($novoEmail == $emailUserSemAlteracoes){
     echo 'Novo e-mail é identico a e-mail já cadastrada!';
+    exit();
+}
+
+$res2 = $pdo->query("SELECT * FROM medicos where nivel = 'adm'"); 
+$dados2 = $res2->fetchAll(PDO::FETCH_ASSOC);
+$email_adm = $dados2[0]['email'];
+
+if($novoEmail === $email_adm){
+    echo 'E-mail do perfil administrativo não pode ser utilizado! Por riscos de gerar conflitos no banco de dados.';
     exit();
 }
 
