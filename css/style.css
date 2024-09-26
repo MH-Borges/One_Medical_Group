@@ -459,6 +459,7 @@ body #Main_index #onHolding {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 body #Main_index #onHolding h1 {
   font-family: "TrajanPro", sans-serif;
@@ -466,6 +467,23 @@ body #Main_index #onHolding h1 {
   color: #D0B498;
   padding: 0 10vw;
   text-align: center;
+}
+body #Main_index #onHolding .btn_novidade {
+  margin-top: 15vh;
+}
+body #Main_index #onHolding .btn_novidade span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5vw;
+  color: #D0B498;
+}
+body #Main_index #onHolding .btn_novidade a {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 3.5vh;
+  font-family: "khmer-mn", sans-serif;
+  font-size: 1.25vw;
+  background-color: #D2AE6D;
+  color: #4B2F24;
 }
 body #Main_index #home {
   padding: 0;
@@ -686,6 +704,7 @@ body #Main_index #espaco {
   justify-content: center;
   padding: 0;
   background-color: #4B2F24;
+  height: 100vh;
 }
 body #Main_index #espaco #Block_VideoEspaco {
   width: 50%;
@@ -873,6 +892,8 @@ body #Main_index #equipe {
   flex-direction: column;
   align-items: center;
   padding: 7.5vh 5%;
+  min-height: 100vh;
+  height: auto;
 }
 body #Main_index #equipe h2 {
   width: 100%;
@@ -2560,7 +2581,7 @@ body #Main_clinica #banner span {
 body #Main_clinica #oneMedical {
   padding: 0;
   width: 100%;
-  height: 165vh;
+  height: 157vh;
   display: flex;
   position: relative;
 }
@@ -2826,7 +2847,7 @@ body #Main_clinica #concierge #Block_textConcierge span {
 body #Main_clinica #concierge #Block_textConcierge .btn_Concierge {
   font-family: "Montserrat", sans-serif;
   height: 4.5vh;
-  width: 13.5vw;
+  width: 17.5vw;
   background-color: #D2AE6D;
   color: #373435;
   font-size: 1.25vw;
@@ -3669,7 +3690,7 @@ body #Main_especialidades #concierge #Block_textConcierge span {
 body #Main_especialidades #concierge #Block_textConcierge .btn_Concierge {
   font-family: "Montserrat", sans-serif;
   height: 4.5vh;
-  width: 13.5vw;
+  width: 17vw;
   background-color: #D2AE6D;
   color: #373435;
   font-size: 1.25vw;
@@ -3955,7 +3976,7 @@ body #Main_especialidades #depos .splide .splide__track .splide__list .splide__s
   body #Main_especialidades #concierge #Block_textConcierge .btn_Concierge {
     border-radius: 1.5vw;
     height: 3.5vh;
-    width: 35vw;
+    width: 45vw;
     font-size: 3.5vw;
     margin-top: 3vh;
     margin-left: auto;
@@ -4026,7 +4047,8 @@ body #Main_tratamentos {
   padding-top: 124px;
 }
 body #Main_tratamentos #banner {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -4105,8 +4127,9 @@ body #Main_tratamentos #banner .marrom h1::before {
 }
 body #Main_tratamentos #banner p {
   width: 100%;
-  height: 40vh;
-  padding: 0 5%;
+  min-height: 40vh;
+  height: auto;
+  padding: 2vh 5%;
   font-family: "Montserrat", sans-serif;
   font-size: 1.25vw;
   color: #373435;
@@ -4491,6 +4514,8 @@ body #Main_tratamentos #equipe {
   flex-direction: column;
   align-items: center;
   padding: 5vh 5%;
+  min-height: 100vh;
+  height: auto;
 }
 body #Main_tratamentos #equipe h2 {
   width: 100%;
@@ -5061,7 +5086,7 @@ body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
     font-size: 3.5vw;
   }
   body #Main_tratamentos #equipe .btn_equipe {
-    width: 58vw;
+    width: 70vw;
     height: 4vh;
     font-size: 4.5vw;
     margin-top: 5vh;
@@ -5106,7 +5131,7 @@ body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
   body #Main_tratamentos #concierge #Block_textConcierge .btn_Concierge {
     border-radius: 1.5vw;
     height: 3.5vh;
-    width: 35vw;
+    width: 45vw;
     font-size: 3.5vw;
     margin-top: 3vh;
     margin-left: auto;
@@ -5376,6 +5401,8 @@ body #Main_TratDetalhes #equipe {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  height: auto;
 }
 body #Main_TratDetalhes #equipe h2 {
   width: 100%;
@@ -5611,6 +5638,8 @@ body #Main_TratDetalhes #espaco {
   justify-content: center;
   padding: 0;
   background-color: #4B2F24;
+  min-height: 100vh;
+  height: auto;
 }
 body #Main_TratDetalhes #espaco #Block_textEspaco {
   width: 50%;
@@ -5667,7 +5696,7 @@ body #Main_TratDetalhes #espaco #Block_textEspaco .btn_espaco img path, body #Ma
 }
 body #Main_TratDetalhes #espaco #Block_VideoEspaco {
   width: 50%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -5985,7 +6014,7 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
   }
   body #Main_TratDetalhes #espaco #Block_textEspaco {
     width: 100%;
-    height: 110vh;
+    min-height: 125vh;
     padding: 5vw;
     flex-direction: column;
     order: 1;
@@ -6138,6 +6167,7 @@ body #Main_Equipe #Block_medicos .dropdown {
   top: 0;
   width: 17vw;
   height: 3.75vh;
+  z-index: 999;
 }
 body #Main_Equipe #Block_medicos .dropdown .dropdown-toggle {
   width: 100%;
@@ -6278,10 +6308,12 @@ body #Main_Equipe #espaco {
   justify-content: center;
   padding: 0;
   background-color: #4B2F24;
+  min-height: 100vh;
+  height: auto;
 }
 body #Main_Equipe #espaco #Block_VideoEspaco {
   width: 50%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -6539,7 +6571,7 @@ body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(5)::before, bo
   }
   body #Main_Equipe #espaco #Block_textEspaco {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     padding: 5vw;
     flex-direction: column;
     order: 1;
@@ -6561,7 +6593,7 @@ body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(5)::before, bo
     line-height: 2.5vh;
   }
   body #Main_Equipe #espaco #Block_textEspaco .btn_espaco {
-    width: 60vw;
+    width: 70vw;
     height: 4vh;
     font-size: 4.5vw;
     margin-top: 5vh;
@@ -6590,7 +6622,7 @@ body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(5)::before, bo
   }
   body #Main_Equipe #FAQ .block_perguntas .Block_pergunta {
     width: 100%;
-    height: 25vh;
+    height: 30vh;
     padding: 1vh 2vw;
     border: none;
     margin: 1vh 0;
@@ -6603,7 +6635,7 @@ body #Main_Equipe #FAQ .block_perguntas .Block_pergunta:nth-child(5)::before, bo
     margin-bottom: 2vh;
   }
   body #Main_Equipe #FAQ .block_perguntas .Block_pergunta p {
-    font-size: 3vw;
+    font-size: 3.25vw;
     line-height: 2.75vh;
     margin-bottom: 0;
   }
@@ -7428,6 +7460,8 @@ body #Main_blog #equipe {
   flex-direction: column;
   align-items: center;
   padding: 7.5vh 5%;
+  min-height: 100vh;
+  height: auto;
 }
 body #Main_blog #equipe h2 {
   width: 100%;
@@ -7849,7 +7883,7 @@ body #Main_blog #equipe .btn_equipe img path, body #Main_blog #equipe .btn_equip
     font-size: 3.5vw;
   }
   body #Main_blog #equipe .btn_equipe {
-    width: 58vw;
+    width: 70vw;
     height: 4vh;
     font-size: 4.5vw;
     margin-top: 5vh;
@@ -8308,6 +8342,8 @@ body #Main_blogPost #equipe {
   flex-direction: column;
   align-items: center;
   padding: 7.5vh 5%;
+  min-height: 100vh;
+  height: auto;
 }
 body #Main_blogPost #equipe h2 {
   width: 100%;
@@ -8698,7 +8734,7 @@ body #Main_blogPost #equipe .btn_equipe img path, body #Main_blogPost #equipe .b
     font-size: 3.5vw;
   }
   body #Main_blogPost #equipe .btn_equipe {
-    width: 58vw;
+    width: 70vw;
     height: 4vh;
     font-size: 4.5vw;
     margin-top: 5vh;
@@ -8860,6 +8896,23 @@ body #Main_blogPost #equipe .btn_equipe img path, body #Main_blogPost #equipe .b
   }
   body #Main_index #espaco, body #Main_index #especialidades, body #Main_index #depos, body #Main_index #blog, body #Main_index #contatos, body #Main_index #form {
     height: auto;
+  }
+  body #Main_index #onHolding h1 {
+    font-size: 8vw;
+    padding: 0 2.5vw;
+  }
+  body #Main_index #onHolding .btn_novidade {
+    margin-top: 15vh;
+  }
+  body #Main_index #onHolding .btn_novidade span {
+    font-size: 4vw;
+  }
+  body #Main_index #onHolding .btn_novidade a {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 4vh;
+    font-size: 4.5vw;
+    border-radius: 1vw;
   }
   body #Main_index #home {
     padding: 0;

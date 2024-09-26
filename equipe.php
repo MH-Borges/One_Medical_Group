@@ -150,13 +150,17 @@
             <div id="Block_textEspaco">
                 <h2>Nosso espaço</h2>
                 <p>
-                    Localizada no <b>Cidade Jardim Corporate Center Continental Tower</b>, em um dos bairros mais nobres de São Paulo, a ONE foi projetada para oferecer conforto, elegância, conveniência e uma experiência de saúde premium para nossos pacientes.
+                    Localizada no Continental Tower, no Complexo Corporativo do Shopping Cidade Jardim, em um dos bairros mais nobres de São Paulo, a ONE garante conforto, conveniência e uma experiência de saúde premium para nossos pacientes.
                     <br><br>
-                    Na ONE, redefinimos o conceito de cuidado médico para uma experiencia única e exclusiva.
                     <br><br>
-                    Em um ambiente de elegância e conforto, nossa ampla estrutura inclui uma área exclusiva, um espaço acolhedor e tranquilo enquanto você aguarda seu atendimento. Os consultórios são totalmente equipados, cada um desenhado para garantir que os procedimentos sejam realizados com a máxima precisão, garantindo que você tenha acesso a todos os recursos em um único lugar e com muito conforto. 
+                    Na ONE, o conceito clínico torna-se uma experiencia única, num ambiente de elegância e tranquilidade, com ampla estrutura que inclui desde um espaço exclusivo e acolhedor, para você aguardar seu atendimento, a consultórios totalmente equipados, desenhados para garantir que os procedimentos sejam realizados com a máxima precisão.  
                     <br><br>
-                    Na ONE, nosso compromisso é proporcionar um atendimento humanizado e de excelência, onde cada paciente recebe um plano de cuidado orientado pelas melhores práticas e inovações na área da saúde. Experimente o padrão ONE de excelência médica, onde seu bem-estar é nossa prioridade. 
+                    Tudo isso para garantir que você tenha acesso a todos os recursos em um único lugar e com muito conforto.
+                    <br><br>
+                    <br><br>
+                    Na ONE, proporcionamos um atendimento humanizado e de excelência, onde cada paciente recebe um plano de cuidado orientado pelas melhores práticas e inovações na área de beleza. 
+                    <br><br>
+                    Experimente o padrão ONE de excelência médica, onde seu bem-estar é nossa prioridade.
                 </p>
                 <a href="clinica" class="btns btn_espaco">Conheça nossa historia<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>

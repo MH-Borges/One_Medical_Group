@@ -242,9 +242,12 @@
                 echo '
                     <section id="equipe">
                         <h2>Conheça nosso corpo clínico</h2>
-                        <p>Na ONE MEDICAL GROUP, valorizamos o que é mais importante: sua saúde e bem-estar. 
+                        <p>
+                            Na ONE Medical Group, contamos com profissionais altamente capacitados e reconhecidos em suas áreas de atuação. 
                             <br><br>
-                            Na nossa equipe estão profissionais altamente qualificados em diversas áreas, comprometidos com diagnósticos precisos e tratamentos para atender suas necessidades, de forma integrada e humanizada. Explore nossas especialidades médicas e descubra como podemos ajudar a alcançar a sua melhor versão.
+                            Cada membro de nossa equipe se destaca por sua expertise e pelo compromisso com a atualização constante nas mais recentes inovações tecnológicas e práticas de saúde e beleza 
+                            <br><br>
+                            Aqui estão os especialistas que fazem parte da nossa equipe.
                         </p>
                         <div class="splide" role="group">
                             <div class="splide__track">
@@ -331,15 +334,17 @@
             <div id="Block_textEspaco">
                 <h2>Nosso espaço</h2>
                 <p>
-                    É um imenso prazer apresentar para você um pouco da ONEMEDICAL GROUP, onde a excelência em atendimento encontra a mais avançada estrutura física e tecnologica. 
+                    Localizada no Continental Tower, no Complexo Corporativo do Shopping Cidade Jardim, em um dos bairros mais nobres de São Paulo, a ONE garante conforto, conveniência e uma experiência de saúde premium para nossos pacientes.
                     <br><br>
-                    Localizada no <b>Cidade Jardim Corporate Center Continental Tower</b>, em um dos bairros mais nobres de São Paulo, a ONE foi projetada para oferecer conforto, elegância, conveniência e uma experiência de saúde premium para nossos pacientes.
                     <br><br>
-                    Na ONE, redefinimos o conceito de cuidado médico para uma experiencia única e exclusiva.
+                    Na ONE, o conceito clínico torna-se uma experiencia única, num ambiente de elegância e tranquilidade, com ampla estrutura que inclui desde um espaço exclusivo e acolhedor, para você aguardar seu atendimento, a consultórios totalmente equipados, desenhados para garantir que os procedimentos sejam realizados com a máxima precisão.  
                     <br><br>
-                    Em um ambiente de elegância e conforto, nossa ampla estrutura inclui uma área exclusiva, um espaço acolhedor e tranquilo enquanto você aguarda seu atendimento. Os consultórios são totalmente equipados, cada um desenhado para garantir que os procedimentos sejam realizados com a máxima precisão, garantindo que você tenha acesso a todos os recursos em um único lugar e com muito conforto. 
+                    Tudo isso para garantir que você tenha acesso a todos os recursos em um único lugar e com muito conforto.
                     <br><br>
-                    Na ONE, nosso compromisso é proporcionar um atendimento humanizado e de excelência, onde cada paciente recebe um plano de cuidado orientado pelas melhores práticas e inovações na área da saúde. Experimente o padrão ONE de excelência médica, onde seu bem-estar é nossa prioridade. 
+                    <br><br>
+                    Na ONE, proporcionamos um atendimento humanizado e de excelência, onde cada paciente recebe um plano de cuidado orientado pelas melhores práticas e inovações na área de beleza. 
+                    <br><br>
+                    Experimente o padrão ONE de excelência médica, onde seu bem-estar é nossa prioridade.
                 </p>
                 <a href="clinica" class="btns btn_espaco">Conheça nossa historia<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>

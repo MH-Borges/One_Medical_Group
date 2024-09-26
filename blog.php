@@ -201,12 +201,18 @@
                     
         <section id="equipe">
             <h2>Conheça nosso corpo clínico</h2>
-            <p>Na One Medical Group, contamos com um time de profissionais altamente capacitados e reconhecidos em suas áreas de atuação. Cada membro de nossa equipe se destaca por sua expertise e compromisso com a atualização constante nas mais recentes inovações e técnicas médicas. Aqui estão os nossos renomados especialistas que fazem parte da nossa equipe</p>
+            <p>
+                Na ONE Medical Group, contamos com profissionais altamente capacitados e reconhecidos em suas áreas de atuação. 
+                <br><br>
+                Cada membro de nossa equipe se destaca por sua expertise e pelo compromisso com a atualização constante nas mais recentes inovações tecnológicas e práticas de saúde e beleza 
+                <br><br>
+                Aqui estão os especialistas que fazem parte da nossa equipe.
+            </p>
             <div class="splide" role="group">
                 <div class="splide__track">
                     <ul class="splide__list">
                         <?php
-                            $query = $pdo->query("SELECT * FROM medicos ORDER BY id DESC");
+                            $query = $pdo->query("SELECT * FROM medicos ORDER BY id asc");
                             $dados = $query->fetchAll(PDO::FETCH_ASSOC);
                             $j = 0;
                             for ($i=0; $i < count($dados); $i++) {

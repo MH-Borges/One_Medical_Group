@@ -78,21 +78,23 @@
         <section id="oneMedical">
             <img src="assets/A_Clinica/a_One.webp" alt="">
             <div id="Block_textOne">
-                <h2>Quem é a One Medical Group?</h2>
+                <h2>A One Medical Group</h2>
                 <p>
-                    Olá, eu sou a Dra. Nicole Daher Cóser Capovilla, sócia da ONE Medical Group e gostaria de convidar você a conhecer um pouco da nossa história.
+                    Como nasceu a One Medical Group.
                     <br><br>
-                    Sou de Londrina-PR de uma família de médicos e sempre sonhei seguir este caminho. Cursei Medicina em Marília-SP e cirurgia geral e plástica na cidade de São Paulo, onde atuo há mais de 13 anos. Na equipe de Coordenação do Hospital São Luiz Morumbi me aprofundei em experiência do paciente, trazendo para meus médicos a importância do atender com excelência, empatia e carinho.
+                    Olá, eu sou a Dra. Nicole Daher Cóser Capovilla, sócia da ONE e gostaria de convidar você a conhecer um pouco da nossa história.
                     <br><br>
-                    Num dia de folga quando assistia um seriado voltado à cirurgia plástica e estética, surgiram ideias que fui trazendo para a realidade e necessidade no Brasil.  Pensei em criar um espaço acolhedor, com serviços de qualidade e cuidados personalizados e, surgiu o conceito ALL IN ONE, algo inovador na experiência e atendimento.  
+                    Sou de Londrina-PR de uma família de médicos e sempre sonhei seguir este caminho. Cursei Medicina em Marília-SP e cirurgia geral/plástica na cidade de São Paulo, onde atuo há mais de 13 anos.
                     <br><br>
-                    Com ele, as técnicas, cirúrgicas ou não, são especificadas de uma só vez por uma junta médica e equipe multidisciplinar, fazendo do paciente o CENTRO de toda a jornada. 
+                    Assistindo a um seriado voltado à cirurgia plástica e estética, surgiram ideias que fui trazendo para a nossa realidade e necessidade. Pensei em criar um espaço acolhedor, com serviços de qualidade e cuidados personalizados. Surgiu assim o conceito ALL IN ONE.
                     <br><br>
-                    Na construção desse sonho, Deus colocou em meu caminho pessoas maravilhosas com anos de experiência na área da saúde, cirurgia plástica e de gestão e, sonhamos juntos ao unir conhecimentos e valores para fundar a ONE Medical Group. 
+                    Nele, uma junta médica e uma equipe multidisciplinar, especificam técnicas que serão utilizadas para aquele que é o CENTRO de toda a jornada:  você.
                     <br><br>
-                    Escolhemos criteriosamente todo o corpo clínico profissionais de destaque, adquirimos as melhores tecnologias do mercado para que cada paciente tenha atenção e cuidado especial e inauguramos nossa clinica no melhor local da capital de São Paulo. Estamos comprometidos em oferecer um atendimento humanizado e responsável, que busque o bem-estar e a satisfação de cada pessoa que passar por aqui. 
+                    Na construção desse sonho, Deus colocou pessoas maravilhosas com anos de experiência na área da saúde, cirurgia plástica e de gestão e, sonhamos juntos ao unir conhecimentos e valores para fundar a ONE Medical Group.
                     <br><br>
-                    Juntos vamos auxiliar você a encontrar sua melhor versão. Vem pra ONE!
+                    Escolhemos criteriosamente o corpo clínico e adquirimos as melhores tecnologias do mercado para que cada paciente tenha atenção e cuidado especial. Assim, inauguramos a ONE no melhor local da capital de São Paulo. Estamos comprometidos em oferecer um atendimento humanizado e responsável, buscando o seu bem-estar e satisfação.
+                    <br><br>
+                    Juntos vamos encontrar sua melhor versão. Vem pra ONE!
                 </p>
                 <a href="tratamentos" class="btns btn_tratamentos">Conheça nossos tratamentos<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
@@ -140,7 +142,7 @@
                 <span>
                     Agende sua consulta e descubra como nossa Concierge de Beleza pode transformar sua jornada de beleza em uma experiência única.
                 </span>
-                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_Concierge">Marcar Consulta</a>
+                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_Concierge">Agendar Atendimento</a>
             </div>
             <img src="assets/concierge.webp" alt="">
         </section>
@@ -154,17 +156,15 @@
             <div id="Block_textAllinOne">
                 <h2>O que é o atendimento all in one</h2>
                 <p>
-                    Acreditamos que o cuidado com a saúde e a beleza deve ser abrangente e contínuo e por isso, desenvolvemos o atendimento All In One, um serviço exclusivo que oferece um acompanhamento personalizado e único à você. 
+                    É um conceito que define que o cuidado com a saúde e a beleza deve ser abrangente e contínuo. Um serviço exclusivo que oferece um acompanhamento personalizado e único.
                     <br><br>
-                    O All In One começa com uma consulta inicial ampla, onde os profissionais de saúde realizam uma análise completa das suas expectativas e desejos.
+                    A partir de uma consulta ampla, nossa equipe médica realiza uma análise completa das suas expectativas e desejos e elabora um plano personalizado que inclui: opções de intervenções que serão executadas, o programa de avaliações periódicas e o monitoramento da evolução do seu procedimento, uso das tecnologias. 
                     <br><br>
-                    Com base neste diagnóstico, elaboramos um plano personalizado que inclui as intervenções que serão executadas, avaliações periódicas e monitoramento da evolução do seu procedimento.
+                    Assim garantimos que você receberá toda a atenção, que vai além das indispensáveis à sua terapia, com detalhes, sugestões de técnicas novas, procedimentos complementares e suporte contínuo.
                     <br><br>
-                    Nosso objetivo é garantir que você receba toda a atenção, além das indispensáveis a sua terapia, com avaliações detalhadas, sugestões de técnicas novas ou complementares e suporte contínuo.
+                    O ALL IN ONE é serviço de excelência, que se adapta aos seus sonhos e necessidades e garante que todas opções e recursos terapêuticos sejam considerados e discutidos em conjunto, proporcionando uma experiência de cuidado completa e personalizada.
                     <br><br>
-                    Estamos comprometidos em oferecer um serviço de excelência, que se adapta às suas necessidades e que garanta que todas opções e recursos terapêuticos sejam considerados e discutidos em conjunto, proporcionando uma experiência de cuidado completa e personalizada.
-                    <br><br>
-                    Isso é parte integrante do compromisso da One Medical Group, a sua saúde. 
+                    Isso é parte fundamental do compromisso da ONE Medical Group com sua saúde e beleza 
                 </p>
                 <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Marcar Consulta</a>
             </div>

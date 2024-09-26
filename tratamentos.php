@@ -247,7 +247,7 @@
                                             </video>
                                         </div>
                                     </li>
-                                    <li class="splide__slide">
+                                    <li class="splide__slide hide">
                                         <div class="Block_VideoDepo" id="Block_VideoDepo02">
                                             <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo(`VideoDepo02`)">
                                             <video controlsList="nodownload" id="VideoDepo02" onclick="PLayVideo(`VideoDepo02`)">
@@ -255,7 +255,7 @@
                                             </video>
                                         </div>
                                     </li>
-                                    <li class="splide__slide">
+                                    <li class="splide__slide hide">
                                         <div class="Block_VideoDepo" id="Block_VideoDepo03">
                                             <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo(`VideoDepo03`)">
                                             <video controlsList="nodownload" id="VideoDepo03" onclick="PLayVideo(`VideoDepo03`)">
@@ -263,7 +263,7 @@
                                             </video>
                                         </div>
                                     </li>
-                                    <li class="splide__slide">
+                                    <li class="splide__slide hide">
                                         <div class="Block_VideoDepo" id="Block_VideoDepo04">
                                             <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo(`VideoDepo04`)">
                                             <video controlsList="nodownload" id="VideoDepo04" onclick="PLayVideo(`VideoDepo04`)">
@@ -304,21 +304,31 @@
         
         <section id="equipe">
             <h2>Conheça nosso corpo clínico</h2>
-            <p>Na One Medical Group, contamos com um time de profissionais altamente capacitados e reconhecidos em suas áreas de atuação. Cada membro de nossa equipe se destaca por sua expertise e compromisso com a atualização constante nas mais recentes inovações e técnicas médicas. Aqui estão os nossos renomados especialistas que fazem parte da nossa equipe</p>
+            <p>
+                Na ONE Medical Group, contamos com profissionais altamente capacitados e reconhecidos em suas áreas de atuação. 
+                <br><br>
+                Cada membro de nossa equipe se destaca por sua expertise e pelo compromisso com a atualização constante nas mais recentes inovações tecnológicas e práticas de saúde e beleza 
+                <br><br>
+                Aqui estão os especialistas que fazem parte da nossa equipe.
+            </p>
             <div class="splide equipe_splide" role="group">
                 <div class="splide__track">
                     <ul class="splide__list">
                         <?php
                             if($nome_get !== "" && $nome_get !== NULL){
-                                $query = $pdo->query("SELECT * FROM medicos WHERE especialidade = '$nome_clean'");
+                                $query = $pdo->query("SELECT * FROM medicos WHERE especialidade = '$nome_clean' and status_perfil = 'ativo'");
                                 $dados = $query->fetchAll(PDO::FETCH_ASSOC);
-                                if(@count($dados) == 0){
-                                    $query = $pdo->query("SELECT * FROM medicos ORDER BY id DESC");
+                                if(@count($dados) !== 0){
+                                    $query = $pdo->query("SELECT * FROM medicos WHERE especialidade = '$nome_clean' and status_perfil = 'ativo' ORDER BY id asc");
+                                    $dados = $query->fetchAll(PDO::FETCH_ASSOC);
+                                }
+                                else{
+                                    $query = $pdo->query("SELECT * FROM medicos ORDER BY id asc");
                                     $dados = $query->fetchAll(PDO::FETCH_ASSOC);
                                 }
                             }
                             else{
-                                $query = $pdo->query("SELECT * FROM medicos ORDER BY id DESC");
+                                $query = $pdo->query("SELECT * FROM medicos ORDER BY id asc");
                                 $dados = $query->fetchAll(PDO::FETCH_ASSOC);
                             }
 
@@ -390,17 +400,15 @@
                         <div id="Block_textAllinOne">
                             <h2>O que é o atendimento all in one</h2>
                             <p>
-                                Acreditamos que o cuidado com a saúde e a beleza deve ser abrangente e contínuo e por isso, desenvolvemos o atendimento <b>All In One</b>, um serviço exclusivo que oferece um acompanhamento personalizado e único. 
+                                É um conceito que define que o cuidado com a saúde e a beleza deve ser abrangente e contínuo. Um serviço exclusivo que oferece um acompanhamento personalizado e único.
                                 <br><br>
-                                O <b>All In One</b> começa com uma consulta ampla, onde os profissionais de saúde realizam uma análise completa das suas expectativas e desejos.
+                                A partir de uma consulta ampla, nossa equipe médica realiza uma análise completa das suas expectativas e desejos e elabora um plano personalizado que inclui: opções de intervenções que serão executadas, o programa de avaliações periódicas e o monitoramento da evolução do seu procedimento, uso das tecnologias. 
                                 <br><br>
-                                Com base nestas informações, elaboramos um plano personalizado que inclui as opções de intervenções que serão executadas, o programa de avaliações periódicas e o monitoramento da evolução do seu procedimento.
+                                Assim garantimos que você receberá toda a atenção, que vai além das indispensáveis à sua terapia, com detalhes, sugestões de técnicas novas, procedimentos complementares e suporte contínuo.
                                 <br><br>
-                                Nosso objetivo é garantir que você receba toda a atenção, além das indispensáveis a sua terapia, com detalhes, sugestões de técnicas novas, procedimentos complementares e suporte contínuo.
+                                O ALL IN ONE é serviço de excelência, que se adapta aos seus sonhos e necessidades e garante que todas opções e recursos terapêuticos sejam considerados e discutidos em conjunto, proporcionando uma experiência de cuidado completa e personalizada.
                                 <br><br>
-                                Estamos comprometidos em oferecer um serviço de excelência que se adapte aos seus sonhos e necessidades e que garanta todas opções e recursos terapêuticos sejam considerados e discutidos em conjunto, proporcionando uma experiência de cuidado completa e personalizada.
-                                <br><br>
-                                Isso é parte fundamental do compromisso da One Medical Group, a sua saúde.
+                                Isso é parte fundamental do compromisso da ONE Medical Group com sua saúde e beleza 
                             </p>
                             <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Marcar Consulta</a>
                         </div>

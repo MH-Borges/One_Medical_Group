@@ -83,6 +83,7 @@
             top: 0;
             width: 17vw;
             height: 3.75vh;
+            z-index: 999;
             .dropdown-toggle{
                 width: 100%;
                 height: 100%;
@@ -225,9 +226,11 @@
         justify-content: center;
         padding: 0;
         background-color: $Marrom;
+        min-height: 100vh;
+        height: auto;
         #Block_VideoEspaco{
             width: 50%;
-            height: 100%;
+            height: 100vh;
             position: relative;
             display: flex;
             align-items: center;
@@ -489,7 +492,7 @@
             }
             #Block_textEspaco{
                 width: 100%;
-                height: 90vh;
+                height: 100vh;
                 padding: 5vw;
                 flex-direction: column;
                 order: 1;
@@ -510,7 +513,7 @@
                     line-height: 2.5vh;
                 }
                 .btn_espaco{
-                    width: 60vw;
+                    width: 70vw;
                     height: 4vh;
                     font-size: 4.5vw;
                     margin-top: 5vh;
@@ -538,7 +541,7 @@
                 margin: 2vh 0;
                 .Block_pergunta{
                     width: 100%;
-                    height: 25vh;
+                    height: 30vh;
                     padding: 1vh 2vw;
                     border: none;
                     margin: 1vh 0;
@@ -550,7 +553,7 @@
                         margin-bottom: 2vh;
                     }
                     p{
-                        font-size: 3vw;
+                        font-size: 3.25vw;
                         line-height: 2.75vh;
                         margin-bottom: 0;
                     }

@@ -79,6 +79,9 @@
             if($img_espec_edit != ""){
                 $img_espec = $img_espec_edit;
             }
+            else{
+                $img_espec = 'placeholder.webp';
+            }
         }
     }
     else{

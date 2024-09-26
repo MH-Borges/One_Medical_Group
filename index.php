@@ -43,6 +43,10 @@
     <main id="Main_index">
         <section id="onHolding">
             <h1> Em construção, agradecemos por sua paciencia! </h1>
+            <div class="btn_novidade">
+                <span>Cadastre-se para receber nossas novidades e fique por dentro de todo nosso conteudo!</span>
+                <a class="btns" href="https://beneficiosone.com.br/pagina-de-captura-predios/">Cadastre-se</a>
+            </div>
         </section>
     </main>
 </body>

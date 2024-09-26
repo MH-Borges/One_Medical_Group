@@ -422,12 +422,30 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             h1{
                 font-family: $Main-font;
                 font-size: 4.5vw;
                 color: $Creme;
                 padding: 0 10vw;
                 text-align: center;
+            }
+            .btn_novidade{
+                margin-top: 15vh;
+                span{
+                    font-family: $Text-font;
+                    font-size: 1.5vw;
+                    color: $Creme;
+                }
+                a{
+                    width: 50%;
+                    margin-left: 25%;
+                    margin-top: 3.5vh;
+                    font-family: $Second-font;
+                    font-size: 1.25vw;
+                    background-color: $Amarelo;
+                    color: $Marrom;
+                }
             }
         }
         #home{
@@ -648,6 +666,7 @@ body {
             justify-content: center;
             padding: 0;
             background-color: $Marrom;
+            height: 100vh;
             #Block_VideoEspaco{
                 width: 50%;
                 height: 100%;
@@ -837,6 +856,8 @@ body {
             flex-direction: column;
             align-items: center;
             padding: 7.5vh 5%;
+            min-height: 100vh;
+            height: auto;
             h2{
                 width: 100%;
                 height: auto;
@@ -2042,6 +2063,25 @@ body {
         #Main_index{
             #espaco, #especialidades, #depos, #blog, #contatos, #form{
                 height: auto;
+            }
+            #onHolding{
+                h1{
+                    font-size: 8vw;
+                    padding: 0 2.5vw;
+                }
+                .btn_novidade{
+                    margin-top: 15vh;
+                    span{
+                        font-size: 4vw;
+                    }
+                    a{
+                        width: 60%;
+                        margin-left: 20%;
+                        margin-top: 4vh;
+                        font-size: 4.5vw;
+                        border-radius: 1vw;
+                    }
+                }
             }
             #home{
                 padding: 0;

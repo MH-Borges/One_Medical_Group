@@ -120,7 +120,7 @@
                 <span>
                     Agende sua consulta e descubra como nossa Concierge de Beleza pode transformar sua jornada de beleza em uma experiência única.
                 </span>
-                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_Concierge">Marcar Consulta</a>
+                <a target="_blank" href="https://wa.me/551151081977" class="btns btn_Concierge">Agendar Atendimento</a>
             </div>
             <img src="assets/concierge.webp" alt="">
         </section>
@@ -135,17 +135,15 @@
             <div id="Block_textAllinOne">
                 <h2>O que é o atendimento all in one</h2>
                 <p>
-                    Acreditamos que o cuidado com a saúde e a beleza deve ser abrangente e contínuo e por isso, desenvolvemos o atendimento All In One, um serviço exclusivo que oferece um acompanhamento personalizado e único à você. 
+                    É um conceito que define que o cuidado com a saúde e a beleza deve ser abrangente e contínuo. Um serviço exclusivo que oferece um acompanhamento personalizado e único.
                     <br><br>
-                    O All In One começa com uma consulta inicial ampla, onde os profissionais de saúde realizam uma análise completa das suas expectativas e desejos.
+                    A partir de uma consulta ampla, nossa equipe médica realiza uma análise completa das suas expectativas e desejos e elabora um plano personalizado que inclui: opções de intervenções que serão executadas, o programa de avaliações periódicas e o monitoramento da evolução do seu procedimento, uso das tecnologias. 
                     <br><br>
-                    Com base neste diagnóstico, elaboramos um plano personalizado que inclui as intervenções que serão executadas, avaliações periódicas e monitoramento da evolução do seu procedimento.
+                    Assim garantimos que você receberá toda a atenção, que vai além das indispensáveis à sua terapia, com detalhes, sugestões de técnicas novas, procedimentos complementares e suporte contínuo.
                     <br><br>
-                    Nosso objetivo é garantir que você receba toda a atenção, além das indispensáveis a sua terapia, com avaliações detalhadas, sugestões de técnicas novas ou complementares e suporte contínuo.
+                    O ALL IN ONE é serviço de excelência, que se adapta aos seus sonhos e necessidades e garante que todas opções e recursos terapêuticos sejam considerados e discutidos em conjunto, proporcionando uma experiência de cuidado completa e personalizada.
                     <br><br>
-                    Estamos comprometidos em oferecer um serviço de excelência, que se adapta às suas necessidades e que garanta que todas opções e recursos terapêuticos sejam considerados e discutidos em conjunto, proporcionando uma experiência de cuidado completa e personalizada.
-                    <br><br>
-                    Isso é parte integrante do compromisso da One Medical Group, a sua saúde. 
+                    Isso é parte fundamental do compromisso da ONE Medical Group com sua saúde e beleza 
                 </p>
                 <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Marcar Consulta</a>
             </div>
@@ -165,7 +163,7 @@
                                 </video>
                             </div>
                         </li>
-                        <li class="splide__slide">
+                        <li class="splide__slide hide">
                             <div class="Block_VideoDepo" id="Block_VideoDepo02">
                                 <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoDepo02')">
                                 <video controlsList="nodownload" id="VideoDepo02" onclick="PLayVideo('VideoDepo02')">
@@ -173,7 +171,7 @@
                                 </video>
                             </div>
                         </li>
-                        <li class="splide__slide">
+                        <li class="splide__slide hide">
                             <div class="Block_VideoDepo" id="Block_VideoDepo03">
                                 <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoDepo03')">
                                 <video controlsList="nodownload" id="VideoDepo03" onclick="PLayVideo('VideoDepo03')">
@@ -181,7 +179,7 @@
                                 </video>
                             </div>
                         </li>
-                        <li class="splide__slide">
+                        <li class="splide__slide hide">
                             <div class="Block_VideoDepo" id="Block_VideoDepo04">
                                 <img src="assets/icons/play_btn.svg" onload="SVGInject(this)" onclick="PLayVideo('VideoDepo04')">
                                 <video controlsList="nodownload" id="VideoDepo04" onclick="PLayVideo('VideoDepo04')">
