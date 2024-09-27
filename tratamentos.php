@@ -64,7 +64,7 @@
             <a class="itensMenu" href="clinica">A One</a>
             <a class="itensMenu" href="especialidades">Especialidades</a>
             <a class="itensMenu" href="equipe">Equipe one</a>
-            <a class="itensMenu <?php if($nome_get === "" || $nome_get === NULL){ echo "active"; }?>" href="tratamentos">Tratamentos</a>
+            <a class="itensMenu <?php if($nome_get === "" || $nome_get === NULL){ echo "active"; }?>" href="tratamentos">Tecnologias</a>
             <a class="itensMenu" href="blog">Blog</a>
             <a class="itensMenu" href="contato">Contato</a>
 
@@ -122,14 +122,18 @@
                 echo '
                     <section id="banner">
                         <div id="Titulo_banner">
-                            <span> Conheça todos os </span>
-                            <h1>Tratamentos da One</h1>
+                            <span> Conheça todos as </span>
+                            <h1>Tecnologias da One</h1>
                         </div>
                         <img src="assets/banner_tratamentos.webp" alt="">
                         <p>
-                        Oferecemos uma ampla gama de tratamentos estéticos faciais, corporais e íntimos que combinam técnicas avançadas e tecnologias de última geração para proporcionar resultados naturais e eficazes.
-                        <br><br>
-                        São procedimentos, cirurgías estéticas ou reparadores que têm como objetivo melhorar a aparência e a função de determinadas áreas do rosto e do corpo e que podem ajudar a corrigir imperfeições, melhorar contornos, restaurar a harmonia e reverter sinais de envelhecimento.</p>
+                            Na ONE, oferecemos as tecnologias mais avançadas do mercado para garantir resultados excepcionais em todos os tratamentos. Contamos com equipamentos de última geração que proporcionam eficiência, segurança e resultados visíveis em menos tempo. Entre nossas tecnologias, está o Fotona, amplamente utilizado para rejuvenescimento e cicatrizes, o Ultraformer, ideal para lifting facial e corporal sem necessidade de cirurgia, e o Discovery Pico, que atua na remoção de tatuagens e tratamento de manchas. Também utilizamos o Vectra XT, uma tecnologia inovadora de simulação 3D que permite visualizar os resultados de cirurgias e procedimentos estéticos antes mesmo de serem realizados.
+                            <br><br>
+                            Além disso, contamos com o Volnewmer, uma tecnologia de radiofrequência não invasiva que tonifica e rejuvenesce a pele, proporcionando firmeza e elasticidade. 
+                            <br><br>
+                            Na ONE, combinamos essas inovações com um atendimento personalizado para entregar os melhores resultados com segurança e conforto.
+                            Aqui, sua transformação é planejada com o que há de mais moderno. 
+                        </p>
                     </section>
                 ';
             }

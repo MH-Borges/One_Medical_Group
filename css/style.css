@@ -4848,7 +4848,7 @@ body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
     padding-top: 90px;
   }
   body #Main_tratamentos #banner {
-    height: 75vh;
+    min-height: 75vh;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
@@ -5801,6 +5801,9 @@ body #Main_TratDetalhes #FAQ .block_perguntas .Block_pergunta:nth-child(5)::befo
   display: none;
 }
 @media only screen and (max-width: 479px) {
+  body #Main_TratDetalhes #banner {
+    min-height: 75vh;
+  }
   body #Main_TratDetalhes #banner img {
     height: 100%;
   }
@@ -8906,6 +8909,7 @@ body #Main_blogPost #equipe .btn_equipe img path, body #Main_blogPost #equipe .b
   }
   body #Main_index #onHolding .btn_novidade span {
     font-size: 4vw;
+    text-align: center;
   }
   body #Main_index #onHolding .btn_novidade a {
     width: 60%;

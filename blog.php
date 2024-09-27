@@ -55,7 +55,7 @@
             <a class="itensMenu" href="clinica">A One</a>
             <a class="itensMenu" href="especialidades">Especialidades</a>
             <a class="itensMenu" href="equipe">Equipe one</a>
-            <a class="itensMenu" href="tratamentos">Tratamentos</a>
+            <a class="itensMenu" href="tratamentos">Tecnologias</a>
             <a class="itensMenu active" href="blog">Blog</a>
             <a class="itensMenu" href="contato">Contato</a>
 
