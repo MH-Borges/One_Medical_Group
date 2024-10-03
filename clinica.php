@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A clinica | One medical group</title>
+    <title>A clinica | ONE medical group</title>
 
     <link rel="icon" href="assets/icons/icon.svg" />
     <link rel="canonical" href="https://onemedicalgroup.com.br/clinica" />
@@ -50,9 +50,9 @@
         <div id="sideMenu" class="hide">
             <button type="button" onclick="sideMenu()"></button>
 
-            <a class="itensMenu active" href="clinica">A One</a>
+            <a class="itensMenu active" href="clinica">A ONE</a>
             <a class="itensMenu" href="especialidades">Especialidades</a>
-            <a class="itensMenu" href="equipe">Equipe one</a>
+            <a class="itensMenu" href="equipe">Equipe ONE</a>
             <a class="itensMenu" href="tratamentos">Tecnologias</a>
             <a class="itensMenu" href="blog">Blog</a>
             <a class="itensMenu" href="contato">Contato</a>
@@ -73,28 +73,22 @@
         <section id="banner">
             <img src="assets/A_Clinica/banner.webp" alt="">
             <span> A sua clínica </span>
-            <h1>One Medical Group</h1>
+            <h1>ONE Medical Group</h1>
         </section>
         <section id="oneMedical">
             <img src="assets/A_Clinica/a_One.webp" alt="">
             <div id="Block_textOne">
-                <h2>A One Medical Group</h2>
+                <h2>A ONE Medical Group</h2>
                 <p>
-                    Como nasceu a One Medical Group.
-                    <br><br>
-                    Olá, eu sou a Dra. Nicole Daher Cóser Capovilla, sócia da ONE e gostaria de convidar você a conhecer um pouco da nossa história.
-                    <br><br>
-                    Sou de Londrina-PR de uma família de médicos e sempre sonhei seguir este caminho. Cursei Medicina em Marília-SP e cirurgia geral/plástica na cidade de São Paulo, onde atuo há mais de 13 anos.
-                    <br><br>
-                    Assistindo a um seriado voltado à cirurgia plástica e estética, surgiram ideias que fui trazendo para a nossa realidade e necessidade. Pensei em criar um espaço acolhedor, com serviços de qualidade e cuidados personalizados. Surgiu assim o conceito ALL IN ONE.
-                    <br><br>
-                    Nele, uma junta médica e uma equipe multidisciplinar, especificam técnicas que serão utilizadas para aquele que é o CENTRO de toda a jornada:  você.
-                    <br><br>
-                    Na construção desse sonho, Deus colocou pessoas maravilhosas com anos de experiência na área da saúde, cirurgia plástica e de gestão e, sonhamos juntos ao unir conhecimentos e valores para fundar a ONE Medical Group.
-                    <br><br>
-                    Escolhemos criteriosamente o corpo clínico e adquirimos as melhores tecnologias do mercado para que cada paciente tenha atenção e cuidado especial. Assim, inauguramos a ONE no melhor local da capital de São Paulo. Estamos comprometidos em oferecer um atendimento humanizado e responsável, buscando o seu bem-estar e satisfação.
-                    <br><br>
-                    Juntos vamos encontrar sua melhor versão. Vem pra ONE!
+                    Como nasceu a ONE? 
+                    <br><br>                
+                    Um pouquinho da minha história e de como nasceu a ONE:
+                    <br><br>                
+                    Para quem não me conhece, sou Nicole Daher Cóser Capovilla, nascida em Londrina-PR em família de médicos e desde muito novinha sempre falei em seguir o caminho, tendo principalmente meu pai e meu avô como exemplos. Cursei a Faculdade de Medicina de Marília no interior de São Paulo e depois cirurgia geral e cirurgia plástica em São Paulo capital, atuo na minha área há mais de 13 anos e sou uma verdadeira apaixonada pela MEDICINA. Por muitos anos fiz parte do time de coordenação médica do setor de emergência adulto do Hospital São Luiz Morumbi, onde aprendi muito e me aprofundei nos estudos relacionados a experiência do paciente e a importância de um atendimento de excelência além da empatia e carinho que julgo ser fundamental. O amor é capaz de curar! 
+                    Sempre sonhei em criar um espaço acolhedor e inovador, onde pudesse oferecer serviços de qualidade e cuidados personalizados aos meus pacientes, e queria trazer algo novo, realmente inovador no quesito experiência e atendimento, onde o paciente fosse o centro da jornada.
+                    Na construção desse sonho, Deus colocou em meu caminho pessoas maravilhosas que passaram a sonhar comigo e trouxeram na bagagem também anos de experiência na área da saúde, cirurgia plástica e da gestão, decidimos unir nossos conhecimentos e valores para fundar a ONE Medical Group. 
+                    <br><br>   
+                    Acreditamos que cada indivíduo merece atenção e cuidado especial, e é isso que buscamos proporcionar em nossa clínica: um ambiente onde o cuidado e o conforto dos pacientes estão em primeiro lugar. Escolhemos minuciosamente todo o corpo clínico com profissionais maravilhosos e competentes, adquirimos as melhores tecnologias do mercado. Estamos comprometidos em oferecer um atendimento humanizado e responsável, visando sempre o bem-estar e a satisfação. Esperamos que este seja o início de uma jornada de sucesso e crescimento, onde poderemos contribuir de forma significativa para a saúde e felicidade dos nossos pacientes. Juntos queremos te ajudar a encontrar sua melhor versão. Vem pra ONE!
                 </p>
                 <a href="tratamentos" class="btns btn_tratamentos">Conheça nossos tratamentos<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
@@ -154,24 +148,32 @@
                 </video>
             </div>
             <div id="Block_textAllinOne">
-                <h2>O que é o atendimento all in one</h2>
+                <h2>O que é o atendimento all in ONE</h2>
                 <p>
-                    É um conceito que define que o cuidado com a saúde e a beleza deve ser abrangente e contínuo. Um serviço exclusivo que oferece um acompanhamento personalizado e único.
-                    <br><br>
-                    A partir de uma consulta ampla, nossa equipe médica realiza uma análise completa das suas expectativas e desejos e elabora um plano personalizado que inclui: opções de intervenções que serão executadas, o programa de avaliações periódicas e o monitoramento da evolução do seu procedimento, uso das tecnologias. 
-                    <br><br>
+                    É um conceito de atendimento inédito no Brasil, que define que o cuidado com a saúde e a beleza deve ser abrangente e contínuo. 
+                    <br><br>                
+                    Primeiro passo:
+                    O paciente que opta por passar por esse atendimento “ALL IN ONE” recebe um questionário bem completo onde constará todo o seu histórico de saúde e o que vem buscar na ONE antes de comparecer à clínica. 
+                    <br><br>                
+                    Segundo passo: 
+                    Com os dados obtidos é realizada uma pré-triagem pela nossa equipe especializada que avaliará minuciosamente quais são os profissionais necessários para o atendimento e realiza o agendamento da consulta.
+                    <br><br>                
+                    Terceiro passo:
+                    No dia da consulta o time de profissionais recrutados estará junto, em uma sala especial idealizada para um atendimento único e exclusivo, para trazer a maior segurança e assertividade na escolha dos tratamentos, alinhando suas expectativas e desejos e elaborando um plano personalizado que inclui a escolha das intervenções que serão executadas, o programa de avaliações periódicas e o monitoramento da evolução do seu procedimento.
                     Assim garantimos que você receberá toda a atenção, que vai além das indispensáveis à sua terapia, com detalhes, sugestões de técnicas novas, procedimentos complementares e suporte contínuo.
-                    <br><br>
+                    <br><br>                
                     O ALL IN ONE é serviço de excelência, que se adapta aos seus sonhos e necessidades e garante que todas opções e recursos terapêuticos sejam considerados e discutidos em conjunto, proporcionando uma experiência de cuidado completa e personalizada.
-                    <br><br>
-                    Isso é parte fundamental do compromisso da ONE Medical Group com sua saúde e beleza 
+                    <br><br>                
+                    Isso é parte fundamental do compromisso da ONE Medical Group com sua saúde e beleza
+                    <br><br>                
+                    Uma verdadeira experiência de cuidado onde o paciente é o CENTRO de toda a jornada.
                 </p>
                 <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Marcar Consulta</a>
             </div>
         </section>
         <section id="especialidades">
             <div id="textEspecialidade" class="especialidadeBlock">
-                <h2>As especialidades da One Medical</h2>
+                <h2>As especialidades da ONE Medical</h2>
                 <p>Na ONE MEDICAL GROUP, valorizamos o que é mais importante para você: a sua saúde e bem-estar. Por isso, oferecemos um atendimento personalizado e de excelência.</p>
                 <a href="especialidades" class="btns btn_especialidades">Veja as especialidades<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
@@ -213,7 +215,7 @@
             <img id="logoRodape" src="assets/logo.png" alt="Logo one medical group">
             <div id="consulta_rodape">
                 <h5>Marque a sua consulta</h5>
-                <p>Venha conhecer a One Medical Group e agende a sua consulta!</p>
+                <p>Venha conhecer a ONE Medical Group e agende a sua consulta!</p>
                 <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
             </div>
             <div id="endereco_rodape">
@@ -236,7 +238,7 @@
             </div>
         </div>
         <div id="smallFooter">
-            <p>© <span id="data_footer"></span> One Medical Group</p>
+            <p>© <span id="data_footer"></span> ONE Medical Group</p>
             <a aria-label="link para a VL7" href="https://vl7.com.br" target="_blank">
                 <img src="assets/vl7_logo.png">
             </a>

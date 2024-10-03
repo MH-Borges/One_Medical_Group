@@ -58,7 +58,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>O tratamnento de <?php echo $titulo ?> | One medical group</title>
+    <title>O tratamnento de <?php echo $titulo ?> | ONE medical group</title>
 
     <link rel="icon" href="assets/icons/icon.svg" />
     <link rel="canonical" href="https://onemedicalgroup.com.br/tratamento_de_<?php echo $nome_clean ?>" />
@@ -105,9 +105,9 @@
         <div id="sideMenu" class="hide">
             <button type="button" onclick="sideMenu()"></button>
 
-            <a class="itensMenu" href="clinica">A One</a>
+            <a class="itensMenu" href="clinica">A ONE</a>
             <a class="itensMenu" href="especialidades">Especialidades</a>
-            <a class="itensMenu" href="equipe">Equipe one</a>
+            <a class="itensMenu" href="equipe">Equipe ONE</a>
             <a class="itensMenu" href="tratamentos">Tecnologias</a>
             <a class="itensMenu" href="blog">Blog</a>
             <a class="itensMenu" href="contato">Contato</a>
@@ -334,17 +334,9 @@
             <div id="Block_textEspaco">
                 <h2>Nosso espaço</h2>
                 <p>
-                    Localizada no Continental Tower, no Complexo Corporativo do Shopping Cidade Jardim, em um dos bairros mais nobres de São Paulo, a ONE garante conforto, conveniência e uma experiência de saúde premium para nossos pacientes.
+                    Localizada no Complexo do Shopping Cidade Jardim, em um dos bairros mais nobres de São Paulo. Temos o privilégio de estar próximos aos principais hospitais da cidade. Buscamos trazer o requinte e sofisticação de um Hotel Boutique, propiciando o acolhimento necessário para uma imersão na experiência ONE. 
                     <br><br>
-                    <br><br>
-                    Na ONE, o conceito clínico torna-se uma experiencia única, num ambiente de elegância e tranquilidade, com ampla estrutura que inclui desde um espaço exclusivo e acolhedor, para você aguardar seu atendimento, a consultórios totalmente equipados, desenhados para garantir que os procedimentos sejam realizados com a máxima precisão.  
-                    <br><br>
-                    Tudo isso para garantir que você tenha acesso a todos os recursos em um único lugar e com muito conforto.
-                    <br><br>
-                    <br><br>
-                    Na ONE, proporcionamos um atendimento humanizado e de excelência, onde cada paciente recebe um plano de cuidado orientado pelas melhores práticas e inovações na área de beleza. 
-                    <br><br>
-                    Experimente o padrão ONE de excelência médica, onde seu bem-estar é nossa prioridade.
+                    O conceito traz uma experiencia única, num ambiente de elegância e tranquilidade, com ampla estrutura que inclui desde um espaço exclusivo e acolhedor, e consultórios totalmente equipados, desenhados para garantir que os procedimentos sejam realizados com a máxima precisão e segurança.
                 </p>
                 <a href="clinica" class="btns btn_espaco">Conheça nossa historia<img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
@@ -436,7 +428,7 @@
             <img id="logoRodape" src="assets/logo.png" alt="Logo one medical group">
             <div id="consulta_rodape">
                 <h5>Marque a sua consulta</h5>
-                <p>Venha conhecer a One Medical Group e agende a sua consulta!</p>
+                <p>Venha conhecer a ONE Medical Group e agende a sua consulta!</p>
                 <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
             </div>
             <div id="endereco_rodape">
@@ -459,7 +451,7 @@
             </div>
         </div>
         <div id="smallFooter">
-            <p>© <span id="data_footer"></span> One Medical Group</p>
+            <p>© <span id="data_footer"></span> ONE Medical Group</p>
             <a aria-label="link para a VL7" href="https://vl7.com.br" target="_blank">
                 <img src="assets/vl7_logo.png">
             </a>

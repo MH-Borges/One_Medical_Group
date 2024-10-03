@@ -1243,10 +1243,12 @@ body #Main_index #allInOne {
   align-items: center;
   justify-content: center;
   padding: 0;
+  min-height: 100vh;
+  height: auto;
 }
 body #Main_index #allInOne #Block_VideoAllinOne {
   width: 50%;
-  height: 100%;
+  height: 145vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -2878,10 +2880,12 @@ body #Main_clinica #allInOne {
   align-items: center;
   justify-content: center;
   padding: 0;
+  min-height: 100vh;
+  height: auto;
 }
 body #Main_clinica #allInOne #Block_VideoAllinOne {
   width: 50%;
-  height: 100%;
+  height: 145vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -3091,7 +3095,7 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
     margin: -2vh 0 2vh;
   }
   body #Main_clinica #oneMedical {
-    height: 190vh;
+    height: 200vh;
     flex-direction: column;
     padding: 0;
   }
@@ -3103,14 +3107,14 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
     order: 2;
   }
   body #Main_clinica #oneMedical::before {
-    top: 140vh;
+    top: 150vh;
     right: 0;
     width: 100%;
     height: 50vh;
   }
   body #Main_clinica #oneMedical #Block_textOne {
     width: 100%;
-    height: 140vh;
+    height: 150vh;
     padding: 2vh 7.5vw;
     flex-direction: column;
     order: 1;
@@ -3272,7 +3276,8 @@ body #Main_clinica #especialidades #textEspecialidade .btn_especialidades img, b
   }
   body #Main_clinica #allInOne #Block_textAllinOne {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     padding: 2vh 7.5%;
     flex-direction: column;
     order: 1;
@@ -3536,10 +3541,12 @@ body #Main_especialidades #allInOne {
   align-items: center;
   justify-content: center;
   padding: 0;
+  min-height: 100vh;
+  height: auto;
 }
 body #Main_especialidades #allInOne #Block_VideoAllinOne {
   width: 50%;
-  height: 100%;
+  height: 145vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -3907,7 +3914,8 @@ body #Main_especialidades #depos .splide .splide__track .splide__list .splide__s
   }
   body #Main_especialidades #allInOne #Block_textAllinOne {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     padding: 2vh 7.5%;
     flex-direction: column;
     order: 1;
@@ -4751,10 +4759,12 @@ body #Main_tratamentos #allInOne {
   align-items: center;
   justify-content: center;
   padding: 0;
+  min-height: 100vh;
+  height: auto;
 }
 body #Main_tratamentos #allInOne #Block_VideoAllinOne {
   width: 50%;
-  height: 100%;
+  height: 145vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -5168,7 +5178,8 @@ body #Main_tratamentos #allInOne #Block_textAllinOne .btn_AllInOne {
   }
   body #Main_tratamentos #allInOne #Block_textAllinOne {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     padding: 2vh 7.5%;
     flex-direction: column;
     order: 1;
@@ -9293,7 +9304,8 @@ body #Main_blogPost #equipe .btn_equipe img path, body #Main_blogPost #equipe .b
   }
   body #Main_index #allInOne #Block_textAllinOne {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     padding: 2vh 7.5%;
     flex-direction: column;
     order: 1;
@@ -9362,7 +9374,7 @@ body #Main_blogPost #equipe .btn_equipe img path, body #Main_blogPost #equipe .b
   body #Main_index #concierge #Block_textConcierge .btn_Concierge {
     border-radius: 1.5vw;
     height: 3.5vh;
-    width: 35vw;
+    width: 45vw;
     font-size: 3.5vw;
     margin-top: 3vh;
     margin-left: auto;

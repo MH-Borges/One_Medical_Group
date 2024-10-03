@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One medical group</title>
+    <title>ONE medical group</title>
 
     <link rel="icon" href="assets/icons/icon.svg" />
     <link rel="canonical" href="https://onemedicalgroup.com.br" />
@@ -44,7 +44,7 @@
         <ul id="menu">
             <li>
                 <a class="links" href="#home">
-                    <h1 class="hide">One Medical Group</h1>
+                    <h1 class="hide">ONE Medical Group</h1>
                     <img src="assets/logo.png" alt="Logo one medical group">
                 </a>
             </li>
@@ -54,9 +54,9 @@
         <div id="sideMenu" class="hide">
             <button type="button" onclick="sideMenu()"></button>
 
-            <a class="itensMenu" href="clinica">A One</a>
+            <a class="itensMenu" href="clinica">A ONE</a>
             <a class="itensMenu" href="especialidades">Especialidades</a>
-            <a class="itensMenu" href="equipe">Equipe one</a>
+            <a class="itensMenu" href="equipe">Equipe ONE</a>
             <a class="itensMenu" href="tratamentos">Tecnologias</a>
             <a class="itensMenu" href="blog">Blog</a>
             <a class="itensMenu" href="contato">Contato</a>
@@ -96,18 +96,12 @@
         </section>
         <section id="clinica">
             <div id="Block_textClinica">
-                <h2>A One</h2>
-                <p>É um prazer receber você na ONE MEDICAL GROUP, onde cada detalhe foi pensado para realçar sua elegância.
+                <h2>A ONE</h2>
+                <p>
+                    É um prazer receber você na ONE Medical Group, onde cada detalhe foi pensado para realçar a sua beleza. Temos uma missão de redefinir o conceito de cuidados com a beleza, a partir de uma abordagem integrada e personalizada.
                     <br><br>
-                    Temos uma missão de redefinir o conceito de cuidados com a beleza, a partir de uma abordagem integrada e personalizada.
-                    <br><br>
-                    Desde o primeiro contato nossos especialistas trabalham em conjunto para oferecer um acompanhamento coordenado e contínuo, em cada etapa do seu tratamento.
-                    <br><br>
-                    Este diferencial da ONE em unir diversas especialidades em um só lugar, para um cuidado completo e multidisciplinar nos capacita a oferecer soluções que respeitam a individualidade e as necessidades do paciente
-                    <br><br>
-                    Com uma infraestrutura moderna e acolhedora, que garante total privacidade e conforto, a ONE se destaca pelo atendimento excepcional e busca constante pela excelência.
-                    <br><br>
-                    Aqui, você encontra mais do que uma clínica: Nós somos seu parceiro na sua jornada para encontrar a sua melhor versão
+                    Desde o primeiro contato nossos especialistas trabalham em conjunto para oferecer um acompanhamento coordenado e contínuo, em cada etapa do seu tratamento. Este diferencial da ONE em unir diversas especialidades em um só lugar, para um cuidado completo e multidisciplinar nos capacita a oferecer soluções que respeitam a individualidade e as necessidades do paciente. Com uma infraestrutura moderna e acolhedora, que garante total privacidade e conforto, a ONE se destaca pelo atendimento excepcional e busca constante pela excelência.
+                    Aqui, você encontra mais do que uma clínica: Nós somos seu parceiro na sua jornada para encontrar a sua melhor versão.
                 </p>
                 <a href="clinica" class="btns btn_clinica">Veja mais da clínica <img src="assets/icons/seta.svg" onload="SVGInject(this)"></a>
             </div>
@@ -123,23 +117,15 @@
             <div id="Block_textEspaco">
                 <h2>Nosso espaço</h2>
                 <p>
-                    Localizada no Continental Tower, no Complexo Corporativo do Shopping Cidade Jardim, em um dos bairros mais nobres de São Paulo, a ONE garante conforto, conveniência e uma experiência de saúde premium para nossos pacientes.
+                    Localizada no Complexo do Shopping Cidade Jardim, em um dos bairros mais nobres de São Paulo. Temos o privilégio de estar próximos aos principais hospitais da cidade. Buscamos trazer o requinte e sofisticação de um Hotel Boutique, propiciando o acolhimento necessário para uma imersão na experiência ONE. 
                     <br><br>
-                    <br><br>
-                    Na ONE, o conceito clínico torna-se uma experiencia única, num ambiente de elegância e tranquilidade, com ampla estrutura que inclui desde um espaço exclusivo e acolhedor, para você aguardar seu atendimento, a consultórios totalmente equipados, desenhados para garantir que os procedimentos sejam realizados com a máxima precisão.  
-                    <br><br>
-                    Tudo isso para garantir que você tenha acesso a todos os recursos em um único lugar e com muito conforto.
-                    <br><br>
-                    <br><br>
-                    Na ONE, proporcionamos um atendimento humanizado e de excelência, onde cada paciente recebe um plano de cuidado orientado pelas melhores práticas e inovações na área de beleza. 
-                    <br><br>
-                    Experimente o padrão ONE de excelência médica, onde seu bem-estar é nossa prioridade.
+                    O conceito traz uma experiencia única, num ambiente de elegância e tranquilidade, com ampla estrutura que inclui desde um espaço exclusivo e acolhedor, e consultórios totalmente equipados, desenhados para garantir que os procedimentos sejam realizados com a máxima precisão e segurança.
                 </p>
             </div>
         </section>
         <section id="especialidades">
             <div id="textEspecialidade" class="especialidadeBlock">
-                <h2>As especialidades da One Medical</h2>
+                <h2>As especialidades da ONE Medical</h2>
                 <p>Na ONE MEDICAL GROUP, valorizamos o que é mais importante para você: a sua saúde e bem-estar. Por isso, oferecemos um atendimento personalizado e de excelência.</p>
                 <a href="especialidades" class="btns btn_especialidades">Veja as especialidades</a>
             </div>
@@ -227,9 +213,9 @@
         <section id="tratamentos">
             <div id="tratamentosInfos">
                 <div id="Block_textTratamentos">
-                    <h2>As Tecnologias da One medical group</h2>
+                    <h2>As Tecnologias da ONE medical group</h2>
                     <p>
-                        Na One Medical Group estamos comprometidos em oferecer aos pacientes soluções de saúde e estética que atendam às suas mais altas expectativas e para isso, acesso às tecnologias mais avançadas do mercado de estética. Nossos equipamentos de última geração foram selecionados para garantir resultados excepcionais e atender às necessidades de cada procedimento.
+                        Na ONE Medical Group estamos comprometidos em oferecer aos pacientes soluções de saúde e estética que atendam às suas mais altas expectativas e para isso, acesso às tecnologias mais avançadas do mercado de estética. Nossos equipamentos de última geração foram selecionados para garantir resultados excepcionais e atender às necessidades de cada procedimento.
                         <br><br>
                         Entre eles, destacam-se o <b>Ultraformer MPT</b>, que realiza lifting e rejuvenescimento com alta precisão, o <b>Laser Fotona Dynamis NX</b>, conhecido por sua versatilidade e eficácia, o <b>Discovery Pico Plus</b>, a escolha ideal para tratamentos de pigmentações e rejuvenescimento da pele, o <b>Vectra XT</b> que oferece uma análise detalhada das características física no planejamento de procedimentos estéticos e o Volnewmer que combina tecnologia avançada para tratar a firmeza e revitalização da pele.
                         <br><br>
@@ -282,17 +268,25 @@
                 </video>
             </div>
             <div id="Block_textAllinOne">
-                <h2>O que é o atendimento all in one</h2>
+                <h2>O que é o atendimento all in ONE</h2>
                 <p>
-                    É um conceito que define que o cuidado com a saúde e a beleza deve ser abrangente e contínuo. Um serviço exclusivo que oferece um acompanhamento personalizado e único.
-                    <br><br>
-                    A partir de uma consulta ampla, nossa equipe médica realiza uma análise completa das suas expectativas e desejos e elabora um plano personalizado que inclui: opções de intervenções que serão executadas, o programa de avaliações periódicas e o monitoramento da evolução do seu procedimento, uso das tecnologias. 
-                    <br><br>
+                    É um conceito de atendimento inédito no Brasil, que define que o cuidado com a saúde e a beleza deve ser abrangente e contínuo. 
+                    <br><br>                
+                    Primeiro passo:
+                    O paciente que opta por passar por esse atendimento “ALL IN ONE” recebe um questionário bem completo onde constará todo o seu histórico de saúde e o que vem buscar na ONE antes de comparecer à clínica. 
+                    <br><br>                
+                    Segundo passo: 
+                    Com os dados obtidos é realizada uma pré-triagem pela nossa equipe especializada que avaliará minuciosamente quais são os profissionais necessários para o atendimento e realiza o agendamento da consulta.
+                    <br><br>                
+                    Terceiro passo:
+                    No dia da consulta o time de profissionais recrutados estará junto, em uma sala especial idealizada para um atendimento único e exclusivo, para trazer a maior segurança e assertividade na escolha dos tratamentos, alinhando suas expectativas e desejos e elaborando um plano personalizado que inclui a escolha das intervenções que serão executadas, o programa de avaliações periódicas e o monitoramento da evolução do seu procedimento.
                     Assim garantimos que você receberá toda a atenção, que vai além das indispensáveis à sua terapia, com detalhes, sugestões de técnicas novas, procedimentos complementares e suporte contínuo.
-                    <br><br>
+                    <br><br>                
                     O ALL IN ONE é serviço de excelência, que se adapta aos seus sonhos e necessidades e garante que todas opções e recursos terapêuticos sejam considerados e discutidos em conjunto, proporcionando uma experiência de cuidado completa e personalizada.
-                    <br><br>
-                    Isso é parte fundamental do compromisso da ONE Medical Group com sua saúde e beleza 
+                    <br><br>                
+                    Isso é parte fundamental do compromisso da ONE Medical Group com sua saúde e beleza
+                    <br><br>                
+                    Uma verdadeira experiência de cuidado onde o paciente é o CENTRO de toda a jornada.
                 </p>
                 <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Marcar Consulta</a>
             </div>
@@ -315,7 +309,7 @@
             <img src="assets/concierge.webp" alt="">
         </section>
         <section id="depos"> 
-            <h2>Conexão One</h2>
+            <h2>Conexão ONE</h2>
             <p>Conheça o que algumas pessoas, que confiaram sua beleza a ONE Medical Group, consideram sobre nossa empresa.</p>
             
             <div class="splide" role="group">
@@ -360,7 +354,7 @@
         <section id="blog">
             <h2>Blog</h2>
             <p>
-                É uma satisfação apresentar para você o Blog da One Medical Group, o seu espaço dedicado a insights, novidades e informações relevantes sobre saúde e estética. 
+                É uma satisfação apresentar para você o Blog da ONE Medical Group, o seu espaço dedicado a insights, novidades e informações relevantes sobre saúde e estética. 
                 <br><br>
                 Aqui, compartilhamos artigos, dicas e atualizações para ajudá-lo a manter-se informado sobre os avanços na medicina e as melhores práticas para o seu bem-estar. 
                 <br><br>
@@ -467,7 +461,7 @@
             <img id="logoRodape" src="assets/logo.png" alt="Logo one medical group">
             <div id="consulta_rodape">
                 <h5>Marque a sua consulta</h5>
-                <p>Venha conhecer a One Medical Group e agende a sua consulta!</p>
+                <p>Venha conhecer a ONE Medical Group e agende a sua consulta!</p>
                 <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
             </div>
             <div id="endereco_rodape">
@@ -490,7 +484,7 @@
             </div>
         </div>
         <div id="smallFooter">
-            <p>© <span id="data_footer"></span> One Medical Group</p>
+            <p>© <span id="data_footer"></span> ONE Medical Group</p>
             <a aria-label="link para a VL7" href="https://vl7.com.br" target="_blank">
                 <img src="assets/vl7_logo.png">
             </a>

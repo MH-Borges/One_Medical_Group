@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | One medical group</title>
+    <title>Blog | ONE medical group</title>
 
     <link rel="icon" href="assets/icons/icon.svg" />
     <link rel="canonical" href="https://onemedicalgroup.com.br/blog" />
@@ -52,9 +52,9 @@
         <div id="sideMenu" class="hide">
             <button type="button" onclick="sideMenu()"></button>
 
-            <a class="itensMenu" href="clinica">A One</a>
+            <a class="itensMenu" href="clinica">A ONE</a>
             <a class="itensMenu" href="especialidades">Especialidades</a>
-            <a class="itensMenu" href="equipe">Equipe one</a>
+            <a class="itensMenu" href="equipe">Equipe ONE</a>
             <a class="itensMenu" href="tratamentos">Tecnologias</a>
             <a class="itensMenu active" href="blog">Blog</a>
             <a class="itensMenu" href="contato">Contato</a>
@@ -261,7 +261,7 @@
             <img id="logoRodape" src="assets/logo.png" alt="Logo one medical group">
             <div id="consulta_rodape">
                 <h5>Marque a sua consulta</h5>
-                <p>Venha conhecer a One Medical Group e agende a sua consulta!</p>
+                <p>Venha conhecer a ONE Medical Group e agende a sua consulta!</p>
                 <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
             </div>
             <div id="endereco_rodape">
@@ -284,7 +284,7 @@
             </div>
         </div>
         <div id="smallFooter">
-            <p>© <span id="data_footer"></span> One Medical Group</p>
+            <p>© <span id="data_footer"></span> ONE Medical Group</p>
             <a aria-label="link para a VL7" href="https://vl7.com.br" target="_blank">
                 <img src="assets/vl7_logo.png">
             </a>

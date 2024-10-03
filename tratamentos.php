@@ -5,10 +5,10 @@
     $nome_clean = preg_replace('/_/', ' ', $nome_get);
 
     if($nome_get !== "" && $nome_get !== NULL){
-        $title_page = "<title>Tratamentos de $nome_clean | One medical group</title>";
+        $title_page = "<title>Tratamentos de $nome_clean | ONE medical group</title>";
     }
     else{
-        $title_page = "<title>Tratamentos | One medical group</title>";
+        $title_page = "<title>Tratamentos | ONE medical group</title>";
     }
 ?>
 <!DOCTYPE html>
@@ -61,9 +61,9 @@
         <div id="sideMenu" class="hide">
             <button type="button" onclick="sideMenu()"></button>
 
-            <a class="itensMenu" href="clinica">A One</a>
+            <a class="itensMenu" href="clinica">A ONE</a>
             <a class="itensMenu" href="especialidades">Especialidades</a>
-            <a class="itensMenu" href="equipe">Equipe one</a>
+            <a class="itensMenu" href="equipe">Equipe ONE</a>
             <a class="itensMenu <?php if($nome_get === "" || $nome_get === NULL){ echo "active"; }?>" href="tratamentos">Tecnologias</a>
             <a class="itensMenu" href="blog">Blog</a>
             <a class="itensMenu" href="contato">Contato</a>
@@ -123,7 +123,7 @@
                     <section id="banner">
                         <div id="Titulo_banner">
                             <span> Conheça todos as </span>
-                            <h1>Tecnologias da One</h1>
+                            <h1>Tecnologias da ONE</h1>
                         </div>
                         <img src="assets/banner_tratamentos.webp" alt="">
                         <p>
@@ -238,8 +238,8 @@
             if($nome_get === "" || $nome_get === NULL){
                 echo '
                     <section id="depos"> 
-                        <h2>Conexão One</h2>
-                        <p>Experiências de quem confia na One.</p>
+                        <h2>Conexão ONE</h2>
+                        <p>Experiências de quem confia na ONE.</p>
                         <div class="splide depo_splide" role="group">
                             <div class="splide__track">
                                 <ul class="splide__list">
@@ -402,17 +402,25 @@
                             </video>
                         </div>
                         <div id="Block_textAllinOne">
-                            <h2>O que é o atendimento all in one</h2>
+                            <h2>O que é o atendimento all in ONE</h2>
                             <p>
-                                É um conceito que define que o cuidado com a saúde e a beleza deve ser abrangente e contínuo. Um serviço exclusivo que oferece um acompanhamento personalizado e único.
-                                <br><br>
-                                A partir de uma consulta ampla, nossa equipe médica realiza uma análise completa das suas expectativas e desejos e elabora um plano personalizado que inclui: opções de intervenções que serão executadas, o programa de avaliações periódicas e o monitoramento da evolução do seu procedimento, uso das tecnologias. 
-                                <br><br>
+                                É um conceito de atendimento inédito no Brasil, que define que o cuidado com a saúde e a beleza deve ser abrangente e contínuo. 
+                                <br><br>                
+                                Primeiro passo:
+                                O paciente que opta por passar por esse atendimento “ALL IN ONE” recebe um questionário bem completo onde constará todo o seu histórico de saúde e o que vem buscar na ONE antes de comparecer à clínica. 
+                                <br><br>                
+                                Segundo passo: 
+                                Com os dados obtidos é realizada uma pré-triagem pela nossa equipe especializada que avaliará minuciosamente quais são os profissionais necessários para o atendimento e realiza o agendamento da consulta.
+                                <br><br>                
+                                Terceiro passo:
+                                No dia da consulta o time de profissionais recrutados estará junto, em uma sala especial idealizada para um atendimento único e exclusivo, para trazer a maior segurança e assertividade na escolha dos tratamentos, alinhando suas expectativas e desejos e elaborando um plano personalizado que inclui a escolha das intervenções que serão executadas, o programa de avaliações periódicas e o monitoramento da evolução do seu procedimento.
                                 Assim garantimos que você receberá toda a atenção, que vai além das indispensáveis à sua terapia, com detalhes, sugestões de técnicas novas, procedimentos complementares e suporte contínuo.
-                                <br><br>
+                                <br><br>                
                                 O ALL IN ONE é serviço de excelência, que se adapta aos seus sonhos e necessidades e garante que todas opções e recursos terapêuticos sejam considerados e discutidos em conjunto, proporcionando uma experiência de cuidado completa e personalizada.
-                                <br><br>
-                                Isso é parte fundamental do compromisso da ONE Medical Group com sua saúde e beleza 
+                                <br><br>                
+                                Isso é parte fundamental do compromisso da ONE Medical Group com sua saúde e beleza
+                                <br><br>                
+                                Uma verdadeira experiência de cuidado onde o paciente é o CENTRO de toda a jornada.
                             </p>
                             <a target="_blank" href="https://wa.me/551151081977" class="btns btn_AllInOne">Marcar Consulta</a>
                         </div>
@@ -427,7 +435,7 @@
             <img id="logoRodape" src="assets/logo.png" alt="Logo one medical group">
             <div id="consulta_rodape">
                 <h5>Marque a sua consulta</h5>
-                <p>Venha conhecer a One Medical Group e agende a sua consulta!</p>
+                <p>Venha conhecer a ONE Medical Group e agende a sua consulta!</p>
                 <a class="btns btn_agendamento" href="" target="_blank">marcar consulta</a>
             </div>
             <div id="endereco_rodape">
@@ -450,7 +458,7 @@
             </div>
         </div>
         <div id="smallFooter">
-            <p>© <span id="data_footer"></span> One Medical Group</p>
+            <p>© <span id="data_footer"></span> ONE Medical Group</p>
             <a aria-label="link para a VL7" href="https://vl7.com.br" target="_blank">
                 <img src="assets/vl7_logo.png">
             </a>
